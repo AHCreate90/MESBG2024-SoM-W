@@ -1,0 +1,19415 @@
+{
+  "config": {
+    "trackHighestDivision": true
+  },
+  "appVersion": 2,
+  "update": {
+    "contentVersion": "shadow-of-mordor-custom-2026-09-08"
+  },
+  "disallowMultipleFactions": true,
+  "colors": {
+    "light": {
+      "primary": "#841912",
+      "background": "#a58650",
+      "pageBackground": "#fffffe",
+      "buttonBackground": "#e2ded3",
+      "primaryBorder": "#841912",
+      "primaryBackgroundColor": "#fffffe"
+    },
+    "dark": {
+      "primary": "#fffffe",
+      "background": "#814143",
+      "pageBackground": "#3b1d1e",
+      "buttonBackground": "#a58650",
+      "primaryBorder": "#841912",
+      "primaryBackgroundColor": "#841912"
+    }
+  },
+  "testProperty": "test",
+  "encyclopedia": {
+    "dataTabs": [
+      {
+        "dataSource": "heroes",
+        "label": "Heroes",
+        "filters": [
+          {
+            "kind": "child",
+            "dataSource": "keywords",
+            "property": "specialRules",
+            "label": "Special Rule"
+          },
+          {
+            "kind": "child",
+            "dataSource": "magicalPowers",
+            "property": "magicalPowers",
+            "label": "Magical Power"
+          }
+        ]
+      },
+      {
+        "dataSource": "warriors",
+        "label": "Warriors"
+      },
+      {
+        "dataSource": "gear",
+        "label": "Wargear"
+      },
+      {
+        "dataSource": "magicalPowers",
+        "label": "Magical Powers"
+      },
+      {
+        "dataSource": "keywords",
+        "label": "Special Rules"
+      },
+      {
+        "dataSource": "armyBonuses",
+        "label": "Army Bonuses",
+        "filters": [
+          {
+            "kind": "parent",
+            "dataSource": "factions",
+            "property": "armyBonuses",
+            "label": "Faction"
+          }
+        ]
+      }
+    ],
+    "rulebook": {
+      "title": "Rulebook",
+      "sections": [
+        {
+          "id": "heroic-actions",
+          "title": "Heroic Actions",
+          "sections": [
+            {
+              "id": "universal-heroic-actions",
+              "title": "Universal Heroic Actions",
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "Some Heroic Actions can be used by any Hero in the game, regardless of who (or what) they are – so long as they have Might Points remaining, of course! Every Hero can use the following three Heroic Actions:"
+                }
+              ],
+              "sections": [
+                {
+                  "id": "heroic-move",
+                  "title": "Heroic Move (Move Phase) (63)",
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "text": "A Heroic Move enables a Hero to Activate before other models – essentially defying the usual Priority system. The Hero can then Activate exactly as normal and do anything they would normally be able to do when they Activate. The Hero cannot then be Activated again later in the Move Phase."
+                    },
+                    {
+                      "type": "paragraph",
+                      "text": "This Heroic Action can prove extremely valuable, and often when the player without Priority declares a Heroic Move their opponent will also declare one in order to try to keep the initiative."
+                    },
+                    {
+                      "type": "paragraph",
+                      "text": "If a Hero who has declared a Heroic Move is Charged and Engaged in Combat, or rendered unable to Activate in some other way, then their Heroic Move is cancelled and the Might Point spent is lost."
+                    }
+                  ],
+                  "sections": [
+                    {
+                      "id": "with-me",
+                      "title": "With Me",
+                      "blocks": [
+                        {
+                          "type": "paragraph",
+                          "text": "A Hero who is performing a Heroic Move may choose to shout “With Me” as soon as they are Activated. If they do, note their starting position before they Activate. All friendly models within 6\" of the Hero when they shout With Me are automatically affected, and after the Hero has finished their Activation, they must choose to do one of two things:"
+                        },
+                        {
+                          "type": "unorderedList",
+                          "items": [
+                            "Activate as normal in an order chosen by their controlling player. Any model that Activates as part of a With Me must finish their Activation within 6\" of the Hero that shouted With Me. If the model attempts to finish their Activation within 6\" of the Hero, but fails a roll (such as a Courage Test, Jump Test or Climb Test) that makes this impossible, they simply stop where they are.",
+                            "Forego their Activation, in which case they do not Activate and cannot do so later in the Move Phase. A model that cannot finish its Activation within 6\" of the Hero that shouted With Me must choose this option."
+                          ]
+                        },
+                        {
+                          "type": "paragraph",
+                          "text": "In either case, the affected models cannot be Activated again later in the Move Phase for any reason."
+                        },
+                        {
+                          "type": "paragraph",
+                          "text": "A Hero that shouts With Me doesn’t have to Move as part of their Activation, and as With Me is shouted at the start of their Activation, if anything would render them unable to Move as part of their Activation (such as failing a Courage Test to Charge an enemy with the Terror special rule) then they will still shout With Me. However, should the Hero be removed as a casualty for any reason (such as fleeing or suffering Falling Damage) then their Heroic Move and With Me will immediately be cancelled."
+                        },
+                        {
+                          "type": "paragraph",
+                          "text": "If two friendly Hero models within 6\" of each other both declare a Heroic Move, and the one that goes first shouts With Me, the second Hero has two options:"
+                        },
+                        {
+                          "type": "unorderedList",
+                          "items": [
+                            "Activate as normal for a model affected by With Me, in which case their Heroic Move will be cancelled.",
+                            "Forego their Activation, in which case they do not Activate later in the Move Phase and their Heroic Move will be cancelled."
+                          ]
+                        },
+                        {
+                          "type": "paragraph",
+                          "text": "If a Hero who shouted With Me Moves off the board, then any friendly models who are affected by their With Me may also Move off the board if able; however, if they cannot then they must choose to forego their Activation. If a model is affected by a Hero model’s With Me, then they can only Move off the board if that Hero also does so."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "heroic-shoot",
+                  "title": "Heroic Shoot (Shoot Phase)",
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "text": "A Heroic Shoot allows a Hero to Shoot before all other models in the Shoot Phase. A Hero does not need to have a Missile Weapon to declare a Heroic Shoot, but they cannot declare a Heroic Shoot if they are Engaged in Combat."
+                    }
+                  ],
+                  "sections": [
+                    {
+                      "id": "loose",
+                      "title": "Loose",
+                      "blocks": [
+                        {
+                          "type": "paragraph",
+                          "text": "A Hero who is performing a Heroic Shoot may choose to shout “Loose”. The Hero does not need to Shoot first (or at all if they don’t wish to) when they shout Loose."
+                        },
+                        {
+                          "type": "paragraph",
+                          "text": "If they do, all friendly models within 6\" of the Hero when they shout Loose are automatically affected, and may also Shoot at the same time as the Hero – in an order chosen by their controlling player."
+                        },
+                        {
+                          "type": "paragraph",
+                          "text": "Friendly models affected by the Loose of a friendly Hero do not need to target the same enemy model, and may Shoot as normal. However, any model affected by a friendly Hero model’s Loose that chooses not to Shoot as part of it cannot then do so later that Shoot Phase."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "heroic-combat",
+                  "title": "Heroic Combat (Fight Phase) (64)",
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "text": "When a Hero declares a Heroic Combat, their Combat is resolved first before any others. In addition, if the Hero wins their Combat and all enemy models involved in that Combat are removed as a casualty, then the Hero and any friendly models that were involved in that Combat (with the exception of any War Beast or Chariot models) may immediately Move in the same way as they would during the Move Phase – however, the only things they may do is to Move or Charge. If they Charge, then they will fight again in the ordinary way – i.e., in an order chosen by the player with Priority."
+                    },
+                    {
+                      "type": "paragraph",
+                      "text": "If models Charge during this Move, then the way the Combats should be divided may be altered. In this situation, the player with Priority will Pair Off Combats again after each successful Heroic Combat."
+                    },
+                    {
+                      "type": "paragraph",
+                      "text": "A model may only benefit from one Heroic Combat per turn; so, if a model that was involved in one Heroic Combat Moves to join another Combat that is also a Heroic Combat, which is then itself successful, the model may then not Move again as part of the second Heroic Combat."
+                    },
+                    {
+                      "type": "paragraph",
+                      "text": "There may be a situation where two opposing Hero models in the same Combat both declare a Heroic Combat. When this happens, if either side causes all enemy models to be removed as a casualty, then they are considered to have made a successful Heroic Combat and may Move as described above, regardless of which player’s choice of Heroic Combat it was."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "specialised-heroic-actions",
+              "title": "Specialised Heroic Actions",
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "Some Heroic Actions can only be declared by certain Hero models. In each Hero model’s profile there will be a section listing the additional Heroic Actions that Hero can declare. These Heroic Actions are described here:"
+                }
+              ],
+              "sections": [
+                {
+                  "id": "heroic-channelling",
+                  "title": "Heroic Channelling (Move Phase)",
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "text": "A Hero who declares Heroic Channelling will count the result of their next Casting Test this turn as a 6. As a result, they do not need to roll the dice for the Casting Test but will still need to spend a Will Point to Cast the Magical Power as normal."
+                    }
+                  ]
+                },
+                {
+                  "id": "heroic-march",
+                  "title": "Heroic March (Move Phase) (65)",
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "text": "A Hero who declares a Heroic March adds 3\" to their Move Value for the duration of the Move Phase if they have the Infantry, Chariot or War Beast keyword; if they have the Cavalry keyword or have the Fly special rule, then they add 5\" to their Move Value instead. Additionally, the Hero may not Charge under any circumstances during the same Move Phase."
+                    },
+                    {
+                      "type": "paragraph",
+                      "text": "If a Hero who has declared a Heroic March is Charged and Engaged in Combat, or rendered unable to Activate in some other way, then their Heroic March is cancelled and the Might Point spent is lost."
+                    }
+                  ],
+                  "sections": [
+                    {
+                      "id": "at-the-double",
+                      "title": "At the Double",
+                      "blocks": [
+                        {
+                          "type": "paragraph",
+                          "text": "A Hero who is performing a Heroic March may choose to shout “At the Double” as soon as they are Activated. If they do, note their starting position before they Activate. All friendly models within 6\" of the Hero when they shout At the Double are automatically affected and, after the Hero model has Activated, gain the following benefit: A model affected by At the Double adds 3\" to their Move Value for the duration of the Move Phase if they have the Infantry, Chariot or War Beast keyword; if they have the Cavalry keyword or have the Fly special rule, then they add 5\" to their Move Value instead. Additionally, the model may not Charge under any circumstances during the same Move Phase."
+                        },
+                        {
+                          "type": "paragraph",
+                          "text": "Models affected by At the Double must finish their Activation within 6\" of the Hero that shouted At the Double. If the model attempts to finish their Activation within 6\" of the Hero, but fails a roll (such as a Courage Test, Jump Test or Climb Test) that makes this impossible, they simply stop where they are. A model that cannot finish their Activation within 6\" of the Hero who shouted At the Double must forego their Activation, and cannot be Activated later on in the same Move Phase. Models can choose not to Activate when affected by a Heroic March, in which case they will also forego their Activation."
+                        },
+                        {
+                          "type": "paragraph",
+                          "text": "Should the Hero be removed as a casualty for any reason (such as fleeing or suffering Falling Damage) then their Heroic March and At the Double will immediately be cancelled."
+                        },
+                        {
+                          "type": "paragraph",
+                          "text": "Models can only ever be affected by one Hero model’s At the Double each turn – you can’t stack multiple Heroic Marches together!"
+                        },
+                        {
+                          "type": "paragraph",
+                          "text": "If a Hero who shouted At the Double Moves off the board, then any friendly models who are affected by their At the Double may also Move off the board if able; however, if they cannot then they must choose to forego their Activation. If a model is affected by a Hero model’s At the Double, then they can only Move off the board if that Hero also does so."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "heroic-resolve",
+                  "title": "Heroic Resolve (Move Phase) (66)",
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "text": "When a Hero declares a Heroic Resolve it has two effects, the first of which is resolved as soon as the Heroic Action is declared. Friendly models within 6\" of a Hero who declared a Heroic Resolve gain an additional free dice when making Resist Tests until the End Phase of the turn. Note that for models that have no Will Points (or none remaining), this allows them to make a Resist Test on one dice rather than none."
+                    },
+                    {
+                      "type": "paragraph",
+                      "text": "Additionally, a Hero who declares a Heroic Resolve will automatically pass any Courage Tests they are required to make that turn as a result of their Army being Broken. If a Hero who has declared a Heroic Resolve is Charged and Engaged in Combat before they are able to Activate, they are still able to Activate solely in order to provide a Stand Fast even though they would not normally be able to (though this is the only thing they can do in this Activation). However, a Hero who has been rendered unable to Activate by some other means (such as being Transfixed) still cannot provide a Stand Fast as normal."
+                    }
+                  ]
+                },
+                {
+                  "id": "heroic-accuracy",
+                  "title": "Heroic Accuracy (Shoot Phase) (67)",
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "text": "When a Hero declares a Heroic Accuracy, they gain the Sharpshooter special rule until the End Phase of the turn if they don’t already have it. Additionally, the Hero may re-roll any failed In The Way Tests when making a Shooting Attack. This includes any failed In The Way Tests when targeting a Cavalry model with a Shooting Attack to determine whether the target part of the model has been hit."
+                    },
+                    {
+                      "type": "paragraph",
+                      "text": "A Hero may not declare a Heroic Accuracy if they are Engaged in Combat or otherwise rendered unable to Activate."
+                    }
+                  ],
+                  "sections": [
+                    {
+                      "id": "take-aim",
+                      "title": "Take Aim",
+                      "blocks": [
+                        {
+                          "type": "paragraph",
+                          "text": "A Hero who is performing a Heroic Accuracy may choose to shout “Take Aim”. The Hero does not need to Shoot first (or at all if they don’t wish to) when they shout Take Aim."
+                        },
+                        {
+                          "type": "paragraph",
+                          "text": "If they do, all friendly models within 6\" of the Hero when they shout Take Aim are automatically affected, and may also re-roll any failed In The Way Tests when making a Shooting Attack. This includes any failed In The Way Tests when targeting a Cavalry model with a Shooting Attack to determine whether the target part of the model (usually the rider) has been hit."
+                        },
+                        {
+                          "type": "paragraph",
+                          "text": "Friendly models affected by the Take Aim of a friendly Hero do not need to target the same enemy model, and may Shoot as normal."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "heroic-challenge",
+                  "title": "Heroic Challenge (Fight Phase) (68, 69)",
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "text": "When a Hero declares a Heroic Challenge they must also declare an enemy Hero within 6\" of them, with the same Heroic Tier or higher, to be the target of the Heroic Challenge. If there is no enemy Hero within 6\" with the same Heroic Tier or higher, then the Hero cannot declare a Heroic Challenge."
+                    },
+                    {
+                      "type": "paragraph",
+                      "text": "Whilst Engaged in Combat with their target, the Hero gains a bonus of +1 Attack (both in the Duel Roll and when making Strikes) and a bonus of +1 To Wound when making Strikes against their target. Additionally, if they slay their target (i.e., they inflict the final Wound that causes them to be removed as a casualty) then the Hero immediately gains 1 Might Point, though this cannot take them above their starting limit."
+                    },
+                    {
+                      "type": "paragraph",
+                      "text": "The target of the Heroic Challenge can choose to either accept or decline the challenge. If they accept, then they get the same benefits as the Hero who declared the Heroic Challenge as listed above (as if the Hero who declared the Heroic Challenge was their target). Additionally, if the target chooses to accept, then when either Hero Activates, they must Charge each other if possible. A Hero who accepts a Heroic Challenge cannot declare a Heroic Challenge themselves until the Hero who challenged them is slain. If a Hero accepts a Heroic Challenge, no other Hero may declare a Heroic Challenge against either Hero involved in the Heroic Challenge until one of them has been slain."
+                    },
+                    {
+                      "type": "paragraph",
+                      "text": "If the target declines, then they gain none of the benefits listed; though the Hero who declared the Heroic Challenge will still gain them. Additionally, if the target declines, they cannot then themselves declare a Heroic Challenge against the Hero who they declined against."
+                    },
+                    {
+                      "type": "paragraph",
+                      "text": "A Hero who has already issued a Heroic Challenge against a target cannot declare another Heroic Challenge until their target has been removed as a casualty."
+                    }
+                  ]
+                },
+                {
+                  "id": "heroic-defence",
+                  "title": "Heroic Defence (Fight Phase)",
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "text": "A Hero model that declares a Heroic Defence will only suffer a Wound on the roll of a natural 6 in the ensuing Fight Phase, regardless of any special rules, modifiers, Brutal Power Attacks or the use of Might. If the Hero would normally be wounded on a 6+/4+, 6+/5+ or 6+/6+, then they will only be wounded if both rolls are a natural 6. Heroic Defence does not confer to a Hero model’s Mount if it has one."
+                    }
+                  ]
+                },
+                {
+                  "id": "heroic-strength",
+                  "title": "Heroic Strength (Fight Phase)",
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "text": "A Hero that declares a Heroic Strength will count their Strength characteristic as double (to a maximum of 10) when making Strikes until the End Phase of the turn."
+                    }
+                  ]
+                },
+                {
+                  "id": "heroic-strike",
+                  "title": "Heroic Strike (Fight Phase)",
+                  "blocks": [
+                    {
+                      "type": "paragraph",
+                      "text": "A Hero that declares a Heroic Strike will add D3 to their Fight Value for the duration of the Fight Phase (to a maximum of 10). This D3 is rolled at the start of the first Combat that the Hero is involved in that Fight Phase, and will last for the duration of the Fight Phase. This bonus is always applied after any other effects that would affect a model’s Fight Value."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "brutal-power-attacks",
+          "title": "Brutal Power Attacks",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "If a Monster wins a Combat, its controlling player may decide for the Monster to not make Strikes and instead use a Brutal Power Attack. There are three Brutal Power Attacks that can be used by any Monster, though some may have their own unique ones in their profile."
+            },
+            {
+              "type": "paragraph",
+              "text": "It’s worth pointing out that Brutal Power Attacks are not Strikes, and therefore are not affected by any special rules, Heroic Actions or other rules that will affect a model’s Strikes (e.g., Heroic Strength, a model being Trapped, a Morgul blade, Venom, etc.). Monster models that are Supporting cannot make Brutal Power Attacks."
+            },
+            {
+              "type": "paragraph",
+              "text": "A Monster model can only ever make a single Brutal Power Attack per turn, and should a Monster wish to use a Brutal Power Attack then it must do so before any other models in the Combat resolve any Strikes."
+            },
+            {
+              "type": "paragraph",
+              "text": "In the situation where there are multiple Monster models on the same side in the same Combat, and both wish to use a Brutal Power Attack, then the order in which these are resolved is chosen by their controlling player. However, there may be situations where as a result of a Brutal Power Attack, the other Monster will find themselves unable to use one of their own – these situations will be described where relevant."
+            }
+          ],
+          "sections": [
+            {
+              "id": "rend",
+              "title": "Rend (75)",
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "When a Monster uses this Brutal Power Attack, they must nominate one enemy model involved in the Combat to Rend (if this is a Cavalry model, you must choose either the rider or the Mount). The Monster makes a number of To Wound Rolls equal to its Attacks characteristic (including any modifiers to its Attacks) against the nominated model. When resolving these To Wound Rolls, use the nominated model’s Strength characteristic instead of their Defence when using the To Wound Chart."
+                }
+              ]
+            },
+            {
+              "id": "barge",
+              "title": "Barge",
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "When a Monster wishes to use this Brutal Power Attack, enemy models do not Back Away as normal. Instead, all enemy models involved in the Combat, plus any enemy models that were Supporting, must Back Away 3\" rather than 1\". The order and direction that these models Back Away is chosen by the Monster model’s controlling player. Models may still Make Way for losing models (which will be decided by the Monster model’s controlling player) and, if they do, may Back Away up to 3\" rather than usual 1\" in a direction chosen by the Monster model’s controlling player. When a model Makes Way in this manner, it will only do so the minimum amount it needs to in order to allow the model Backing Away to Back Away 3\". It won’t be forced to Make Way a full 3\" if only Making Way 1\" would suffice to allow the Barged model to Back Away 3\", for example, and won’t be automatically knocked Prone if it is able to Make Way the required amount."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Any models that cannot Back Away or Make Way the full 3\" are moved as far as possible and then knocked Prone. When doing this, if it is possible for a Monster to choose a direction for a model to Back Away or Make Way so that it goes the full 3\", then it must choose that direction – it can’t force a model to Back Away or Make Way less than 3\" and be knocked Prone if there was a way for it to Back Away the full 3\"."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Once a Monster model has used a Barge, the Combat immediately ends and no further Strikes or Brutal Power Attacks can be made."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Once all models have Backed Away, the Monster that made the Barge can then Move D3+3\" in any direction, following all the usual rules for Moving a model. It can even Charge again if it wishes, in which case it will fight again that Fight Phase in the ordinary way – i.e., in an order chosen by the player with Priority."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "A Monster cannot Barge in the same turn in which it participates in a Heroic Combat."
+                }
+              ]
+            },
+            {
+              "id": "hurl",
+              "title": "Hurl (76)",
+              "blocks": [
+                {
+                  "type": "paragraph",
+                  "text": "When a Monster wishes to use this Brutal Power Attack, it must nominate a single enemy model involved in the Combat before models Back Away – this is the model that will be Hurled. A Monster cannot nominate a model to be Hurled that has a Strength equal to or higher than their own. Then, all other enemy models (not the nominated model) Back Away as normal. The Monster will then Hurl the nominated model."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "To Hurl a model, follow the steps below:"
+                },
+                {
+                  "type": "orderedList",
+                  "items": [
+                    "The Monster rolls a D3 and adds the difference in Strength between the Monster and the nominated model – this is the Hurl Distance.",
+                    "The Monster must then take an Intelligence Test (if the Monster is also a Mount, it may use the Intelligence of its rider if it is better).",
+                    "If the test is passed, the Monster chooses an enemy model it can draw Line of Sight to, and within the Hurl Distance from itself, to Hurl the nominated model at – this is the target. A model can only be chosen as the target of a Hurl once per turn. If the test was failed, the opposing player may choose one of their models in Line of Sight of the Monster, and within the Hurl Distance, to be the target instead.",
+                    "The Hurled model suffers two Strength 6 hits (if it is a Cavalry model then both rider and Mount will suffer these hits), and if it was a Cavalry model then it is also Knocked Flying unless either the rider and/or Mount have a Strength of 6 or higher. If it is slain, skip the next step and move straight to step 6.",
+                    "If it survives, place it in base contact with the target model as close to the Monster as possible. If this is not possible, place the model in base contact with the target as close to the position it should have been in as possible. If there is nowhere to place the model in base contact with the target, move other models the minimum distance to make this possible. The Hurled model is then knocked Prone.",
+                    "The target model is then knocked Prone, if it has a Strength of 5 or less, and will suffer one Strength 6 hit (if it is a Cavalry model then both rider and Mount will suffer these hits). If it is a Cavalry model then it is also Knocked Flying.",
+                    "If there are no enemy models eligible to be the target, then the Monster may choose a point on the battlefield it can draw Line of Sight within the Hurl Distance instead. Place the Hurled model on the chosen point; it is then knocked Prone and suffers two Strength 6 hits."
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "text": "Once a Monster model has used a Hurl, the Combat immediately ends and no further Strikes or Brutal Power Attacks can be made."
+                },
+                {
+                  "type": "paragraph",
+                  "text": "A Monster cannot Hurl in the same turn in which it participates in a Heroic Combat."
+                }
+              ]
+            },
+            {
+              "id": "brutal-power-attacks-faq",
+              "title": "FAQ",
+              "blocks": [
+                {
+                  "type": "definitionList",
+                  "items": [
+                    {
+                      "term": "Q: If a model fighting a Monster is being Supported by a model with a pike, who is then themselves being Supported by another model with a pike, and the Monster slays the model it is in Combat with, does the Monster get to make its free Strike on each of the pikes that were Supporting? (p.89)",
+                      "text": "A: Yes."
+                    },
+                    {
+                      "term": "Q: Can a Monster choose to make a Brutal Power Attack if there is no possibility of making Strikes? For example: if a Monster was prone and wins a Combat, normally they would not be allowed to make Strikes as they have stood up, but could they make a Brutal Power Attack? Or, if the Monster is Transfixed and wins a Combat? (p.90)",
+                      "text": "A: No. A Monster may only perform a Brutal Power Attack if they would be able to make Strikes."
+                    },
+                    {
+                      "term": "Q: Do models with Monstrous Charge still knock to the ground if they are using a Brutal Power Attack? (p.128)",
+                      "text": "A: Yes. Note that while a Monster that uses the Rend Brutal Power Attack makes a number of To Wound Rolls equal to its Attacks characteristic (including any modifiers to its Attacks) against a nominated model, they do not make Strikes so will not double the number of Strikes they make against a Prone target."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "invisible",
+          "title": "Invisible",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "A model that is Invisible cannot be targeted by Magical Powers, Shooting Attacks or special rules and other models cannot draw Line of Sight to it."
+            },
+            {
+              "type": "paragraph",
+              "text": "An Invisible model has no Control Zone, and models (from either side) may Move through them as if they were not there, though they cannot finish their Move overlapping the Invisible model. An Invisible model may Move through other models (from either side) and may ignore enemy Control Zones; however, it may not end its Move overlapping another model."
+            },
+            {
+              "type": "paragraph",
+              "text": "If a model wishes to Charge an Invisible model, they must take an Intelligence Test, suffering a -1 penalty to the test for every full 1\" that the Invisible model is away from them. If this Intelligence Test is failed, the model may not Charge the Invisible model at all that turn, but may Charge a different target if they wish."
+            },
+            {
+              "type": "paragraph",
+              "text": "An Invisible model may declare Heroic Actions, but friendly models may never benefit from their Heroic Actions. So, an Invisible model cannot shout With Me, At the Double, Loose or Take Aim, and if they declare a Heroic Combat, other friendly models cannot Move as part of it. An Invisible model also cannot provide a Stand Fast."
+            },
+            {
+              "type": "paragraph",
+              "text": "During the Fight Phase, if an Invisible model is Engaged in Combat and has no other friendly models as part of the Combat, they will halve the Fight Value of all enemy models they are Engaged in Combat with. A friendly model cannot Support an Invisible model, and models cannot Support a model that is only fighting an Invisible model."
+            },
+            {
+              "type": "paragraph",
+              "text": "None of the above applies to Sauron or Ringwraith models –see the Will of Evil special rule for further details."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "credit": [
+    {
+      "type": "text",
+      "text": "Data provided by Now For Wrath. Check out their YouTube channel with Battle Reports and talks about the game "
+    },
+    {
+      "type": "url",
+      "text": "Here!",
+      "url": "https://www.youtube.com/@NowForWrathGaming"
+    }
+  ],
+  "game": "Middle-earth Strategy Battle Game 2024 — Shadow of Mordor / Shadow of War Custom",
+  "toggles": [
+    {
+      "property": "legacy",
+      "label": "Include Legacy",
+      "default": false
+    },
+    {
+      "property": "siegeEquipment",
+      "label": "Siege Equipment",
+      "default": false
+    }
+  ],
+  "scenarios": [
+    "Domination",
+    "To the Death!",
+    "Hold Ground",
+    "Destroy the Supplies",
+    "Reconnoitre",
+    "Fog of War",
+    "Capture & Control",
+    "Breakthrough",
+    "Stake a Claim",
+    "Lords of Battle",
+    "Assassination",
+    "Contest of Champions",
+    "Heirloom of Ages Past",
+    "Sites of Power",
+    "Command the Battlefield",
+    "Retrieval",
+    "Seize the Prizes",
+    "Treasure Hoard",
+    "Storm the Camp",
+    "Divide & Conquer",
+    "Escort the Wounded",
+    "Clash By Moonlight",
+    "Lead from the Front",
+    "Convergence",
+    "No Escape",
+    "Total Conquest",
+    "Take & Hold",
+    "Clash of Champions",
+    "Cornered",
+    "Duel of Wits"
+  ],
+  "scenarioScoring": [
+    {
+      "name": "Domination",
+      "points": [
+        [
+          {
+            "text": "Objectives with more models within 3\" than your opponent.",
+            "points": 1,
+            "increment": true,
+            "max": 5
+          }
+        ],
+        [
+          {
+            "text": "Objectives with at least twice as many models as your opponent within 3\" than your opponent.",
+            "points": 2,
+            "increment": true,
+            "max": 5
+          }
+        ],
+        [
+          {
+            "text": "Objectives where you are the only player within 3\".",
+            "points": 3,
+            "increment": true,
+            "max": 5
+          }
+        ],
+        [
+          {
+            "text": "The enemy general was wounded.",
+            "points": 1
+          },
+          {
+            "text": "The enemy general was killed.",
+            "points": 2
+          }
+        ],
+        [
+          {
+            "text": "The enemy Army is Broken.",
+            "points": 1
+          },
+          {
+            "text": "The enemy Army is Broken and your Army is not.",
+            "points": 3
+          }
+        ]
+      ]
+    },
+    {
+      "name": "To the Death!",
+      "points": [
+        [
+          {
+            "text": "The enemy General was wounded.",
+            "points": 1,
+            "increment": false
+          },
+          {
+            "text": "The enemy General was wounded and only has a single Wound remaining.",
+            "points": 3,
+            "increment": false
+          },
+          {
+            "text": "The enemy General was removed as a casualty.",
+            "points": 5,
+            "increment": false
+          }
+        ],
+        [
+          {
+            "text": "The enemy Army is Broken.",
+            "points": 3,
+            "increment": false
+          },
+          {
+            "text": "The enemy Army is Broken and your Army is not.",
+            "points": 5,
+            "increment": false
+          }
+        ],
+        [
+          {
+            "text": "Your opponent has no banners remaining.",
+            "points": 2,
+            "increment": false
+          }
+        ],
+        [
+          {
+            "text": "You have at least one banner remaining.",
+            "points": 1,
+            "increment": false
+          },
+          {
+            "text": "You have more banners remaining than your opponent.",
+            "points": 2,
+            "increment": false
+          }
+        ],
+        [
+          {
+            "text": "The enemy Army has been reduced to 25% of its starting models.",
+            "points": 3,
+            "increment": false
+          }
+        ],
+        [
+          {
+            "text": "Enemy Hero models that have been removed as a casualty (max 3).",
+            "points": 1,
+            "increment": true,
+            "max": 3
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Hold Ground",
+      "points": [
+        [
+          {
+            "text": "You have more models within 6\" of the objective than your opponent.",
+            "points": 4
+          },
+          {
+            "text": "You have twice as many models within 6\" of the objective than your opponent.",
+            "points": 8
+          },
+          {
+            "text": "You have three times as many models within 6\" of the objective than your opponent, or you are the only player to have models within 6\" of the objective.",
+            "points": 12
+          }
+        ],
+        [
+          {
+            "text": "The enemy General was wounded.",
+            "points": 1
+          },
+          {
+            "text": "The enemy General was removed as a casualty.",
+            "points": 3
+          }
+        ],
+        [
+          {
+            "text": "The enemy Army is Broken.",
+            "points": 1
+          },
+          {
+            "text": "The enemy Army is Broken and your Army is not.",
+            "points": 3
+          }
+        ],
+        [
+          {
+            "text": "Your opponent has no banners remaining (if they didn't have a banner to start with, you automatically score this).",
+            "points": 2
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Destroy the Supplies",
+      "points": [
+        [
+          {
+            "text": "Each enemy Supply Marker that has been destroyed",
+            "points": 3,
+            "increment": true,
+            "max": 3
+          }
+        ],
+        [
+          {
+            "text": "Each enemy Supply Marker not destroyed, but you have more models within 3\" than your opponent",
+            "points": 1,
+            "increment": true,
+            "max": 3
+          }
+        ],
+        [
+          {
+            "text": "You have destroyed more Supply Markers than your opponent",
+            "points": 1
+          }
+        ],
+        [
+          {
+            "text": "The enemy General was wounded",
+            "points": 1
+          },
+          {
+            "text": "The enemy General was removed as a casualty",
+            "points": 3
+          }
+        ],
+        [
+          {
+            "text": "The enemy Army is Broken",
+            "points": 1
+          },
+          {
+            "text": "The enemy Army is Broken and your Army is not",
+            "points": 3
+          }
+        ],
+        [
+          {
+            "text": "Your opponent has no banners remaining (if they didn't have a banner to start with, you automatically score this)",
+            "points": 2
+          }
+        ],
+        [
+          {
+            "text": "You have at least one banner remaining",
+            "points": 1
+          },
+          {
+            "text": "You have more banners remaining than your opponent",
+            "points": 2
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Reconnoitre",
+      "points": [
+        [
+          {
+            "text": "More of your models have escaped the battlefield via your opponent's board edge than vice versa",
+            "points": 4
+          },
+          {
+            "text": "At least two of your models and twice as many models as your opponent have escaped the board",
+            "points": 8
+          },
+          {
+            "text": "At least three of your models, and three times as many models as your opponent have escaped the board",
+            "points": 12
+          }
+        ],
+        [
+          {
+            "text": "Each of your Hero models that escapes the board (max 3)",
+            "points": 1,
+            "increment": true,
+            "max": 3
+          }
+        ],
+        [
+          {
+            "text": "The enemy General was wounded",
+            "points": 1
+          },
+          {
+            "text": "The enemy General was removed as a casualty",
+            "points": 2
+          }
+        ],
+        [
+          {
+            "text": "The enemy Army is Broken",
+            "points": 1
+          },
+          {
+            "text": "The enemy Army is Broken and your Army is not",
+            "points": 3
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Fog of War",
+      "points": [
+        [
+          {
+            "text": "Your secretly nominated Hero is still alive",
+            "points": 1
+          },
+          {
+            "text": "Your secretly nominated Hero is still alive and has suffered no Wounds",
+            "points": 3
+          },
+          {
+            "text": "Your secretly nominated Hero is still alive, has suffered no Wounds, and spent no Fate Points",
+            "points": 5
+          }
+        ],
+        [
+          {
+            "text": "You caused one or more Wounds on your secretly nominated opponent's Hero",
+            "points": 1
+          },
+          {
+            "text": "Your secretly nominated opponent's Hero was removed as a casualty",
+            "points": 3
+          },
+          {
+            "text": "Your secretly nominated opponent's Hero was removed as a casualty as a result of one of your models Wounding them in Combat",
+            "points": 5
+          }
+        ],
+        [
+          {
+            "text": "You have more models than your opponent on or in base contact with your secretly chosen terrain piece",
+            "points": 1
+          },
+          {
+            "text": "You have at least two models and twice as many as your opponent on or in base contact with your secretly chosen terrain piece",
+            "points": 3
+          },
+          {
+            "text": "Your opponent has no models on or in base contact with your secretly chosen terrain piece and you have at least two",
+            "points": 5
+          }
+        ],
+        [
+          {
+            "text": "The enemy General was wounded",
+            "points": 1
+          },
+          {
+            "text": "The enemy General was removed as a casualty",
+            "points": 2
+          }
+        ],
+        [
+          {
+            "text": "The enemy Army is Broken",
+            "points": 1
+          },
+          {
+            "text": "The enemy Army is Broken and your Army is not",
+            "points": 3
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Capture & Control",
+      "points": [
+        [
+          {
+            "text": "Each Objective Marker under your control",
+            "points": 3,
+            "increment": true,
+            "max": 5
+          }
+        ],
+        [
+          {
+            "text": "The enemy General was wounded",
+            "points": 1
+          },
+          {
+            "text": "The enemy General was removed as a casualty",
+            "points": 3
+          }
+        ],
+        [
+          {
+            "text": "The enemy Army is Broken",
+            "points": 1
+          },
+          {
+            "text": "The enemy Army is Broken and your Army is not",
+            "points": 2
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Breakthrough",
+      "points": [
+        [
+          {
+            "text": "More friendly models than enemy models within 3\" of the Objective Marker in your own deployment zone",
+            "points": 1
+          }
+        ],
+        [
+          {
+            "text": "For each Objective Marker on the centreline, more friendly models than enemy models within 3\"",
+            "points": 1,
+            "increment": true,
+            "max": 2
+          }
+        ],
+        [
+          {
+            "text": "For each Objective Marker on the centreline, at least one friendly model and no enemy models within 3\"",
+            "points": 3,
+            "increment": true,
+            "max": 2
+          }
+        ],
+        [
+          {
+            "text": "More friendly models than enemy models within 3\" of the Objective Marker in your opponent's deployment zone",
+            "points": 3
+          },
+          {
+            "text": "At least one friendly model and no enemy models within 3\" of the Objective Marker in your opponent's deployment zone",
+            "points": 5
+          }
+        ],
+        [
+          {
+            "text": "The enemy General was wounded",
+            "points": 1
+          },
+          {
+            "text": "The enemy General was removed as a casualty",
+            "points": 2
+          }
+        ],
+        [
+          {
+            "text": "The enemy Army is Broken",
+            "points": 1
+          },
+          {
+            "text": "The enemy Army is Broken and your Army is not",
+            "points": 2
+          }
+        ],
+        [
+          {
+            "text": "Your opponent has no banners remaining (if they didn't have a banner to start with, you automatically score this)",
+            "points": 2
+          }
+        ],
+        [
+          {
+            "text": "The model with the highest points cost in your opponent's army (not their General) was wounded",
+            "points": 1
+          },
+          {
+            "text": "The model with the highest points cost in your opponent's army (not their General) was removed as a casualty",
+            "points": 2
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Stake a Claim",
+      "points": [
+        [
+          {
+            "text": "Fortification Points",
+            "points": 0,
+            "increment": true,
+            "max": 100
+          }
+        ],
+        [
+          {
+            "text": "You scored more Fortification Points than your opponent",
+            "points": 4
+          },
+          {
+            "text": "You scored at least twice as many Fortification Points as your opponent",
+            "points": 8
+          },
+          {
+            "text": "You scored at least three times as many Fortification Points as your opponent",
+            "points": 12
+          }
+        ],
+        [
+          {
+            "text": "The enemy General was wounded",
+            "points": 1
+          },
+          {
+            "text": "The enemy General was removed as a casualty",
+            "points": 3
+          }
+        ],
+        [
+          {
+            "text": "The enemy Army is Broken",
+            "points": 1
+          },
+          {
+            "text": "The enemy Army is Broken and your Army is not",
+            "points": 3
+          }
+        ],
+        [
+          {
+            "text": "You control the most Objective Markers",
+            "points": 2
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Lords of Battle",
+      "points": [
+        [
+          {
+            "text": "Your Wound Tally is greater than your opponent's",
+            "points": 4
+          },
+          {
+            "text": "Your Wound Tally is at least twice as large as your opponent's",
+            "points": 8
+          },
+          {
+            "text": "Your Wound Tally is at least three times as large as your opponent's, or your opponent has no models left on the board",
+            "points": 12
+          }
+        ],
+        [
+          {
+            "text": "The enemy General was wounded",
+            "points": 1
+          },
+          {
+            "text": "The enemy General was removed as a casualty",
+            "points": 3
+          }
+        ],
+        [
+          {
+            "text": "The enemy Army is Broken",
+            "points": 1
+          },
+          {
+            "text": "The enemy Army is Broken and your Army is not",
+            "points": 3
+          }
+        ],
+        [
+          {
+            "text": "Each enemy Hero model that has been removed as a casualty (max 2)",
+            "points": 1,
+            "increment": true,
+            "max": 2
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Assassination",
+      "points": [
+        [
+          {
+            "text": "Your target has suffered one or more Wounds",
+            "points": 3
+          },
+          {
+            "text": "Your target has suffered one or more Wounds, and your Assassin caused at least one of those Wounds",
+            "points": 6
+          },
+          {
+            "text": "Your target has been slain",
+            "points": 9
+          },
+          {
+            "text": "Your target has been slain, and your Assassin caused the fatal Wound",
+            "points": 12
+          }
+        ],
+        [
+          {
+            "text": "The enemy General was wounded",
+            "points": 1
+          },
+          {
+            "text": "The enemy General was removed as a casualty",
+            "points": 3
+          }
+        ],
+        [
+          {
+            "text": "The enemy Army is Broken",
+            "points": 1
+          },
+          {
+            "text": "The enemy Army is Broken and your Army is not",
+            "points": 3
+          }
+        ],
+        [
+          {
+            "text": "Your Assassin is still alive",
+            "points": 1
+          }
+        ],
+        [
+          {
+            "text": "The model your opponent chose as their target is still alive",
+            "points": 1
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Contest of Champions",
+      "points": [
+        [
+          {
+            "text": "Your Champion has killed more models than your opponent's Champion",
+            "points": 4
+          },
+          {
+            "text": "Your Champion has killed at least two models and at least twice as many as your opponent's Champion",
+            "points": 8
+          },
+          {
+            "text": "Your Champion has killed at least three models and at least three times as many as your opponent's Champion",
+            "points": 12
+          }
+        ],
+        [
+          {
+            "text": "Your Champion kills the opposing Champion",
+            "points": 2
+          }
+        ],
+        [
+          {
+            "text": "The enemy Army is Broken",
+            "points": 1
+          },
+          {
+            "text": "The enemy Army is Broken and your Army is not",
+            "points": 3
+          }
+        ],
+        [
+          {
+            "text": "Your General is alive",
+            "points": 1
+          },
+          {
+            "text": "Your General is alive and has suffered no Wounds",
+            "points": 3
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Heirlooms of Ages Past",
+      "points": [
+        [
+          {
+            "text": "Your Army is in possession of the Heirloom",
+            "points": 8
+          },
+          {
+            "text": "No model from either Army is in possession of the Heirloom, but you have more models within 3\" of the Heirloom than your opponent",
+            "points": 4
+          }
+        ],
+        [
+          {
+            "text": "Each Objective Marker your Army has uncovered which has been revealed to be a decoy",
+            "points": 1,
+            "increment": true,
+            "max": 5
+          }
+        ],
+        [
+          {
+            "text": "The enemy Army is Broken",
+            "points": 1
+          },
+          {
+            "text": "The enemy Army is Broken and your Army is not",
+            "points": 3
+          }
+        ],
+        [
+          {
+            "text": "The enemy General was wounded",
+            "points": 1
+          },
+          {
+            "text": "The enemy General was removed as a casualty",
+            "points": 2
+          }
+        ],
+        [
+          {
+            "text": "You have at least one banner remaining",
+            "points": 1
+          },
+          {
+            "text": "You have more banners remaining than your opponent",
+            "points": 2
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Sites of Power",
+      "points": [
+        [
+          {
+            "text": "For each Objective Marker, you have more models within 3\" than your opponent",
+            "points": 1,
+            "increment": true,
+            "max": 4
+          }
+        ],
+        [
+          {
+            "text": "For each Objective Marker, you have at least twice as many models within 3\" as your opponent",
+            "points": 2,
+            "increment": true,
+            "max": 4
+          }
+        ],
+        [
+          {
+            "text": "For each Objective Marker, you are the only player to have models within 3\"",
+            "points": 3,
+            "increment": true,
+            "max": 4
+          }
+        ],
+        [
+          {
+            "text": "The enemy Army is Broken",
+            "points": 1
+          },
+          {
+            "text": "The enemy Army is Broken and your Army is not",
+            "points": 3
+          }
+        ],
+        [
+          {
+            "text": "The enemy General was wounded",
+            "points": 1
+          },
+          {
+            "text": "The enemy General was removed as a casualty",
+            "points": 3
+          }
+        ],
+        [
+          {
+            "text": "The model with the highest points cost in your opponent's army (not their General) was wounded",
+            "points": 1
+          },
+          {
+            "text": "The most expensive model that is not their General was removed as a casualty",
+            "points": 2
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Command the Battlefield",
+      "points": [
+        [
+          {
+            "text": "For each quarter of the board, you have more friendly models wholly within it than enemy models",
+            "points": 1,
+            "increment": true,
+            "max": 4
+          }
+        ],
+        [
+          {
+            "text": "For each quarter of the board, you have at least double the number of friendly models wholly within it than enemy models",
+            "points": 2,
+            "increment": true,
+            "max": 4
+          }
+        ],
+        [
+          {
+            "text": "For each quarter of the board, only friendly models and no enemy models wholly within it",
+            "points": 3,
+            "increment": true,
+            "max": 4
+          }
+        ],
+        [
+          {
+            "text": "The enemy Army is Broken",
+            "points": 1
+          },
+          {
+            "text": "The enemy Army is Broken and your Army is not",
+            "points": 3
+          }
+        ],
+        [
+          {
+            "text": "The enemy General was wounded",
+            "points": 1
+          },
+          {
+            "text": "The enemy General was removed as a casualty",
+            "points": 3
+          }
+        ],
+        [
+          {
+            "text": "The enemy Army has been reduced to 25% of its starting models",
+            "points": 2
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Retrieval",
+      "points": [
+        [
+          {
+            "text": "Your opponent's Relic has moved from its original position",
+            "points": 3
+          },
+          {
+            "text": "You have retrieved your opponent's Relic",
+            "points": 6
+          },
+          {
+            "text": "You have retrieved your opponent's Relic and the model holding it is in your deployment zone",
+            "points": 9
+          },
+          {
+            "text": "You have retrieved your opponent's Relic and moved it off the board via either of the board edges in your deployment zone",
+            "points": 12
+          }
+        ],
+        [
+          {
+            "text": "The enemy Army is Broken",
+            "points": 1
+          },
+          {
+            "text": "The enemy Army is Broken and your Army is not",
+            "points": 3
+          }
+        ],
+        [
+          {
+            "text": "The enemy General was wounded",
+            "points": 1
+          },
+          {
+            "text": "The enemy General was removed as a casualty",
+            "points": 2
+          }
+        ],
+        [
+          {
+            "text": "Each enemy Hero model that has been removed as a casualty (max 3)",
+            "points": 1,
+            "increment": true,
+            "max": 3
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Seize the Prizes",
+      "points": [
+        [
+          {
+            "text": "Each Artefact carried by one of your models within your own board half",
+            "points": 2,
+            "increment": true,
+            "max": 3
+          },
+          {
+            "text": "Each Artefact carried by one of your models within your opponent's board half",
+            "points": 3,
+            "increment": true,
+            "max": 3
+          },
+          {
+            "text": "Each Artefact carried off the board via your opponent's board edge",
+            "points": 4,
+            "increment": true,
+            "max": 3
+          }
+        ],
+        [
+          {
+            "text": "For each Artefact still on the board but not in possession of any model, you have the most models within 3\" of the Artefact",
+            "points": 1,
+            "increment": true,
+            "max": 3
+          }
+        ],
+        [
+          {
+            "text": "The enemy Army is Broken",
+            "points": 1
+          },
+          {
+            "text": "The enemy Army is Broken and your Army is not",
+            "points": 3
+          }
+        ],
+        [
+          {
+            "text": "The enemy General was wounded",
+            "points": 1
+          },
+          {
+            "text": "The enemy General was removed as a casualty",
+            "points": 3
+          }
+        ],
+        [
+          {
+            "text": "You have at least one banner remaining",
+            "points": 1
+          },
+          {
+            "text": "You have more banners remaining than your opponent",
+            "points": 2
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Treasure Hoard",
+      "points": [
+        [
+          {
+            "text": "Each Artefact in the possession of a friendly model",
+            "points": 2,
+            "increment": true,
+            "max": 6
+          }
+        ],
+        [
+          {
+            "text": "The enemy Army is Broken",
+            "points": 1
+          },
+          {
+            "text": "The enemy Army is Broken and your Army is not",
+            "points": 3
+          }
+        ],
+        [
+          {
+            "text": "The enemy General was wounded",
+            "points": 1
+          },
+          {
+            "text": "The enemy General was removed as a casualty",
+            "points": 3
+          }
+        ],
+        [
+          {
+            "text": "At least one model wholly within 12\" of your opponent's board edge",
+            "points": 1
+          },
+          {
+            "text": "At least three models wholly within 12\" of your opponent's board edge",
+            "points": 2
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Storm the Camp",
+      "points": [
+        [
+          {
+            "text": "Your Army captured your opponent's camp",
+            "points": 5
+          },
+          {
+            "text": "Your Army captured your opponent's camp and you have a Hero model in your opponent's camp",
+            "points": 7
+          },
+          {
+            "text": "Your Army captured your opponent's camp and you have a model with a banner in your opponent's camp",
+            "points": 10
+          }
+        ],
+        [
+          {
+            "text": "The enemy Army is Broken",
+            "points": 1
+          },
+          {
+            "text": "The enemy Army is Broken and your Army is not",
+            "points": 2
+          }
+        ],
+        [
+          {
+            "text": "The enemy General was wounded",
+            "points": 1
+          },
+          {
+            "text": "The enemy General was removed as a casualty",
+            "points": 3
+          }
+        ],
+        [
+          {
+            "text": "Each model you have in your opponent's camp (max 5)",
+            "points": 1,
+            "increment": true,
+            "max": 5
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Divide & Conquer",
+      "points": [
+        [
+          {
+            "text": "More friendly models than enemy models within 3\" of the central objective",
+            "points": 3
+          },
+          {
+            "text": "At least one friendly model and no enemy models within 3\" of the central objective",
+            "points": 6
+          }
+        ],
+        [
+          {
+            "text": "For each other objective, more friendly models than enemy models within 3\"",
+            "points": 1,
+            "increment": true,
+            "max": 2
+          },
+          {
+            "text": "For each other objective, at least one friendly model and no enemy models within 3\"",
+            "points": 3,
+            "increment": true,
+            "max": 2
+          }
+        ],
+        [
+          {
+            "text": "The enemy Army is Broken",
+            "points": 1
+          },
+          {
+            "text": "The enemy Army is Broken and your Army is not",
+            "points": 3
+          }
+        ],
+        [
+          {
+            "text": "The enemy General was wounded",
+            "points": 1
+          },
+          {
+            "text": "The enemy General was removed as a casualty",
+            "points": 3
+          }
+        ],
+        [
+          {
+            "text": "At the end of the game your General is within 3\" of the central objective",
+            "points": 2
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Escort the Wounded",
+      "points": [
+        [
+          {
+            "text": "Each wounded ally being carried by a friendly model in your opponent's board half",
+            "points": 2,
+            "increment": true,
+            "max": 3
+          },
+          {
+            "text": "Each wounded ally that has been rescued",
+            "points": 4,
+            "increment": true,
+            "max": 3
+          }
+        ],
+        [
+          {
+            "text": "The enemy Army is Broken",
+            "points": 1
+          },
+          {
+            "text": "The enemy Army is Broken and your Army is not",
+            "points": 3
+          }
+        ],
+        [
+          {
+            "text": "The enemy General was wounded",
+            "points": 1
+          },
+          {
+            "text": "The enemy General was removed as a casualty",
+            "points": 3
+          }
+        ],
+        [
+          {
+            "text": "Your opponent has no banners remaining (if they didn't have a banner to start with, you automatically score this)",
+            "points": 2
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Clash By Moonlight",
+      "points": [
+        [
+          {
+            "text": "The enemy Army is Broken",
+            "points": 1
+          },
+          {
+            "text": "The enemy Army is Broken and your Army is not",
+            "points": 4
+          }
+        ],
+        [
+          {
+            "text": "The enemy General was wounded",
+            "points": 1
+          },
+          {
+            "text": "The enemy General was removed as a casualty",
+            "points": 4
+          }
+        ],
+        [
+          {
+            "text": "Your opponent has no banners remaining (if they didn't have a banner to start with, you automatically score this)",
+            "points": 2
+          }
+        ],
+        [
+          {
+            "text": "You have at least one banner remaining",
+            "points": 1
+          },
+          {
+            "text": "You have more banners remaining than your opponent",
+            "points": 2
+          }
+        ],
+        [
+          {
+            "text": "Each enemy Hero model that has been removed as a casualty (max 4)",
+            "points": 1,
+            "increment": true,
+            "max": 4
+          }
+        ],
+        [
+          {
+            "text": "You have more models within 3\" of the objective than your opponent",
+            "points": 1
+          },
+          {
+            "text": "You have twice as many models within 3\" of the objective than your opponent or you are the only player with models within 3\" of the objective",
+            "points": 4
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Lead from the Front",
+      "points": [
+        [
+          {
+            "text": "Each Objective Marker with both friendly and enemy Hero models within 3\", but only if any friendly Hero model is of a higher Heroic Tier than any enemy Hero model",
+            "points": 2,
+            "increment": true,
+            "max": 3
+          }
+        ],
+        [
+          {
+            "text": "Each Objective Marker with a friendly Hero model and no enemy Hero models within 3\"",
+            "points": 4,
+            "increment": true,
+            "max": 3
+          }
+        ],
+        [
+          {
+            "text": "The enemy Army is Broken",
+            "points": 1
+          },
+          {
+            "text": "The enemy Army is Broken and your Army is not",
+            "points": 3
+          }
+        ],
+        [
+          {
+            "text": "The enemy General was wounded",
+            "points": 1
+          },
+          {
+            "text": "The enemy General was removed as a casualty",
+            "points": 3
+          }
+        ],
+        [
+          {
+            "text": "Your opponent has no banners remaining (if they didn't have a banner to start with, you automatically score this)",
+            "points": 2
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Convergence",
+      "points": [
+        [
+          {
+            "text": "Each Heirloom held by a friendly model",
+            "points": 1,
+            "increment": true,
+            "max": 4
+          }
+        ],
+        [
+          {
+            "text": "Each Heirloom held by a friendly model within 6\" of the centre of the battlefield",
+            "points": 3,
+            "increment": true,
+            "max": 4
+          }
+        ],
+        [
+          {
+            "text": "You have more models within 6\" of the centre of the battlefield than your opponent",
+            "points": 2
+          }
+        ],
+        [
+          {
+            "text": "The enemy Army is Broken",
+            "points": 1
+          },
+          {
+            "text": "The enemy Army is Broken and your Army is not",
+            "points": 3
+          }
+        ],
+        [
+          {
+            "text": "The enemy General was wounded",
+            "points": 1
+          },
+          {
+            "text": "The enemy General was removed as a casualty",
+            "points": 3
+          }
+        ]
+      ]
+    },
+    {
+      "name": "No Escape",
+      "points": [
+        [
+          {
+            "text": "The enemy Leader was wounded during the game",
+            "points": 1
+          },
+          {
+            "text": "The enemy Leader has been wounded, and only has a single Wound remaining",
+            "points": 3
+          },
+          {
+            "text": "The enemy Leader was removed as a casualty",
+            "points": 5
+          }
+        ],
+        [
+          {
+            "text": "The enemy Army is Broken",
+            "points": 3
+          },
+          {
+            "text": "The enemy Army is Broken and your Army is not",
+            "points": 5
+          }
+        ],
+        [
+          {
+            "text": "The opposing team has no banners remaining",
+            "points": 2
+          }
+        ],
+        [
+          {
+            "text": "Your Army has at least one banner remaining",
+            "points": 1
+          },
+          {
+            "text": "Your army has more banners remaining than the opposing team",
+            "points": 2
+          }
+        ],
+        [
+          {
+            "text": "You killed the General of the Secondary Force",
+            "points": 3
+          }
+        ],
+        [
+          {
+            "text": "Each Hero model within 3\" of the centre of the board",
+            "points": 1,
+            "increment": true,
+            "max": 3
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Total Conquest",
+      "points": [
+        [
+          {
+            "text": "Each Objective Marker with more models within 3\" than the opposing team",
+            "points": 1,
+            "increment": true
+          }
+        ],
+        [
+          {
+            "name": "Each Objective Marker with at least twice as many models as the opposing team within 3\"",
+            "points": 2,
+            "increment": true
+          }
+        ],
+        [
+          {
+            "text": "Each Objective Marker where your team is the only team with models within 3\"",
+            "points": 3,
+            "increment": true
+          }
+        ],
+        [
+          {
+            "text": "The enemy Army is Broken",
+            "points": 1
+          },
+          {
+            "text": "The enemy Army is Broken and your Army is not",
+            "points": 2
+          }
+        ],
+        [
+          {
+            "text": "The enemy leader was wounded",
+            "points": 1
+          },
+          {
+            "text": "The enemy leader was removed as a casualty",
+            "points": 3
+          }
+        ]
+      ]
+    }
+  ],
+  "stats": [
+    {
+      "name": "Movement",
+      "abbreviation": "Mv",
+      "trail": "\"",
+      "excludeFromQuiz": true
+    },
+    {
+      "name": "Fight",
+      "abbreviation": "FV"
+    },
+    {
+      "name": "Shoot",
+      "abbreviation": "SV",
+      "trail": "+",
+      "isHighWorse": true
+    },
+    {
+      "name": "Strength",
+      "abbreviation": "S"
+    },
+    {
+      "name": "Defence",
+      "abbreviation": "D"
+    },
+    {
+      "name": "Attack",
+      "abbreviation": "A"
+    },
+    {
+      "name": "Wounds",
+      "abbreviation": "W",
+      "expendable": true,
+      "onlyExpendableIfGreaterThanOne": true
+    },
+    {
+      "name": "Courage",
+      "abbreviation": "C",
+      "trail": "+",
+      "isHighWorse": true
+    },
+    {
+      "name": "Intelligence",
+      "abbreviation": "I",
+      "trail": "+",
+      "isHighWorse": true
+    },
+    {
+      "name": "",
+      "abbreviation": "|",
+      "showIf": "Might"
+    },
+    {
+      "name": "Might",
+      "abbreviation": "M",
+      "expendable": true
+    },
+    {
+      "name": "Will",
+      "abbreviation": "W",
+      "expendable": true
+    },
+    {
+      "name": "Fate",
+      "abbreviation": "F",
+      "expendable": true
+    }
+  ],
+  "dataTableKeys": [
+    "heroes",
+    "warriors"
+  ],
+  "quiz": {
+    "seedKey": "mesbg-2024",
+    "sources": [
+      "heroes",
+      "warriors"
+    ],
+    "questionsPerDay": 10,
+    "minStatsOnUnit": 5,
+    "timezone": "UTC",
+    "epoch": "2026-07-29-no-zero-stats",
+    "excludeStatsBySource": {
+      "warriors": [
+        "Attack",
+        "Wounds"
+      ]
+    }
+  },
+  "limits": [
+    {
+      "type": "bow",
+      "property": "warriors",
+      "byFaction": true,
+      "maximumPercentage": 33.33,
+      "roundUp": true,
+      "label": "warrior bows"
+    },
+    {
+      "type": "throwingWeapon",
+      "property": "warriors",
+      "byFaction": true,
+      "maximumPercentage": 33.33,
+      "roundUp": true,
+      "label": "warrior throwing weapons"
+    }
+  ],
+  "counts": [
+    "bow",
+    {
+      "property": "throwingWeapon",
+      "label": "throwing weapon"
+    }
+  ],
+  "calculations": [
+    {
+      "label": "Broken",
+      "property": "models",
+      "percentage": 50.00001,
+      "roundup": true,
+      "suffix": " killed"
+    },
+    {
+      "label": "Quartered",
+      "property": "models",
+      "percentage": 25,
+      "roundup": false,
+      "suffix": " remaining"
+    },
+    {
+      "label": "Might",
+      "properties": [
+        "might"
+      ]
+    }
+  ],
+  "validations": [
+    {
+      "type": "propertyPerTier",
+      "property": "keywords",
+      "value": [
+        "Siege Engine",
+        "Siege Weapon"
+      ],
+      "maxPer": 1,
+      "tier": 3,
+      "message": "You must have one hero of at least Hero of Fortitude for each Siege keyword."
+    }
+  ],
+  "leaderConfig": {
+    "elementPropertyName": "heroes",
+    "usesProperty": "heroicTier"
+  },
+  "additionalPrint": [
+    {
+      "propertyName": "wargear",
+      "label": "Wargear",
+      "dataSource": "gear"
+    },
+    {
+      "propertyName": "heroicActions",
+      "label": "Heroic Actions"
+    },
+    {
+      "propertyName": "specialRules",
+      "label": "Special Rules",
+      "dataSource": "keywords"
+    }
+  ],
+  "additionalDb": [
+    {
+      "propertyName": "magicalPowers",
+      "label": "Magical Powers"
+    }
+  ],
+  "elements": [
+    {
+      "propertyName": "factions",
+      "label": "Faction",
+      "type": "faction",
+      "dataSource": "factions",
+      "removeWhenNotPrimary": [
+        "armyBonus"
+      ],
+      "divisionProperty": "alignment",
+      "divisions": [
+        "Good",
+        "Evil"
+      ],
+      "children": [
+        {
+          "propertyName": "additionalRules",
+          "label": "Additional Rules: ",
+          "type": "static",
+          "bullet": true
+        },
+        {
+          "propertyName": "armyBonuses",
+          "label": "",
+          "type": "static",
+          "dataSource": "armyBonuses"
+        },
+        {
+          "propertyName": "specialRules",
+          "type": "static",
+          "label": "Related Special Rules: ",
+          "bullet": true,
+          "dataSource": "keywords"
+        },
+        {
+          "propertyName": "tribes",
+          "label": "Tribes",
+          "type": "checkbox",
+          "dataSource": "tribes"
+        },
+        {
+          "propertyName": "heroes",
+          "dataSource": "heroes",
+          "label": "Hero",
+          "type": "main",
+          "tierProperty": "heroicTier",
+          "tierData": "heroicTiers",
+          "tiers": [
+            {
+              "name": "Hero of Legend - Sauron",
+              "maximumChildren": {
+                "warriors": 24
+              },
+              "rank": 1
+            },
+            {
+              "name": "Hero of Legend",
+              "maximumChildren": {
+                "warriors": 18
+              },
+              "rank": 1
+            },
+            {
+              "name": "Hero of Valour",
+              "maximumChildren": {
+                "warriors": 15
+              },
+              "rank": 2
+            },
+            {
+              "name": "Hero of Fortitude",
+              "maximumChildren": {
+                "warriors": 12
+              },
+              "rank": 3
+            },
+            {
+              "name": "Minor Hero",
+              "maximumChildren": {
+                "warriors": 6
+              },
+              "rank": 4
+            },
+            {
+              "name": "Independent Hero",
+              "maximumChildren": {
+                "warriors": 0
+              },
+              "canBeChild": true,
+              "rank": 5
+            }
+          ],
+          "children": [
+            {
+              "singleKey": "warrior",
+              "dataSource": "warriors",
+              "propertyName": "warriors",
+              "label": "Model",
+              "searchLabel": "Warrior",
+              "type": "list",
+              "children": [
+                {
+                  "propertyName": "magicalPowers",
+                  "label": "Magical Powers",
+                  "type": "static",
+                  "dataSource": "magicalPowers",
+                  "stats": [
+                    {
+                      "name": "Magical Power",
+                      "propertyName": "name"
+                    },
+                    {
+                      "name": "Range",
+                      "propertyName": "range",
+                      "trail": "\"",
+                      "definedOnUnit": true
+                    },
+                    {
+                      "name": "Casting",
+                      "propertyName": "casting",
+                      "trail": "+",
+                      "definedOnUnit": true
+                    },
+                    {
+                      "name": "Duration",
+                      "propertyName": "duration",
+                      "inTooltip": true,
+                      "printDisplay": "parentheses"
+                    },
+                    {
+                      "name": "Definition",
+                      "propertyName": "definition",
+                      "inTooltip": true
+                    }
+                  ]
+                },
+                {
+                  "propertyName": "options",
+                  "type": "checkbox",
+                  "dataSource": "gear",
+                  "disallowedMultiples": [
+                    "bow",
+                    "mount",
+                    "armour",
+                    "shield"
+                  ]
+                },
+                {
+                  "propertyName": "wargear",
+                  "label": "Wargear",
+                  "type": "static",
+                  "dataSource": "gear",
+                  "disallowedMultiples": [
+                    "bow",
+                    "mount",
+                    "armour",
+                    "shield"
+                  ],
+                  "children": [
+                    {
+                      "propertyName": "wargear",
+                      "label": "Wargear",
+                      "type": "static",
+                      "dataSource": "gear"
+                    },
+                    {
+                      "label": "Special Rules",
+                      "propertyName": "specialRules",
+                      "type": "static",
+                      "dataSource": "keywords"
+                    },
+                    {
+                      "propertyName": "race",
+                      "label": "Race",
+                      "type": "static"
+                    },
+                    {
+                      "propertyName": "faction",
+                      "label": "Faction",
+                      "type": "static"
+                    },
+                    {
+                      "propertyName": "unitType",
+                      "label": "Unit Type",
+                      "type": "static"
+                    },
+                    {
+                      "propertyName": "baseSize",
+                      "label": "Base Size",
+                      "type": "static"
+                    }
+                  ]
+                },
+                {
+                  "propertyName": "specialRules",
+                  "type": "static",
+                  "label": "Special Rules",
+                  "dataSource": "keywords",
+                  "children": [
+                    {
+                      "label": "Special Rules",
+                      "propertyName": "specialRules",
+                      "type": "static",
+                      "dataSource": "keywords"
+                    }
+                  ]
+                },
+                {
+                  "propertyName": "heroicActions",
+                  "label": "Heroic Actions",
+                  "type": "static"
+                },
+                {
+                  "propertyName": "race",
+                  "label": "Race",
+                  "type": "static"
+                },
+                {
+                  "propertyName": "faction",
+                  "label": "Faction",
+                  "type": "static"
+                },
+                {
+                  "propertyName": "unitType",
+                  "label": "Unit Type",
+                  "type": "static"
+                },
+                {
+                  "propertyName": "baseSize",
+                  "label": "Base Size",
+                  "type": "static"
+                }
+              ]
+            },
+            {
+              "propertyName": "wargear",
+              "label": "Wargear",
+              "type": "static",
+              "dataSource": "gear",
+              "disallowedMultiples": [
+                "bow",
+                "mount",
+                "armour",
+                "shield"
+              ]
+            },
+            {
+              "propertyName": "options",
+              "type": "checkbox",
+              "dataSource": "gear",
+              "disallowedMultiples": [
+                "bow",
+                "mount",
+                "armour",
+                "shield"
+              ],
+              "children": [
+                {
+                  "label": "Special Rules",
+                  "propertyName": "specialRules",
+                  "type": "static",
+                  "dataSource": "keywords"
+                },
+                {
+                  "propertyName": "race",
+                  "label": "Race",
+                  "type": "static"
+                },
+                {
+                  "propertyName": "faction",
+                  "label": "Faction",
+                  "type": "static"
+                },
+                {
+                  "propertyName": "unitType",
+                  "label": "Unit Type",
+                  "type": "static"
+                },
+                {
+                  "propertyName": "baseSize",
+                  "label": "Base Size",
+                  "type": "static"
+                },
+                {
+                  "propertyName": "heroicActions",
+                  "label": "Heroic Actions",
+                  "type": "static"
+                },
+                {
+                  "propertyName": "wargear",
+                  "label": "Wargear",
+                  "type": "static",
+                  "dataSource": "gear"
+                }
+              ]
+            },
+            {
+              "propertyName": "specialRules",
+              "label": "Special Rules",
+              "type": "static",
+              "dataSource": "keywords",
+              "children": [
+                {
+                  "label": "Special Rules",
+                  "propertyName": "specialRules",
+                  "type": "static",
+                  "dataSource": "keywords"
+                }
+              ]
+            },
+            {
+              "propertyName": "heroicActions",
+              "label": "Heroic Actions",
+              "type": "static"
+            },
+            {
+              "propertyName": "range",
+              "label": "Range",
+              "type": "static"
+            },
+            {
+              "propertyName": "race",
+              "label": "Race",
+              "type": "static"
+            },
+            {
+              "propertyName": "faction",
+              "label": "Faction",
+              "type": "static"
+            },
+            {
+              "propertyName": "unitType",
+              "label": "Unit Type",
+              "type": "static"
+            },
+            {
+              "propertyName": "baseSize",
+              "label": "Base Size",
+              "type": "static"
+            },
+            {
+              "propertyName": "magicalPowers",
+              "label": "Magical Powers",
+              "type": "static",
+              "dataSource": "magicalPowers",
+              "stats": [
+                {
+                  "name": "Magical Power",
+                  "propertyName": "name"
+                },
+                {
+                  "name": "Range",
+                  "propertyName": "range",
+                  "trail": "\"",
+                  "definedOnUnit": true
+                },
+                {
+                  "name": "Casting",
+                  "propertyName": "casting",
+                  "trail": "+",
+                  "definedOnUnit": true
+                },
+                {
+                  "name": "Duration",
+                  "propertyName": "duration",
+                  "inTooltip": true,
+                  "printDisplay": "parentheses"
+                },
+                {
+                  "name": "Definition",
+                  "propertyName": "definition",
+                  "inTooltip": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "propertyName": "siegeEquipment",
+          "dataSource": "siegeEquipment",
+          "label": "Siege Equipment",
+          "type": "main",
+          "ignoreFactionFilter": true,
+          "excludeFromModelCount": true,
+          "excludeFromTiers": true,
+          "allowIncrement": true,
+          "tierProperty": "siegeRole",
+          "tierSource": "root",
+          "tierFilterChips": true,
+          "groupArmyByTier": true,
+          "prettyViewSortByTier": true,
+          "prettyViewStyle": "pills",
+          "tiers": [
+            {
+              "name": "Attacker Equipment",
+              "rank": 1
+            },
+            {
+              "name": "Defender Equipment",
+              "rank": 2
+            }
+          ],
+          "children": [
+            {
+              "propertyName": "specialRules",
+              "label": "Special Rules",
+              "type": "static",
+              "dataSource": "keywords"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "data": {
+    "factions": [
+      {
+        "name": "Black Gate Garrison",
+        "alignment": "good",
+        "additionalRules": [
+          "A Black Gate Garrison Army must include Talion, Captain of the Watch, who must be the Army's General.",
+          "A Black Gate Garrison Army must include Talion's Family."
+        ],
+        "armyBonuses": [
+          "For Hope of Family",
+          "Stalwart Defenders",
+          "An Army of Rangers"
+        ],
+        "requiredChildren": [
+          {
+            "name": "Talion, Captain of the Watch",
+            "points": 100,
+            "mustBeLeader": true,
+            "elementPropertyName": "heroes"
+          },
+          {
+            "name": "Talion's Family",
+            "points": 80,
+            "elementPropertyName": "heroes"
+          }
+        ],
+        "adjustLimits": [
+          {
+            "type": "bow",
+            "percentage": 100
+          }
+        ]
+      },
+      {
+        "name": "Outcasts of Udûn",
+        "alignment": "good",
+        "additionalRules": [
+          "An Outcasts of Udûn Army must include Hirgon of Tarnost.",
+          "Orc Warrior and Uruk-hai Warrior models may only be included in warbands of an Uruk-hai Hero.",
+          "Black Gate Rangers do not count towards this Army's Bow Limit.",
+          "Gollum may only be included in your Army if Talion, the Bright Lord is also taken.",
+          "Ratbag, the Coward may only be included in your Army if Talion, the Bright Lord is also taken."
+        ],
+        "armyBonuses": [
+          "Free the Prisoners",
+          "Convient Alliance"
+        ],
+        "requiredChildren": [
+          {
+            "name": "Hirgon of Tarnost",
+            "points": 100,
+            "elementPropertyName": "heroes"
+          }
+        ]
+      },
+      {
+        "name": "The Freefolk of Nûrn",
+        "alignment": "good",
+        "additionalRules": [
+          "A Freefolk of Nûrn Army must include Lithariel, Leader of the Tribesmen.",
+          "A Freefolk of Nûrn Army may have up to 50% of its Warrior models armed with throwing weapons rather than the usual 33%."
+        ],
+        "armyBonuses": [
+          "Salt in the Blood",
+          "Break the Chains"
+        ],
+        "requiredChildren": [
+          {
+            "name": "Lithariel, Leader of the Tribesmen",
+            "points": 65,
+            "elementPropertyName": "heroes"
+          }
+        ],
+        "profileOptions": {
+          "Talion, the Bright Lord": [
+            {
+              "name": "Caragor",
+              "points": 30
+            },
+            {
+              "name": "Heavy armour",
+              "points": 5
+            }
+          ],
+          "Tribesman Warden": [
+            {
+              "name": "Exchange light armour for armour",
+              "points": 5
+            },
+            {
+              "name": "Light shield",
+              "points": 5
+            }
+          ],
+          "Tribesman of Nûrn": [
+            {
+              "name": "Exchange light armour for armour",
+              "points": 1
+            },
+            {
+              "name": "War horn and spear",
+              "points": 26
+            },
+            {
+              "name": "Spear and bow",
+              "points": 3
+            },
+            {
+              "name": "Throwing spear and light shield",
+              "points": 3
+            },
+            {
+              "name": "Sling and light shield",
+              "points": 2
+            }
+          ]
+        }
+      },
+      {
+        "name": "Defence of Minas Ithil",
+        "alignment": "good",
+        "additionalRules": [
+          "A Defence of Minas Ithil Army must include at least one Unique Gondor character."
+        ],
+        "armyBonuses": [
+          "The Ithil Stone",
+          "Weather the siege"
+        ],
+        "profileOptions": {
+          "Talion, the Bright Lord": {
+            "required": [
+              {
+                "name": "The New Ring",
+                "points": 40
+              }
+            ],
+            "displayPoints": 250
+          }
+        }
+      },
+      {
+        "name": "Talion's Army",
+        "alignment": "good",
+        "additionalRules": [
+          "Talion's Army must include Talion, the Bright Lord."
+        ],
+        "armyBonuses": [
+          "\"I am one, but we are many\"",
+          "Shattered Dominance"
+        ],
+        "requiredChildren": [
+          {
+            "name": "Talion, the Bright Lord",
+            "points": 210,
+            "elementPropertyName": "heroes",
+            "mustBeLeader": true
+          }
+        ],
+        "profileOptions": {
+          "Talion, the Bright Lord": [
+            {
+              "name": "The New Ring",
+              "points": 40
+            },
+            {
+              "name": "Caragor",
+              "points": 30
+            },
+            {
+              "name": "Heavy armour",
+              "points": 5
+            }
+          ],
+          "Udûn Uruk-hai Warchief": [
+            {
+              "name": "Exchange armour for heavy armour",
+              "points": 5
+            },
+            {
+              "name": "Crossbow",
+              "points": 10
+            },
+            {
+              "name": "Dual blades",
+              "points": 10
+            },
+            {
+              "name": "Spear and shield",
+              "points": 10
+            },
+            {
+              "name": "Two-handed weapon",
+              "points": 5
+            }
+          ],
+          "Udûn Orc Warchief": [
+            {
+              "name": "Caragor",
+              "points": 20
+            },
+            {
+              "name": "Throwing spears",
+              "points": 10
+            },
+            {
+              "name": "Dual blades",
+              "points": 10
+            },
+            {
+              "name": "Shield",
+              "points": 5
+            },
+            {
+              "name": "Two-handed weapon",
+              "points": 5
+            }
+          ],
+          "Udûn Olog-hai Warchief": [
+            {
+              "name": "Exchange light armour with armour",
+              "points": 5
+            },
+            {
+              "name": "Olog-hai mace",
+              "points": 10
+            },
+            {
+              "name": "Pit spear and shield",
+              "points": 10
+            }
+          ],
+          "Ratbag, the Coward": [],
+          "Udûn Uruk-hai Captain": [
+            {
+              "name": "Exchange armour for heavy armour",
+              "points": 5
+            },
+            {
+              "name": "Crossbow",
+              "points": 10
+            },
+            {
+              "name": "Dual blades",
+              "points": 10
+            },
+            {
+              "name": "Spear and shield",
+              "points": 10
+            },
+            {
+              "name": "Two-handed weapon",
+              "points": 5
+            }
+          ],
+          "Udûn Orc Captain": [
+            {
+              "name": "Caragor",
+              "points": 20
+            },
+            {
+              "name": "Throwing spears",
+              "points": 10
+            },
+            {
+              "name": "Dual blades",
+              "points": 10
+            },
+            {
+              "name": "Shield",
+              "points": 5
+            },
+            {
+              "name": "Two-handed weapon",
+              "points": 5
+            }
+          ],
+          "Udûn Olog-hai Captain": [
+            {
+              "name": "Exchange light armour with armour",
+              "points": 5
+            },
+            {
+              "name": "Olog-hai mace",
+              "points": 10
+            },
+            {
+              "name": "Pit spear and shield",
+              "points": 10
+            }
+          ],
+          "Udûn Uruk-hai Warrior": [
+            {
+              "name": "Exchange armour for heavy armour",
+              "points": 1
+            },
+            {
+              "name": "Crossbow",
+              "points": 2
+            },
+            {
+              "name": "Dual blades",
+              "points": 2
+            },
+            {
+              "name": "Spear and shield",
+              "points": 2
+            },
+            {
+              "name": "Two-handed weapon",
+              "points": 1
+            }
+          ],
+          "Udûn Orc Warrior": [
+            {
+              "name": "Throwing spears",
+              "points": 2
+            },
+            {
+              "name": "Shield",
+              "points": 1
+            },
+            {
+              "name": "Spear",
+              "points": 1
+            },
+            {
+              "name": "Two-handed weapon",
+              "points": 1
+            }
+          ],
+          "Udûn Olog-hai Warrior": [
+            {
+              "name": "Exchange light armour with armour",
+              "points": 1
+            },
+            {
+              "name": "Olog-hai mace",
+              "points": 2
+            },
+            {
+              "name": "Pit spear and shield",
+              "points": 2
+            }
+          ],
+          "Udûn Uruk-hai Caragor Rider": [
+            {
+              "name": "Crossbow",
+              "points": 2
+            },
+            {
+              "name": "Dual blades",
+              "points": 2
+            },
+            {
+              "name": "Spear and shield",
+              "points": 2
+            },
+            {
+              "name": "Two-handed weapon",
+              "points": 1
+            }
+          ],
+          "Udûn Orc Caragor Rider": [
+            {
+              "name": "Throwing spears",
+              "points": 2
+            },
+            {
+              "name": "Dual blades",
+              "points": 2
+            },
+            {
+              "name": "Shield",
+              "points": 1
+            },
+            {
+              "name": "Two-handed weapon",
+              "points": 1
+            }
+          ]
+        }
+      },
+      {
+        "name": "Stronghold of the Hammer",
+        "alignment": "evil",
+        "additionalRules": [
+          "A Stronghold of the Hammer Army must include The Hammer of Sauron, who is always the Army's General."
+        ],
+        "armyBonuses": [
+          "\"Bring me that head!\"",
+          "\"The Warchiefs did NOTHING to prevent this sacrilege?!\""
+        ],
+        "requiredChildren": [
+          {
+            "name": "The Hammer of Sauron",
+            "points": 90,
+            "elementPropertyName": "heroes",
+            "mustBeLeader": true
+          }
+        ],
+        "profileOptions": {
+          "Udûn Uruk-hai Warchief": [
+            {
+              "name": "Exchange armour for heavy armour",
+              "points": 5
+            },
+            {
+              "name": "Crossbow",
+              "points": 10
+            },
+            {
+              "name": "Dual blades",
+              "points": 10
+            },
+            {
+              "name": "Spear and shield",
+              "points": 10
+            },
+            {
+              "name": "Two-handed weapon",
+              "points": 5
+            }
+          ],
+          "Udûn Orc Warchief": [
+            {
+              "name": "Caragor",
+              "points": 20
+            },
+            {
+              "name": "Throwing spears",
+              "points": 10
+            },
+            {
+              "name": "Dual blades",
+              "points": 10
+            },
+            {
+              "name": "Shield",
+              "points": 5
+            },
+            {
+              "name": "Two-handed weapon",
+              "points": 5
+            }
+          ],
+          "Udûn Uruk-hai Captain": [
+            {
+              "name": "Exchange armour for heavy armour",
+              "points": 5
+            },
+            {
+              "name": "Crossbow",
+              "points": 10
+            },
+            {
+              "name": "Dual blades",
+              "points": 10
+            },
+            {
+              "name": "Spear and shield",
+              "points": 10
+            },
+            {
+              "name": "Two-handed weapon",
+              "points": 5
+            }
+          ],
+          "Udûn Orc Captain": [
+            {
+              "name": "Caragor",
+              "points": 20
+            },
+            {
+              "name": "Throwing spears",
+              "points": 10
+            },
+            {
+              "name": "Dual blades",
+              "points": 10
+            },
+            {
+              "name": "Shield",
+              "points": 5
+            },
+            {
+              "name": "Two-handed weapon",
+              "points": 5
+            }
+          ],
+          "Udûn Uruk-hai Warrior": [
+            {
+              "name": "Exchange armour for heavy armour",
+              "points": 1
+            },
+            {
+              "name": "Crossbow",
+              "points": 2
+            },
+            {
+              "name": "Dual blades",
+              "points": 2
+            },
+            {
+              "name": "Spear and shield",
+              "points": 2
+            },
+            {
+              "name": "Two-handed weapon",
+              "points": 1
+            }
+          ],
+          "Udûn Orc Warrior": [
+            {
+              "name": "Throwing spears",
+              "points": 2
+            },
+            {
+              "name": "Shield",
+              "points": 1
+            },
+            {
+              "name": "Spear",
+              "points": 1
+            },
+            {
+              "name": "Two-handed weapon",
+              "points": 1
+            }
+          ],
+          "Udûn Uruk-hai Caragor Rider": [
+            {
+              "name": "Crossbow",
+              "points": 2
+            },
+            {
+              "name": "Dual blades",
+              "points": 2
+            },
+            {
+              "name": "Spear and shield",
+              "points": 2
+            },
+            {
+              "name": "Two-handed weapon",
+              "points": 1
+            }
+          ],
+          "Udûn Orc Caragor Rider": [
+            {
+              "name": "Throwing spears",
+              "points": 2
+            },
+            {
+              "name": "Dual blades",
+              "points": 2
+            },
+            {
+              "name": "Shield",
+              "points": 1
+            },
+            {
+              "name": "Two-handed weapon",
+              "points": 1
+            }
+          ]
+        }
+      },
+      {
+        "name": "The Spire of the Tower",
+        "alignment": "evil",
+        "additionalRules": [
+          "The Spire of the Tower Army must include The Tower of Sauron, who is always the Army's General."
+        ],
+        "armyBonuses": [
+          "\"I can see through your tricks\"",
+          "Illusion of strength"
+        ],
+        "requiredChildren": [
+          {
+            "name": "The Tower of Sauron",
+            "points": 110,
+            "elementPropertyName": "heroes",
+            "mustBeLeader": true
+          }
+        ],
+        "profileOptions": {
+          "Udûn Uruk-hai Warchief": [
+            {
+              "name": "Exchange armour for heavy armour",
+              "points": 5
+            },
+            {
+              "name": "Crossbow",
+              "points": 10
+            },
+            {
+              "name": "Dual blades",
+              "points": 10
+            },
+            {
+              "name": "Spear and shield",
+              "points": 10
+            },
+            {
+              "name": "Two-handed weapon",
+              "points": 5
+            }
+          ],
+          "Udûn Orc Warchief": [
+            {
+              "name": "Throwing spears",
+              "points": 10
+            },
+            {
+              "name": "Dual blades",
+              "points": 10
+            },
+            {
+              "name": "Shield",
+              "points": 5
+            },
+            {
+              "name": "Two-handed weapon",
+              "points": 5
+            }
+          ],
+          "Udûn Uruk-hai Captain": [
+            {
+              "name": "Exchange armour for heavy armour",
+              "points": 5
+            },
+            {
+              "name": "Crossbow",
+              "points": 10
+            },
+            {
+              "name": "Dual blades",
+              "points": 10
+            },
+            {
+              "name": "Spear and shield",
+              "points": 10
+            },
+            {
+              "name": "Two-handed weapon",
+              "points": 5
+            }
+          ],
+          "Udûn Orc Captain": [
+            {
+              "name": "Throwing spears",
+              "points": 10
+            },
+            {
+              "name": "Dual blades",
+              "points": 10
+            },
+            {
+              "name": "Shield",
+              "points": 5
+            },
+            {
+              "name": "Two-handed weapon",
+              "points": 5
+            }
+          ],
+          "Udûn Uruk-hai Warrior": [
+            {
+              "name": "Exchange armour for heavy armour",
+              "points": 1
+            },
+            {
+              "name": "Crossbow",
+              "points": 2
+            },
+            {
+              "name": "Dual blades",
+              "points": 2
+            },
+            {
+              "name": "Spear and shield",
+              "points": 2
+            },
+            {
+              "name": "Two-handed weapon",
+              "points": 1
+            }
+          ],
+          "Udûn Orc Warrior": [
+            {
+              "name": "Throwing spears",
+              "points": 2
+            },
+            {
+              "name": "Shield",
+              "points": 1
+            },
+            {
+              "name": "Spear",
+              "points": 1
+            },
+            {
+              "name": "Two-handed weapon",
+              "points": 1
+            }
+          ],
+          "Udûn Olog-hai Warrior": [
+            {
+              "name": "Exchange light armour with armour",
+              "points": 1
+            },
+            {
+              "name": "Olog-hai mace",
+              "points": 2
+            },
+            {
+              "name": "Pit spear and shield",
+              "points": 2
+            }
+          ]
+        }
+      },
+      {
+        "name": "Fortress of the Black Hand",
+        "alignment": "evil",
+        "additionalRules": [
+          "A Fortress of the Black Hand Army must include The Black Hand of Sauron, who is always the Army's General.",
+          "A Fortress of the Black Hand Army must include at least one Udûn Uruk-hai Warchief."
+        ],
+        "armyBonuses": [
+          "Marked by The Hand",
+          "The Talons of the Hand"
+        ],
+        "requiredChildren": [
+          {
+            "name": "The Black Hand of Sauron",
+            "points": 180,
+            "elementPropertyName": "heroes",
+            "mustBeLeader": true
+          },
+          {
+            "name": "Udûn Uruk-hai Warchief",
+            "points": 80,
+            "elementPropertyName": "heroes"
+          }
+        ],
+        "profileOptions": {
+          "Udûn Uruk-hai Warchief": [
+            {
+              "name": "Exchange armour for heavy armour",
+              "points": 5
+            },
+            {
+              "name": "Crossbow",
+              "points": 10
+            },
+            {
+              "name": "Dual blades",
+              "points": 10
+            },
+            {
+              "name": "Spear and shield",
+              "points": 10
+            },
+            {
+              "name": "Two-handed weapon",
+              "points": 5
+            }
+          ],
+          "Udûn Orc Warchief": [
+            {
+              "name": "Throwing spears",
+              "points": 10
+            },
+            {
+              "name": "Dual blades",
+              "points": 10
+            },
+            {
+              "name": "Shield",
+              "points": 5
+            },
+            {
+              "name": "Two-handed weapon",
+              "points": 5
+            }
+          ],
+          "Udûn Uruk-hai Captain": [
+            {
+              "name": "Exchange armour for heavy armour",
+              "points": 5
+            },
+            {
+              "name": "Caragor",
+              "points": 20
+            },
+            {
+              "name": "Crossbow",
+              "points": 10
+            },
+            {
+              "name": "Dual blades",
+              "points": 10
+            },
+            {
+              "name": "Spear and shield",
+              "points": 10
+            },
+            {
+              "name": "Two-handed weapon",
+              "points": 5
+            }
+          ],
+          "Udûn Orc Captain": [
+            {
+              "name": "Caragor",
+              "points": 20
+            },
+            {
+              "name": "Throwing spears",
+              "points": 10
+            },
+            {
+              "name": "Dual blades",
+              "points": 10
+            },
+            {
+              "name": "Shield",
+              "points": 5
+            },
+            {
+              "name": "Two-handed weapon",
+              "points": 5
+            }
+          ],
+          "Udûn Olog-hai Captain": [
+            {
+              "name": "Exchange light armour with armour",
+              "points": 5
+            },
+            {
+              "name": "Olog-hai mace",
+              "points": 10
+            },
+            {
+              "name": "Pit spear and shield",
+              "points": 10
+            }
+          ],
+          "Udûn Uruk-hai Warrior": [
+            {
+              "name": "Exchange armour for heavy armour",
+              "points": 1
+            },
+            {
+              "name": "Crossbow",
+              "points": 2
+            },
+            {
+              "name": "Dual blades",
+              "points": 2
+            },
+            {
+              "name": "Spear and shield",
+              "points": 2
+            },
+            {
+              "name": "Two-handed weapon",
+              "points": 1
+            }
+          ],
+          "Udûn Orc Warrior": [
+            {
+              "name": "Throwing spears",
+              "points": 2
+            },
+            {
+              "name": "Shield",
+              "points": 1
+            },
+            {
+              "name": "Spear",
+              "points": 1
+            },
+            {
+              "name": "Two-handed weapon",
+              "points": 1
+            }
+          ],
+          "Udûn Olog-hai Warrior": [
+            {
+              "name": "Exchange light armour with armour",
+              "points": 1
+            },
+            {
+              "name": "Olog-hai mace",
+              "points": 2
+            },
+            {
+              "name": "Pit spear and shield",
+              "points": 2
+            }
+          ],
+          "Udûn Uruk-hai Caragor Rider": [
+            {
+              "name": "Crossbow",
+              "points": 2
+            },
+            {
+              "name": "Dual blades",
+              "points": 2
+            },
+            {
+              "name": "Spear and shield",
+              "points": 2
+            },
+            {
+              "name": "Two-handed weapon",
+              "points": 1
+            }
+          ],
+          "Udûn Orc Caragor Rider": [
+            {
+              "name": "Throwing spears",
+              "points": 2
+            },
+            {
+              "name": "Dual blades",
+              "points": 2
+            },
+            {
+              "name": "Shield",
+              "points": 1
+            },
+            {
+              "name": "Two-handed weapon",
+              "points": 1
+            }
+          ]
+        }
+      },
+      {
+        "name": "Lairs of Mordor",
+        "alignment": "evil",
+        "additionalRules": [
+          "A Lairs of Mordor Army must include, at least, 50% Ghûl models.",
+          "If this Army does not contain The White Graug, choose one Ghûl Matron to be the Army's General."
+        ],
+        "armyBonuses": [
+          "The Most Dominant Species",
+          "Call of the Hive",
+          "Beasts of the Lairs"
+        ],
+        "requireOne": [
+          [
+            "The White Graug",
+            "Ghûl Matron"
+          ]
+        ]
+      },
+      {
+        "name": "Tribes of Udûn",
+        "alignment": "evil",
+        "additionalRules": [
+          "When building this Army, you must first choose a Dominant Tribe.",
+          "The first non-Unique Hero model selected in your Army must belong to the Dominant Tribe.",
+          "Any Followers included in the Warbands of a Unique Hero model must also belong to the Dominant Tribe.",
+          "The Dominant Tribe must contain more models than all other Tribes in the Army combined.",
+          "A Tribes of Udûn Army may not contain more than one Hero of Legend.",
+          "A Hero's Tribe is shown in brackets after its profile name. Only Warrior profiles with the same Tribe shown in the profile name are available as Followers in that Hero's Warband."
+        ],
+        "armyBonuses": [
+          "Tribes of the Orcs",
+          "Dominant Tribe",
+          "Tribe Fortress"
+        ],
+        "tribes": [
+          {
+            "name": "Dark Tribe",
+            "chooseOneKey": "dominantTribe"
+          },
+          {
+            "name": "Feral Tribe",
+            "chooseOneKey": "dominantTribe"
+          },
+          {
+            "name": "Machine Tribe",
+            "chooseOneKey": "dominantTribe"
+          },
+          {
+            "name": "Marauder Tribe",
+            "chooseOneKey": "dominantTribe"
+          },
+          {
+            "name": "Mystic Tribe",
+            "chooseOneKey": "dominantTribe"
+          },
+          {
+            "name": "Outlaw Tribe",
+            "chooseOneKey": "dominantTribe"
+          },
+          {
+            "name": "Slaughter Tribe",
+            "chooseOneKey": "dominantTribe"
+          },
+          {
+            "name": "Terror Tribe",
+            "chooseOneKey": "dominantTribe"
+          },
+          {
+            "name": "Warmonger Tribe",
+            "chooseOneKey": "dominantTribe"
+          }
+        ],
+        "childMatchesRequired": [
+          {
+            "elementPropertyName": "heroes",
+            "matchPropertyName": "faction",
+            "value": "Dark Tribe",
+            "childElementPropertyName": "warriors"
+          },
+          {
+            "elementPropertyName": "heroes",
+            "matchPropertyName": "faction",
+            "value": "Feral Tribe",
+            "childElementPropertyName": "warriors"
+          },
+          {
+            "elementPropertyName": "heroes",
+            "matchPropertyName": "faction",
+            "value": "Machine Tribe",
+            "childElementPropertyName": "warriors"
+          },
+          {
+            "elementPropertyName": "heroes",
+            "matchPropertyName": "faction",
+            "value": "Marauder Tribe",
+            "childElementPropertyName": "warriors"
+          },
+          {
+            "elementPropertyName": "heroes",
+            "matchPropertyName": "faction",
+            "value": "Mystic Tribe",
+            "childElementPropertyName": "warriors"
+          },
+          {
+            "elementPropertyName": "heroes",
+            "matchPropertyName": "faction",
+            "value": "Outlaw Tribe",
+            "childElementPropertyName": "warriors"
+          },
+          {
+            "elementPropertyName": "heroes",
+            "matchPropertyName": "faction",
+            "value": "Slaughter Tribe",
+            "childElementPropertyName": "warriors"
+          },
+          {
+            "elementPropertyName": "heroes",
+            "matchPropertyName": "faction",
+            "value": "Terror Tribe",
+            "childElementPropertyName": "warriors"
+          },
+          {
+            "elementPropertyName": "heroes",
+            "matchPropertyName": "faction",
+            "value": "Warmonger Tribe",
+            "childElementPropertyName": "warriors"
+          }
+        ]
+      }
+    ],
+    "heroicTiers": [
+      {
+        "name": "Hero of Legend - Sauron"
+      },
+      {
+        "name": "Hero of Legend"
+      },
+      {
+        "name": "Hero of Valour"
+      },
+      {
+        "name": "Hero of Fortitude"
+      },
+      {
+        "name": "Minor Hero"
+      },
+      {
+        "name": "Independent Hero"
+      }
+    ],
+    "heroes": [
+      {
+        "name": "Ar-Harto",
+        "factions": [],
+        "points": 140,
+        "movement": 6,
+        "fight": 7,
+        "shoot": 5,
+        "strength": 7,
+        "defence": 7,
+        "attack": 3,
+        "wounds": 3,
+        "courage": 6,
+        "intelligence": 6,
+        "might": 3,
+        "will": 2,
+        "fate": 1,
+        "race": [
+          "Troll"
+        ],
+        "faction": [
+          "Mordor"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Monster",
+          "Unique"
+        ],
+        "baseSize": [
+          "50mm"
+        ],
+        "heroicActions": [
+          "Heroic Strike"
+        ],
+        "specialRules": [
+          "Dominant (4)",
+          "Terror",
+          "Sworn Protector (Ratbag)",
+          "Dishonourable Saviour",
+          "“Snaga-Uruk”"
+        ],
+        "wargear": [
+          "Light Armour",
+          "Olog Gauntlets"
+        ],
+        "options": []
+      },
+      {
+        "name": "Baranor",
+        "factions": [],
+        "points": 140,
+        "movement": 6,
+        "fight": 7,
+        "shoot": 5,
+        "strength": 7,
+        "defence": 7,
+        "attack": 3,
+        "wounds": 3,
+        "courage": 6,
+        "intelligence": 6,
+        "might": 1,
+        "will": 7,
+        "fate": 1,
+        "race": [
+          "Man"
+        ],
+        "faction": [
+          "Gondor"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Unique"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [
+          "Heroic Strike"
+        ],
+        "specialRules": [
+          "Dominant (4)",
+          "Terror",
+          "Sworn Protector (Ratbag)"
+        ],
+        "wargear": [
+          "Light Armour",
+          "Olog Gauntlets"
+        ],
+        "options": []
+      },
+      {
+        "name": "Baranor, Captain of Minas Ithil",
+        "factions": [
+          {
+            "name": "Defence of Minas Ithil",
+            "heroicTier": "Hero of Valour"
+          }
+        ],
+        "points": 90,
+        "movement": 6,
+        "fight": 5,
+        "shoot": 3,
+        "strength": 4,
+        "defence": 6,
+        "attack": 2,
+        "wounds": 2,
+        "courage": 6,
+        "intelligence": 6,
+        "might": 2,
+        "will": 2,
+        "fate": 2,
+        "race": [
+          "Man"
+        ],
+        "faction": [
+          "Gondor"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Unique"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [
+          "Heroic Resolve",
+          "Heroic Strength",
+          "Heroic Strike"
+        ],
+        "specialRules": [
+          "Hatred (Orc, Uruk-hai)",
+          "Poisoned Attacks (throwing weapon)",
+          "Haradrim Training"
+        ],
+        "wargear": [
+          "Heavy armour",
+          "Throwing weapon",
+          "Sword"
+        ],
+        "options": []
+      },
+      {
+        "name": "Captain of Minas Ithel",
+        "factions": [
+          {
+            "name": "Defence of Minas Ithil",
+            "heroicTier": "Hero of Fortitude"
+          }
+        ],
+        "points": 60,
+        "movement": 6,
+        "fight": 5,
+        "shoot": 4,
+        "strength": 4,
+        "defence": 7,
+        "attack": 2,
+        "wounds": 2,
+        "courage": 6,
+        "intelligence": 6,
+        "might": 2,
+        "will": 1,
+        "fate": 1,
+        "race": [
+          "Man"
+        ],
+        "faction": [
+          "Gondor"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [
+          "Heroic March"
+        ],
+        "specialRules": [
+          "Hatred (Orc, Uruk-hai)"
+        ],
+        "wargear": [
+          "Heavy armour",
+          "Shield",
+          "Hand weapon"
+        ],
+        "options": []
+      },
+      {
+        "name": "Caragor (profile page 32)",
+        "factions": [],
+        "points": 50,
+        "movement": 6,
+        "fight": 4,
+        "shoot": 5,
+        "strength": 4,
+        "defence": 5,
+        "attack": 2,
+        "wounds": 2,
+        "courage": 7,
+        "intelligence": 7,
+        "might": 3,
+        "will": 1,
+        "fate": 2,
+        "race": [
+          "Uruk-hai"
+        ],
+        "faction": [
+          "Mordor"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Unique"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [
+          "Heroic Defence"
+        ],
+        "specialRules": [
+          "Backstabbers",
+          "General Hunter",
+          "Fight another Day"
+        ],
+        "wargear": [
+          "Armour",
+          "Morgai Flies",
+          "Sword"
+        ],
+        "options": []
+      },
+      {
+        "name": "Dirhael",
+        "factions": [],
+        "unavailableSolo": true,
+        "points": 0,
+        "movement": 6,
+        "fight": 4,
+        "shoot": 4,
+        "strength": 3,
+        "defence": 4,
+        "attack": 2,
+        "wounds": 2,
+        "courage": 5,
+        "intelligence": 6,
+        "might": 1,
+        "will": 1,
+        "fate": 1,
+        "race": [
+          "Man"
+        ],
+        "faction": [
+          "Gondor"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Unique"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [
+          "Heroic Resolve"
+        ],
+        "specialRules": [
+          "Sworn Protector (Ioreth)",
+          "Innocent Courage"
+        ],
+        "wargear": [
+          "Light armour",
+          "Archan"
+        ],
+        "options": []
+      },
+      {
+        "name": "Eltariel, Blade of Galadriel",
+        "factions": [],
+        "points": 50,
+        "movement": 8,
+        "fight": 6,
+        "shoot": 3,
+        "strength": 4,
+        "defence": 5,
+        "attack": 2,
+        "wounds": 2,
+        "courage": 4,
+        "intelligence": 4,
+        "might": 3,
+        "will": 4,
+        "fate": 2,
+        "race": [
+          "Elf"
+        ],
+        "faction": [
+          "Lothlórien"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Unique"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [
+          "Heroic Resolve",
+          "Heroic Strike"
+        ],
+        "specialRules": [
+          "Backstabbers",
+          "General Hunter",
+          "Galadriel's Assassin",
+          "Survival Instinct"
+        ],
+        "wargear": [
+          "Armour",
+          "Elf Bow",
+          "Twin Blades"
+        ],
+        "options": []
+      },
+      {
+        "name": "Eryn",
+        "factions": [
+          {
+            "name": "Outcasts of Udûn",
+            "heroicTier": "Minor Hero"
+          }
+        ],
+        "points": 50,
+        "movement": 6,
+        "fight": 3,
+        "shoot": 3,
+        "strength": 3,
+        "defence": 4,
+        "attack": 1,
+        "wounds": 2,
+        "courage": 5,
+        "intelligence": 5,
+        "might": 1,
+        "will": 2,
+        "fate": 1,
+        "race": [
+          "Man"
+        ],
+        "faction": [
+          "Gondor"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Unique"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [
+          "Heroic Resolve"
+        ],
+        "specialRules": [
+          "Ancient Enemies (Mordor)",
+          "Stalk Unseen",
+          "Rally the people",
+          "Against our enemies"
+        ],
+        "wargear": [
+          "Light armour",
+          "Hand weapon"
+        ],
+        "options": []
+      },
+      {
+        "name": "General Castamir",
+        "factions": [
+          {
+            "name": "Defence of Minas Ithil",
+            "heroicTier": "Hero of Legend"
+          }
+        ],
+        "points": 125,
+        "movement": 6,
+        "fight": 6,
+        "shoot": 3,
+        "strength": 4,
+        "defence": 5,
+        "attack": 2,
+        "wounds": 3,
+        "courage": 5,
+        "intelligence": 5,
+        "might": 3,
+        "will": 3,
+        "fate": 1,
+        "race": [
+          "Man"
+        ],
+        "faction": [
+          "Gondor"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Unique"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [
+          "Heroic Defence",
+          "Heroic Resolve",
+          "Heroic Strike"
+        ],
+        "specialRules": [
+          "Hatred (Mordor)",
+          "Leader (Ithil Stone Guard)",
+          "Defend the stone, at all costs"
+        ],
+        "wargear": [
+          "Heavy armour",
+          "Hand weapon"
+        ],
+        "options": []
+      },
+      {
+        "name": "Ghûl Matron",
+        "factions": [
+          {
+            "name": "Lairs of Mordor",
+            "heroicTier": "Hero of Valour"
+          }
+        ],
+        "points": 80,
+        "movement": 6,
+        "fight": 4,
+        "shoot": 5,
+        "strength": 5,
+        "defence": 5,
+        "attack": 3,
+        "wounds": 4,
+        "courage": 5,
+        "intelligence": 5,
+        "might": 1,
+        "will": 3,
+        "fate": 0,
+        "race": [
+          "Ghûl"
+        ],
+        "faction": [
+          "Mordor"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Unique"
+        ],
+        "baseSize": [
+          "40mm"
+        ],
+        "heroicActions": [
+          "Heroic Strength"
+        ],
+        "specialRules": [
+          "Cave Dweller",
+          "Pack Hunter",
+          "Pack Instinct",
+          "Terror",
+          "Swarm Leader"
+        ],
+        "wargear": [
+          "Teeth and Claws (hand weapons)"
+        ],
+        "options": []
+      },
+      {
+        "name": "Gollum",
+        "factions": [
+          {
+            "name": "Outcasts of Udûn",
+            "heroicTier": "Independent Hero"
+          }
+        ],
+        "points": 40,
+        "movement": 5,
+        "fight": 4,
+        "shoot": 4,
+        "strength": 4,
+        "defence": 4,
+        "attack": 2,
+        "wounds": 2,
+        "courage": 6,
+        "intelligence": 5,
+        "might": 1,
+        "will": 0,
+        "fate": 1,
+        "race": [
+          "Hobbit"
+        ],
+        "faction": [
+          "Goblin-town"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Unique"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [],
+        "specialRules": [
+          "Cave Dweller",
+          "Mountain Dweller",
+          "Stalk Unseen",
+          "The Precious"
+        ],
+        "wargear": [
+          "Gollum's fingers / The One Ring"
+        ],
+        "options": []
+      },
+      {
+        "name": "Gondor Battlecry Trebuchet",
+        "factions": [
+          {
+            "name": "Defence of Minas Ithil",
+            "heroicTier": "Independent Hero"
+          }
+        ],
+        "unlimited": true,
+        "points": 100,
+        "movement": 0,
+        "fight": 0,
+        "shoot": 0,
+        "strength": 10,
+        "defence": 10,
+        "attack": 0,
+        "wounds": 3,
+        "courage": 0,
+        "might": 0,
+        "will": 0,
+        "fate": 0,
+        "range": [
+          "12\"-96\""
+        ],
+        "baseSize": [
+          "120mm oval"
+        ],
+        "heroicActions": [],
+        "keywords": [
+          "Siege Engine"
+        ],
+        "includes": [
+          {
+            "name": "Minas Tirith Siege Veteran",
+            "dataSource": "heroes"
+          }
+        ],
+        "increaseMaximumChildren": {
+          "warriors": -4
+        },
+        "options": [
+          {
+            "name": "Flaming Ammunition",
+            "points": 10
+          }
+        ],
+        "specialRules": [
+          "Arcing Shot",
+          "Static",
+          "Area Effect",
+          "Wall-breaker"
+        ],
+        "wargear": [],
+        "requiredChildren": [
+          {
+            "elementPropertyName": "warriors",
+            "name": "Minas Tirith Siege Crew",
+            "quantity": 2,
+            "points": 0,
+            "hideFromPrint": true,
+            "lockedChildren": true
+          }
+        ]
+      },
+      {
+        "name": "Gorvin",
+        "factions": [],
+        "points": 50,
+        "movement": 6,
+        "fight": 4,
+        "shoot": 5,
+        "strength": 4,
+        "defence": 5,
+        "attack": 2,
+        "wounds": 2,
+        "courage": 7,
+        "intelligence": 7,
+        "might": 3,
+        "will": 1,
+        "fate": 2,
+        "race": [
+          "Uruk-hai"
+        ],
+        "faction": [
+          "Mordor"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Unique"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [
+          "Heroic Defence"
+        ],
+        "specialRules": [
+          "Backstabbers",
+          "General Hunter",
+          "Fight another Day"
+        ],
+        "wargear": [
+          "Armour",
+          "Morgai Flies",
+          "Sword"
+        ],
+        "options": []
+      },
+      {
+        "name": "Graug",
+        "factions": [],
+        "points": 140,
+        "movement": 6,
+        "fight": 7,
+        "shoot": 5,
+        "strength": 7,
+        "defence": 7,
+        "attack": 3,
+        "wounds": 3,
+        "courage": 6,
+        "intelligence": 6,
+        "might": 3,
+        "will": 2,
+        "fate": 1,
+        "race": [
+          "Troll"
+        ],
+        "faction": [
+          "Mordor"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Monster",
+          "Unique"
+        ],
+        "baseSize": [
+          "50mm"
+        ],
+        "heroicActions": [
+          "Heroic Strike"
+        ],
+        "specialRules": [
+          "Dominant (4)",
+          "Terror",
+          "Sworn Protector (Ratbag)",
+          "Dishonourable Saviour",
+          "“Snaga-Uruk”"
+        ],
+        "wargear": [
+          "Light Armour",
+          "Olog Gauntlets"
+        ],
+        "options": []
+      },
+      {
+        "name": "Hallas",
+        "factions": [
+          {
+            "name": "Black Gate Garrison",
+            "heroicTier": "Hero of Valour"
+          }
+        ],
+        "points": 100,
+        "movement": 6,
+        "fight": 5,
+        "shoot": 3,
+        "strength": 4,
+        "defence": 5,
+        "attack": 2,
+        "wounds": 3,
+        "courage": 4,
+        "intelligence": 5,
+        "might": 3,
+        "will": 2,
+        "fate": 2,
+        "race": [
+          "Man"
+        ],
+        "faction": [
+          "Gondor"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Unique"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [
+          "Heroic Accuracy",
+          "Heroic Defence",
+          "Heroic Resolve",
+          "Heroic Strike"
+        ],
+        "specialRules": [
+          "Ancient Enemies (Mordor)",
+          "Bodyguard (Ioreth)",
+          "Expert Shot",
+          "Resistant to Magic",
+          "Martial Discipline",
+          "Leader of the Watch"
+        ],
+        "wargear": [
+          "Armour",
+          "Bow",
+          "Hand weapon"
+        ],
+        "options": []
+      },
+      {
+        "name": "Hirgon of Tarnost",
+        "factions": [
+          {
+            "name": "Outcasts of Udûn",
+            "heroicTier": "Hero of Valour"
+          }
+        ],
+        "points": 100,
+        "movement": 6,
+        "fight": 5,
+        "shoot": 3,
+        "strength": 4,
+        "defence": 5,
+        "attack": 2,
+        "wounds": 3,
+        "courage": 5,
+        "intelligence": 6,
+        "might": 2,
+        "will": 2,
+        "fate": 1,
+        "race": [
+          "Man"
+        ],
+        "faction": [
+          "Gondor"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Unique"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [
+          "Heroic Accuracy",
+          "Heroic Strike"
+        ],
+        "specialRules": [
+          "Sharpshooter",
+          "Stalk Unseen",
+          "Venom (Orc, Uruk-hai)",
+          "Reconnaissance Expert"
+        ],
+        "wargear": [
+          "Armour",
+          "Hand weapon",
+          "Bow"
+        ],
+        "options": []
+      },
+      {
+        "name": "Hirgon, Gondorian Scout",
+        "factions": [],
+        "points": 60,
+        "movement": 6,
+        "fight": 4,
+        "shoot": 3,
+        "strength": 4,
+        "defence": 4,
+        "attack": 2,
+        "wounds": 2,
+        "courage": 5,
+        "intelligence": 5,
+        "might": 2,
+        "will": 2,
+        "fate": 1,
+        "race": [
+          "Man"
+        ],
+        "faction": [
+          "Gondor"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Unique"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [
+          "Heroic Accuracy",
+          "Heroic March"
+        ],
+        "specialRules": [
+          "Sharpshooter",
+          "Stalk Unseen",
+          "Woodland Creature",
+          "Reconnaissance Expert"
+        ],
+        "wargear": [
+          "Light Armour",
+          "Hand weapon",
+          "Longbow"
+        ],
+        "options": []
+      },
+      {
+        "name": "Idril",
+        "factions": [
+          {
+            "name": "Defence of Minas Ithil",
+            "heroicTier": "Hero of Valour"
+          }
+        ],
+        "points": 70,
+        "movement": 6,
+        "fight": 5,
+        "shoot": 3,
+        "strength": 4,
+        "defence": 5,
+        "attack": 2,
+        "wounds": 2,
+        "courage": 5,
+        "intelligence": 6,
+        "might": 1,
+        "will": 2,
+        "fate": 2,
+        "race": [
+          "Man"
+        ],
+        "faction": [
+          "Gondor"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Unique"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [
+          "Heroic Defence",
+          "Heroic Resolve"
+        ],
+        "specialRules": [
+          "Bodyguard (Castamir)",
+          "Bound by blood"
+        ],
+        "wargear": [
+          "Heavy armour",
+          "Hand weapon"
+        ],
+        "options": []
+      },
+      {
+        "name": "Ioreth",
+        "factions": [],
+        "unavailableSolo": true,
+        "points": 0,
+        "movement": 6,
+        "fight": 3,
+        "shoot": 4,
+        "strength": 3,
+        "defence": 3,
+        "attack": 1,
+        "wounds": 2,
+        "courage": 5,
+        "intelligence": 4,
+        "might": 1,
+        "will": 4,
+        "fate": 1,
+        "race": [
+          "Man"
+        ],
+        "faction": [
+          "Gondor"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Unique"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [
+          "Heroic Defence"
+        ],
+        "specialRules": [
+          "Sworn Protector (Dirhael)",
+          "Healer's Touch"
+        ],
+        "wargear": [
+          "Hand weapon"
+        ],
+        "options": []
+      },
+      {
+        "name": "Lady Marwen",
+        "factions": [],
+        "points": 140,
+        "movement": 6,
+        "fight": 7,
+        "shoot": 5,
+        "strength": 7,
+        "defence": 7,
+        "attack": 3,
+        "wounds": 3,
+        "courage": 6,
+        "intelligence": 6,
+        "might": 3,
+        "will": 2,
+        "fate": 1,
+        "race": [
+          "Troll"
+        ],
+        "faction": [
+          "Mordor"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Monster",
+          "Unique"
+        ],
+        "baseSize": [
+          "50mm"
+        ],
+        "heroicActions": [
+          "Heroic Strike"
+        ],
+        "specialRules": [
+          "Dominant (4)",
+          "Terror",
+          "Sworn Protector (Ratbag)",
+          "Dishonourable Saviour",
+          "“Snaga-Uruk”"
+        ],
+        "wargear": [
+          "Light Armour",
+          "Olog Gauntlets"
+        ],
+        "options": []
+      },
+      {
+        "name": "Lady Marwen, Queen of the Shore",
+        "factions": [
+          {
+            "name": "The Freefolk of Nûrn",
+            "heroicTier": "Hero of Legend"
+          }
+        ],
+        "points": 80,
+        "movement": 6,
+        "fight": 4,
+        "shoot": 4,
+        "strength": 3,
+        "defence": 3,
+        "attack": 1,
+        "wounds": 2,
+        "courage": 6,
+        "intelligence": 5,
+        "might": 2,
+        "will": 5,
+        "fate": 1,
+        "race": [
+          "Man"
+        ],
+        "faction": [
+          "Nûrn"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Unique"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [
+          "Heroic Defence",
+          "Heroic Resolve"
+        ],
+        "specialRules": [
+          "Hatred (Uruk-hai)",
+          "Stalk Unseen",
+          "Woodland Creature",
+          "Queen of Nûrn",
+          "Bound by Saruman"
+        ],
+        "wargear": [
+          "Light armour",
+          "Hand weapon"
+        ],
+        "options": []
+      },
+      {
+        "name": "Lithariel, Leader of the Tribesmen",
+        "factions": [
+          {
+            "name": "The Freefolk of Nûrn",
+            "heroicTier": "Hero of Valour"
+          }
+        ],
+        "points": 65,
+        "movement": 6,
+        "fight": 5,
+        "shoot": 3,
+        "strength": 4,
+        "defence": 4,
+        "attack": 2,
+        "wounds": 2,
+        "courage": 5,
+        "intelligence": 5,
+        "might": 2,
+        "will": 2,
+        "fate": 1,
+        "race": [
+          "Man"
+        ],
+        "faction": [
+          "Nûrn"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Unique"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [
+          "Heroic Strength",
+          "Heroic Defence"
+        ],
+        "specialRules": [
+          "Hatred (Uruk-hai)",
+          "Master Hunter",
+          "Sworn Protector (Marwen)",
+          "Stalk Unseen",
+          "Woodland Creature",
+          "Leader of the Tribe"
+        ],
+        "wargear": [
+          "Light armour",
+          "Dual blades",
+          "Throwing spears"
+        ],
+        "options": []
+      },
+      {
+        "name": "Minas Tirith Siege Veteran",
+        "factions": [],
+        "autoAddOnly": true,
+        "unavailableSolo": true,
+        "points": 0,
+        "movement": 6,
+        "fight": 3,
+        "shoot": 4,
+        "strength": 3,
+        "defence": 5,
+        "attack": 1,
+        "wounds": 1,
+        "courage": 7,
+        "intelligence": 7,
+        "will": 1,
+        "might": 1,
+        "fate": 1,
+        "race": [
+          "Man"
+        ],
+        "faction": [
+          "Gondor"
+        ],
+        "unitType": [
+          "Infantry",
+          "Hero"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "options": [],
+        "specialRules": [],
+        "wargear": [
+          "Heavy armour",
+          "Hand weapon"
+        ]
+      },
+      {
+        "name": "Ranger Captain",
+        "factions": [
+          {
+            "name": "Black Gate Garrison",
+            "heroicTier": "Hero of Fortitude"
+          },
+          {
+            "name": "Outcasts of Udûn",
+            "heroicTier": "Hero of Fortitude"
+          }
+        ],
+        "points": 65,
+        "movement": 6,
+        "fight": 5,
+        "shoot": 3,
+        "strength": 4,
+        "defence": 5,
+        "attack": 2,
+        "wounds": 2,
+        "courage": 6,
+        "intelligence": 6,
+        "might": 2,
+        "will": 1,
+        "fate": 1,
+        "race": [
+          "Man"
+        ],
+        "faction": [
+          "Gondor"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [
+          "Heroic Accuracy"
+        ],
+        "specialRules": [
+          "Ancient Enemies (Mordor)",
+          "Sharpshooter"
+        ],
+        "wargear": [
+          "Armour",
+          "Hand weapon",
+          "Bow"
+        ],
+        "options": []
+      },
+      {
+        "name": "Ratbag, the Coward",
+        "factions": [
+          {
+            "name": "Outcasts of Udûn",
+            "heroicTier": "Hero of Fortitude"
+          },
+          {
+            "name": "Talion's Army",
+            "heroicTier": "Hero of Fortitude"
+          },
+          {
+            "name": "Stronghold of the Hammer",
+            "heroicTier": "Hero of Fortitude"
+          }
+        ],
+        "points": 50,
+        "movement": 6,
+        "fight": 4,
+        "shoot": 5,
+        "strength": 4,
+        "defence": 5,
+        "attack": 2,
+        "wounds": 2,
+        "courage": 7,
+        "intelligence": 7,
+        "might": 1,
+        "will": 1,
+        "fate": 2,
+        "race": [
+          "Uruk-hai"
+        ],
+        "faction": [
+          "Mordor"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Unique"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [
+          "Heroic Defence"
+        ],
+        "specialRules": [
+          "Backstabbers",
+          "General Hunter",
+          "Fight Another Day"
+        ],
+        "wargear": [
+          "Armour",
+          "Vials of Flies",
+          "Hand weapon"
+        ],
+        "options": []
+      },
+      {
+        "name": "Shelob",
+        "factions": [],
+        "points": 90,
+        "movement": 6,
+        "fight": 5,
+        "shoot": 4,
+        "strength": 5,
+        "defence": 5,
+        "attack": 2,
+        "wounds": 2,
+        "courage": 6,
+        "intelligence": 6,
+        "might": 3,
+        "will": 2,
+        "fate": 2,
+        "race": [
+          "Uruk-hai"
+        ],
+        "faction": [
+          "Talion's Army"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [
+          "Heroic Challenge",
+          "Heroic Strength",
+          "Heroic Strike"
+        ],
+        "specialRules": [
+          "Tribes of the Orcs"
+        ],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Caragor",
+            "points": 30
+          },
+          {
+            "name": "Exchange Armour for Heavy Armour",
+            "points": 10
+          },
+          {
+            "name": "Shield",
+            "points": 5
+          },
+          {
+            "name": "Two-handed Weapon",
+            "points": 5
+          }
+        ]
+      },
+      {
+        "name": "Talion's Family",
+        "factions": [
+          {
+            "name": "Black Gate Garrison",
+            "heroicTier": "Independent Hero"
+          }
+        ],
+        "points": 80,
+        "includes": [
+          {
+            "dataSource": "heroes",
+            "name": "Ioreth"
+          },
+          {
+            "dataSource": "heroes",
+            "name": "Dirhael"
+          }
+        ],
+        "hideStats": true,
+        "race": [
+          "Man"
+        ],
+        "faction": [
+          "Gondor"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Unique"
+        ],
+        "specialRules": [
+          "Talion's Family"
+        ],
+        "wargear": [],
+        "options": []
+      },
+      {
+        "name": "Talion, Captain of the Watch",
+        "factions": [
+          {
+            "name": "Black Gate Garrison",
+            "heroicTier": "Hero of Valour"
+          }
+        ],
+        "points": 100,
+        "movement": 6,
+        "fight": 6,
+        "shoot": 3,
+        "strength": 4,
+        "defence": 5,
+        "attack": 2,
+        "wounds": 3,
+        "courage": 4,
+        "intelligence": 4,
+        "might": 3,
+        "will": 3,
+        "fate": 1,
+        "race": [
+          "Man"
+        ],
+        "faction": [
+          "Gondor"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Unique"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [
+          "Heroic Accuracy",
+          "Heroic Challenge",
+          "Heroic Resolve",
+          "Heroic Strike"
+        ],
+        "specialRules": [
+          "General Hunter",
+          "Hatred (Mordor)",
+          "Stalk Unseen",
+          "Sworn Protector (Dirhael)",
+          "Sworn Protector (Ioreth)",
+          "Lunge Deep, Cut Deeper",
+          "\"Remember your training!\""
+        ],
+        "wargear": [
+          "Armour",
+          "Urfael",
+          "Bow"
+        ],
+        "options": []
+      },
+      {
+        "name": "Talion, the Bright Lord",
+        "factions": [
+          {
+            "name": "Outcasts of Udûn",
+            "heroicTier": "Independent Hero"
+          },
+          {
+            "name": "The Freefolk of Nûrn",
+            "heroicTier": "Independent Hero"
+          },
+          {
+            "name": "Defence of Minas Ithil",
+            "heroicTier": "Independent Hero"
+          },
+          {
+            "name": "Talion's Army",
+            "heroicTier": "Hero of Legend"
+          }
+        ],
+        "points": 210,
+        "movement": 6,
+        "fight": 7,
+        "shoot": 3,
+        "strength": 4,
+        "defence": 5,
+        "attack": 2,
+        "wounds": 3,
+        "courage": 5,
+        "intelligence": 5,
+        "might": 3,
+        "will": 3,
+        "fate": 0,
+        "race": [
+          "Man",
+          "Spirit"
+        ],
+        "faction": [
+          "Gondor"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Unique"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [
+          "Heroic Challenge",
+          "Heroic Resolve",
+          "Heroic Strength",
+          "Heroic Strike"
+        ],
+        "specialRules": [
+          "General Hunter",
+          "Stalk Unseen",
+          "Celebrimbor's Intervention",
+          "Wraith Resurrection"
+        ],
+        "wargear": [
+          "Armour",
+          "Bow",
+          "Urfael and Acharn"
+        ],
+        "options": [
+          {
+            "name": "The New Ring",
+            "points": 40
+          },
+          {
+            "name": "Caragor",
+            "points": 30
+          },
+          {
+            "name": "Heavy armour",
+            "points": 5,
+            "usesDefinition": "Exchange armour for heavy armour"
+          }
+        ],
+        "magicalPowers": [
+          {
+            "name": "Aura of Dismay",
+            "range": "Self",
+            "casting": 4
+          },
+          {
+            "name": "Fog of Disarray",
+            "range": "Self",
+            "casting": 4
+          },
+          {
+            "name": "Instil Fear",
+            "range": "Self",
+            "casting": 4
+          }
+        ]
+      },
+      {
+        "name": "The Black Hand of Sauron",
+        "factions": [
+          {
+            "name": "Fortress of the Black Hand",
+            "heroicTier": "Hero of Valour"
+          }
+        ],
+        "points": 180,
+        "movement": 6,
+        "fight": 6,
+        "shoot": 3,
+        "strength": 4,
+        "defence": 6,
+        "attack": 2,
+        "wounds": 3,
+        "courage": 5,
+        "intelligence": 5,
+        "might": 3,
+        "will": 5,
+        "fate": 0,
+        "race": [
+          "Man"
+        ],
+        "faction": [
+          "Mordor"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Unique"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [
+          "Heroic Channelling",
+          "Heroic Strength",
+          "Heroic Strike"
+        ],
+        "specialRules": [
+          "Dominant (2)",
+          "Fell Sight",
+          "Harbinger of Evil (6\")",
+          "Terror",
+          "Aura of Dread",
+          "A Sacrifice of Blood",
+          "Dark Ritual"
+        ],
+        "wargear": [
+          "Heavy armour",
+          "Hand weapon",
+          "Hand-and-a-half weapon"
+        ],
+        "options": [],
+        "magicalPowers": [
+          {
+            "name": "Drain Courage",
+            "range": "12\"",
+            "casting": 4
+          },
+          {
+            "name": "Black Dart",
+            "range": "12\"",
+            "casting": 5
+          },
+          {
+            "name": "Panic Steed",
+            "range": "12\"",
+            "casting": 4
+          }
+        ]
+      },
+      {
+        "name": "The Hammer of Sauron",
+        "factions": [
+          {
+            "name": "Stronghold of the Hammer",
+            "heroicTier": "Hero of Valour"
+          }
+        ],
+        "points": 90,
+        "movement": 6,
+        "fight": 6,
+        "shoot": 4,
+        "strength": 5,
+        "defence": 6,
+        "attack": 2,
+        "wounds": 2,
+        "courage": 5,
+        "intelligence": 5,
+        "might": 2,
+        "will": 2,
+        "fate": 2,
+        "race": [
+          "Man"
+        ],
+        "faction": [
+          "Mordor"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Unique"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [
+          "Heroic Challenge",
+          "Heroic Strength"
+        ],
+        "specialRules": [
+          "Burly",
+          "Dominant (2)",
+          "Hatred (Man)",
+          "Terror",
+          "Relentless Charge"
+        ],
+        "wargear": [
+          "Heavy armour",
+          "Mace of Sauron"
+        ],
+        "options": []
+      },
+      {
+        "name": "The Tower of Sauron",
+        "factions": [
+          {
+            "name": "The Spire of the Tower",
+            "heroicTier": "Hero of Valour"
+          }
+        ],
+        "points": 110,
+        "movement": 6,
+        "fight": 5,
+        "shoot": 4,
+        "strength": 5,
+        "defence": 6,
+        "attack": 2,
+        "wounds": 2,
+        "courage": 5,
+        "intelligence": 4,
+        "might": 2,
+        "will": 6,
+        "fate": 0,
+        "race": [
+          "Man"
+        ],
+        "faction": [
+          "Mordor"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Unique"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [
+          "Heroic Channelling",
+          "Heroic Defence"
+        ],
+        "specialRules": [
+          "Dominant (2)",
+          "Fell Sight",
+          "Terror",
+          "Stalk Unseen",
+          "Master of Illusions"
+        ],
+        "wargear": [
+          "Heavy armour",
+          "Banner of Faces",
+          "Two hand weapons"
+        ],
+        "options": [],
+        "magicalPowers": [
+          {
+            "name": "Compel",
+            "range": "6\"",
+            "casting": 5
+          },
+          {
+            "name": "Drain Courage",
+            "range": "6\"",
+            "casting": 5
+          },
+          {
+            "name": "Enchant Blades",
+            "range": "Self",
+            "casting": 4
+          }
+        ]
+      },
+      {
+        "name": "The White Graug",
+        "factions": [
+          {
+            "name": "Lairs of Mordor",
+            "heroicTier": "Hero of Legend"
+          }
+        ],
+        "points": 200,
+        "movement": 6,
+        "fight": 7,
+        "shoot": 4,
+        "strength": 8,
+        "defence": 7,
+        "attack": 4,
+        "wounds": 6,
+        "courage": 5,
+        "intelligence": 5,
+        "might": 2,
+        "will": 2,
+        "fate": 0,
+        "race": [
+          "Graug"
+        ],
+        "faction": [
+          "Mordor"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Monster",
+          "Unique"
+        ],
+        "baseSize": [
+          "80mm"
+        ],
+        "heroicActions": [],
+        "specialRules": [
+          "Cave Dweller",
+          "Dominant (6)",
+          "Fearless",
+          "Large Target",
+          "Monstrous Charge",
+          "Terror",
+          "Immovable Object",
+          "Relentless Advance",
+          "Sovereign Predator"
+        ],
+        "wargear": [
+          "Massive Claws (hand weapons)"
+        ],
+        "options": []
+      },
+      {
+        "name": "Torvin",
+        "factions": [],
+        "points": 140,
+        "movement": 6,
+        "fight": 7,
+        "shoot": 5,
+        "strength": 7,
+        "defence": 7,
+        "attack": 3,
+        "wounds": 3,
+        "courage": 6,
+        "intelligence": 6,
+        "might": 1,
+        "will": 7,
+        "fate": 1,
+        "race": [
+          "Troll"
+        ],
+        "faction": [
+          "Mordor"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Monster",
+          "Unique"
+        ],
+        "baseSize": [
+          "50mm"
+        ],
+        "heroicActions": [
+          "Heroic Strike"
+        ],
+        "specialRules": [
+          "Dominant (4)",
+          "Terror",
+          "Sworn Protector (Ratbag)",
+          "Dishonourable Saviour",
+          "“Snaga-Uruk”"
+        ],
+        "wargear": [
+          "Light Armour",
+          "Olog Gauntlets"
+        ],
+        "options": []
+      },
+      {
+        "name": "Tribesman Warden",
+        "factions": [
+          {
+            "name": "The Freefolk of Nûrn",
+            "heroicTier": "Hero of Fortitude"
+          }
+        ],
+        "points": 45,
+        "movement": 6,
+        "fight": 4,
+        "shoot": 4,
+        "strength": 4,
+        "defence": 4,
+        "attack": 2,
+        "wounds": 2,
+        "courage": 6,
+        "intelligence": 6,
+        "might": 2,
+        "will": 1,
+        "fate": 1,
+        "race": [
+          "Man"
+        ],
+        "faction": [
+          "Nûrn"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [
+          "Heroic Accuracy"
+        ],
+        "specialRules": [
+          "Expert Hunter",
+          "Hatred (Uruk-hai)",
+          "Stalk Unseen",
+          "Woodland Creature",
+          "Master Hunter"
+        ],
+        "wargear": [
+          "Light armour",
+          "Hand weapon",
+          "Throwing spears"
+        ],
+        "options": [
+          {
+            "name": "Exchange light armour for armour",
+            "points": 5,
+            "usesDefinition": "Exchange light armour for armour"
+          },
+          {
+            "name": "Light shield",
+            "points": 5
+          }
+        ]
+      },
+      {
+        "name": "Udûn Olog-hai Captain",
+        "factions": [
+          {
+            "name": "Talion's Army",
+            "heroicTier": "Hero of Fortitude"
+          },
+          {
+            "name": "Fortress of the Black Hand",
+            "heroicTier": "Hero of Fortitude"
+          }
+        ],
+        "points": 80,
+        "movement": 6,
+        "fight": 6,
+        "shoot": 6,
+        "strength": 6,
+        "defence": 6,
+        "attack": 3,
+        "wounds": 3,
+        "courage": 6,
+        "intelligence": 7,
+        "might": 2,
+        "will": 1,
+        "fate": 1,
+        "race": [
+          "Olog-hai"
+        ],
+        "faction": [
+          "Mordor"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Monster"
+        ],
+        "baseSize": [
+          "50mm"
+        ],
+        "heroicActions": [
+          "Heroic Strength"
+        ],
+        "specialRules": [
+          "Dominant (3)",
+          "Terror"
+        ],
+        "wargear": [
+          "Armour",
+          "Olog gauntlets"
+        ],
+        "options": [
+          {
+            "name": "Exchange armour for heavy armour",
+            "points": 5,
+            "usesDefinition": "Exchange armour for heavy armour",
+            "availableIn": []
+          },
+          {
+            "name": "Olog-hai mace",
+            "points": 10
+          },
+          {
+            "name": "Pit spear and shield",
+            "points": 10
+          }
+        ],
+        "unlimited": true
+      },
+      {
+        "name": "Udûn Olog-hai Overlord",
+        "factions": [],
+        "points": 180,
+        "movement": 6,
+        "fight": 8,
+        "shoot": 4,
+        "strength": 7,
+        "defence": 7,
+        "attack": 4,
+        "wounds": 5,
+        "courage": 5,
+        "intelligence": 5,
+        "might": 3,
+        "will": 3,
+        "fate": 2,
+        "race": [
+          "Olog-hai"
+        ],
+        "faction": [
+          "Mordor"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Monster",
+          "Unique"
+        ],
+        "baseSize": [
+          "60mm"
+        ],
+        "heroicActions": [
+          "Heroic Challenge",
+          "Heroic Strength",
+          "Heroic Strike"
+        ],
+        "specialRules": [
+          "Dominant (5)",
+          "Terror"
+        ],
+        "wargear": [
+          "Armour",
+          "Olog gauntlets"
+        ],
+        "options": [
+          {
+            "name": "Exchange armour for heavy armour",
+            "points": 5,
+            "usesDefinition": "Exchange armour for heavy armour",
+            "availableIn": []
+          },
+          {
+            "name": "Olog-hai mace",
+            "points": 10
+          },
+          {
+            "name": "Pit spear and shield",
+            "points": 10
+          }
+        ],
+        "unavailableWith": [
+          "Udûn Orc Overlord",
+          "Udûn Uruk-hai Overlord"
+        ]
+      },
+      {
+        "name": "Udûn Olog-hai Warchief",
+        "factions": [
+          {
+            "name": "Talion's Army",
+            "heroicTier": "Hero of Valour"
+          }
+        ],
+        "points": 110,
+        "movement": 6,
+        "fight": 7,
+        "shoot": 5,
+        "strength": 6,
+        "defence": 7,
+        "attack": 3,
+        "wounds": 4,
+        "courage": 6,
+        "intelligence": 6,
+        "might": 2,
+        "will": 2,
+        "fate": 2,
+        "race": [
+          "Olog-hai"
+        ],
+        "faction": [
+          "Mordor"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Monster"
+        ],
+        "baseSize": [
+          "50mm"
+        ],
+        "heroicActions": [
+          "Heroic Strength",
+          "Heroic Strike"
+        ],
+        "specialRules": [
+          "Dominant (4)",
+          "Terror"
+        ],
+        "wargear": [
+          "Armour",
+          "Olog gauntlets"
+        ],
+        "options": [
+          {
+            "name": "Exchange armour for heavy armour",
+            "points": 5,
+            "usesDefinition": "Exchange armour for heavy armour",
+            "availableIn": []
+          },
+          {
+            "name": "Olog-hai mace",
+            "points": 10
+          },
+          {
+            "name": "Pit spear and shield",
+            "points": 10
+          }
+        ],
+        "unlimited": true
+      },
+      {
+        "name": "Udûn Orc Captain",
+        "factions": [
+          {
+            "name": "Talion's Army",
+            "heroicTier": "Hero of Fortitude"
+          },
+          {
+            "name": "Stronghold of the Hammer",
+            "heroicTier": "Hero of Fortitude"
+          },
+          {
+            "name": "The Spire of the Tower",
+            "heroicTier": "Hero of Fortitude"
+          },
+          {
+            "name": "Fortress of the Black Hand",
+            "heroicTier": "Hero of Fortitude"
+          }
+        ],
+        "points": 45,
+        "movement": 6,
+        "fight": 4,
+        "shoot": 5,
+        "strength": 4,
+        "defence": 5,
+        "attack": 2,
+        "wounds": 2,
+        "courage": 7,
+        "intelligence": 7,
+        "might": 2,
+        "will": 1,
+        "fate": 1,
+        "race": [
+          "Orc"
+        ],
+        "faction": [
+          "Mordor"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [
+          "Heroic March"
+        ],
+        "specialRules": [],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Caragor",
+            "points": 20,
+            "availableIn": [
+              "Talion's Army",
+              "Stronghold of the Hammer",
+              "Fortress of the Black Hand"
+            ]
+          },
+          {
+            "name": "Throwing spears",
+            "points": 10
+          },
+          {
+            "name": "Dual blades",
+            "points": 10
+          },
+          {
+            "name": "Shield",
+            "points": 5
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 5
+          },
+          {
+            "name": "Pit spear",
+            "points": 5
+          }
+        ],
+        "unlimited": true
+      },
+      {
+        "name": "Udûn Orc Overlord",
+        "factions": [],
+        "points": 90,
+        "movement": 6,
+        "fight": 5,
+        "shoot": 4,
+        "strength": 5,
+        "defence": 5,
+        "attack": 3,
+        "wounds": 3,
+        "courage": 5,
+        "intelligence": 4,
+        "might": 3,
+        "will": 3,
+        "fate": 2,
+        "race": [
+          "Orc"
+        ],
+        "faction": [
+          "Mordor"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Unique"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [
+          "Heroic Challenge",
+          "Heroic Strength",
+          "Heroic Strike"
+        ],
+        "specialRules": [
+          "Backstabbers",
+          "Dominant (2)"
+        ],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Caragor",
+            "points": 20
+          },
+          {
+            "name": "Throwing spears",
+            "points": 10
+          },
+          {
+            "name": "Dual blades",
+            "points": 10
+          },
+          {
+            "name": "Shield",
+            "points": 5
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 5
+          },
+          {
+            "name": "Pit spear",
+            "points": 5
+          }
+        ],
+        "unavailableWith": [
+          "Udûn Uruk-hai Overlord",
+          "Udûn Olog-hai Overlord"
+        ]
+      },
+      {
+        "name": "Udûn Orc Warchief",
+        "factions": [
+          {
+            "name": "Talion's Army",
+            "heroicTier": "Hero of Valour"
+          },
+          {
+            "name": "Stronghold of the Hammer",
+            "heroicTier": "Hero of Valour"
+          },
+          {
+            "name": "The Spire of the Tower",
+            "heroicTier": "Hero of Valour"
+          },
+          {
+            "name": "Fortress of the Black Hand",
+            "heroicTier": "Hero of Valour"
+          }
+        ],
+        "points": 65,
+        "movement": 6,
+        "fight": 4,
+        "shoot": 5,
+        "strength": 4,
+        "defence": 5,
+        "attack": 2,
+        "wounds": 2,
+        "courage": 6,
+        "intelligence": 5,
+        "might": 2,
+        "will": 2,
+        "fate": 2,
+        "race": [
+          "Orc"
+        ],
+        "faction": [
+          "Mordor"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry"
+        ],
+        "baseSize": [
+          "28mm"
+        ],
+        "heroicActions": [
+          "Heroic Defence",
+          "Heroic March"
+        ],
+        "specialRules": [
+          "Backstabbers"
+        ],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Caragor",
+            "points": 20,
+            "availableIn": [
+              "Talion's Army",
+              "Stronghold of the Hammer"
+            ]
+          },
+          {
+            "name": "Throwing spears",
+            "points": 10
+          },
+          {
+            "name": "Dual blades",
+            "points": 10
+          },
+          {
+            "name": "Shield",
+            "points": 5
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 5
+          },
+          {
+            "name": "Pit spear",
+            "points": 5
+          }
+        ],
+        "unlimited": true
+      },
+      {
+        "name": "Udûn Uruk-hai Captain",
+        "factions": [
+          {
+            "name": "Talion's Army",
+            "heroicTier": "Hero of Fortitude"
+          },
+          {
+            "name": "Stronghold of the Hammer",
+            "heroicTier": "Hero of Fortitude"
+          },
+          {
+            "name": "The Spire of the Tower",
+            "heroicTier": "Hero of Fortitude"
+          },
+          {
+            "name": "Fortress of the Black Hand",
+            "heroicTier": "Hero of Fortitude"
+          }
+        ],
+        "points": 55,
+        "movement": 6,
+        "fight": 5,
+        "shoot": 4,
+        "strength": 5,
+        "defence": 5,
+        "attack": 2,
+        "wounds": 2,
+        "courage": 6,
+        "intelligence": 6,
+        "might": 2,
+        "will": 1,
+        "fate": 1,
+        "race": [
+          "Uruk-hai"
+        ],
+        "faction": [
+          "Mordor"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [
+          "Heroic March"
+        ],
+        "specialRules": [],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Exchange armour for heavy armour",
+            "points": 5,
+            "usesDefinition": "Exchange armour for heavy armour",
+            "availableIn": []
+          },
+          {
+            "name": "Caragor",
+            "points": 20,
+            "availableIn": [
+              "Fortress of the Black Hand"
+            ]
+          },
+          {
+            "name": "Crossbow",
+            "points": 10
+          },
+          {
+            "name": "Dual blades",
+            "points": 10
+          },
+          {
+            "name": "Spear and shield",
+            "points": 10
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 5
+          }
+        ],
+        "unlimited": true
+      },
+      {
+        "name": "Udûn Uruk-hai Overlord",
+        "factions": [],
+        "points": 120,
+        "movement": 6,
+        "fight": 6,
+        "shoot": 3,
+        "strength": 5,
+        "defence": 5,
+        "attack": 3,
+        "wounds": 3,
+        "courage": 5,
+        "intelligence": 5,
+        "might": 3,
+        "will": 3,
+        "fate": 2,
+        "race": [
+          "Uruk-hai"
+        ],
+        "faction": [
+          "Mordor"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Unique"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [
+          "Heroic Challenge",
+          "Heroic Strength",
+          "Heroic Strike"
+        ],
+        "specialRules": [
+          "Dominant (3)"
+        ],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Exchange armour for heavy armour",
+            "points": 5,
+            "usesDefinition": "Exchange armour for heavy armour",
+            "availableIn": []
+          },
+          {
+            "name": "Caragor",
+            "points": 20
+          },
+          {
+            "name": "Crossbow",
+            "points": 10
+          },
+          {
+            "name": "Dual blades",
+            "points": 10
+          },
+          {
+            "name": "Pit spear and shield",
+            "points": 10
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 5
+          }
+        ],
+        "unavailableWith": [
+          "Udûn Orc Overlord",
+          "Udûn Olog-hai Overlord"
+        ]
+      },
+      {
+        "name": "Udûn Uruk-hai Warchief",
+        "factions": [
+          {
+            "name": "Talion's Army",
+            "heroicTier": "Hero of Valour"
+          },
+          {
+            "name": "Stronghold of the Hammer",
+            "heroicTier": "Hero of Valour"
+          },
+          {
+            "name": "The Spire of the Tower",
+            "heroicTier": "Hero of Valour"
+          },
+          {
+            "name": "Fortress of the Black Hand",
+            "heroicTier": "Hero of Valour"
+          }
+        ],
+        "points": 80,
+        "movement": 6,
+        "fight": 5,
+        "shoot": 3,
+        "strength": 5,
+        "defence": 5,
+        "attack": 2,
+        "wounds": 3,
+        "courage": 6,
+        "intelligence": 5,
+        "might": 2,
+        "will": 2,
+        "fate": 2,
+        "race": [
+          "Uruk-hai"
+        ],
+        "faction": [
+          "Mordor"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry"
+        ],
+        "baseSize": [
+          "28mm"
+        ],
+        "heroicActions": [
+          "Heroic Challenge",
+          "Heroic Strength"
+        ],
+        "specialRules": [
+          "Dominant (2)"
+        ],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Exchange armour for heavy armour",
+            "points": 5,
+            "usesDefinition": "Exchange armour for heavy armour",
+            "availableIn": []
+          },
+          {
+            "name": "Caragor",
+            "points": 20,
+            "availableIn": []
+          },
+          {
+            "name": "Crossbow",
+            "points": 10
+          },
+          {
+            "name": "Dual blades",
+            "points": 10
+          },
+          {
+            "name": "Pit spear and shield",
+            "points": 10
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 5
+          }
+        ],
+        "unlimited": true
+      },
+      {
+        "name": "Uruk Overlord",
+        "factions": [],
+        "points": 100,
+        "movement": 6,
+        "fight": 5,
+        "shoot": 4,
+        "strength": 5,
+        "defence": 5,
+        "attack": 2,
+        "wounds": 2,
+        "courage": 6,
+        "intelligence": 6,
+        "might": 3,
+        "will": 2,
+        "fate": 2,
+        "race": [
+          "Uruk-hai"
+        ],
+        "faction": [
+          "Mordor"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [
+          "Heroic Challenge",
+          "Heroic Strength",
+          "Heroic Strike"
+        ],
+        "specialRules": [
+          "Tribes of the Orcs"
+        ],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Caragor",
+            "points": 30
+          },
+          {
+            "name": "Exchange Armour for Heavy Armour",
+            "points": 10
+          },
+          {
+            "name": "Shield",
+            "points": 5
+          },
+          {
+            "name": "Two-handed Weapon",
+            "points": 5
+          }
+        ]
+      },
+      {
+        "name": "Orc Captain — Dark",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Fortitude"
+          }
+        ],
+        "points": 45,
+        "movement": 6,
+        "fight": 4,
+        "shoot": 5,
+        "strength": 4,
+        "defence": 5,
+        "attack": 2,
+        "wounds": 2,
+        "courage": 7,
+        "intelligence": 7,
+        "might": 2,
+        "will": 1,
+        "fate": 1,
+        "race": [
+          "Orc"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Dark Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [
+          "Heroic March"
+        ],
+        "specialRules": [
+          "Dark Tribe Captain"
+        ],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Caragor",
+            "points": 20,
+            "availableIn": [
+              "Talion's Army",
+              "Stronghold of the Hammer",
+              "Fortress of the Black Hand"
+            ]
+          },
+          {
+            "name": "Throwing spears",
+            "points": 10
+          },
+          {
+            "name": "Dual blades",
+            "points": 10
+          },
+          {
+            "name": "Shield",
+            "points": 5
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 5
+          },
+          {
+            "name": "Pit spear",
+            "points": 5
+          }
+        ],
+        "unlimited": true,
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Dark Tribe"
+      },
+      {
+        "name": "Orc Captain — Feral",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Fortitude"
+          }
+        ],
+        "points": 45,
+        "movement": 6,
+        "fight": 4,
+        "shoot": 5,
+        "strength": 4,
+        "defence": 5,
+        "attack": 2,
+        "wounds": 2,
+        "courage": 7,
+        "intelligence": 7,
+        "might": 2,
+        "will": 1,
+        "fate": 1,
+        "race": [
+          "Orc"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Feral Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [
+          "Heroic March"
+        ],
+        "specialRules": [
+          "Feral Tribe Captain"
+        ],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Caragor",
+            "points": 20,
+            "availableIn": [
+              "Talion's Army",
+              "Stronghold of the Hammer",
+              "Fortress of the Black Hand"
+            ]
+          },
+          {
+            "name": "Throwing spears",
+            "points": 10
+          },
+          {
+            "name": "Dual blades",
+            "points": 10
+          },
+          {
+            "name": "Shield",
+            "points": 5
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 5
+          },
+          {
+            "name": "Pit spear",
+            "points": 5
+          },
+          {
+            "name": "Chained Bolas",
+            "points": 5,
+            "usesDefinition": "Chained Bolas"
+          }
+        ],
+        "unlimited": true,
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Feral Tribe"
+      },
+      {
+        "name": "Orc Captain — Machine",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Fortitude"
+          }
+        ],
+        "points": 45,
+        "movement": 6,
+        "fight": 4,
+        "shoot": 5,
+        "strength": 4,
+        "defence": 5,
+        "attack": 2,
+        "wounds": 2,
+        "courage": 7,
+        "intelligence": 7,
+        "might": 2,
+        "will": 1,
+        "fate": 1,
+        "race": [
+          "Orc"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Machine Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [
+          "Heroic March"
+        ],
+        "specialRules": [
+          "Machine Tribe Captain"
+        ],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Caragor",
+            "points": 20,
+            "availableIn": [
+              "Talion's Army",
+              "Stronghold of the Hammer",
+              "Fortress of the Black Hand"
+            ]
+          },
+          {
+            "name": "Throwing spears",
+            "points": 10
+          },
+          {
+            "name": "Dual blades",
+            "points": 10
+          },
+          {
+            "name": "Shield",
+            "points": 5
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 5
+          },
+          {
+            "name": "Pit spear",
+            "points": 5
+          },
+          {
+            "name": "Twin Hand-crossbows",
+            "points": 5,
+            "usesDefinition": "Twin Hand-crossbows"
+          }
+        ],
+        "unlimited": true,
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Machine Tribe"
+      },
+      {
+        "name": "Orc Captain — Marauder",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Fortitude"
+          }
+        ],
+        "points": 45,
+        "movement": 6,
+        "fight": 4,
+        "shoot": 5,
+        "strength": 4,
+        "defence": 5,
+        "attack": 2,
+        "wounds": 2,
+        "courage": 7,
+        "intelligence": 7,
+        "might": 2,
+        "will": 1,
+        "fate": 1,
+        "race": [
+          "Orc"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Marauder Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [
+          "Heroic March"
+        ],
+        "specialRules": [
+          "Marauder Tribe Captain"
+        ],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Caragor",
+            "points": 20,
+            "availableIn": [
+              "Talion's Army",
+              "Stronghold of the Hammer",
+              "Fortress of the Black Hand"
+            ]
+          },
+          {
+            "name": "Throwing spears",
+            "points": 10
+          },
+          {
+            "name": "Dual blades",
+            "points": 10
+          },
+          {
+            "name": "Shield",
+            "points": 5
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 5
+          },
+          {
+            "name": "Pit spear",
+            "points": 5
+          }
+        ],
+        "unlimited": true,
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Marauder Tribe"
+      },
+      {
+        "name": "Orc Captain — Mystic",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Fortitude"
+          }
+        ],
+        "points": 45,
+        "movement": 6,
+        "fight": 4,
+        "shoot": 5,
+        "strength": 4,
+        "defence": 5,
+        "attack": 2,
+        "wounds": 2,
+        "courage": 7,
+        "intelligence": 7,
+        "might": 2,
+        "will": 1,
+        "fate": 1,
+        "race": [
+          "Orc"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Mystic Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [
+          "Heroic March"
+        ],
+        "specialRules": [
+          "Mystic Tribe Captain"
+        ],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Caragor",
+            "points": 20,
+            "availableIn": [
+              "Talion's Army",
+              "Stronghold of the Hammer",
+              "Fortress of the Black Hand"
+            ]
+          },
+          {
+            "name": "Throwing spears",
+            "points": 10
+          },
+          {
+            "name": "Dual blades",
+            "points": 10
+          },
+          {
+            "name": "Shield",
+            "points": 5
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 5
+          },
+          {
+            "name": "Pit spear",
+            "points": 5
+          }
+        ],
+        "unlimited": true,
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Mystic Tribe"
+      },
+      {
+        "name": "Orc Captain — Outlaw",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Fortitude"
+          }
+        ],
+        "points": 45,
+        "movement": 6,
+        "fight": 4,
+        "shoot": 5,
+        "strength": 4,
+        "defence": 5,
+        "attack": 2,
+        "wounds": 2,
+        "courage": 7,
+        "intelligence": 7,
+        "might": 2,
+        "will": 1,
+        "fate": 1,
+        "race": [
+          "Orc"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Outlaw Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [
+          "Heroic March"
+        ],
+        "specialRules": [
+          "Outlaw Tribe Captain"
+        ],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Caragor",
+            "points": 20,
+            "availableIn": [
+              "Talion's Army",
+              "Stronghold of the Hammer",
+              "Fortress of the Black Hand"
+            ]
+          },
+          {
+            "name": "Throwing spears",
+            "points": 10
+          },
+          {
+            "name": "Dual blades",
+            "points": 10
+          },
+          {
+            "name": "Shield",
+            "points": 5
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 5
+          },
+          {
+            "name": "Pit spear",
+            "points": 5
+          }
+        ],
+        "unlimited": true,
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Outlaw Tribe"
+      },
+      {
+        "name": "Orc Captain — Slaughter",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Fortitude"
+          }
+        ],
+        "points": 45,
+        "movement": 6,
+        "fight": 4,
+        "shoot": 5,
+        "strength": 4,
+        "defence": 5,
+        "attack": 2,
+        "wounds": 2,
+        "courage": 7,
+        "intelligence": 7,
+        "might": 2,
+        "will": 1,
+        "fate": 1,
+        "race": [
+          "Orc"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Slaughter Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [
+          "Heroic March"
+        ],
+        "specialRules": [
+          "Slaughter Tribe Captain"
+        ],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Caragor",
+            "points": 20,
+            "availableIn": [
+              "Talion's Army",
+              "Stronghold of the Hammer",
+              "Fortress of the Black Hand"
+            ]
+          },
+          {
+            "name": "Throwing spears",
+            "points": 10
+          },
+          {
+            "name": "Dual blades",
+            "points": 10
+          },
+          {
+            "name": "Shield",
+            "points": 5
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 5
+          },
+          {
+            "name": "Pit spear",
+            "points": 5
+          }
+        ],
+        "unlimited": true,
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Slaughter Tribe"
+      },
+      {
+        "name": "Orc Captain — Terror",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Fortitude"
+          }
+        ],
+        "points": 45,
+        "movement": 6,
+        "fight": 4,
+        "shoot": 5,
+        "strength": 4,
+        "defence": 5,
+        "attack": 2,
+        "wounds": 2,
+        "courage": 7,
+        "intelligence": 7,
+        "might": 2,
+        "will": 1,
+        "fate": 1,
+        "race": [
+          "Orc"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Terror Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [
+          "Heroic March"
+        ],
+        "specialRules": [
+          "Terror Tribe Captain"
+        ],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Caragor",
+            "points": 20,
+            "availableIn": [
+              "Talion's Army",
+              "Stronghold of the Hammer",
+              "Fortress of the Black Hand"
+            ]
+          },
+          {
+            "name": "Throwing spears",
+            "points": 10
+          },
+          {
+            "name": "Dual blades",
+            "points": 10
+          },
+          {
+            "name": "Shield",
+            "points": 5
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 5
+          },
+          {
+            "name": "Pit spear",
+            "points": 5
+          }
+        ],
+        "unlimited": true,
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Terror Tribe"
+      },
+      {
+        "name": "Orc Captain — Warmonger",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Fortitude"
+          }
+        ],
+        "points": 45,
+        "movement": 6,
+        "fight": 4,
+        "shoot": 5,
+        "strength": 4,
+        "defence": 5,
+        "attack": 2,
+        "wounds": 2,
+        "courage": 7,
+        "intelligence": 7,
+        "might": 2,
+        "will": 1,
+        "fate": 1,
+        "race": [
+          "Orc"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Warmonger Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [
+          "Heroic March"
+        ],
+        "specialRules": [
+          "Warmonger Tribe Captain"
+        ],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Caragor",
+            "points": 20,
+            "availableIn": [
+              "Talion's Army",
+              "Stronghold of the Hammer",
+              "Fortress of the Black Hand"
+            ]
+          },
+          {
+            "name": "Throwing spears",
+            "points": 10
+          },
+          {
+            "name": "Dual blades",
+            "points": 10
+          },
+          {
+            "name": "Shield",
+            "points": 5
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 5
+          },
+          {
+            "name": "Pit spear",
+            "points": 5
+          },
+          {
+            "name": "Exchange armour for heavy armour (Warmonger)",
+            "points": 0,
+            "usesDefinition": "Exchange armour for heavy armour"
+          }
+        ],
+        "unlimited": true,
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Warmonger Tribe"
+      },
+      {
+        "name": "Uruk-hai Captain — Dark",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Fortitude"
+          }
+        ],
+        "points": 55,
+        "movement": 6,
+        "fight": 5,
+        "shoot": 4,
+        "strength": 5,
+        "defence": 5,
+        "attack": 2,
+        "wounds": 2,
+        "courage": 6,
+        "intelligence": 6,
+        "might": 2,
+        "will": 1,
+        "fate": 1,
+        "race": [
+          "Uruk-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Dark Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [
+          "Heroic March"
+        ],
+        "specialRules": [
+          "Dark Tribe Captain"
+        ],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Exchange armour for heavy armour",
+            "points": 5,
+            "usesDefinition": "Exchange armour for heavy armour",
+            "availableIn": []
+          },
+          {
+            "name": "Caragor",
+            "points": 20,
+            "availableIn": [
+              "Fortress of the Black Hand"
+            ]
+          },
+          {
+            "name": "Crossbow",
+            "points": 10
+          },
+          {
+            "name": "Dual blades",
+            "points": 10
+          },
+          {
+            "name": "Spear and shield",
+            "points": 10
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 5
+          }
+        ],
+        "unlimited": true,
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Dark Tribe"
+      },
+      {
+        "name": "Uruk-hai Captain — Feral",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Fortitude"
+          }
+        ],
+        "points": 55,
+        "movement": 6,
+        "fight": 5,
+        "shoot": 4,
+        "strength": 5,
+        "defence": 5,
+        "attack": 2,
+        "wounds": 2,
+        "courage": 6,
+        "intelligence": 6,
+        "might": 2,
+        "will": 1,
+        "fate": 1,
+        "race": [
+          "Uruk-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Feral Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [
+          "Heroic March"
+        ],
+        "specialRules": [
+          "Feral Tribe Captain"
+        ],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Exchange armour for heavy armour",
+            "points": 5,
+            "usesDefinition": "Exchange armour for heavy armour",
+            "availableIn": []
+          },
+          {
+            "name": "Caragor",
+            "points": 20,
+            "availableIn": [
+              "Fortress of the Black Hand"
+            ]
+          },
+          {
+            "name": "Crossbow",
+            "points": 10
+          },
+          {
+            "name": "Dual blades",
+            "points": 10
+          },
+          {
+            "name": "Spear and shield",
+            "points": 10
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 5
+          },
+          {
+            "name": "Chained Bolas",
+            "points": 5,
+            "usesDefinition": "Chained Bolas"
+          }
+        ],
+        "unlimited": true,
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Feral Tribe"
+      },
+      {
+        "name": "Uruk-hai Captain — Machine",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Fortitude"
+          }
+        ],
+        "points": 55,
+        "movement": 6,
+        "fight": 5,
+        "shoot": 4,
+        "strength": 5,
+        "defence": 5,
+        "attack": 2,
+        "wounds": 2,
+        "courage": 6,
+        "intelligence": 6,
+        "might": 2,
+        "will": 1,
+        "fate": 1,
+        "race": [
+          "Uruk-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Machine Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [
+          "Heroic March"
+        ],
+        "specialRules": [
+          "Machine Tribe Captain"
+        ],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Exchange armour for heavy armour",
+            "points": 5,
+            "usesDefinition": "Exchange armour for heavy armour",
+            "availableIn": []
+          },
+          {
+            "name": "Caragor",
+            "points": 20,
+            "availableIn": [
+              "Fortress of the Black Hand"
+            ]
+          },
+          {
+            "name": "Crossbow",
+            "points": 10
+          },
+          {
+            "name": "Dual blades",
+            "points": 10
+          },
+          {
+            "name": "Spear and shield",
+            "points": 10
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 5
+          },
+          {
+            "name": "Twin Hand-crossbows",
+            "points": 5,
+            "usesDefinition": "Twin Hand-crossbows"
+          }
+        ],
+        "unlimited": true,
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Machine Tribe"
+      },
+      {
+        "name": "Uruk-hai Captain — Marauder",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Fortitude"
+          }
+        ],
+        "points": 55,
+        "movement": 6,
+        "fight": 5,
+        "shoot": 4,
+        "strength": 5,
+        "defence": 5,
+        "attack": 2,
+        "wounds": 2,
+        "courage": 6,
+        "intelligence": 6,
+        "might": 2,
+        "will": 1,
+        "fate": 1,
+        "race": [
+          "Uruk-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Marauder Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [
+          "Heroic March"
+        ],
+        "specialRules": [
+          "Marauder Tribe Captain"
+        ],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Exchange armour for heavy armour",
+            "points": 5,
+            "usesDefinition": "Exchange armour for heavy armour",
+            "availableIn": []
+          },
+          {
+            "name": "Caragor",
+            "points": 20,
+            "availableIn": [
+              "Fortress of the Black Hand"
+            ]
+          },
+          {
+            "name": "Crossbow",
+            "points": 10
+          },
+          {
+            "name": "Dual blades",
+            "points": 10
+          },
+          {
+            "name": "Spear and shield",
+            "points": 10
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 5
+          }
+        ],
+        "unlimited": true,
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Marauder Tribe"
+      },
+      {
+        "name": "Uruk-hai Captain — Mystic",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Fortitude"
+          }
+        ],
+        "points": 55,
+        "movement": 6,
+        "fight": 5,
+        "shoot": 4,
+        "strength": 5,
+        "defence": 5,
+        "attack": 2,
+        "wounds": 2,
+        "courage": 6,
+        "intelligence": 6,
+        "might": 2,
+        "will": 1,
+        "fate": 1,
+        "race": [
+          "Uruk-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Mystic Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [
+          "Heroic March"
+        ],
+        "specialRules": [
+          "Mystic Tribe Captain"
+        ],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Exchange armour for heavy armour",
+            "points": 5,
+            "usesDefinition": "Exchange armour for heavy armour",
+            "availableIn": []
+          },
+          {
+            "name": "Caragor",
+            "points": 20,
+            "availableIn": [
+              "Fortress of the Black Hand"
+            ]
+          },
+          {
+            "name": "Crossbow",
+            "points": 10
+          },
+          {
+            "name": "Dual blades",
+            "points": 10
+          },
+          {
+            "name": "Spear and shield",
+            "points": 10
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 5
+          }
+        ],
+        "unlimited": true,
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Mystic Tribe"
+      },
+      {
+        "name": "Uruk-hai Captain — Outlaw",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Fortitude"
+          }
+        ],
+        "points": 55,
+        "movement": 6,
+        "fight": 5,
+        "shoot": 4,
+        "strength": 5,
+        "defence": 5,
+        "attack": 2,
+        "wounds": 2,
+        "courage": 6,
+        "intelligence": 6,
+        "might": 2,
+        "will": 1,
+        "fate": 1,
+        "race": [
+          "Uruk-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Outlaw Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [
+          "Heroic March"
+        ],
+        "specialRules": [
+          "Outlaw Tribe Captain"
+        ],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Exchange armour for heavy armour",
+            "points": 5,
+            "usesDefinition": "Exchange armour for heavy armour",
+            "availableIn": []
+          },
+          {
+            "name": "Caragor",
+            "points": 20,
+            "availableIn": [
+              "Fortress of the Black Hand"
+            ]
+          },
+          {
+            "name": "Crossbow",
+            "points": 10
+          },
+          {
+            "name": "Dual blades",
+            "points": 10
+          },
+          {
+            "name": "Spear and shield",
+            "points": 10
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 5
+          }
+        ],
+        "unlimited": true,
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Outlaw Tribe"
+      },
+      {
+        "name": "Uruk-hai Captain — Slaughter",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Fortitude"
+          }
+        ],
+        "points": 55,
+        "movement": 6,
+        "fight": 5,
+        "shoot": 4,
+        "strength": 5,
+        "defence": 5,
+        "attack": 2,
+        "wounds": 2,
+        "courage": 6,
+        "intelligence": 6,
+        "might": 2,
+        "will": 1,
+        "fate": 1,
+        "race": [
+          "Uruk-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Slaughter Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [
+          "Heroic March"
+        ],
+        "specialRules": [
+          "Slaughter Tribe Captain"
+        ],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Exchange armour for heavy armour",
+            "points": 5,
+            "usesDefinition": "Exchange armour for heavy armour",
+            "availableIn": []
+          },
+          {
+            "name": "Caragor",
+            "points": 20,
+            "availableIn": [
+              "Fortress of the Black Hand"
+            ]
+          },
+          {
+            "name": "Crossbow",
+            "points": 10
+          },
+          {
+            "name": "Dual blades",
+            "points": 10
+          },
+          {
+            "name": "Spear and shield",
+            "points": 10
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 5
+          }
+        ],
+        "unlimited": true,
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Slaughter Tribe"
+      },
+      {
+        "name": "Uruk-hai Captain — Terror",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Fortitude"
+          }
+        ],
+        "points": 55,
+        "movement": 6,
+        "fight": 5,
+        "shoot": 4,
+        "strength": 5,
+        "defence": 5,
+        "attack": 2,
+        "wounds": 2,
+        "courage": 6,
+        "intelligence": 6,
+        "might": 2,
+        "will": 1,
+        "fate": 1,
+        "race": [
+          "Uruk-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Terror Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [
+          "Heroic March"
+        ],
+        "specialRules": [
+          "Terror Tribe Captain"
+        ],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Exchange armour for heavy armour",
+            "points": 5,
+            "usesDefinition": "Exchange armour for heavy armour",
+            "availableIn": []
+          },
+          {
+            "name": "Caragor",
+            "points": 20,
+            "availableIn": [
+              "Fortress of the Black Hand"
+            ]
+          },
+          {
+            "name": "Crossbow",
+            "points": 10
+          },
+          {
+            "name": "Dual blades",
+            "points": 10
+          },
+          {
+            "name": "Spear and shield",
+            "points": 10
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 5
+          }
+        ],
+        "unlimited": true,
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Terror Tribe"
+      },
+      {
+        "name": "Uruk-hai Captain — Warmonger",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Fortitude"
+          }
+        ],
+        "points": 55,
+        "movement": 6,
+        "fight": 5,
+        "shoot": 4,
+        "strength": 5,
+        "defence": 5,
+        "attack": 2,
+        "wounds": 2,
+        "courage": 6,
+        "intelligence": 6,
+        "might": 2,
+        "will": 1,
+        "fate": 1,
+        "race": [
+          "Uruk-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Warmonger Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [
+          "Heroic March"
+        ],
+        "specialRules": [
+          "Warmonger Tribe Captain"
+        ],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Exchange armour for heavy armour",
+            "points": 5,
+            "usesDefinition": "Exchange armour for heavy armour",
+            "availableIn": []
+          },
+          {
+            "name": "Caragor",
+            "points": 20,
+            "availableIn": [
+              "Fortress of the Black Hand"
+            ]
+          },
+          {
+            "name": "Crossbow",
+            "points": 10
+          },
+          {
+            "name": "Dual blades",
+            "points": 10
+          },
+          {
+            "name": "Spear and shield",
+            "points": 10
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 5
+          },
+          {
+            "name": "Exchange armour for heavy armour (Warmonger)",
+            "points": 0,
+            "usesDefinition": "Exchange armour for heavy armour"
+          }
+        ],
+        "unlimited": true,
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Warmonger Tribe"
+      },
+      {
+        "name": "Olog-hai Captain — Dark",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Fortitude"
+          }
+        ],
+        "points": 80,
+        "movement": 6,
+        "fight": 6,
+        "shoot": 6,
+        "strength": 6,
+        "defence": 6,
+        "attack": 3,
+        "wounds": 3,
+        "courage": 6,
+        "intelligence": 7,
+        "might": 2,
+        "will": 1,
+        "fate": 1,
+        "race": [
+          "Olog-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Dark Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Monster"
+        ],
+        "baseSize": [
+          "50mm"
+        ],
+        "heroicActions": [
+          "Heroic Strength"
+        ],
+        "specialRules": [
+          "Dominant (3)",
+          "Terror",
+          "Dark Tribe Captain"
+        ],
+        "wargear": [
+          "Armour",
+          "Olog gauntlets"
+        ],
+        "options": [
+          {
+            "name": "Exchange armour for heavy armour",
+            "points": 5,
+            "usesDefinition": "Exchange armour for heavy armour",
+            "availableIn": []
+          },
+          {
+            "name": "Olog-hai mace",
+            "points": 10
+          },
+          {
+            "name": "Pit spear and shield",
+            "points": 10
+          }
+        ],
+        "unlimited": true,
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Dark Tribe"
+      },
+      {
+        "name": "Olog-hai Captain — Feral",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Fortitude"
+          }
+        ],
+        "points": 80,
+        "movement": 6,
+        "fight": 6,
+        "shoot": 6,
+        "strength": 6,
+        "defence": 6,
+        "attack": 3,
+        "wounds": 3,
+        "courage": 6,
+        "intelligence": 7,
+        "might": 2,
+        "will": 1,
+        "fate": 1,
+        "race": [
+          "Olog-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Feral Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Monster"
+        ],
+        "baseSize": [
+          "50mm"
+        ],
+        "heroicActions": [
+          "Heroic Strength"
+        ],
+        "specialRules": [
+          "Dominant (3)",
+          "Terror",
+          "Feral Tribe Captain"
+        ],
+        "wargear": [
+          "Armour",
+          "Olog gauntlets"
+        ],
+        "options": [
+          {
+            "name": "Exchange armour for heavy armour",
+            "points": 5,
+            "usesDefinition": "Exchange armour for heavy armour",
+            "availableIn": []
+          },
+          {
+            "name": "Olog-hai mace",
+            "points": 10
+          },
+          {
+            "name": "Pit spear and shield",
+            "points": 10
+          }
+        ],
+        "unlimited": true,
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Feral Tribe"
+      },
+      {
+        "name": "Olog-hai Captain — Machine",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Fortitude"
+          }
+        ],
+        "points": 80,
+        "movement": 6,
+        "fight": 6,
+        "shoot": 6,
+        "strength": 6,
+        "defence": 6,
+        "attack": 3,
+        "wounds": 3,
+        "courage": 6,
+        "intelligence": 7,
+        "might": 2,
+        "will": 1,
+        "fate": 1,
+        "race": [
+          "Olog-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Machine Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Monster"
+        ],
+        "baseSize": [
+          "50mm"
+        ],
+        "heroicActions": [
+          "Heroic Strength"
+        ],
+        "specialRules": [
+          "Dominant (3)",
+          "Terror",
+          "Machine Tribe Captain"
+        ],
+        "wargear": [
+          "Armour",
+          "Olog gauntlets"
+        ],
+        "options": [
+          {
+            "name": "Exchange armour for heavy armour",
+            "points": 5,
+            "usesDefinition": "Exchange armour for heavy armour",
+            "availableIn": []
+          },
+          {
+            "name": "Olog-hai mace",
+            "points": 10
+          },
+          {
+            "name": "Pit spear and shield",
+            "points": 10
+          }
+        ],
+        "unlimited": true,
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Machine Tribe"
+      },
+      {
+        "name": "Olog-hai Captain — Marauder",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Fortitude"
+          }
+        ],
+        "points": 80,
+        "movement": 6,
+        "fight": 6,
+        "shoot": 6,
+        "strength": 6,
+        "defence": 6,
+        "attack": 3,
+        "wounds": 3,
+        "courage": 6,
+        "intelligence": 7,
+        "might": 2,
+        "will": 1,
+        "fate": 1,
+        "race": [
+          "Olog-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Marauder Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Monster"
+        ],
+        "baseSize": [
+          "50mm"
+        ],
+        "heroicActions": [
+          "Heroic Strength"
+        ],
+        "specialRules": [
+          "Dominant (3)",
+          "Terror",
+          "Marauder Tribe Captain"
+        ],
+        "wargear": [
+          "Armour",
+          "Olog gauntlets"
+        ],
+        "options": [
+          {
+            "name": "Exchange armour for heavy armour",
+            "points": 5,
+            "usesDefinition": "Exchange armour for heavy armour",
+            "availableIn": []
+          },
+          {
+            "name": "Olog-hai mace",
+            "points": 10
+          },
+          {
+            "name": "Pit spear and shield",
+            "points": 10
+          }
+        ],
+        "unlimited": true,
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Marauder Tribe"
+      },
+      {
+        "name": "Olog-hai Captain — Mystic",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Fortitude"
+          }
+        ],
+        "points": 80,
+        "movement": 6,
+        "fight": 6,
+        "shoot": 6,
+        "strength": 6,
+        "defence": 6,
+        "attack": 3,
+        "wounds": 3,
+        "courage": 6,
+        "intelligence": 7,
+        "might": 2,
+        "will": 1,
+        "fate": 1,
+        "race": [
+          "Olog-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Mystic Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Monster"
+        ],
+        "baseSize": [
+          "50mm"
+        ],
+        "heroicActions": [
+          "Heroic Strength"
+        ],
+        "specialRules": [
+          "Dominant (3)",
+          "Terror",
+          "Mystic Tribe Captain"
+        ],
+        "wargear": [
+          "Armour",
+          "Olog gauntlets"
+        ],
+        "options": [
+          {
+            "name": "Exchange armour for heavy armour",
+            "points": 5,
+            "usesDefinition": "Exchange armour for heavy armour",
+            "availableIn": []
+          },
+          {
+            "name": "Olog-hai mace",
+            "points": 10
+          },
+          {
+            "name": "Pit spear and shield",
+            "points": 10
+          }
+        ],
+        "unlimited": true,
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Mystic Tribe"
+      },
+      {
+        "name": "Olog-hai Captain — Outlaw",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Fortitude"
+          }
+        ],
+        "points": 80,
+        "movement": 6,
+        "fight": 6,
+        "shoot": 6,
+        "strength": 6,
+        "defence": 6,
+        "attack": 3,
+        "wounds": 3,
+        "courage": 6,
+        "intelligence": 7,
+        "might": 2,
+        "will": 1,
+        "fate": 1,
+        "race": [
+          "Olog-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Outlaw Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Monster"
+        ],
+        "baseSize": [
+          "50mm"
+        ],
+        "heroicActions": [
+          "Heroic Strength"
+        ],
+        "specialRules": [
+          "Dominant (3)",
+          "Terror",
+          "Outlaw Tribe Captain"
+        ],
+        "wargear": [
+          "Armour",
+          "Olog gauntlets"
+        ],
+        "options": [
+          {
+            "name": "Exchange armour for heavy armour",
+            "points": 5,
+            "usesDefinition": "Exchange armour for heavy armour",
+            "availableIn": []
+          },
+          {
+            "name": "Olog-hai mace",
+            "points": 10
+          },
+          {
+            "name": "Pit spear and shield",
+            "points": 10
+          }
+        ],
+        "unlimited": true,
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Outlaw Tribe"
+      },
+      {
+        "name": "Olog-hai Captain — Slaughter",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Fortitude"
+          }
+        ],
+        "points": 80,
+        "movement": 6,
+        "fight": 6,
+        "shoot": 6,
+        "strength": 6,
+        "defence": 6,
+        "attack": 3,
+        "wounds": 3,
+        "courage": 6,
+        "intelligence": 7,
+        "might": 2,
+        "will": 1,
+        "fate": 1,
+        "race": [
+          "Olog-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Slaughter Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Monster"
+        ],
+        "baseSize": [
+          "50mm"
+        ],
+        "heroicActions": [
+          "Heroic Strength"
+        ],
+        "specialRules": [
+          "Dominant (3)",
+          "Terror",
+          "Slaughter Tribe Captain"
+        ],
+        "wargear": [
+          "Armour",
+          "Olog gauntlets"
+        ],
+        "options": [
+          {
+            "name": "Exchange armour for heavy armour",
+            "points": 5,
+            "usesDefinition": "Exchange armour for heavy armour",
+            "availableIn": []
+          },
+          {
+            "name": "Olog-hai mace",
+            "points": 10
+          },
+          {
+            "name": "Pit spear and shield",
+            "points": 10
+          }
+        ],
+        "unlimited": true,
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Slaughter Tribe"
+      },
+      {
+        "name": "Olog-hai Captain — Terror",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Fortitude"
+          }
+        ],
+        "points": 80,
+        "movement": 6,
+        "fight": 6,
+        "shoot": 6,
+        "strength": 6,
+        "defence": 6,
+        "attack": 3,
+        "wounds": 3,
+        "courage": 6,
+        "intelligence": 7,
+        "might": 2,
+        "will": 1,
+        "fate": 1,
+        "race": [
+          "Olog-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Terror Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Monster"
+        ],
+        "baseSize": [
+          "50mm"
+        ],
+        "heroicActions": [
+          "Heroic Strength"
+        ],
+        "specialRules": [
+          "Dominant (3)",
+          "Terror",
+          "Terror Tribe Captain"
+        ],
+        "wargear": [
+          "Armour",
+          "Olog gauntlets"
+        ],
+        "options": [
+          {
+            "name": "Exchange armour for heavy armour",
+            "points": 5,
+            "usesDefinition": "Exchange armour for heavy armour",
+            "availableIn": []
+          },
+          {
+            "name": "Olog-hai mace",
+            "points": 10
+          },
+          {
+            "name": "Pit spear and shield",
+            "points": 10
+          }
+        ],
+        "unlimited": true,
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Terror Tribe"
+      },
+      {
+        "name": "Olog-hai Captain — Warmonger",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Fortitude"
+          }
+        ],
+        "points": 80,
+        "movement": 6,
+        "fight": 6,
+        "shoot": 6,
+        "strength": 6,
+        "defence": 6,
+        "attack": 3,
+        "wounds": 3,
+        "courage": 6,
+        "intelligence": 7,
+        "might": 2,
+        "will": 1,
+        "fate": 1,
+        "race": [
+          "Olog-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Warmonger Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Monster"
+        ],
+        "baseSize": [
+          "50mm"
+        ],
+        "heroicActions": [
+          "Heroic Strength"
+        ],
+        "specialRules": [
+          "Dominant (3)",
+          "Terror",
+          "Warmonger Tribe Captain"
+        ],
+        "wargear": [
+          "Armour",
+          "Olog gauntlets"
+        ],
+        "options": [
+          {
+            "name": "Exchange armour for heavy armour",
+            "points": 5,
+            "usesDefinition": "Exchange armour for heavy armour",
+            "availableIn": []
+          },
+          {
+            "name": "Olog-hai mace",
+            "points": 10
+          },
+          {
+            "name": "Pit spear and shield",
+            "points": 10
+          },
+          {
+            "name": "Exchange light armour with armour (Warmonger)",
+            "points": 0,
+            "usesDefinition": "Exchange light armour with armour"
+          }
+        ],
+        "unlimited": true,
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Warmonger Tribe"
+      },
+      {
+        "name": "Orc Warchief — Dark",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Valour"
+          }
+        ],
+        "points": 65,
+        "movement": 6,
+        "fight": 4,
+        "shoot": 5,
+        "strength": 4,
+        "defence": 5,
+        "attack": 2,
+        "wounds": 2,
+        "courage": 6,
+        "intelligence": 5,
+        "might": 2,
+        "will": 2,
+        "fate": 2,
+        "race": [
+          "Orc"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Dark Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry"
+        ],
+        "baseSize": [
+          "28mm"
+        ],
+        "heroicActions": [
+          "Heroic Defence",
+          "Heroic March"
+        ],
+        "specialRules": [
+          "Backstabbers",
+          "Dark Tribe Captain",
+          "Dark Tribe Warchief"
+        ],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Caragor",
+            "points": 20,
+            "availableIn": [
+              "Talion's Army",
+              "Stronghold of the Hammer"
+            ]
+          },
+          {
+            "name": "Throwing spears",
+            "points": 10
+          },
+          {
+            "name": "Dual blades",
+            "points": 10
+          },
+          {
+            "name": "Shield",
+            "points": 5
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 5
+          },
+          {
+            "name": "Pit spear",
+            "points": 5
+          }
+        ],
+        "unlimited": true,
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Dark Tribe"
+      },
+      {
+        "name": "Orc Warchief — Feral",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Valour"
+          }
+        ],
+        "points": 65,
+        "movement": 6,
+        "fight": 4,
+        "shoot": 5,
+        "strength": 4,
+        "defence": 5,
+        "attack": 2,
+        "wounds": 2,
+        "courage": 6,
+        "intelligence": 5,
+        "might": 2,
+        "will": 2,
+        "fate": 2,
+        "race": [
+          "Orc"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Feral Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry"
+        ],
+        "baseSize": [
+          "28mm"
+        ],
+        "heroicActions": [
+          "Heroic Defence",
+          "Heroic March"
+        ],
+        "specialRules": [
+          "Backstabbers",
+          "Feral Tribe Captain",
+          "Feral Tribe Warchief"
+        ],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Caragor",
+            "points": 20,
+            "availableIn": [
+              "Talion's Army",
+              "Stronghold of the Hammer"
+            ]
+          },
+          {
+            "name": "Throwing spears",
+            "points": 10
+          },
+          {
+            "name": "Dual blades",
+            "points": 10
+          },
+          {
+            "name": "Shield",
+            "points": 5
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 5
+          },
+          {
+            "name": "Pit spear",
+            "points": 5
+          },
+          {
+            "name": "Chained Bolas",
+            "points": 5,
+            "usesDefinition": "Chained Bolas"
+          }
+        ],
+        "unlimited": true,
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Feral Tribe"
+      },
+      {
+        "name": "Orc Warchief — Machine",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Valour"
+          }
+        ],
+        "points": 65,
+        "movement": 6,
+        "fight": 4,
+        "shoot": 5,
+        "strength": 4,
+        "defence": 5,
+        "attack": 2,
+        "wounds": 2,
+        "courage": 6,
+        "intelligence": 5,
+        "might": 2,
+        "will": 2,
+        "fate": 2,
+        "race": [
+          "Orc"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Machine Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry"
+        ],
+        "baseSize": [
+          "28mm"
+        ],
+        "heroicActions": [
+          "Heroic Defence",
+          "Heroic March"
+        ],
+        "specialRules": [
+          "Backstabbers",
+          "Machine Tribe Captain",
+          "Machine Tribe Warchief"
+        ],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Caragor",
+            "points": 20,
+            "availableIn": [
+              "Talion's Army",
+              "Stronghold of the Hammer"
+            ]
+          },
+          {
+            "name": "Throwing spears",
+            "points": 10
+          },
+          {
+            "name": "Dual blades",
+            "points": 10
+          },
+          {
+            "name": "Shield",
+            "points": 5
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 5
+          },
+          {
+            "name": "Pit spear",
+            "points": 5
+          },
+          {
+            "name": "Twin Hand-crossbows",
+            "points": 5,
+            "usesDefinition": "Twin Hand-crossbows"
+          }
+        ],
+        "unlimited": true,
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Machine Tribe"
+      },
+      {
+        "name": "Orc Warchief — Marauder",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Valour"
+          }
+        ],
+        "points": 65,
+        "movement": 6,
+        "fight": 4,
+        "shoot": 5,
+        "strength": 4,
+        "defence": 5,
+        "attack": 2,
+        "wounds": 2,
+        "courage": 6,
+        "intelligence": 5,
+        "might": 2,
+        "will": 2,
+        "fate": 2,
+        "race": [
+          "Orc"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Marauder Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry"
+        ],
+        "baseSize": [
+          "28mm"
+        ],
+        "heroicActions": [
+          "Heroic Defence",
+          "Heroic March"
+        ],
+        "specialRules": [
+          "Backstabbers",
+          "Marauder Tribe Captain",
+          "Marauder Tribe Warchief"
+        ],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Caragor",
+            "points": 20,
+            "availableIn": [
+              "Talion's Army",
+              "Stronghold of the Hammer"
+            ]
+          },
+          {
+            "name": "Throwing spears",
+            "points": 10
+          },
+          {
+            "name": "Dual blades",
+            "points": 10
+          },
+          {
+            "name": "Shield",
+            "points": 5
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 5
+          },
+          {
+            "name": "Pit spear",
+            "points": 5
+          }
+        ],
+        "unlimited": true,
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Marauder Tribe"
+      },
+      {
+        "name": "Orc Warchief — Mystic",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Valour"
+          }
+        ],
+        "points": 65,
+        "movement": 6,
+        "fight": 4,
+        "shoot": 5,
+        "strength": 4,
+        "defence": 5,
+        "attack": 2,
+        "wounds": 2,
+        "courage": 6,
+        "intelligence": 5,
+        "might": 2,
+        "will": 2,
+        "fate": 2,
+        "race": [
+          "Orc"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Mystic Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry"
+        ],
+        "baseSize": [
+          "28mm"
+        ],
+        "heroicActions": [
+          "Heroic Defence",
+          "Heroic March"
+        ],
+        "specialRules": [
+          "Backstabbers",
+          "Mystic Tribe Captain",
+          "Mystic Tribe Warchief"
+        ],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Caragor",
+            "points": 20,
+            "availableIn": [
+              "Talion's Army",
+              "Stronghold of the Hammer"
+            ]
+          },
+          {
+            "name": "Throwing spears",
+            "points": 10
+          },
+          {
+            "name": "Dual blades",
+            "points": 10
+          },
+          {
+            "name": "Shield",
+            "points": 5
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 5
+          },
+          {
+            "name": "Pit spear",
+            "points": 5
+          },
+          {
+            "name": "Morgul Blade",
+            "points": 5,
+            "usesDefinition": "Morgul Blade"
+          }
+        ],
+        "unlimited": true,
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Mystic Tribe"
+      },
+      {
+        "name": "Orc Warchief — Outlaw",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Valour"
+          }
+        ],
+        "points": 65,
+        "movement": 6,
+        "fight": 4,
+        "shoot": 5,
+        "strength": 4,
+        "defence": 5,
+        "attack": 2,
+        "wounds": 2,
+        "courage": 6,
+        "intelligence": 5,
+        "might": 2,
+        "will": 2,
+        "fate": 2,
+        "race": [
+          "Orc"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Outlaw Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry"
+        ],
+        "baseSize": [
+          "28mm"
+        ],
+        "heroicActions": [
+          "Heroic Defence",
+          "Heroic March"
+        ],
+        "specialRules": [
+          "Backstabbers",
+          "Outlaw Tribe Captain",
+          "Outlaw Tribe Warchief"
+        ],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Caragor",
+            "points": 20,
+            "availableIn": [
+              "Talion's Army",
+              "Stronghold of the Hammer"
+            ]
+          },
+          {
+            "name": "Throwing spears",
+            "points": 10
+          },
+          {
+            "name": "Dual blades",
+            "points": 10
+          },
+          {
+            "name": "Shield",
+            "points": 5
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 5
+          },
+          {
+            "name": "Pit spear",
+            "points": 5
+          }
+        ],
+        "unlimited": true,
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Outlaw Tribe"
+      },
+      {
+        "name": "Orc Warchief — Slaughter",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Valour"
+          }
+        ],
+        "points": 65,
+        "movement": 6,
+        "fight": 4,
+        "shoot": 5,
+        "strength": 4,
+        "defence": 5,
+        "attack": 2,
+        "wounds": 2,
+        "courage": 6,
+        "intelligence": 5,
+        "might": 2,
+        "will": 2,
+        "fate": 2,
+        "race": [
+          "Orc"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Slaughter Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry"
+        ],
+        "baseSize": [
+          "28mm"
+        ],
+        "heroicActions": [
+          "Heroic Defence",
+          "Heroic March"
+        ],
+        "specialRules": [
+          "Backstabbers",
+          "Slaughter Tribe Captain",
+          "Slaughter Tribe Warchief"
+        ],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Caragor",
+            "points": 20,
+            "availableIn": [
+              "Talion's Army",
+              "Stronghold of the Hammer"
+            ]
+          },
+          {
+            "name": "Throwing spears",
+            "points": 10
+          },
+          {
+            "name": "Dual blades",
+            "points": 10
+          },
+          {
+            "name": "Shield",
+            "points": 5
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 5
+          },
+          {
+            "name": "Pit spear",
+            "points": 5
+          }
+        ],
+        "unlimited": true,
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Slaughter Tribe"
+      },
+      {
+        "name": "Orc Warchief — Terror",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Valour"
+          }
+        ],
+        "points": 65,
+        "movement": 6,
+        "fight": 4,
+        "shoot": 5,
+        "strength": 4,
+        "defence": 5,
+        "attack": 2,
+        "wounds": 2,
+        "courage": 6,
+        "intelligence": 5,
+        "might": 2,
+        "will": 2,
+        "fate": 2,
+        "race": [
+          "Orc"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Terror Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry"
+        ],
+        "baseSize": [
+          "28mm"
+        ],
+        "heroicActions": [
+          "Heroic Defence",
+          "Heroic March"
+        ],
+        "specialRules": [
+          "Backstabbers",
+          "Terror Tribe Captain",
+          "Terror Tribe Warchief"
+        ],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Caragor",
+            "points": 20,
+            "availableIn": [
+              "Talion's Army",
+              "Stronghold of the Hammer"
+            ]
+          },
+          {
+            "name": "Throwing spears",
+            "points": 10
+          },
+          {
+            "name": "Dual blades",
+            "points": 10
+          },
+          {
+            "name": "Shield",
+            "points": 5
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 5
+          },
+          {
+            "name": "Pit spear",
+            "points": 5
+          }
+        ],
+        "unlimited": true,
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Terror Tribe"
+      },
+      {
+        "name": "Orc Warchief — Warmonger",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Valour"
+          }
+        ],
+        "points": 65,
+        "movement": 6,
+        "fight": 4,
+        "shoot": 5,
+        "strength": 4,
+        "defence": 5,
+        "attack": 2,
+        "wounds": 2,
+        "courage": 6,
+        "intelligence": 5,
+        "might": 2,
+        "will": 2,
+        "fate": 2,
+        "race": [
+          "Orc"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Warmonger Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry"
+        ],
+        "baseSize": [
+          "28mm"
+        ],
+        "heroicActions": [
+          "Heroic Defence",
+          "Heroic March"
+        ],
+        "specialRules": [
+          "Backstabbers",
+          "Warmonger Tribe Captain",
+          "Warmonger Tribe Warchief"
+        ],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Caragor",
+            "points": 20,
+            "availableIn": [
+              "Talion's Army",
+              "Stronghold of the Hammer"
+            ]
+          },
+          {
+            "name": "Throwing spears",
+            "points": 10
+          },
+          {
+            "name": "Dual blades",
+            "points": 10
+          },
+          {
+            "name": "Shield",
+            "points": 5
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 5
+          },
+          {
+            "name": "Pit spear",
+            "points": 5
+          },
+          {
+            "name": "Exchange armour for heavy armour (Warmonger)",
+            "points": 0,
+            "usesDefinition": "Exchange armour for heavy armour"
+          }
+        ],
+        "unlimited": true,
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Warmonger Tribe"
+      },
+      {
+        "name": "Uruk-hai Warchief — Dark",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Valour"
+          }
+        ],
+        "points": 80,
+        "movement": 6,
+        "fight": 5,
+        "shoot": 3,
+        "strength": 5,
+        "defence": 5,
+        "attack": 2,
+        "wounds": 3,
+        "courage": 6,
+        "intelligence": 5,
+        "might": 2,
+        "will": 2,
+        "fate": 2,
+        "race": [
+          "Uruk-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Dark Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry"
+        ],
+        "baseSize": [
+          "28mm"
+        ],
+        "heroicActions": [
+          "Heroic Challenge",
+          "Heroic Strength"
+        ],
+        "specialRules": [
+          "Dominant (2)",
+          "Dark Tribe Captain",
+          "Dark Tribe Warchief"
+        ],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Exchange armour for heavy armour",
+            "points": 5,
+            "usesDefinition": "Exchange armour for heavy armour",
+            "availableIn": []
+          },
+          {
+            "name": "Caragor",
+            "points": 20,
+            "availableIn": []
+          },
+          {
+            "name": "Crossbow",
+            "points": 10
+          },
+          {
+            "name": "Dual blades",
+            "points": 10
+          },
+          {
+            "name": "Pit spear and shield",
+            "points": 10
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 5
+          }
+        ],
+        "unlimited": true,
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Dark Tribe"
+      },
+      {
+        "name": "Uruk-hai Warchief — Feral",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Valour"
+          }
+        ],
+        "points": 80,
+        "movement": 6,
+        "fight": 5,
+        "shoot": 3,
+        "strength": 5,
+        "defence": 5,
+        "attack": 2,
+        "wounds": 3,
+        "courage": 6,
+        "intelligence": 5,
+        "might": 2,
+        "will": 2,
+        "fate": 2,
+        "race": [
+          "Uruk-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Feral Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry"
+        ],
+        "baseSize": [
+          "28mm"
+        ],
+        "heroicActions": [
+          "Heroic Challenge",
+          "Heroic Strength"
+        ],
+        "specialRules": [
+          "Dominant (2)",
+          "Feral Tribe Captain",
+          "Feral Tribe Warchief"
+        ],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Exchange armour for heavy armour",
+            "points": 5,
+            "usesDefinition": "Exchange armour for heavy armour",
+            "availableIn": []
+          },
+          {
+            "name": "Caragor",
+            "points": 20,
+            "availableIn": []
+          },
+          {
+            "name": "Crossbow",
+            "points": 10
+          },
+          {
+            "name": "Dual blades",
+            "points": 10
+          },
+          {
+            "name": "Pit spear and shield",
+            "points": 10
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 5
+          },
+          {
+            "name": "Chained Bolas",
+            "points": 5,
+            "usesDefinition": "Chained Bolas"
+          }
+        ],
+        "unlimited": true,
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Feral Tribe"
+      },
+      {
+        "name": "Uruk-hai Warchief — Machine",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Valour"
+          }
+        ],
+        "points": 80,
+        "movement": 6,
+        "fight": 5,
+        "shoot": 3,
+        "strength": 5,
+        "defence": 5,
+        "attack": 2,
+        "wounds": 3,
+        "courage": 6,
+        "intelligence": 5,
+        "might": 2,
+        "will": 2,
+        "fate": 2,
+        "race": [
+          "Uruk-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Machine Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry"
+        ],
+        "baseSize": [
+          "28mm"
+        ],
+        "heroicActions": [
+          "Heroic Challenge",
+          "Heroic Strength"
+        ],
+        "specialRules": [
+          "Dominant (2)",
+          "Machine Tribe Captain",
+          "Machine Tribe Warchief"
+        ],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Exchange armour for heavy armour",
+            "points": 5,
+            "usesDefinition": "Exchange armour for heavy armour",
+            "availableIn": []
+          },
+          {
+            "name": "Caragor",
+            "points": 20,
+            "availableIn": []
+          },
+          {
+            "name": "Crossbow",
+            "points": 10
+          },
+          {
+            "name": "Dual blades",
+            "points": 10
+          },
+          {
+            "name": "Pit spear and shield",
+            "points": 10
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 5
+          },
+          {
+            "name": "Twin Hand-crossbows",
+            "points": 5,
+            "usesDefinition": "Twin Hand-crossbows"
+          }
+        ],
+        "unlimited": true,
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Machine Tribe"
+      },
+      {
+        "name": "Uruk-hai Warchief — Marauder",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Valour"
+          }
+        ],
+        "points": 80,
+        "movement": 6,
+        "fight": 5,
+        "shoot": 3,
+        "strength": 5,
+        "defence": 5,
+        "attack": 2,
+        "wounds": 3,
+        "courage": 6,
+        "intelligence": 5,
+        "might": 2,
+        "will": 2,
+        "fate": 2,
+        "race": [
+          "Uruk-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Marauder Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry"
+        ],
+        "baseSize": [
+          "28mm"
+        ],
+        "heroicActions": [
+          "Heroic Challenge",
+          "Heroic Strength"
+        ],
+        "specialRules": [
+          "Dominant (2)",
+          "Marauder Tribe Captain",
+          "Marauder Tribe Warchief"
+        ],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Exchange armour for heavy armour",
+            "points": 5,
+            "usesDefinition": "Exchange armour for heavy armour",
+            "availableIn": []
+          },
+          {
+            "name": "Caragor",
+            "points": 20,
+            "availableIn": []
+          },
+          {
+            "name": "Crossbow",
+            "points": 10
+          },
+          {
+            "name": "Dual blades",
+            "points": 10
+          },
+          {
+            "name": "Pit spear and shield",
+            "points": 10
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 5
+          }
+        ],
+        "unlimited": true,
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Marauder Tribe"
+      },
+      {
+        "name": "Uruk-hai Warchief — Mystic",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Valour"
+          }
+        ],
+        "points": 80,
+        "movement": 6,
+        "fight": 5,
+        "shoot": 3,
+        "strength": 5,
+        "defence": 5,
+        "attack": 2,
+        "wounds": 3,
+        "courage": 6,
+        "intelligence": 5,
+        "might": 2,
+        "will": 2,
+        "fate": 2,
+        "race": [
+          "Uruk-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Mystic Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry"
+        ],
+        "baseSize": [
+          "28mm"
+        ],
+        "heroicActions": [
+          "Heroic Challenge",
+          "Heroic Strength"
+        ],
+        "specialRules": [
+          "Dominant (2)",
+          "Mystic Tribe Captain",
+          "Mystic Tribe Warchief"
+        ],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Exchange armour for heavy armour",
+            "points": 5,
+            "usesDefinition": "Exchange armour for heavy armour",
+            "availableIn": []
+          },
+          {
+            "name": "Caragor",
+            "points": 20,
+            "availableIn": []
+          },
+          {
+            "name": "Crossbow",
+            "points": 10
+          },
+          {
+            "name": "Dual blades",
+            "points": 10
+          },
+          {
+            "name": "Pit spear and shield",
+            "points": 10
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 5
+          },
+          {
+            "name": "Morgul Blade",
+            "points": 5,
+            "usesDefinition": "Morgul Blade"
+          }
+        ],
+        "unlimited": true,
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Mystic Tribe"
+      },
+      {
+        "name": "Uruk-hai Warchief — Outlaw",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Valour"
+          }
+        ],
+        "points": 80,
+        "movement": 6,
+        "fight": 5,
+        "shoot": 3,
+        "strength": 5,
+        "defence": 5,
+        "attack": 2,
+        "wounds": 3,
+        "courage": 6,
+        "intelligence": 5,
+        "might": 2,
+        "will": 2,
+        "fate": 2,
+        "race": [
+          "Uruk-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Outlaw Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry"
+        ],
+        "baseSize": [
+          "28mm"
+        ],
+        "heroicActions": [
+          "Heroic Challenge",
+          "Heroic Strength"
+        ],
+        "specialRules": [
+          "Dominant (2)",
+          "Outlaw Tribe Captain",
+          "Outlaw Tribe Warchief"
+        ],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Exchange armour for heavy armour",
+            "points": 5,
+            "usesDefinition": "Exchange armour for heavy armour",
+            "availableIn": []
+          },
+          {
+            "name": "Caragor",
+            "points": 20,
+            "availableIn": []
+          },
+          {
+            "name": "Crossbow",
+            "points": 10
+          },
+          {
+            "name": "Dual blades",
+            "points": 10
+          },
+          {
+            "name": "Pit spear and shield",
+            "points": 10
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 5
+          }
+        ],
+        "unlimited": true,
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Outlaw Tribe"
+      },
+      {
+        "name": "Uruk-hai Warchief — Slaughter",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Valour"
+          }
+        ],
+        "points": 80,
+        "movement": 6,
+        "fight": 5,
+        "shoot": 3,
+        "strength": 5,
+        "defence": 5,
+        "attack": 2,
+        "wounds": 3,
+        "courage": 6,
+        "intelligence": 5,
+        "might": 2,
+        "will": 2,
+        "fate": 2,
+        "race": [
+          "Uruk-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Slaughter Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry"
+        ],
+        "baseSize": [
+          "28mm"
+        ],
+        "heroicActions": [
+          "Heroic Challenge",
+          "Heroic Strength"
+        ],
+        "specialRules": [
+          "Dominant (2)",
+          "Slaughter Tribe Captain",
+          "Slaughter Tribe Warchief"
+        ],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Exchange armour for heavy armour",
+            "points": 5,
+            "usesDefinition": "Exchange armour for heavy armour",
+            "availableIn": []
+          },
+          {
+            "name": "Caragor",
+            "points": 20,
+            "availableIn": []
+          },
+          {
+            "name": "Crossbow",
+            "points": 10
+          },
+          {
+            "name": "Dual blades",
+            "points": 10
+          },
+          {
+            "name": "Pit spear and shield",
+            "points": 10
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 5
+          }
+        ],
+        "unlimited": true,
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Slaughter Tribe"
+      },
+      {
+        "name": "Uruk-hai Warchief — Terror",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Valour"
+          }
+        ],
+        "points": 80,
+        "movement": 6,
+        "fight": 5,
+        "shoot": 3,
+        "strength": 5,
+        "defence": 5,
+        "attack": 2,
+        "wounds": 3,
+        "courage": 6,
+        "intelligence": 5,
+        "might": 2,
+        "will": 2,
+        "fate": 2,
+        "race": [
+          "Uruk-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Terror Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry"
+        ],
+        "baseSize": [
+          "28mm"
+        ],
+        "heroicActions": [
+          "Heroic Challenge",
+          "Heroic Strength"
+        ],
+        "specialRules": [
+          "Dominant (2)",
+          "Terror Tribe Captain",
+          "Terror Tribe Warchief"
+        ],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Exchange armour for heavy armour",
+            "points": 5,
+            "usesDefinition": "Exchange armour for heavy armour",
+            "availableIn": []
+          },
+          {
+            "name": "Caragor",
+            "points": 20,
+            "availableIn": []
+          },
+          {
+            "name": "Crossbow",
+            "points": 10
+          },
+          {
+            "name": "Dual blades",
+            "points": 10
+          },
+          {
+            "name": "Pit spear and shield",
+            "points": 10
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 5
+          }
+        ],
+        "unlimited": true,
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Terror Tribe"
+      },
+      {
+        "name": "Uruk-hai Warchief — Warmonger",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Valour"
+          }
+        ],
+        "points": 80,
+        "movement": 6,
+        "fight": 5,
+        "shoot": 3,
+        "strength": 5,
+        "defence": 5,
+        "attack": 2,
+        "wounds": 3,
+        "courage": 6,
+        "intelligence": 5,
+        "might": 2,
+        "will": 2,
+        "fate": 2,
+        "race": [
+          "Uruk-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Warmonger Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry"
+        ],
+        "baseSize": [
+          "28mm"
+        ],
+        "heroicActions": [
+          "Heroic Challenge",
+          "Heroic Strength"
+        ],
+        "specialRules": [
+          "Dominant (2)",
+          "Warmonger Tribe Captain",
+          "Warmonger Tribe Warchief"
+        ],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Exchange armour for heavy armour",
+            "points": 5,
+            "usesDefinition": "Exchange armour for heavy armour",
+            "availableIn": []
+          },
+          {
+            "name": "Caragor",
+            "points": 20,
+            "availableIn": []
+          },
+          {
+            "name": "Crossbow",
+            "points": 10
+          },
+          {
+            "name": "Dual blades",
+            "points": 10
+          },
+          {
+            "name": "Pit spear and shield",
+            "points": 10
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 5
+          },
+          {
+            "name": "Exchange armour for heavy armour (Warmonger)",
+            "points": 0,
+            "usesDefinition": "Exchange armour for heavy armour"
+          }
+        ],
+        "unlimited": true,
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Warmonger Tribe"
+      },
+      {
+        "name": "Olog-hai Warchief — Dark",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Valour"
+          }
+        ],
+        "points": 110,
+        "movement": 6,
+        "fight": 7,
+        "shoot": 5,
+        "strength": 6,
+        "defence": 7,
+        "attack": 3,
+        "wounds": 4,
+        "courage": 6,
+        "intelligence": 6,
+        "might": 2,
+        "will": 2,
+        "fate": 2,
+        "race": [
+          "Olog-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Dark Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Monster"
+        ],
+        "baseSize": [
+          "50mm"
+        ],
+        "heroicActions": [
+          "Heroic Strength",
+          "Heroic Strike"
+        ],
+        "specialRules": [
+          "Dominant (4)",
+          "Terror",
+          "Dark Tribe Captain",
+          "Dark Tribe Warchief"
+        ],
+        "wargear": [
+          "Armour",
+          "Olog gauntlets"
+        ],
+        "options": [
+          {
+            "name": "Exchange armour for heavy armour",
+            "points": 5,
+            "usesDefinition": "Exchange armour for heavy armour",
+            "availableIn": []
+          },
+          {
+            "name": "Olog-hai mace",
+            "points": 10
+          },
+          {
+            "name": "Pit spear and shield",
+            "points": 10
+          }
+        ],
+        "unlimited": true,
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Dark Tribe"
+      },
+      {
+        "name": "Olog-hai Warchief — Feral",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Valour"
+          }
+        ],
+        "points": 110,
+        "movement": 6,
+        "fight": 7,
+        "shoot": 5,
+        "strength": 6,
+        "defence": 7,
+        "attack": 3,
+        "wounds": 4,
+        "courage": 6,
+        "intelligence": 6,
+        "might": 2,
+        "will": 2,
+        "fate": 2,
+        "race": [
+          "Olog-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Feral Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Monster"
+        ],
+        "baseSize": [
+          "50mm"
+        ],
+        "heroicActions": [
+          "Heroic Strength",
+          "Heroic Strike"
+        ],
+        "specialRules": [
+          "Dominant (4)",
+          "Terror",
+          "Feral Tribe Captain",
+          "Feral Tribe Warchief"
+        ],
+        "wargear": [
+          "Armour",
+          "Olog gauntlets"
+        ],
+        "options": [
+          {
+            "name": "Exchange armour for heavy armour",
+            "points": 5,
+            "usesDefinition": "Exchange armour for heavy armour",
+            "availableIn": []
+          },
+          {
+            "name": "Olog-hai mace",
+            "points": 10
+          },
+          {
+            "name": "Pit spear and shield",
+            "points": 10
+          }
+        ],
+        "unlimited": true,
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Feral Tribe"
+      },
+      {
+        "name": "Olog-hai Warchief — Machine",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Valour"
+          }
+        ],
+        "points": 110,
+        "movement": 6,
+        "fight": 7,
+        "shoot": 5,
+        "strength": 6,
+        "defence": 7,
+        "attack": 3,
+        "wounds": 4,
+        "courage": 6,
+        "intelligence": 6,
+        "might": 2,
+        "will": 2,
+        "fate": 2,
+        "race": [
+          "Olog-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Machine Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Monster"
+        ],
+        "baseSize": [
+          "50mm"
+        ],
+        "heroicActions": [
+          "Heroic Strength",
+          "Heroic Strike"
+        ],
+        "specialRules": [
+          "Dominant (4)",
+          "Terror",
+          "Machine Tribe Captain",
+          "Machine Tribe Warchief"
+        ],
+        "wargear": [
+          "Armour",
+          "Olog gauntlets"
+        ],
+        "options": [
+          {
+            "name": "Exchange armour for heavy armour",
+            "points": 5,
+            "usesDefinition": "Exchange armour for heavy armour",
+            "availableIn": []
+          },
+          {
+            "name": "Olog-hai mace",
+            "points": 10
+          },
+          {
+            "name": "Pit spear and shield",
+            "points": 10
+          },
+          {
+            "name": "Olog-hai Flamethrower",
+            "points": 40,
+            "usesDefinition": "Olog-hai Flamethrower"
+          }
+        ],
+        "unlimited": true,
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Machine Tribe"
+      },
+      {
+        "name": "Olog-hai Warchief — Marauder",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Valour"
+          }
+        ],
+        "points": 110,
+        "movement": 6,
+        "fight": 7,
+        "shoot": 5,
+        "strength": 6,
+        "defence": 7,
+        "attack": 3,
+        "wounds": 4,
+        "courage": 6,
+        "intelligence": 6,
+        "might": 2,
+        "will": 2,
+        "fate": 2,
+        "race": [
+          "Olog-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Marauder Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Monster"
+        ],
+        "baseSize": [
+          "50mm"
+        ],
+        "heroicActions": [
+          "Heroic Strength",
+          "Heroic Strike"
+        ],
+        "specialRules": [
+          "Dominant (4)",
+          "Terror",
+          "Marauder Tribe Captain",
+          "Marauder Tribe Warchief"
+        ],
+        "wargear": [
+          "Armour",
+          "Olog gauntlets"
+        ],
+        "options": [
+          {
+            "name": "Exchange armour for heavy armour",
+            "points": 5,
+            "usesDefinition": "Exchange armour for heavy armour",
+            "availableIn": []
+          },
+          {
+            "name": "Olog-hai mace",
+            "points": 10
+          },
+          {
+            "name": "Pit spear and shield",
+            "points": 10
+          }
+        ],
+        "unlimited": true,
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Marauder Tribe"
+      },
+      {
+        "name": "Olog-hai Warchief — Mystic",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Valour"
+          }
+        ],
+        "points": 110,
+        "movement": 6,
+        "fight": 7,
+        "shoot": 5,
+        "strength": 6,
+        "defence": 7,
+        "attack": 3,
+        "wounds": 4,
+        "courage": 6,
+        "intelligence": 6,
+        "might": 2,
+        "will": 2,
+        "fate": 2,
+        "race": [
+          "Olog-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Mystic Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Monster"
+        ],
+        "baseSize": [
+          "50mm"
+        ],
+        "heroicActions": [
+          "Heroic Strength",
+          "Heroic Strike"
+        ],
+        "specialRules": [
+          "Dominant (4)",
+          "Terror",
+          "Mystic Tribe Captain",
+          "Mystic Tribe Warchief"
+        ],
+        "wargear": [
+          "Armour",
+          "Olog gauntlets"
+        ],
+        "options": [
+          {
+            "name": "Exchange armour for heavy armour",
+            "points": 5,
+            "usesDefinition": "Exchange armour for heavy armour",
+            "availableIn": []
+          },
+          {
+            "name": "Olog-hai mace",
+            "points": 10
+          },
+          {
+            "name": "Pit spear and shield",
+            "points": 10
+          },
+          {
+            "name": "Morgul Blade",
+            "points": 5,
+            "usesDefinition": "Morgul Blade"
+          }
+        ],
+        "unlimited": true,
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Mystic Tribe"
+      },
+      {
+        "name": "Olog-hai Warchief — Outlaw",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Valour"
+          }
+        ],
+        "points": 110,
+        "movement": 6,
+        "fight": 7,
+        "shoot": 5,
+        "strength": 6,
+        "defence": 7,
+        "attack": 3,
+        "wounds": 4,
+        "courage": 6,
+        "intelligence": 6,
+        "might": 2,
+        "will": 2,
+        "fate": 2,
+        "race": [
+          "Olog-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Outlaw Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Monster"
+        ],
+        "baseSize": [
+          "50mm"
+        ],
+        "heroicActions": [
+          "Heroic Strength",
+          "Heroic Strike"
+        ],
+        "specialRules": [
+          "Dominant (4)",
+          "Terror",
+          "Outlaw Tribe Captain",
+          "Outlaw Tribe Warchief"
+        ],
+        "wargear": [
+          "Armour",
+          "Olog gauntlets"
+        ],
+        "options": [
+          {
+            "name": "Exchange armour for heavy armour",
+            "points": 5,
+            "usesDefinition": "Exchange armour for heavy armour",
+            "availableIn": []
+          },
+          {
+            "name": "Olog-hai mace",
+            "points": 10
+          },
+          {
+            "name": "Pit spear and shield",
+            "points": 10
+          }
+        ],
+        "unlimited": true,
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Outlaw Tribe"
+      },
+      {
+        "name": "Olog-hai Warchief — Slaughter",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Valour"
+          }
+        ],
+        "points": 110,
+        "movement": 6,
+        "fight": 7,
+        "shoot": 5,
+        "strength": 6,
+        "defence": 7,
+        "attack": 3,
+        "wounds": 4,
+        "courage": 6,
+        "intelligence": 6,
+        "might": 2,
+        "will": 2,
+        "fate": 2,
+        "race": [
+          "Olog-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Slaughter Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Monster"
+        ],
+        "baseSize": [
+          "50mm"
+        ],
+        "heroicActions": [
+          "Heroic Strength",
+          "Heroic Strike"
+        ],
+        "specialRules": [
+          "Dominant (4)",
+          "Terror",
+          "Slaughter Tribe Captain",
+          "Slaughter Tribe Warchief"
+        ],
+        "wargear": [
+          "Armour",
+          "Olog gauntlets"
+        ],
+        "options": [
+          {
+            "name": "Exchange armour for heavy armour",
+            "points": 5,
+            "usesDefinition": "Exchange armour for heavy armour",
+            "availableIn": []
+          },
+          {
+            "name": "Olog-hai mace",
+            "points": 10
+          },
+          {
+            "name": "Pit spear and shield",
+            "points": 10
+          }
+        ],
+        "unlimited": true,
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Slaughter Tribe"
+      },
+      {
+        "name": "Olog-hai Warchief — Terror",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Valour"
+          }
+        ],
+        "points": 110,
+        "movement": 6,
+        "fight": 7,
+        "shoot": 5,
+        "strength": 6,
+        "defence": 7,
+        "attack": 3,
+        "wounds": 4,
+        "courage": 6,
+        "intelligence": 6,
+        "might": 2,
+        "will": 2,
+        "fate": 2,
+        "race": [
+          "Olog-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Terror Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Monster"
+        ],
+        "baseSize": [
+          "50mm"
+        ],
+        "heroicActions": [
+          "Heroic Strength",
+          "Heroic Strike"
+        ],
+        "specialRules": [
+          "Dominant (4)",
+          "Terror",
+          "Terror Tribe Captain",
+          "Terror Tribe Warchief"
+        ],
+        "wargear": [
+          "Armour",
+          "Olog gauntlets"
+        ],
+        "options": [
+          {
+            "name": "Exchange armour for heavy armour",
+            "points": 5,
+            "usesDefinition": "Exchange armour for heavy armour",
+            "availableIn": []
+          },
+          {
+            "name": "Olog-hai mace",
+            "points": 10
+          },
+          {
+            "name": "Pit spear and shield",
+            "points": 10
+          }
+        ],
+        "unlimited": true,
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Terror Tribe"
+      },
+      {
+        "name": "Olog-hai Warchief — Warmonger",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Valour"
+          }
+        ],
+        "points": 110,
+        "movement": 6,
+        "fight": 7,
+        "shoot": 5,
+        "strength": 6,
+        "defence": 7,
+        "attack": 3,
+        "wounds": 4,
+        "courage": 6,
+        "intelligence": 6,
+        "might": 2,
+        "will": 2,
+        "fate": 2,
+        "race": [
+          "Olog-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Warmonger Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Monster"
+        ],
+        "baseSize": [
+          "50mm"
+        ],
+        "heroicActions": [
+          "Heroic Strength",
+          "Heroic Strike"
+        ],
+        "specialRules": [
+          "Dominant (4)",
+          "Terror",
+          "Warmonger Tribe Captain",
+          "Warmonger Tribe Warchief"
+        ],
+        "wargear": [
+          "Armour",
+          "Olog gauntlets"
+        ],
+        "options": [
+          {
+            "name": "Exchange armour for heavy armour",
+            "points": 5,
+            "usesDefinition": "Exchange armour for heavy armour",
+            "availableIn": []
+          },
+          {
+            "name": "Olog-hai mace",
+            "points": 10
+          },
+          {
+            "name": "Pit spear and shield",
+            "points": 10
+          },
+          {
+            "name": "Exchange light armour with armour (Warmonger)",
+            "points": 0,
+            "usesDefinition": "Exchange light armour with armour"
+          }
+        ],
+        "unlimited": true,
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Warmonger Tribe"
+      },
+      {
+        "name": "Orc Overlord — Dark",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Legend"
+          }
+        ],
+        "points": 90,
+        "movement": 6,
+        "fight": 5,
+        "shoot": 4,
+        "strength": 5,
+        "defence": 5,
+        "attack": 3,
+        "wounds": 3,
+        "courage": 5,
+        "intelligence": 4,
+        "might": 3,
+        "will": 3,
+        "fate": 2,
+        "race": [
+          "Orc"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Dark Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Unique"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [
+          "Heroic Challenge",
+          "Heroic Strength",
+          "Heroic Strike"
+        ],
+        "specialRules": [
+          "Backstabbers",
+          "Dominant (2)",
+          "Dark Tribe Captain",
+          "Dark Tribe Warchief",
+          "Dark Tribe Overlord"
+        ],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Caragor",
+            "points": 20
+          },
+          {
+            "name": "Throwing spears",
+            "points": 10
+          },
+          {
+            "name": "Dual blades",
+            "points": 10
+          },
+          {
+            "name": "Shield",
+            "points": 5
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 5
+          },
+          {
+            "name": "Pit spear",
+            "points": 5
+          }
+        ],
+        "unavailableWith": [
+          "Orc Overlord — Feral",
+          "Orc Overlord — Machine",
+          "Orc Overlord — Marauder",
+          "Orc Overlord — Mystic",
+          "Orc Overlord — Outlaw",
+          "Orc Overlord — Slaughter",
+          "Orc Overlord — Terror",
+          "Orc Overlord — Warmonger",
+          "Uruk-hai Overlord — Dark",
+          "Uruk-hai Overlord — Feral",
+          "Uruk-hai Overlord — Machine",
+          "Uruk-hai Overlord — Marauder",
+          "Uruk-hai Overlord — Mystic",
+          "Uruk-hai Overlord — Outlaw",
+          "Uruk-hai Overlord — Slaughter",
+          "Uruk-hai Overlord — Terror",
+          "Uruk-hai Overlord — Warmonger",
+          "Olog-hai Overlord — Dark",
+          "Olog-hai Overlord — Feral",
+          "Olog-hai Overlord — Machine",
+          "Olog-hai Overlord — Marauder",
+          "Olog-hai Overlord — Mystic",
+          "Olog-hai Overlord — Outlaw",
+          "Olog-hai Overlord — Slaughter",
+          "Olog-hai Overlord — Terror",
+          "Olog-hai Overlord — Warmonger"
+        ],
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Dark Tribe"
+      },
+      {
+        "name": "Orc Overlord — Feral",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Legend"
+          }
+        ],
+        "points": 90,
+        "movement": 6,
+        "fight": 5,
+        "shoot": 4,
+        "strength": 5,
+        "defence": 5,
+        "attack": 3,
+        "wounds": 3,
+        "courage": 5,
+        "intelligence": 4,
+        "might": 3,
+        "will": 3,
+        "fate": 2,
+        "race": [
+          "Orc"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Feral Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Unique"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [
+          "Heroic Challenge",
+          "Heroic Strength",
+          "Heroic Strike"
+        ],
+        "specialRules": [
+          "Backstabbers",
+          "Dominant (2)",
+          "Feral Tribe Captain",
+          "Feral Tribe Warchief",
+          "Feral Tribe Overlord"
+        ],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Caragor",
+            "points": 20
+          },
+          {
+            "name": "Throwing spears",
+            "points": 10
+          },
+          {
+            "name": "Dual blades",
+            "points": 10
+          },
+          {
+            "name": "Shield",
+            "points": 5
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 5
+          },
+          {
+            "name": "Pit spear",
+            "points": 5
+          },
+          {
+            "name": "Chained Bolas",
+            "points": 5,
+            "usesDefinition": "Chained Bolas"
+          }
+        ],
+        "unavailableWith": [
+          "Orc Overlord — Dark",
+          "Orc Overlord — Machine",
+          "Orc Overlord — Marauder",
+          "Orc Overlord — Mystic",
+          "Orc Overlord — Outlaw",
+          "Orc Overlord — Slaughter",
+          "Orc Overlord — Terror",
+          "Orc Overlord — Warmonger",
+          "Uruk-hai Overlord — Dark",
+          "Uruk-hai Overlord — Feral",
+          "Uruk-hai Overlord — Machine",
+          "Uruk-hai Overlord — Marauder",
+          "Uruk-hai Overlord — Mystic",
+          "Uruk-hai Overlord — Outlaw",
+          "Uruk-hai Overlord — Slaughter",
+          "Uruk-hai Overlord — Terror",
+          "Uruk-hai Overlord — Warmonger",
+          "Olog-hai Overlord — Dark",
+          "Olog-hai Overlord — Feral",
+          "Olog-hai Overlord — Machine",
+          "Olog-hai Overlord — Marauder",
+          "Olog-hai Overlord — Mystic",
+          "Olog-hai Overlord — Outlaw",
+          "Olog-hai Overlord — Slaughter",
+          "Olog-hai Overlord — Terror",
+          "Olog-hai Overlord — Warmonger"
+        ],
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Feral Tribe"
+      },
+      {
+        "name": "Orc Overlord — Machine",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Legend"
+          }
+        ],
+        "points": 90,
+        "movement": 6,
+        "fight": 5,
+        "shoot": 4,
+        "strength": 5,
+        "defence": 5,
+        "attack": 3,
+        "wounds": 3,
+        "courage": 5,
+        "intelligence": 4,
+        "might": 3,
+        "will": 3,
+        "fate": 2,
+        "race": [
+          "Orc"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Machine Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Unique"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [
+          "Heroic Challenge",
+          "Heroic Strength",
+          "Heroic Strike"
+        ],
+        "specialRules": [
+          "Backstabbers",
+          "Dominant (2)",
+          "Machine Tribe Captain",
+          "Machine Tribe Warchief",
+          "Machine Tribe Overlord"
+        ],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Caragor",
+            "points": 20
+          },
+          {
+            "name": "Throwing spears",
+            "points": 10
+          },
+          {
+            "name": "Dual blades",
+            "points": 10
+          },
+          {
+            "name": "Shield",
+            "points": 5
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 5
+          },
+          {
+            "name": "Pit spear",
+            "points": 5
+          },
+          {
+            "name": "Twin Hand-crossbows",
+            "points": 5,
+            "usesDefinition": "Twin Hand-crossbows"
+          }
+        ],
+        "unavailableWith": [
+          "Orc Overlord — Dark",
+          "Orc Overlord — Feral",
+          "Orc Overlord — Marauder",
+          "Orc Overlord — Mystic",
+          "Orc Overlord — Outlaw",
+          "Orc Overlord — Slaughter",
+          "Orc Overlord — Terror",
+          "Orc Overlord — Warmonger",
+          "Uruk-hai Overlord — Dark",
+          "Uruk-hai Overlord — Feral",
+          "Uruk-hai Overlord — Machine",
+          "Uruk-hai Overlord — Marauder",
+          "Uruk-hai Overlord — Mystic",
+          "Uruk-hai Overlord — Outlaw",
+          "Uruk-hai Overlord — Slaughter",
+          "Uruk-hai Overlord — Terror",
+          "Uruk-hai Overlord — Warmonger",
+          "Olog-hai Overlord — Dark",
+          "Olog-hai Overlord — Feral",
+          "Olog-hai Overlord — Machine",
+          "Olog-hai Overlord — Marauder",
+          "Olog-hai Overlord — Mystic",
+          "Olog-hai Overlord — Outlaw",
+          "Olog-hai Overlord — Slaughter",
+          "Olog-hai Overlord — Terror",
+          "Olog-hai Overlord — Warmonger"
+        ],
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Machine Tribe"
+      },
+      {
+        "name": "Orc Overlord — Marauder",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Legend"
+          }
+        ],
+        "points": 90,
+        "movement": 6,
+        "fight": 5,
+        "shoot": 4,
+        "strength": 5,
+        "defence": 5,
+        "attack": 3,
+        "wounds": 3,
+        "courage": 5,
+        "intelligence": 4,
+        "might": 3,
+        "will": 3,
+        "fate": 2,
+        "race": [
+          "Orc"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Marauder Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Unique"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [
+          "Heroic Challenge",
+          "Heroic Strength",
+          "Heroic Strike"
+        ],
+        "specialRules": [
+          "Backstabbers",
+          "Dominant (2)",
+          "Marauder Tribe Captain",
+          "Marauder Tribe Warchief",
+          "Marauder Tribe Overlord"
+        ],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Caragor",
+            "points": 20
+          },
+          {
+            "name": "Throwing spears",
+            "points": 10
+          },
+          {
+            "name": "Dual blades",
+            "points": 10
+          },
+          {
+            "name": "Shield",
+            "points": 5
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 5
+          },
+          {
+            "name": "Pit spear",
+            "points": 5
+          }
+        ],
+        "unavailableWith": [
+          "Orc Overlord — Dark",
+          "Orc Overlord — Feral",
+          "Orc Overlord — Machine",
+          "Orc Overlord — Mystic",
+          "Orc Overlord — Outlaw",
+          "Orc Overlord — Slaughter",
+          "Orc Overlord — Terror",
+          "Orc Overlord — Warmonger",
+          "Uruk-hai Overlord — Dark",
+          "Uruk-hai Overlord — Feral",
+          "Uruk-hai Overlord — Machine",
+          "Uruk-hai Overlord — Marauder",
+          "Uruk-hai Overlord — Mystic",
+          "Uruk-hai Overlord — Outlaw",
+          "Uruk-hai Overlord — Slaughter",
+          "Uruk-hai Overlord — Terror",
+          "Uruk-hai Overlord — Warmonger",
+          "Olog-hai Overlord — Dark",
+          "Olog-hai Overlord — Feral",
+          "Olog-hai Overlord — Machine",
+          "Olog-hai Overlord — Marauder",
+          "Olog-hai Overlord — Mystic",
+          "Olog-hai Overlord — Outlaw",
+          "Olog-hai Overlord — Slaughter",
+          "Olog-hai Overlord — Terror",
+          "Olog-hai Overlord — Warmonger"
+        ],
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Marauder Tribe"
+      },
+      {
+        "name": "Orc Overlord — Mystic",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Legend"
+          }
+        ],
+        "points": 90,
+        "movement": 6,
+        "fight": 5,
+        "shoot": 4,
+        "strength": 5,
+        "defence": 5,
+        "attack": 3,
+        "wounds": 3,
+        "courage": 5,
+        "intelligence": 4,
+        "might": 3,
+        "will": 3,
+        "fate": 2,
+        "race": [
+          "Orc"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Mystic Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Unique"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [
+          "Heroic Challenge",
+          "Heroic Strength",
+          "Heroic Strike"
+        ],
+        "specialRules": [
+          "Backstabbers",
+          "Dominant (2)",
+          "Mystic Tribe Captain",
+          "Mystic Tribe Warchief",
+          "Mystic Tribe Overlord"
+        ],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Caragor",
+            "points": 20
+          },
+          {
+            "name": "Throwing spears",
+            "points": 10
+          },
+          {
+            "name": "Dual blades",
+            "points": 10
+          },
+          {
+            "name": "Shield",
+            "points": 5
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 5
+          },
+          {
+            "name": "Pit spear",
+            "points": 5
+          },
+          {
+            "name": "Morgul Blade",
+            "points": 5,
+            "usesDefinition": "Morgul Blade"
+          }
+        ],
+        "unavailableWith": [
+          "Orc Overlord — Dark",
+          "Orc Overlord — Feral",
+          "Orc Overlord — Machine",
+          "Orc Overlord — Marauder",
+          "Orc Overlord — Outlaw",
+          "Orc Overlord — Slaughter",
+          "Orc Overlord — Terror",
+          "Orc Overlord — Warmonger",
+          "Uruk-hai Overlord — Dark",
+          "Uruk-hai Overlord — Feral",
+          "Uruk-hai Overlord — Machine",
+          "Uruk-hai Overlord — Marauder",
+          "Uruk-hai Overlord — Mystic",
+          "Uruk-hai Overlord — Outlaw",
+          "Uruk-hai Overlord — Slaughter",
+          "Uruk-hai Overlord — Terror",
+          "Uruk-hai Overlord — Warmonger",
+          "Olog-hai Overlord — Dark",
+          "Olog-hai Overlord — Feral",
+          "Olog-hai Overlord — Machine",
+          "Olog-hai Overlord — Marauder",
+          "Olog-hai Overlord — Mystic",
+          "Olog-hai Overlord — Outlaw",
+          "Olog-hai Overlord — Slaughter",
+          "Olog-hai Overlord — Terror",
+          "Olog-hai Overlord — Warmonger"
+        ],
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Mystic Tribe"
+      },
+      {
+        "name": "Orc Overlord — Outlaw",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Legend"
+          }
+        ],
+        "points": 90,
+        "movement": 6,
+        "fight": 5,
+        "shoot": 4,
+        "strength": 5,
+        "defence": 5,
+        "attack": 3,
+        "wounds": 3,
+        "courage": 5,
+        "intelligence": 4,
+        "might": 3,
+        "will": 3,
+        "fate": 2,
+        "race": [
+          "Orc"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Outlaw Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Unique"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [
+          "Heroic Challenge",
+          "Heroic Strength",
+          "Heroic Strike"
+        ],
+        "specialRules": [
+          "Backstabbers",
+          "Dominant (2)",
+          "Outlaw Tribe Captain",
+          "Outlaw Tribe Warchief",
+          "Outlaw Tribe Overlord"
+        ],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Caragor",
+            "points": 20
+          },
+          {
+            "name": "Throwing spears",
+            "points": 10
+          },
+          {
+            "name": "Dual blades",
+            "points": 10
+          },
+          {
+            "name": "Shield",
+            "points": 5
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 5
+          },
+          {
+            "name": "Pit spear",
+            "points": 5
+          }
+        ],
+        "unavailableWith": [
+          "Orc Overlord — Dark",
+          "Orc Overlord — Feral",
+          "Orc Overlord — Machine",
+          "Orc Overlord — Marauder",
+          "Orc Overlord — Mystic",
+          "Orc Overlord — Slaughter",
+          "Orc Overlord — Terror",
+          "Orc Overlord — Warmonger",
+          "Uruk-hai Overlord — Dark",
+          "Uruk-hai Overlord — Feral",
+          "Uruk-hai Overlord — Machine",
+          "Uruk-hai Overlord — Marauder",
+          "Uruk-hai Overlord — Mystic",
+          "Uruk-hai Overlord — Outlaw",
+          "Uruk-hai Overlord — Slaughter",
+          "Uruk-hai Overlord — Terror",
+          "Uruk-hai Overlord — Warmonger",
+          "Olog-hai Overlord — Dark",
+          "Olog-hai Overlord — Feral",
+          "Olog-hai Overlord — Machine",
+          "Olog-hai Overlord — Marauder",
+          "Olog-hai Overlord — Mystic",
+          "Olog-hai Overlord — Outlaw",
+          "Olog-hai Overlord — Slaughter",
+          "Olog-hai Overlord — Terror",
+          "Olog-hai Overlord — Warmonger"
+        ],
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Outlaw Tribe"
+      },
+      {
+        "name": "Orc Overlord — Slaughter",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Legend"
+          }
+        ],
+        "points": 90,
+        "movement": 6,
+        "fight": 5,
+        "shoot": 4,
+        "strength": 5,
+        "defence": 5,
+        "attack": 3,
+        "wounds": 3,
+        "courage": 5,
+        "intelligence": 4,
+        "might": 3,
+        "will": 3,
+        "fate": 2,
+        "race": [
+          "Orc"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Slaughter Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Unique"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [
+          "Heroic Challenge",
+          "Heroic Strength",
+          "Heroic Strike"
+        ],
+        "specialRules": [
+          "Backstabbers",
+          "Dominant (2)",
+          "Slaughter Tribe Captain",
+          "Slaughter Tribe Warchief",
+          "Slaughter Tribe Overlord"
+        ],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Caragor",
+            "points": 20
+          },
+          {
+            "name": "Throwing spears",
+            "points": 10
+          },
+          {
+            "name": "Dual blades",
+            "points": 10
+          },
+          {
+            "name": "Shield",
+            "points": 5
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 5
+          },
+          {
+            "name": "Pit spear",
+            "points": 5
+          }
+        ],
+        "unavailableWith": [
+          "Orc Overlord — Dark",
+          "Orc Overlord — Feral",
+          "Orc Overlord — Machine",
+          "Orc Overlord — Marauder",
+          "Orc Overlord — Mystic",
+          "Orc Overlord — Outlaw",
+          "Orc Overlord — Terror",
+          "Orc Overlord — Warmonger",
+          "Uruk-hai Overlord — Dark",
+          "Uruk-hai Overlord — Feral",
+          "Uruk-hai Overlord — Machine",
+          "Uruk-hai Overlord — Marauder",
+          "Uruk-hai Overlord — Mystic",
+          "Uruk-hai Overlord — Outlaw",
+          "Uruk-hai Overlord — Slaughter",
+          "Uruk-hai Overlord — Terror",
+          "Uruk-hai Overlord — Warmonger",
+          "Olog-hai Overlord — Dark",
+          "Olog-hai Overlord — Feral",
+          "Olog-hai Overlord — Machine",
+          "Olog-hai Overlord — Marauder",
+          "Olog-hai Overlord — Mystic",
+          "Olog-hai Overlord — Outlaw",
+          "Olog-hai Overlord — Slaughter",
+          "Olog-hai Overlord — Terror",
+          "Olog-hai Overlord — Warmonger"
+        ],
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Slaughter Tribe"
+      },
+      {
+        "name": "Orc Overlord — Terror",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Legend"
+          }
+        ],
+        "points": 90,
+        "movement": 6,
+        "fight": 5,
+        "shoot": 4,
+        "strength": 5,
+        "defence": 5,
+        "attack": 3,
+        "wounds": 3,
+        "courage": 5,
+        "intelligence": 4,
+        "might": 3,
+        "will": 3,
+        "fate": 2,
+        "race": [
+          "Orc"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Terror Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Unique"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [
+          "Heroic Challenge",
+          "Heroic Strength",
+          "Heroic Strike"
+        ],
+        "specialRules": [
+          "Backstabbers",
+          "Dominant (2)",
+          "Terror Tribe Captain",
+          "Terror Tribe Warchief",
+          "Terror Tribe Overlord"
+        ],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Caragor",
+            "points": 20
+          },
+          {
+            "name": "Throwing spears",
+            "points": 10
+          },
+          {
+            "name": "Dual blades",
+            "points": 10
+          },
+          {
+            "name": "Shield",
+            "points": 5
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 5
+          },
+          {
+            "name": "Pit spear",
+            "points": 5
+          }
+        ],
+        "unavailableWith": [
+          "Orc Overlord — Dark",
+          "Orc Overlord — Feral",
+          "Orc Overlord — Machine",
+          "Orc Overlord — Marauder",
+          "Orc Overlord — Mystic",
+          "Orc Overlord — Outlaw",
+          "Orc Overlord — Slaughter",
+          "Orc Overlord — Warmonger",
+          "Uruk-hai Overlord — Dark",
+          "Uruk-hai Overlord — Feral",
+          "Uruk-hai Overlord — Machine",
+          "Uruk-hai Overlord — Marauder",
+          "Uruk-hai Overlord — Mystic",
+          "Uruk-hai Overlord — Outlaw",
+          "Uruk-hai Overlord — Slaughter",
+          "Uruk-hai Overlord — Terror",
+          "Uruk-hai Overlord — Warmonger",
+          "Olog-hai Overlord — Dark",
+          "Olog-hai Overlord — Feral",
+          "Olog-hai Overlord — Machine",
+          "Olog-hai Overlord — Marauder",
+          "Olog-hai Overlord — Mystic",
+          "Olog-hai Overlord — Outlaw",
+          "Olog-hai Overlord — Slaughter",
+          "Olog-hai Overlord — Terror",
+          "Olog-hai Overlord — Warmonger"
+        ],
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Terror Tribe"
+      },
+      {
+        "name": "Orc Overlord — Warmonger",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Legend"
+          }
+        ],
+        "points": 90,
+        "movement": 6,
+        "fight": 5,
+        "shoot": 4,
+        "strength": 5,
+        "defence": 5,
+        "attack": 3,
+        "wounds": 3,
+        "courage": 5,
+        "intelligence": 4,
+        "might": 3,
+        "will": 3,
+        "fate": 2,
+        "race": [
+          "Orc"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Warmonger Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Unique"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [
+          "Heroic Challenge",
+          "Heroic Strength",
+          "Heroic Strike"
+        ],
+        "specialRules": [
+          "Backstabbers",
+          "Dominant (2)",
+          "Warmonger Tribe Captain",
+          "Warmonger Tribe Warchief",
+          "Warmonger Tribe Overlord"
+        ],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Caragor",
+            "points": 20
+          },
+          {
+            "name": "Throwing spears",
+            "points": 10
+          },
+          {
+            "name": "Dual blades",
+            "points": 10
+          },
+          {
+            "name": "Shield",
+            "points": 5
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 5
+          },
+          {
+            "name": "Pit spear",
+            "points": 5
+          },
+          {
+            "name": "Exchange armour for heavy armour (Warmonger)",
+            "points": 0,
+            "usesDefinition": "Exchange armour for heavy armour"
+          }
+        ],
+        "unavailableWith": [
+          "Orc Overlord — Dark",
+          "Orc Overlord — Feral",
+          "Orc Overlord — Machine",
+          "Orc Overlord — Marauder",
+          "Orc Overlord — Mystic",
+          "Orc Overlord — Outlaw",
+          "Orc Overlord — Slaughter",
+          "Orc Overlord — Terror",
+          "Uruk-hai Overlord — Dark",
+          "Uruk-hai Overlord — Feral",
+          "Uruk-hai Overlord — Machine",
+          "Uruk-hai Overlord — Marauder",
+          "Uruk-hai Overlord — Mystic",
+          "Uruk-hai Overlord — Outlaw",
+          "Uruk-hai Overlord — Slaughter",
+          "Uruk-hai Overlord — Terror",
+          "Uruk-hai Overlord — Warmonger",
+          "Olog-hai Overlord — Dark",
+          "Olog-hai Overlord — Feral",
+          "Olog-hai Overlord — Machine",
+          "Olog-hai Overlord — Marauder",
+          "Olog-hai Overlord — Mystic",
+          "Olog-hai Overlord — Outlaw",
+          "Olog-hai Overlord — Slaughter",
+          "Olog-hai Overlord — Terror",
+          "Olog-hai Overlord — Warmonger"
+        ],
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Warmonger Tribe"
+      },
+      {
+        "name": "Uruk-hai Overlord — Dark",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Legend"
+          }
+        ],
+        "points": 120,
+        "movement": 6,
+        "fight": 6,
+        "shoot": 3,
+        "strength": 5,
+        "defence": 5,
+        "attack": 3,
+        "wounds": 3,
+        "courage": 5,
+        "intelligence": 5,
+        "might": 3,
+        "will": 3,
+        "fate": 2,
+        "race": [
+          "Uruk-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Dark Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Unique"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [
+          "Heroic Challenge",
+          "Heroic Strength",
+          "Heroic Strike"
+        ],
+        "specialRules": [
+          "Dominant (3)",
+          "Dark Tribe Captain",
+          "Dark Tribe Warchief",
+          "Dark Tribe Overlord"
+        ],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Exchange armour for heavy armour",
+            "points": 5,
+            "usesDefinition": "Exchange armour for heavy armour",
+            "availableIn": []
+          },
+          {
+            "name": "Caragor",
+            "points": 20
+          },
+          {
+            "name": "Crossbow",
+            "points": 10
+          },
+          {
+            "name": "Dual blades",
+            "points": 10
+          },
+          {
+            "name": "Pit spear and shield",
+            "points": 10
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 5
+          }
+        ],
+        "unavailableWith": [
+          "Orc Overlord — Dark",
+          "Orc Overlord — Feral",
+          "Orc Overlord — Machine",
+          "Orc Overlord — Marauder",
+          "Orc Overlord — Mystic",
+          "Orc Overlord — Outlaw",
+          "Orc Overlord — Slaughter",
+          "Orc Overlord — Terror",
+          "Orc Overlord — Warmonger",
+          "Uruk-hai Overlord — Feral",
+          "Uruk-hai Overlord — Machine",
+          "Uruk-hai Overlord — Marauder",
+          "Uruk-hai Overlord — Mystic",
+          "Uruk-hai Overlord — Outlaw",
+          "Uruk-hai Overlord — Slaughter",
+          "Uruk-hai Overlord — Terror",
+          "Uruk-hai Overlord — Warmonger",
+          "Olog-hai Overlord — Dark",
+          "Olog-hai Overlord — Feral",
+          "Olog-hai Overlord — Machine",
+          "Olog-hai Overlord — Marauder",
+          "Olog-hai Overlord — Mystic",
+          "Olog-hai Overlord — Outlaw",
+          "Olog-hai Overlord — Slaughter",
+          "Olog-hai Overlord — Terror",
+          "Olog-hai Overlord — Warmonger"
+        ],
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Dark Tribe"
+      },
+      {
+        "name": "Uruk-hai Overlord — Feral",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Legend"
+          }
+        ],
+        "points": 120,
+        "movement": 6,
+        "fight": 6,
+        "shoot": 3,
+        "strength": 5,
+        "defence": 5,
+        "attack": 3,
+        "wounds": 3,
+        "courage": 5,
+        "intelligence": 5,
+        "might": 3,
+        "will": 3,
+        "fate": 2,
+        "race": [
+          "Uruk-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Feral Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Unique"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [
+          "Heroic Challenge",
+          "Heroic Strength",
+          "Heroic Strike"
+        ],
+        "specialRules": [
+          "Dominant (3)",
+          "Feral Tribe Captain",
+          "Feral Tribe Warchief",
+          "Feral Tribe Overlord"
+        ],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Exchange armour for heavy armour",
+            "points": 5,
+            "usesDefinition": "Exchange armour for heavy armour",
+            "availableIn": []
+          },
+          {
+            "name": "Caragor",
+            "points": 20
+          },
+          {
+            "name": "Crossbow",
+            "points": 10
+          },
+          {
+            "name": "Dual blades",
+            "points": 10
+          },
+          {
+            "name": "Pit spear and shield",
+            "points": 10
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 5
+          },
+          {
+            "name": "Chained Bolas",
+            "points": 5,
+            "usesDefinition": "Chained Bolas"
+          }
+        ],
+        "unavailableWith": [
+          "Orc Overlord — Dark",
+          "Orc Overlord — Feral",
+          "Orc Overlord — Machine",
+          "Orc Overlord — Marauder",
+          "Orc Overlord — Mystic",
+          "Orc Overlord — Outlaw",
+          "Orc Overlord — Slaughter",
+          "Orc Overlord — Terror",
+          "Orc Overlord — Warmonger",
+          "Uruk-hai Overlord — Dark",
+          "Uruk-hai Overlord — Machine",
+          "Uruk-hai Overlord — Marauder",
+          "Uruk-hai Overlord — Mystic",
+          "Uruk-hai Overlord — Outlaw",
+          "Uruk-hai Overlord — Slaughter",
+          "Uruk-hai Overlord — Terror",
+          "Uruk-hai Overlord — Warmonger",
+          "Olog-hai Overlord — Dark",
+          "Olog-hai Overlord — Feral",
+          "Olog-hai Overlord — Machine",
+          "Olog-hai Overlord — Marauder",
+          "Olog-hai Overlord — Mystic",
+          "Olog-hai Overlord — Outlaw",
+          "Olog-hai Overlord — Slaughter",
+          "Olog-hai Overlord — Terror",
+          "Olog-hai Overlord — Warmonger"
+        ],
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Feral Tribe"
+      },
+      {
+        "name": "Uruk-hai Overlord — Machine",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Legend"
+          }
+        ],
+        "points": 120,
+        "movement": 6,
+        "fight": 6,
+        "shoot": 3,
+        "strength": 5,
+        "defence": 5,
+        "attack": 3,
+        "wounds": 3,
+        "courage": 5,
+        "intelligence": 5,
+        "might": 3,
+        "will": 3,
+        "fate": 2,
+        "race": [
+          "Uruk-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Machine Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Unique"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [
+          "Heroic Challenge",
+          "Heroic Strength",
+          "Heroic Strike"
+        ],
+        "specialRules": [
+          "Dominant (3)",
+          "Machine Tribe Captain",
+          "Machine Tribe Warchief",
+          "Machine Tribe Overlord"
+        ],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Exchange armour for heavy armour",
+            "points": 5,
+            "usesDefinition": "Exchange armour for heavy armour",
+            "availableIn": []
+          },
+          {
+            "name": "Caragor",
+            "points": 20
+          },
+          {
+            "name": "Crossbow",
+            "points": 10
+          },
+          {
+            "name": "Dual blades",
+            "points": 10
+          },
+          {
+            "name": "Pit spear and shield",
+            "points": 10
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 5
+          },
+          {
+            "name": "Twin Hand-crossbows",
+            "points": 5,
+            "usesDefinition": "Twin Hand-crossbows"
+          }
+        ],
+        "unavailableWith": [
+          "Orc Overlord — Dark",
+          "Orc Overlord — Feral",
+          "Orc Overlord — Machine",
+          "Orc Overlord — Marauder",
+          "Orc Overlord — Mystic",
+          "Orc Overlord — Outlaw",
+          "Orc Overlord — Slaughter",
+          "Orc Overlord — Terror",
+          "Orc Overlord — Warmonger",
+          "Uruk-hai Overlord — Dark",
+          "Uruk-hai Overlord — Feral",
+          "Uruk-hai Overlord — Marauder",
+          "Uruk-hai Overlord — Mystic",
+          "Uruk-hai Overlord — Outlaw",
+          "Uruk-hai Overlord — Slaughter",
+          "Uruk-hai Overlord — Terror",
+          "Uruk-hai Overlord — Warmonger",
+          "Olog-hai Overlord — Dark",
+          "Olog-hai Overlord — Feral",
+          "Olog-hai Overlord — Machine",
+          "Olog-hai Overlord — Marauder",
+          "Olog-hai Overlord — Mystic",
+          "Olog-hai Overlord — Outlaw",
+          "Olog-hai Overlord — Slaughter",
+          "Olog-hai Overlord — Terror",
+          "Olog-hai Overlord — Warmonger"
+        ],
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Machine Tribe"
+      },
+      {
+        "name": "Uruk-hai Overlord — Marauder",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Legend"
+          }
+        ],
+        "points": 120,
+        "movement": 6,
+        "fight": 6,
+        "shoot": 3,
+        "strength": 5,
+        "defence": 5,
+        "attack": 3,
+        "wounds": 3,
+        "courage": 5,
+        "intelligence": 5,
+        "might": 3,
+        "will": 3,
+        "fate": 2,
+        "race": [
+          "Uruk-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Marauder Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Unique"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [
+          "Heroic Challenge",
+          "Heroic Strength",
+          "Heroic Strike"
+        ],
+        "specialRules": [
+          "Dominant (3)",
+          "Marauder Tribe Captain",
+          "Marauder Tribe Warchief",
+          "Marauder Tribe Overlord"
+        ],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Exchange armour for heavy armour",
+            "points": 5,
+            "usesDefinition": "Exchange armour for heavy armour",
+            "availableIn": []
+          },
+          {
+            "name": "Caragor",
+            "points": 20
+          },
+          {
+            "name": "Crossbow",
+            "points": 10
+          },
+          {
+            "name": "Dual blades",
+            "points": 10
+          },
+          {
+            "name": "Pit spear and shield",
+            "points": 10
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 5
+          }
+        ],
+        "unavailableWith": [
+          "Orc Overlord — Dark",
+          "Orc Overlord — Feral",
+          "Orc Overlord — Machine",
+          "Orc Overlord — Marauder",
+          "Orc Overlord — Mystic",
+          "Orc Overlord — Outlaw",
+          "Orc Overlord — Slaughter",
+          "Orc Overlord — Terror",
+          "Orc Overlord — Warmonger",
+          "Uruk-hai Overlord — Dark",
+          "Uruk-hai Overlord — Feral",
+          "Uruk-hai Overlord — Machine",
+          "Uruk-hai Overlord — Mystic",
+          "Uruk-hai Overlord — Outlaw",
+          "Uruk-hai Overlord — Slaughter",
+          "Uruk-hai Overlord — Terror",
+          "Uruk-hai Overlord — Warmonger",
+          "Olog-hai Overlord — Dark",
+          "Olog-hai Overlord — Feral",
+          "Olog-hai Overlord — Machine",
+          "Olog-hai Overlord — Marauder",
+          "Olog-hai Overlord — Mystic",
+          "Olog-hai Overlord — Outlaw",
+          "Olog-hai Overlord — Slaughter",
+          "Olog-hai Overlord — Terror",
+          "Olog-hai Overlord — Warmonger"
+        ],
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Marauder Tribe"
+      },
+      {
+        "name": "Uruk-hai Overlord — Mystic",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Legend"
+          }
+        ],
+        "points": 120,
+        "movement": 6,
+        "fight": 6,
+        "shoot": 3,
+        "strength": 5,
+        "defence": 5,
+        "attack": 3,
+        "wounds": 3,
+        "courage": 5,
+        "intelligence": 5,
+        "might": 3,
+        "will": 3,
+        "fate": 2,
+        "race": [
+          "Uruk-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Mystic Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Unique"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [
+          "Heroic Challenge",
+          "Heroic Strength",
+          "Heroic Strike"
+        ],
+        "specialRules": [
+          "Dominant (3)",
+          "Mystic Tribe Captain",
+          "Mystic Tribe Warchief",
+          "Mystic Tribe Overlord"
+        ],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Exchange armour for heavy armour",
+            "points": 5,
+            "usesDefinition": "Exchange armour for heavy armour",
+            "availableIn": []
+          },
+          {
+            "name": "Caragor",
+            "points": 20
+          },
+          {
+            "name": "Crossbow",
+            "points": 10
+          },
+          {
+            "name": "Dual blades",
+            "points": 10
+          },
+          {
+            "name": "Pit spear and shield",
+            "points": 10
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 5
+          },
+          {
+            "name": "Morgul Blade",
+            "points": 5,
+            "usesDefinition": "Morgul Blade"
+          }
+        ],
+        "unavailableWith": [
+          "Orc Overlord — Dark",
+          "Orc Overlord — Feral",
+          "Orc Overlord — Machine",
+          "Orc Overlord — Marauder",
+          "Orc Overlord — Mystic",
+          "Orc Overlord — Outlaw",
+          "Orc Overlord — Slaughter",
+          "Orc Overlord — Terror",
+          "Orc Overlord — Warmonger",
+          "Uruk-hai Overlord — Dark",
+          "Uruk-hai Overlord — Feral",
+          "Uruk-hai Overlord — Machine",
+          "Uruk-hai Overlord — Marauder",
+          "Uruk-hai Overlord — Outlaw",
+          "Uruk-hai Overlord — Slaughter",
+          "Uruk-hai Overlord — Terror",
+          "Uruk-hai Overlord — Warmonger",
+          "Olog-hai Overlord — Dark",
+          "Olog-hai Overlord — Feral",
+          "Olog-hai Overlord — Machine",
+          "Olog-hai Overlord — Marauder",
+          "Olog-hai Overlord — Mystic",
+          "Olog-hai Overlord — Outlaw",
+          "Olog-hai Overlord — Slaughter",
+          "Olog-hai Overlord — Terror",
+          "Olog-hai Overlord — Warmonger"
+        ],
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Mystic Tribe"
+      },
+      {
+        "name": "Uruk-hai Overlord — Outlaw",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Legend"
+          }
+        ],
+        "points": 120,
+        "movement": 6,
+        "fight": 6,
+        "shoot": 3,
+        "strength": 5,
+        "defence": 5,
+        "attack": 3,
+        "wounds": 3,
+        "courage": 5,
+        "intelligence": 5,
+        "might": 3,
+        "will": 3,
+        "fate": 2,
+        "race": [
+          "Uruk-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Outlaw Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Unique"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [
+          "Heroic Challenge",
+          "Heroic Strength",
+          "Heroic Strike"
+        ],
+        "specialRules": [
+          "Dominant (3)",
+          "Outlaw Tribe Captain",
+          "Outlaw Tribe Warchief",
+          "Outlaw Tribe Overlord"
+        ],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Exchange armour for heavy armour",
+            "points": 5,
+            "usesDefinition": "Exchange armour for heavy armour",
+            "availableIn": []
+          },
+          {
+            "name": "Caragor",
+            "points": 20
+          },
+          {
+            "name": "Crossbow",
+            "points": 10
+          },
+          {
+            "name": "Dual blades",
+            "points": 10
+          },
+          {
+            "name": "Pit spear and shield",
+            "points": 10
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 5
+          }
+        ],
+        "unavailableWith": [
+          "Orc Overlord — Dark",
+          "Orc Overlord — Feral",
+          "Orc Overlord — Machine",
+          "Orc Overlord — Marauder",
+          "Orc Overlord — Mystic",
+          "Orc Overlord — Outlaw",
+          "Orc Overlord — Slaughter",
+          "Orc Overlord — Terror",
+          "Orc Overlord — Warmonger",
+          "Uruk-hai Overlord — Dark",
+          "Uruk-hai Overlord — Feral",
+          "Uruk-hai Overlord — Machine",
+          "Uruk-hai Overlord — Marauder",
+          "Uruk-hai Overlord — Mystic",
+          "Uruk-hai Overlord — Slaughter",
+          "Uruk-hai Overlord — Terror",
+          "Uruk-hai Overlord — Warmonger",
+          "Olog-hai Overlord — Dark",
+          "Olog-hai Overlord — Feral",
+          "Olog-hai Overlord — Machine",
+          "Olog-hai Overlord — Marauder",
+          "Olog-hai Overlord — Mystic",
+          "Olog-hai Overlord — Outlaw",
+          "Olog-hai Overlord — Slaughter",
+          "Olog-hai Overlord — Terror",
+          "Olog-hai Overlord — Warmonger"
+        ],
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Outlaw Tribe"
+      },
+      {
+        "name": "Uruk-hai Overlord — Slaughter",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Legend"
+          }
+        ],
+        "points": 120,
+        "movement": 6,
+        "fight": 6,
+        "shoot": 3,
+        "strength": 5,
+        "defence": 5,
+        "attack": 3,
+        "wounds": 3,
+        "courage": 5,
+        "intelligence": 5,
+        "might": 3,
+        "will": 3,
+        "fate": 2,
+        "race": [
+          "Uruk-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Slaughter Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Unique"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [
+          "Heroic Challenge",
+          "Heroic Strength",
+          "Heroic Strike"
+        ],
+        "specialRules": [
+          "Dominant (3)",
+          "Slaughter Tribe Captain",
+          "Slaughter Tribe Warchief",
+          "Slaughter Tribe Overlord"
+        ],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Exchange armour for heavy armour",
+            "points": 5,
+            "usesDefinition": "Exchange armour for heavy armour",
+            "availableIn": []
+          },
+          {
+            "name": "Caragor",
+            "points": 20
+          },
+          {
+            "name": "Crossbow",
+            "points": 10
+          },
+          {
+            "name": "Dual blades",
+            "points": 10
+          },
+          {
+            "name": "Pit spear and shield",
+            "points": 10
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 5
+          }
+        ],
+        "unavailableWith": [
+          "Orc Overlord — Dark",
+          "Orc Overlord — Feral",
+          "Orc Overlord — Machine",
+          "Orc Overlord — Marauder",
+          "Orc Overlord — Mystic",
+          "Orc Overlord — Outlaw",
+          "Orc Overlord — Slaughter",
+          "Orc Overlord — Terror",
+          "Orc Overlord — Warmonger",
+          "Uruk-hai Overlord — Dark",
+          "Uruk-hai Overlord — Feral",
+          "Uruk-hai Overlord — Machine",
+          "Uruk-hai Overlord — Marauder",
+          "Uruk-hai Overlord — Mystic",
+          "Uruk-hai Overlord — Outlaw",
+          "Uruk-hai Overlord — Terror",
+          "Uruk-hai Overlord — Warmonger",
+          "Olog-hai Overlord — Dark",
+          "Olog-hai Overlord — Feral",
+          "Olog-hai Overlord — Machine",
+          "Olog-hai Overlord — Marauder",
+          "Olog-hai Overlord — Mystic",
+          "Olog-hai Overlord — Outlaw",
+          "Olog-hai Overlord — Slaughter",
+          "Olog-hai Overlord — Terror",
+          "Olog-hai Overlord — Warmonger"
+        ],
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Slaughter Tribe"
+      },
+      {
+        "name": "Uruk-hai Overlord — Terror",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Legend"
+          }
+        ],
+        "points": 120,
+        "movement": 6,
+        "fight": 6,
+        "shoot": 3,
+        "strength": 5,
+        "defence": 5,
+        "attack": 3,
+        "wounds": 3,
+        "courage": 5,
+        "intelligence": 5,
+        "might": 3,
+        "will": 3,
+        "fate": 2,
+        "race": [
+          "Uruk-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Terror Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Unique"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [
+          "Heroic Challenge",
+          "Heroic Strength",
+          "Heroic Strike"
+        ],
+        "specialRules": [
+          "Dominant (3)",
+          "Terror Tribe Captain",
+          "Terror Tribe Warchief",
+          "Terror Tribe Overlord"
+        ],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Exchange armour for heavy armour",
+            "points": 5,
+            "usesDefinition": "Exchange armour for heavy armour",
+            "availableIn": []
+          },
+          {
+            "name": "Caragor",
+            "points": 20
+          },
+          {
+            "name": "Crossbow",
+            "points": 10
+          },
+          {
+            "name": "Dual blades",
+            "points": 10
+          },
+          {
+            "name": "Pit spear and shield",
+            "points": 10
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 5
+          }
+        ],
+        "unavailableWith": [
+          "Orc Overlord — Dark",
+          "Orc Overlord — Feral",
+          "Orc Overlord — Machine",
+          "Orc Overlord — Marauder",
+          "Orc Overlord — Mystic",
+          "Orc Overlord — Outlaw",
+          "Orc Overlord — Slaughter",
+          "Orc Overlord — Terror",
+          "Orc Overlord — Warmonger",
+          "Uruk-hai Overlord — Dark",
+          "Uruk-hai Overlord — Feral",
+          "Uruk-hai Overlord — Machine",
+          "Uruk-hai Overlord — Marauder",
+          "Uruk-hai Overlord — Mystic",
+          "Uruk-hai Overlord — Outlaw",
+          "Uruk-hai Overlord — Slaughter",
+          "Uruk-hai Overlord — Warmonger",
+          "Olog-hai Overlord — Dark",
+          "Olog-hai Overlord — Feral",
+          "Olog-hai Overlord — Machine",
+          "Olog-hai Overlord — Marauder",
+          "Olog-hai Overlord — Mystic",
+          "Olog-hai Overlord — Outlaw",
+          "Olog-hai Overlord — Slaughter",
+          "Olog-hai Overlord — Terror",
+          "Olog-hai Overlord — Warmonger"
+        ],
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Terror Tribe"
+      },
+      {
+        "name": "Uruk-hai Overlord — Warmonger",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Legend"
+          }
+        ],
+        "points": 120,
+        "movement": 6,
+        "fight": 6,
+        "shoot": 3,
+        "strength": 5,
+        "defence": 5,
+        "attack": 3,
+        "wounds": 3,
+        "courage": 5,
+        "intelligence": 5,
+        "might": 3,
+        "will": 3,
+        "fate": 2,
+        "race": [
+          "Uruk-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Warmonger Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Unique"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [
+          "Heroic Challenge",
+          "Heroic Strength",
+          "Heroic Strike"
+        ],
+        "specialRules": [
+          "Dominant (3)",
+          "Warmonger Tribe Captain",
+          "Warmonger Tribe Warchief",
+          "Warmonger Tribe Overlord"
+        ],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Exchange armour for heavy armour",
+            "points": 5,
+            "usesDefinition": "Exchange armour for heavy armour",
+            "availableIn": []
+          },
+          {
+            "name": "Caragor",
+            "points": 20
+          },
+          {
+            "name": "Crossbow",
+            "points": 10
+          },
+          {
+            "name": "Dual blades",
+            "points": 10
+          },
+          {
+            "name": "Pit spear and shield",
+            "points": 10
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 5
+          },
+          {
+            "name": "Exchange armour for heavy armour (Warmonger)",
+            "points": 0,
+            "usesDefinition": "Exchange armour for heavy armour"
+          }
+        ],
+        "unavailableWith": [
+          "Orc Overlord — Dark",
+          "Orc Overlord — Feral",
+          "Orc Overlord — Machine",
+          "Orc Overlord — Marauder",
+          "Orc Overlord — Mystic",
+          "Orc Overlord — Outlaw",
+          "Orc Overlord — Slaughter",
+          "Orc Overlord — Terror",
+          "Orc Overlord — Warmonger",
+          "Uruk-hai Overlord — Dark",
+          "Uruk-hai Overlord — Feral",
+          "Uruk-hai Overlord — Machine",
+          "Uruk-hai Overlord — Marauder",
+          "Uruk-hai Overlord — Mystic",
+          "Uruk-hai Overlord — Outlaw",
+          "Uruk-hai Overlord — Slaughter",
+          "Uruk-hai Overlord — Terror",
+          "Olog-hai Overlord — Dark",
+          "Olog-hai Overlord — Feral",
+          "Olog-hai Overlord — Machine",
+          "Olog-hai Overlord — Marauder",
+          "Olog-hai Overlord — Mystic",
+          "Olog-hai Overlord — Outlaw",
+          "Olog-hai Overlord — Slaughter",
+          "Olog-hai Overlord — Terror",
+          "Olog-hai Overlord — Warmonger"
+        ],
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Warmonger Tribe"
+      },
+      {
+        "name": "Olog-hai Overlord — Dark",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Legend"
+          }
+        ],
+        "points": 180,
+        "movement": 6,
+        "fight": 8,
+        "shoot": 4,
+        "strength": 7,
+        "defence": 7,
+        "attack": 4,
+        "wounds": 5,
+        "courage": 5,
+        "intelligence": 5,
+        "might": 3,
+        "will": 3,
+        "fate": 2,
+        "race": [
+          "Olog-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Dark Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Monster",
+          "Unique"
+        ],
+        "baseSize": [
+          "60mm"
+        ],
+        "heroicActions": [
+          "Heroic Challenge",
+          "Heroic Strength",
+          "Heroic Strike"
+        ],
+        "specialRules": [
+          "Dominant (5)",
+          "Terror",
+          "Dark Tribe Captain",
+          "Dark Tribe Warchief",
+          "Dark Tribe Overlord"
+        ],
+        "wargear": [
+          "Armour",
+          "Olog gauntlets"
+        ],
+        "options": [
+          {
+            "name": "Exchange armour for heavy armour",
+            "points": 5,
+            "usesDefinition": "Exchange armour for heavy armour",
+            "availableIn": []
+          },
+          {
+            "name": "Olog-hai mace",
+            "points": 10
+          },
+          {
+            "name": "Pit spear and shield",
+            "points": 10
+          }
+        ],
+        "unavailableWith": [
+          "Orc Overlord — Dark",
+          "Orc Overlord — Feral",
+          "Orc Overlord — Machine",
+          "Orc Overlord — Marauder",
+          "Orc Overlord — Mystic",
+          "Orc Overlord — Outlaw",
+          "Orc Overlord — Slaughter",
+          "Orc Overlord — Terror",
+          "Orc Overlord — Warmonger",
+          "Uruk-hai Overlord — Dark",
+          "Uruk-hai Overlord — Feral",
+          "Uruk-hai Overlord — Machine",
+          "Uruk-hai Overlord — Marauder",
+          "Uruk-hai Overlord — Mystic",
+          "Uruk-hai Overlord — Outlaw",
+          "Uruk-hai Overlord — Slaughter",
+          "Uruk-hai Overlord — Terror",
+          "Uruk-hai Overlord — Warmonger",
+          "Olog-hai Overlord — Feral",
+          "Olog-hai Overlord — Machine",
+          "Olog-hai Overlord — Marauder",
+          "Olog-hai Overlord — Mystic",
+          "Olog-hai Overlord — Outlaw",
+          "Olog-hai Overlord — Slaughter",
+          "Olog-hai Overlord — Terror",
+          "Olog-hai Overlord — Warmonger"
+        ],
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Dark Tribe"
+      },
+      {
+        "name": "Olog-hai Overlord — Feral",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Legend"
+          }
+        ],
+        "points": 180,
+        "movement": 6,
+        "fight": 8,
+        "shoot": 4,
+        "strength": 7,
+        "defence": 7,
+        "attack": 4,
+        "wounds": 5,
+        "courage": 5,
+        "intelligence": 5,
+        "might": 3,
+        "will": 3,
+        "fate": 2,
+        "race": [
+          "Olog-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Feral Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Monster",
+          "Unique"
+        ],
+        "baseSize": [
+          "60mm"
+        ],
+        "heroicActions": [
+          "Heroic Challenge",
+          "Heroic Strength",
+          "Heroic Strike"
+        ],
+        "specialRules": [
+          "Dominant (5)",
+          "Terror",
+          "Feral Tribe Captain",
+          "Feral Tribe Warchief",
+          "Feral Tribe Overlord"
+        ],
+        "wargear": [
+          "Armour",
+          "Olog gauntlets"
+        ],
+        "options": [
+          {
+            "name": "Exchange armour for heavy armour",
+            "points": 5,
+            "usesDefinition": "Exchange armour for heavy armour",
+            "availableIn": []
+          },
+          {
+            "name": "Olog-hai mace",
+            "points": 10
+          },
+          {
+            "name": "Pit spear and shield",
+            "points": 10
+          }
+        ],
+        "unavailableWith": [
+          "Orc Overlord — Dark",
+          "Orc Overlord — Feral",
+          "Orc Overlord — Machine",
+          "Orc Overlord — Marauder",
+          "Orc Overlord — Mystic",
+          "Orc Overlord — Outlaw",
+          "Orc Overlord — Slaughter",
+          "Orc Overlord — Terror",
+          "Orc Overlord — Warmonger",
+          "Uruk-hai Overlord — Dark",
+          "Uruk-hai Overlord — Feral",
+          "Uruk-hai Overlord — Machine",
+          "Uruk-hai Overlord — Marauder",
+          "Uruk-hai Overlord — Mystic",
+          "Uruk-hai Overlord — Outlaw",
+          "Uruk-hai Overlord — Slaughter",
+          "Uruk-hai Overlord — Terror",
+          "Uruk-hai Overlord — Warmonger",
+          "Olog-hai Overlord — Dark",
+          "Olog-hai Overlord — Machine",
+          "Olog-hai Overlord — Marauder",
+          "Olog-hai Overlord — Mystic",
+          "Olog-hai Overlord — Outlaw",
+          "Olog-hai Overlord — Slaughter",
+          "Olog-hai Overlord — Terror",
+          "Olog-hai Overlord — Warmonger"
+        ],
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Feral Tribe"
+      },
+      {
+        "name": "Olog-hai Overlord — Machine",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Legend"
+          }
+        ],
+        "points": 180,
+        "movement": 6,
+        "fight": 8,
+        "shoot": 4,
+        "strength": 7,
+        "defence": 7,
+        "attack": 4,
+        "wounds": 5,
+        "courage": 5,
+        "intelligence": 5,
+        "might": 3,
+        "will": 3,
+        "fate": 2,
+        "race": [
+          "Olog-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Machine Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Monster",
+          "Unique"
+        ],
+        "baseSize": [
+          "60mm"
+        ],
+        "heroicActions": [
+          "Heroic Challenge",
+          "Heroic Strength",
+          "Heroic Strike"
+        ],
+        "specialRules": [
+          "Dominant (5)",
+          "Terror",
+          "Machine Tribe Captain",
+          "Machine Tribe Warchief",
+          "Machine Tribe Overlord"
+        ],
+        "wargear": [
+          "Armour",
+          "Olog gauntlets"
+        ],
+        "options": [
+          {
+            "name": "Exchange armour for heavy armour",
+            "points": 5,
+            "usesDefinition": "Exchange armour for heavy armour",
+            "availableIn": []
+          },
+          {
+            "name": "Olog-hai mace",
+            "points": 10
+          },
+          {
+            "name": "Pit spear and shield",
+            "points": 10
+          },
+          {
+            "name": "Olog-hai Flamethrower",
+            "points": 40,
+            "usesDefinition": "Olog-hai Flamethrower"
+          }
+        ],
+        "unavailableWith": [
+          "Orc Overlord — Dark",
+          "Orc Overlord — Feral",
+          "Orc Overlord — Machine",
+          "Orc Overlord — Marauder",
+          "Orc Overlord — Mystic",
+          "Orc Overlord — Outlaw",
+          "Orc Overlord — Slaughter",
+          "Orc Overlord — Terror",
+          "Orc Overlord — Warmonger",
+          "Uruk-hai Overlord — Dark",
+          "Uruk-hai Overlord — Feral",
+          "Uruk-hai Overlord — Machine",
+          "Uruk-hai Overlord — Marauder",
+          "Uruk-hai Overlord — Mystic",
+          "Uruk-hai Overlord — Outlaw",
+          "Uruk-hai Overlord — Slaughter",
+          "Uruk-hai Overlord — Terror",
+          "Uruk-hai Overlord — Warmonger",
+          "Olog-hai Overlord — Dark",
+          "Olog-hai Overlord — Feral",
+          "Olog-hai Overlord — Marauder",
+          "Olog-hai Overlord — Mystic",
+          "Olog-hai Overlord — Outlaw",
+          "Olog-hai Overlord — Slaughter",
+          "Olog-hai Overlord — Terror",
+          "Olog-hai Overlord — Warmonger"
+        ],
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Machine Tribe"
+      },
+      {
+        "name": "Olog-hai Overlord — Marauder",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Legend"
+          }
+        ],
+        "points": 180,
+        "movement": 6,
+        "fight": 8,
+        "shoot": 4,
+        "strength": 7,
+        "defence": 7,
+        "attack": 4,
+        "wounds": 5,
+        "courage": 5,
+        "intelligence": 5,
+        "might": 3,
+        "will": 3,
+        "fate": 2,
+        "race": [
+          "Olog-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Marauder Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Monster",
+          "Unique"
+        ],
+        "baseSize": [
+          "60mm"
+        ],
+        "heroicActions": [
+          "Heroic Challenge",
+          "Heroic Strength",
+          "Heroic Strike"
+        ],
+        "specialRules": [
+          "Dominant (5)",
+          "Terror",
+          "Marauder Tribe Captain",
+          "Marauder Tribe Warchief",
+          "Marauder Tribe Overlord"
+        ],
+        "wargear": [
+          "Armour",
+          "Olog gauntlets"
+        ],
+        "options": [
+          {
+            "name": "Exchange armour for heavy armour",
+            "points": 5,
+            "usesDefinition": "Exchange armour for heavy armour",
+            "availableIn": []
+          },
+          {
+            "name": "Olog-hai mace",
+            "points": 10
+          },
+          {
+            "name": "Pit spear and shield",
+            "points": 10
+          }
+        ],
+        "unavailableWith": [
+          "Orc Overlord — Dark",
+          "Orc Overlord — Feral",
+          "Orc Overlord — Machine",
+          "Orc Overlord — Marauder",
+          "Orc Overlord — Mystic",
+          "Orc Overlord — Outlaw",
+          "Orc Overlord — Slaughter",
+          "Orc Overlord — Terror",
+          "Orc Overlord — Warmonger",
+          "Uruk-hai Overlord — Dark",
+          "Uruk-hai Overlord — Feral",
+          "Uruk-hai Overlord — Machine",
+          "Uruk-hai Overlord — Marauder",
+          "Uruk-hai Overlord — Mystic",
+          "Uruk-hai Overlord — Outlaw",
+          "Uruk-hai Overlord — Slaughter",
+          "Uruk-hai Overlord — Terror",
+          "Uruk-hai Overlord — Warmonger",
+          "Olog-hai Overlord — Dark",
+          "Olog-hai Overlord — Feral",
+          "Olog-hai Overlord — Machine",
+          "Olog-hai Overlord — Mystic",
+          "Olog-hai Overlord — Outlaw",
+          "Olog-hai Overlord — Slaughter",
+          "Olog-hai Overlord — Terror",
+          "Olog-hai Overlord — Warmonger"
+        ],
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Marauder Tribe"
+      },
+      {
+        "name": "Olog-hai Overlord — Mystic",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Legend"
+          }
+        ],
+        "points": 180,
+        "movement": 6,
+        "fight": 8,
+        "shoot": 4,
+        "strength": 7,
+        "defence": 7,
+        "attack": 4,
+        "wounds": 5,
+        "courage": 5,
+        "intelligence": 5,
+        "might": 3,
+        "will": 3,
+        "fate": 2,
+        "race": [
+          "Olog-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Mystic Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Monster",
+          "Unique"
+        ],
+        "baseSize": [
+          "60mm"
+        ],
+        "heroicActions": [
+          "Heroic Challenge",
+          "Heroic Strength",
+          "Heroic Strike"
+        ],
+        "specialRules": [
+          "Dominant (5)",
+          "Terror",
+          "Mystic Tribe Captain",
+          "Mystic Tribe Warchief",
+          "Mystic Tribe Overlord"
+        ],
+        "wargear": [
+          "Armour",
+          "Olog gauntlets"
+        ],
+        "options": [
+          {
+            "name": "Exchange armour for heavy armour",
+            "points": 5,
+            "usesDefinition": "Exchange armour for heavy armour",
+            "availableIn": []
+          },
+          {
+            "name": "Olog-hai mace",
+            "points": 10
+          },
+          {
+            "name": "Pit spear and shield",
+            "points": 10
+          },
+          {
+            "name": "Morgul Blade",
+            "points": 5,
+            "usesDefinition": "Morgul Blade"
+          }
+        ],
+        "unavailableWith": [
+          "Orc Overlord — Dark",
+          "Orc Overlord — Feral",
+          "Orc Overlord — Machine",
+          "Orc Overlord — Marauder",
+          "Orc Overlord — Mystic",
+          "Orc Overlord — Outlaw",
+          "Orc Overlord — Slaughter",
+          "Orc Overlord — Terror",
+          "Orc Overlord — Warmonger",
+          "Uruk-hai Overlord — Dark",
+          "Uruk-hai Overlord — Feral",
+          "Uruk-hai Overlord — Machine",
+          "Uruk-hai Overlord — Marauder",
+          "Uruk-hai Overlord — Mystic",
+          "Uruk-hai Overlord — Outlaw",
+          "Uruk-hai Overlord — Slaughter",
+          "Uruk-hai Overlord — Terror",
+          "Uruk-hai Overlord — Warmonger",
+          "Olog-hai Overlord — Dark",
+          "Olog-hai Overlord — Feral",
+          "Olog-hai Overlord — Machine",
+          "Olog-hai Overlord — Marauder",
+          "Olog-hai Overlord — Outlaw",
+          "Olog-hai Overlord — Slaughter",
+          "Olog-hai Overlord — Terror",
+          "Olog-hai Overlord — Warmonger"
+        ],
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Mystic Tribe"
+      },
+      {
+        "name": "Olog-hai Overlord — Outlaw",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Legend"
+          }
+        ],
+        "points": 180,
+        "movement": 6,
+        "fight": 8,
+        "shoot": 4,
+        "strength": 7,
+        "defence": 7,
+        "attack": 4,
+        "wounds": 5,
+        "courage": 5,
+        "intelligence": 5,
+        "might": 3,
+        "will": 3,
+        "fate": 2,
+        "race": [
+          "Olog-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Outlaw Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Monster",
+          "Unique"
+        ],
+        "baseSize": [
+          "60mm"
+        ],
+        "heroicActions": [
+          "Heroic Challenge",
+          "Heroic Strength",
+          "Heroic Strike"
+        ],
+        "specialRules": [
+          "Dominant (5)",
+          "Terror",
+          "Outlaw Tribe Captain",
+          "Outlaw Tribe Warchief",
+          "Outlaw Tribe Overlord"
+        ],
+        "wargear": [
+          "Armour",
+          "Olog gauntlets"
+        ],
+        "options": [
+          {
+            "name": "Exchange armour for heavy armour",
+            "points": 5,
+            "usesDefinition": "Exchange armour for heavy armour",
+            "availableIn": []
+          },
+          {
+            "name": "Olog-hai mace",
+            "points": 10
+          },
+          {
+            "name": "Pit spear and shield",
+            "points": 10
+          }
+        ],
+        "unavailableWith": [
+          "Orc Overlord — Dark",
+          "Orc Overlord — Feral",
+          "Orc Overlord — Machine",
+          "Orc Overlord — Marauder",
+          "Orc Overlord — Mystic",
+          "Orc Overlord — Outlaw",
+          "Orc Overlord — Slaughter",
+          "Orc Overlord — Terror",
+          "Orc Overlord — Warmonger",
+          "Uruk-hai Overlord — Dark",
+          "Uruk-hai Overlord — Feral",
+          "Uruk-hai Overlord — Machine",
+          "Uruk-hai Overlord — Marauder",
+          "Uruk-hai Overlord — Mystic",
+          "Uruk-hai Overlord — Outlaw",
+          "Uruk-hai Overlord — Slaughter",
+          "Uruk-hai Overlord — Terror",
+          "Uruk-hai Overlord — Warmonger",
+          "Olog-hai Overlord — Dark",
+          "Olog-hai Overlord — Feral",
+          "Olog-hai Overlord — Machine",
+          "Olog-hai Overlord — Marauder",
+          "Olog-hai Overlord — Mystic",
+          "Olog-hai Overlord — Slaughter",
+          "Olog-hai Overlord — Terror",
+          "Olog-hai Overlord — Warmonger"
+        ],
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Outlaw Tribe"
+      },
+      {
+        "name": "Olog-hai Overlord — Slaughter",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Legend"
+          }
+        ],
+        "points": 180,
+        "movement": 6,
+        "fight": 8,
+        "shoot": 4,
+        "strength": 7,
+        "defence": 7,
+        "attack": 4,
+        "wounds": 5,
+        "courage": 5,
+        "intelligence": 5,
+        "might": 3,
+        "will": 3,
+        "fate": 2,
+        "race": [
+          "Olog-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Slaughter Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Monster",
+          "Unique"
+        ],
+        "baseSize": [
+          "60mm"
+        ],
+        "heroicActions": [
+          "Heroic Challenge",
+          "Heroic Strength",
+          "Heroic Strike"
+        ],
+        "specialRules": [
+          "Dominant (5)",
+          "Terror",
+          "Slaughter Tribe Captain",
+          "Slaughter Tribe Warchief",
+          "Slaughter Tribe Overlord"
+        ],
+        "wargear": [
+          "Armour",
+          "Olog gauntlets"
+        ],
+        "options": [
+          {
+            "name": "Exchange armour for heavy armour",
+            "points": 5,
+            "usesDefinition": "Exchange armour for heavy armour",
+            "availableIn": []
+          },
+          {
+            "name": "Olog-hai mace",
+            "points": 10
+          },
+          {
+            "name": "Pit spear and shield",
+            "points": 10
+          }
+        ],
+        "unavailableWith": [
+          "Orc Overlord — Dark",
+          "Orc Overlord — Feral",
+          "Orc Overlord — Machine",
+          "Orc Overlord — Marauder",
+          "Orc Overlord — Mystic",
+          "Orc Overlord — Outlaw",
+          "Orc Overlord — Slaughter",
+          "Orc Overlord — Terror",
+          "Orc Overlord — Warmonger",
+          "Uruk-hai Overlord — Dark",
+          "Uruk-hai Overlord — Feral",
+          "Uruk-hai Overlord — Machine",
+          "Uruk-hai Overlord — Marauder",
+          "Uruk-hai Overlord — Mystic",
+          "Uruk-hai Overlord — Outlaw",
+          "Uruk-hai Overlord — Slaughter",
+          "Uruk-hai Overlord — Terror",
+          "Uruk-hai Overlord — Warmonger",
+          "Olog-hai Overlord — Dark",
+          "Olog-hai Overlord — Feral",
+          "Olog-hai Overlord — Machine",
+          "Olog-hai Overlord — Marauder",
+          "Olog-hai Overlord — Mystic",
+          "Olog-hai Overlord — Outlaw",
+          "Olog-hai Overlord — Terror",
+          "Olog-hai Overlord — Warmonger"
+        ],
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Slaughter Tribe"
+      },
+      {
+        "name": "Olog-hai Overlord — Terror",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Legend"
+          }
+        ],
+        "points": 180,
+        "movement": 6,
+        "fight": 8,
+        "shoot": 4,
+        "strength": 7,
+        "defence": 7,
+        "attack": 4,
+        "wounds": 5,
+        "courage": 5,
+        "intelligence": 5,
+        "might": 3,
+        "will": 3,
+        "fate": 2,
+        "race": [
+          "Olog-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Terror Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Monster",
+          "Unique"
+        ],
+        "baseSize": [
+          "60mm"
+        ],
+        "heroicActions": [
+          "Heroic Challenge",
+          "Heroic Strength",
+          "Heroic Strike"
+        ],
+        "specialRules": [
+          "Dominant (5)",
+          "Terror",
+          "Terror Tribe Captain",
+          "Terror Tribe Warchief",
+          "Terror Tribe Overlord"
+        ],
+        "wargear": [
+          "Armour",
+          "Olog gauntlets"
+        ],
+        "options": [
+          {
+            "name": "Exchange armour for heavy armour",
+            "points": 5,
+            "usesDefinition": "Exchange armour for heavy armour",
+            "availableIn": []
+          },
+          {
+            "name": "Olog-hai mace",
+            "points": 10
+          },
+          {
+            "name": "Pit spear and shield",
+            "points": 10
+          }
+        ],
+        "unavailableWith": [
+          "Orc Overlord — Dark",
+          "Orc Overlord — Feral",
+          "Orc Overlord — Machine",
+          "Orc Overlord — Marauder",
+          "Orc Overlord — Mystic",
+          "Orc Overlord — Outlaw",
+          "Orc Overlord — Slaughter",
+          "Orc Overlord — Terror",
+          "Orc Overlord — Warmonger",
+          "Uruk-hai Overlord — Dark",
+          "Uruk-hai Overlord — Feral",
+          "Uruk-hai Overlord — Machine",
+          "Uruk-hai Overlord — Marauder",
+          "Uruk-hai Overlord — Mystic",
+          "Uruk-hai Overlord — Outlaw",
+          "Uruk-hai Overlord — Slaughter",
+          "Uruk-hai Overlord — Terror",
+          "Uruk-hai Overlord — Warmonger",
+          "Olog-hai Overlord — Dark",
+          "Olog-hai Overlord — Feral",
+          "Olog-hai Overlord — Machine",
+          "Olog-hai Overlord — Marauder",
+          "Olog-hai Overlord — Mystic",
+          "Olog-hai Overlord — Outlaw",
+          "Olog-hai Overlord — Slaughter",
+          "Olog-hai Overlord — Warmonger"
+        ],
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Terror Tribe"
+      },
+      {
+        "name": "Olog-hai Overlord — Warmonger",
+        "factions": [
+          {
+            "name": "Tribes of Udûn",
+            "heroicTier": "Hero of Legend"
+          }
+        ],
+        "points": 180,
+        "movement": 6,
+        "fight": 8,
+        "shoot": 4,
+        "strength": 7,
+        "defence": 7,
+        "attack": 4,
+        "wounds": 5,
+        "courage": 5,
+        "intelligence": 5,
+        "might": 3,
+        "will": 3,
+        "fate": 2,
+        "race": [
+          "Olog-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Warmonger Tribe"
+        ],
+        "unitType": [
+          "Hero",
+          "Infantry",
+          "Monster",
+          "Unique"
+        ],
+        "baseSize": [
+          "60mm"
+        ],
+        "heroicActions": [
+          "Heroic Challenge",
+          "Heroic Strength",
+          "Heroic Strike"
+        ],
+        "specialRules": [
+          "Dominant (5)",
+          "Terror",
+          "Warmonger Tribe Captain",
+          "Warmonger Tribe Warchief",
+          "Warmonger Tribe Overlord"
+        ],
+        "wargear": [
+          "Armour",
+          "Olog gauntlets"
+        ],
+        "options": [
+          {
+            "name": "Exchange armour for heavy armour",
+            "points": 5,
+            "usesDefinition": "Exchange armour for heavy armour",
+            "availableIn": []
+          },
+          {
+            "name": "Olog-hai mace",
+            "points": 10
+          },
+          {
+            "name": "Pit spear and shield",
+            "points": 10
+          },
+          {
+            "name": "Exchange light armour with armour (Warmonger)",
+            "points": 0,
+            "usesDefinition": "Exchange light armour with armour"
+          }
+        ],
+        "unavailableWith": [
+          "Orc Overlord — Dark",
+          "Orc Overlord — Feral",
+          "Orc Overlord — Machine",
+          "Orc Overlord — Marauder",
+          "Orc Overlord — Mystic",
+          "Orc Overlord — Outlaw",
+          "Orc Overlord — Slaughter",
+          "Orc Overlord — Terror",
+          "Orc Overlord — Warmonger",
+          "Uruk-hai Overlord — Dark",
+          "Uruk-hai Overlord — Feral",
+          "Uruk-hai Overlord — Machine",
+          "Uruk-hai Overlord — Marauder",
+          "Uruk-hai Overlord — Mystic",
+          "Uruk-hai Overlord — Outlaw",
+          "Uruk-hai Overlord — Slaughter",
+          "Uruk-hai Overlord — Terror",
+          "Uruk-hai Overlord — Warmonger",
+          "Olog-hai Overlord — Dark",
+          "Olog-hai Overlord — Feral",
+          "Olog-hai Overlord — Machine",
+          "Olog-hai Overlord — Marauder",
+          "Olog-hai Overlord — Mystic",
+          "Olog-hai Overlord — Outlaw",
+          "Olog-hai Overlord — Slaughter",
+          "Olog-hai Overlord — Terror"
+        ],
+        "generatedTribeHeroVariant": true,
+        "unlockedByGlobal": "Warmonger Tribe"
+      }
+    ],
+    "warriors": [
+      {
+        "name": "Ghûl",
+        "factions": [
+          "Lairs of Mordor"
+        ],
+        "points": 6,
+        "movement": 6,
+        "fight": 2,
+        "shoot": 5,
+        "strength": 3,
+        "defence": 3,
+        "attack": 1,
+        "wounds": 1,
+        "courage": 7,
+        "intelligence": 9,
+        "race": [
+          "Ghûl"
+        ],
+        "faction": [
+          "Mordor"
+        ],
+        "unitType": [
+          "Warrior",
+          "Infantry"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [],
+        "specialRules": [
+          "Cave Dweller",
+          "Pack Hunter",
+          "Pack Instinct"
+        ],
+        "wargear": [
+          "Teeth and Claws (hand weapons)"
+        ],
+        "options": []
+      },
+      {
+        "name": "Caragor",
+        "factions": [
+          "Lairs of Mordor"
+        ],
+        "points": 10,
+        "movement": 10,
+        "fight": 3,
+        "shoot": 6,
+        "strength": 5,
+        "defence": 4,
+        "attack": 1,
+        "wounds": 1,
+        "courage": 8,
+        "intelligence": 7,
+        "race": [
+          "Caragor"
+        ],
+        "faction": [
+          "Mordor"
+        ],
+        "unitType": [
+          "Warrior",
+          "Infantry",
+          "Beast"
+        ],
+        "baseSize": [
+          "40mm"
+        ],
+        "heroicActions": [],
+        "specialRules": [
+          "Mountain Dweller",
+          "Monsterbane",
+          "Unruly Strength"
+        ],
+        "wargear": [
+          "Teeth and Claws (hand weapons)"
+        ],
+        "options": []
+      },
+      {
+        "name": "Black Gate Ranger",
+        "factions": [
+          "Black Gate Garrison",
+          "Outcasts of Udûn"
+        ],
+        "points": 9,
+        "movement": 6,
+        "fight": 4,
+        "shoot": 3,
+        "strength": 3,
+        "defence": 4,
+        "attack": 1,
+        "wounds": 1,
+        "courage": 6,
+        "intelligence": 6,
+        "race": [
+          "Man"
+        ],
+        "faction": [
+          "Gondor"
+        ],
+        "unitType": [
+          "Warrior",
+          "Infantry"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [],
+        "specialRules": [
+          "Ancient Enemies (Mordor)"
+        ],
+        "wargear": [
+          "Armour",
+          "Hand weapon",
+          "Bow"
+        ],
+        "options": [
+          {
+            "name": "Banner",
+            "points": 25
+          },
+          {
+            "name": "War horn",
+            "points": 25
+          },
+          {
+            "name": "Spear",
+            "points": 1
+          }
+        ]
+      },
+      {
+        "name": "Udûn Uruk-hai Warrior",
+        "factions": [
+          "Outcasts of Udûn",
+          "Talion's Army",
+          "Stronghold of the Hammer",
+          "The Spire of the Tower",
+          "Fortress of the Black Hand"
+        ],
+        "points": 8,
+        "movement": 6,
+        "fight": 4,
+        "shoot": 4,
+        "strength": 4,
+        "defence": 4,
+        "attack": 1,
+        "wounds": 1,
+        "courage": 6,
+        "intelligence": 7,
+        "race": [
+          "Uruk-hai"
+        ],
+        "faction": [
+          "Mordor"
+        ],
+        "unitType": [
+          "Warrior",
+          "Infantry"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [],
+        "specialRules": [],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Swap armour for heavy armour",
+            "points": 1,
+            "usesDefinition": "Swap armour for heavy armour"
+          },
+          {
+            "name": "Crossbow",
+            "points": 2
+          },
+          {
+            "name": "Dual blades",
+            "points": 2
+          },
+          {
+            "name": "Spear and shield",
+            "points": 2
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 1
+          }
+        ]
+      },
+      {
+        "name": "Udûn Orc Warrior",
+        "factions": [
+          "Outcasts of Udûn",
+          "Talion's Army",
+          "Stronghold of the Hammer",
+          "The Spire of the Tower",
+          "Fortress of the Black Hand"
+        ],
+        "points": 5,
+        "movement": 6,
+        "fight": 3,
+        "shoot": 5,
+        "strength": 3,
+        "defence": 4,
+        "attack": 1,
+        "wounds": 1,
+        "courage": 8,
+        "intelligence": 8,
+        "race": [
+          "Orc"
+        ],
+        "faction": [
+          "Mordor"
+        ],
+        "unitType": [
+          "Warrior",
+          "Infantry"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [],
+        "specialRules": [],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Throwing spears",
+            "points": 2
+          },
+          {
+            "name": "Dual blades",
+            "points": 2
+          },
+          {
+            "name": "Shield",
+            "points": 1
+          },
+          {
+            "name": "Spear",
+            "points": 1
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 1
+          }
+        ]
+      },
+      {
+        "name": "Udûn Olog-hai Warrior",
+        "factions": [
+          "Talion's Army",
+          "The Spire of the Tower",
+          "Fortress of the Black Hand"
+        ],
+        "points": 45,
+        "movement": 6,
+        "fight": 5,
+        "shoot": 6,
+        "strength": 5,
+        "defence": 5,
+        "attack": 2,
+        "wounds": 2,
+        "courage": 7,
+        "intelligence": 8,
+        "race": [
+          "Olog-hai"
+        ],
+        "faction": [
+          "Mordor"
+        ],
+        "unitType": [
+          "Warrior",
+          "Infantry",
+          "Monster"
+        ],
+        "baseSize": [
+          "40mm"
+        ],
+        "heroicActions": [],
+        "specialRules": [
+          "Dominant (2)"
+        ],
+        "wargear": [
+          "Light armour",
+          "Olog gauntlets"
+        ],
+        "options": [
+          {
+            "name": "Exchange light armour with armour",
+            "points": 1,
+            "usesDefinition": "Exchange light armour with armour"
+          },
+          {
+            "name": "Olog-hai mace",
+            "points": 2
+          },
+          {
+            "name": "Pit spear and shield",
+            "points": 2
+          }
+        ]
+      },
+      {
+        "name": "Udûn Uruk-hai Caragor Rider",
+        "factions": [
+          "Talion's Army",
+          "Stronghold of the Hammer",
+          "Fortress of the Black Hand"
+        ],
+        "points": 18,
+        "movement": 6,
+        "fight": 4,
+        "shoot": 4,
+        "strength": 4,
+        "defence": 4,
+        "attack": 1,
+        "wounds": 1,
+        "courage": 6,
+        "intelligence": 7,
+        "race": [
+          "Uruk-hai"
+        ],
+        "faction": [
+          "Mordor"
+        ],
+        "unitType": [
+          "Warrior",
+          "Cavalry"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [],
+        "specialRules": [],
+        "wargear": [
+          "Armour",
+          "Hand weapon",
+          "Caragor"
+        ],
+        "options": [
+          {
+            "name": "Crossbow",
+            "points": 2
+          },
+          {
+            "name": "Dual blades",
+            "points": 2
+          },
+          {
+            "name": "Spear and shield",
+            "points": 2
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 1
+          }
+        ]
+      },
+      {
+        "name": "Udûn Orc Caragor Rider",
+        "factions": [
+          "Talion's Army",
+          "Stronghold of the Hammer",
+          "Fortress of the Black Hand"
+        ],
+        "points": 15,
+        "movement": 6,
+        "fight": 3,
+        "shoot": 5,
+        "strength": 3,
+        "defence": 4,
+        "attack": 1,
+        "wounds": 1,
+        "courage": 8,
+        "intelligence": 8,
+        "race": [
+          "Uruk-hai"
+        ],
+        "faction": [
+          "Mordor"
+        ],
+        "unitType": [
+          "Warrior",
+          "Cavalry"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [],
+        "specialRules": [],
+        "wargear": [
+          "Armour",
+          "Hand weapon",
+          "Caragor"
+        ],
+        "options": [
+          {
+            "name": "Throwing spears",
+            "points": 2
+          },
+          {
+            "name": "Dual blades",
+            "points": 2
+          },
+          {
+            "name": "Shield",
+            "points": 1
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 1
+          }
+        ]
+      },
+      {
+        "name": "Tribesman of Nûrn",
+        "factions": [
+          "The Freefolk of Nûrn"
+        ],
+        "points": 7,
+        "movement": 6,
+        "fight": 3,
+        "shoot": 4,
+        "strength": 4,
+        "defence": 3,
+        "attack": 1,
+        "wounds": 1,
+        "courage": 6,
+        "intelligence": 7,
+        "race": [
+          "Man"
+        ],
+        "faction": [
+          "Nûrn"
+        ],
+        "unitType": [
+          "Warrior",
+          "Infantry"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [],
+        "specialRules": [
+          "Hatred (Uruk-hai)",
+          "Stalk Unseen",
+          "Woodland Creature",
+          "Expert Hunter"
+        ],
+        "wargear": [
+          "Light armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Exchange light armour for armour",
+            "points": 1,
+            "usesDefinition": "Exchange light armour for armour"
+          },
+          {
+            "name": "War horn and spear",
+            "points": 26
+          },
+          {
+            "name": "Spear and bow",
+            "points": 3
+          },
+          {
+            "name": "Throwing spear and light shield",
+            "points": 3
+          },
+          {
+            "name": "Sling and light shield",
+            "points": 2
+          }
+        ]
+      },
+      {
+        "name": "Nûrnian Shorewarden",
+        "factions": [
+          "The Freefolk of Nûrn"
+        ],
+        "points": 10,
+        "movement": 6,
+        "fight": 4,
+        "shoot": 4,
+        "strength": 4,
+        "defence": 4,
+        "attack": 1,
+        "wounds": 1,
+        "courage": 5,
+        "intelligence": 6,
+        "race": [
+          "Man"
+        ],
+        "faction": [
+          "Nûrn"
+        ],
+        "unitType": [
+          "Warrior",
+          "Infantry"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [],
+        "specialRules": [
+          "Expert Hunter",
+          "Hatred (Uruk-hai)",
+          "Stalk Unseen",
+          "Woodland Creature",
+          "Entangling Throw"
+        ],
+        "wargear": [
+          "Light armour",
+          "Spear",
+          "Chained bolas"
+        ],
+        "options": []
+      },
+      {
+        "name": "Liberated Captive",
+        "factions": [],
+        "unavailableSolo": true,
+        "points": 4,
+        "movement": 6,
+        "fight": 2,
+        "shoot": 4,
+        "strength": 3,
+        "defence": 3,
+        "attack": 1,
+        "wounds": 1,
+        "courage": 8,
+        "intelligence": 7,
+        "race": [
+          "Man"
+        ],
+        "faction": [
+          "Nûrn"
+        ],
+        "unitType": [
+          "Warrior",
+          "Infantry"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [],
+        "specialRules": [
+          "Scavenge"
+        ],
+        "wargear": [
+          "Unarmed"
+        ],
+        "options": [
+          {
+            "name": "Light armour",
+            "points": 1
+          },
+          {
+            "name": "Hand weapon",
+            "points": 1
+          }
+        ]
+      },
+      {
+        "name": "Warrior of Minas Ithil",
+        "factions": [
+          "Defence of Minas Ithil"
+        ],
+        "points": 8,
+        "movement": 6,
+        "fight": 4,
+        "shoot": 4,
+        "strength": 3,
+        "defence": 4,
+        "attack": 1,
+        "wounds": 1,
+        "courage": 6,
+        "intelligence": 7,
+        "race": [
+          "Man"
+        ],
+        "faction": [
+          "Gondor"
+        ],
+        "unitType": [
+          "Warrior",
+          "Infantry"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [],
+        "specialRules": [
+          "Hatred (Mordor)"
+        ],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "War Horn",
+            "points": 25,
+            "chooseOneKey": "a"
+          },
+          {
+            "name": "Bow with Flaming Arrows",
+            "points": 2,
+            "chooseOneKey": "a"
+          },
+          {
+            "name": "Spear",
+            "points": 1,
+            "chooseOneKey": "a"
+          },
+          {
+            "name": "Shield",
+            "points": 1,
+            "chooseOneKey": "a"
+          }
+        ]
+      },
+      {
+        "name": "Ithil Stone Guard",
+        "factions": [
+          "Defence of Minas Ithil"
+        ],
+        "points": 11,
+        "movement": 6,
+        "fight": 4,
+        "shoot": 4,
+        "strength": 3,
+        "defence": 5,
+        "attack": 1,
+        "wounds": 1,
+        "courage": 6,
+        "intelligence": 7,
+        "race": [
+          "Man"
+        ],
+        "faction": [
+          "Gondor"
+        ],
+        "unitType": [
+          "Warrior",
+          "Infantry"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [],
+        "specialRules": [
+          "Hatred (Mordor)",
+          "Guardians of the Ithil Stone"
+        ],
+        "wargear": [
+          "Armour",
+          "Hand weapon",
+          "Spear",
+          "Shield"
+        ],
+        "options": [
+          {
+            "name": "Replace shield with Banner",
+            "points": 25
+          }
+        ]
+      },
+      {
+        "name": "Minas Tirith Siege Crew",
+        "factions": [],
+        "autoAddOnly": true,
+        "points": 0,
+        "movement": 6,
+        "fight": 3,
+        "shoot": 4,
+        "strength": 3,
+        "defence": 5,
+        "attack": 1,
+        "wounds": 1,
+        "courage": 7,
+        "intelligence": 7,
+        "race": [
+          "Man"
+        ],
+        "faction": [
+          "Gondor"
+        ],
+        "unitType": [
+          "Warrior",
+          "Infantry"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "options": [],
+        "specialRules": [
+          "Shieldwall"
+        ],
+        "wargear": [
+          "Heavy Armour",
+          "Hand weapon"
+        ]
+      },
+      {
+        "name": "Graug",
+        "factions": [
+          "Lairs of Mordor"
+        ],
+        "points": 125,
+        "movement": 6,
+        "fight": 6,
+        "shoot": 4,
+        "strength": 7,
+        "defence": 6,
+        "attack": 3,
+        "wounds": 4,
+        "courage": 6,
+        "intelligence": 6,
+        "race": [
+          "Graug"
+        ],
+        "faction": [
+          "Mordor"
+        ],
+        "unitType": [
+          "Warrior",
+          "Infantry",
+          "Monster"
+        ],
+        "baseSize": [
+          "80mm"
+        ],
+        "heroicActions": [],
+        "specialRules": [
+          "Cave Dweller",
+          "Dominant (4)",
+          "Fearless",
+          "Large Target",
+          "Monstrous Charge",
+          "Terror",
+          "Immovable Object",
+          "Relentless Advance"
+        ],
+        "wargear": [
+          "Massive Claws (hand weapons)"
+        ],
+        "options": [
+          {
+            "name": "Fire Graug",
+            "points": 50,
+            "chooseOneKey": "graugType"
+          },
+          {
+            "name": "Wretched Graug",
+            "points": 50,
+            "chooseOneKey": "graugType"
+          },
+          {
+            "name": "Frost Graug",
+            "points": 50,
+            "chooseOneKey": "graugType"
+          }
+        ]
+      },
+      {
+        "name": "Hell-Hawk",
+        "factions": [
+          "Lairs of Mordor"
+        ],
+        "points": 30,
+        "movement": 12,
+        "fight": 3,
+        "shoot": 6,
+        "strength": 5,
+        "defence": 3,
+        "attack": 2,
+        "wounds": 2,
+        "courage": 7,
+        "intelligence": 8,
+        "race": [
+          "Hell-Hawk"
+        ],
+        "faction": [
+          "Mordor"
+        ],
+        "unitType": [
+          "Warrior",
+          "Infantry",
+          "Beast"
+        ],
+        "baseSize": [
+          "40mm"
+        ],
+        "heroicActions": [],
+        "specialRules": [
+          "Fly",
+          "Dominant (2)",
+          "Aerial hunter",
+          "Venomous bite"
+        ],
+        "wargear": [
+          "Razor-sharp teeth and talons (hand weapons)"
+        ],
+        "options": []
+      },
+      {
+        "name": "Morgai Flies",
+        "factions": [
+          "Lairs of Mordor"
+        ],
+        "points": 25,
+        "movement": 12,
+        "fight": 1,
+        "shoot": 6,
+        "strength": 1,
+        "defence": 3,
+        "attack": 3,
+        "wounds": 3,
+        "courage": 8,
+        "intelligence": 8,
+        "race": [
+          "Flies"
+        ],
+        "faction": [
+          "Mordor"
+        ],
+        "unitType": [
+          "Warrior",
+          "Infantry",
+          "Beast",
+          "Swarm"
+        ],
+        "baseSize": [
+          "40mm"
+        ],
+        "heroicActions": [],
+        "specialRules": [
+          "Fly",
+          "Venom",
+          "Many bodies"
+        ],
+        "wargear": [
+          "Stinging bite (hand weapon)"
+        ],
+        "options": []
+      },
+      {
+        "name": "Dire Caragor",
+        "factions": [
+          "Lairs of Mordor"
+        ],
+        "points": 20,
+        "movement": 10,
+        "fight": 3,
+        "shoot": 6,
+        "strength": 5,
+        "defence": 4,
+        "attack": 2,
+        "wounds": 2,
+        "courage": 6,
+        "intelligence": 5,
+        "race": [
+          "Caragor"
+        ],
+        "faction": [
+          "Mordor"
+        ],
+        "unitType": [
+          "Warrior",
+          "Infantry",
+          "Beast"
+        ],
+        "baseSize": [
+          "40mm"
+        ],
+        "heroicActions": [],
+        "specialRules": [
+          "Mountain Dweller",
+          "Monsterbane",
+          "Unruly Strength"
+        ],
+        "wargear": [
+          "Teeth and Claws (hand weapons)"
+        ],
+        "options": []
+      },
+      {
+        "name": "Orc Warrior (Dark)",
+        "factions": [
+          "Tribes of Udûn"
+        ],
+        "points": 5,
+        "movement": 6,
+        "fight": 3,
+        "shoot": 5,
+        "strength": 3,
+        "defence": 4,
+        "attack": 1,
+        "wounds": 1,
+        "courage": 8,
+        "intelligence": 8,
+        "race": [
+          "Orc"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Dark Tribe"
+        ],
+        "unitType": [
+          "Warrior",
+          "Infantry"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [],
+        "specialRules": [],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Throwing spears",
+            "points": 2
+          },
+          {
+            "name": "Dual blades",
+            "points": 1
+          },
+          {
+            "name": "Shield",
+            "points": 1
+          },
+          {
+            "name": "Spear",
+            "points": 1
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 1
+          }
+        ],
+        "generatedTribeWarriorVariant": true
+      },
+      {
+        "name": "Uruk-hai Warrior (Dark)",
+        "factions": [
+          "Tribes of Udûn"
+        ],
+        "points": 8,
+        "movement": 6,
+        "fight": 4,
+        "shoot": 4,
+        "strength": 4,
+        "defence": 4,
+        "attack": 1,
+        "wounds": 1,
+        "courage": 6,
+        "intelligence": 7,
+        "race": [
+          "Uruk-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Dark Tribe"
+        ],
+        "unitType": [
+          "Warrior",
+          "Infantry"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [],
+        "specialRules": [],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Swap armour for heavy armour",
+            "points": 1,
+            "usesDefinition": "Swap armour for heavy armour"
+          },
+          {
+            "name": "Crossbow",
+            "points": 2
+          },
+          {
+            "name": "Dual blades",
+            "points": 1
+          },
+          {
+            "name": "Spear and shield",
+            "points": 2
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 1
+          }
+        ],
+        "generatedTribeWarriorVariant": true
+      },
+      {
+        "name": "Olog-hai Warrior (Dark)",
+        "factions": [
+          "Tribes of Udûn"
+        ],
+        "points": 45,
+        "movement": 6,
+        "fight": 5,
+        "shoot": 6,
+        "strength": 5,
+        "defence": 5,
+        "attack": 2,
+        "wounds": 2,
+        "courage": 7,
+        "intelligence": 8,
+        "race": [
+          "Olog-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Dark Tribe"
+        ],
+        "unitType": [
+          "Warrior",
+          "Infantry",
+          "Monster"
+        ],
+        "baseSize": [
+          "40mm"
+        ],
+        "heroicActions": [],
+        "specialRules": [
+          "Dominant (2)",
+          "Resistant to Poison"
+        ],
+        "wargear": [
+          "Light armour",
+          "Olog gauntlets"
+        ],
+        "options": [
+          {
+            "name": "Exchange light armour with armour",
+            "points": 1,
+            "usesDefinition": "Exchange light armour with armour"
+          },
+          {
+            "name": "Olog-hai mace",
+            "points": 2
+          },
+          {
+            "name": "Pit spear and shield",
+            "points": 2
+          }
+        ],
+        "generatedTribeWarriorVariant": true
+      },
+      {
+        "name": "Uruk-hai Caragor Rider (Dark)",
+        "factions": [
+          "Tribes of Udûn"
+        ],
+        "points": 18,
+        "movement": 6,
+        "fight": 4,
+        "shoot": 4,
+        "strength": 4,
+        "defence": 4,
+        "attack": 1,
+        "wounds": 1,
+        "courage": 6,
+        "intelligence": 7,
+        "race": [
+          "Uruk-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Dark Tribe"
+        ],
+        "unitType": [
+          "Warrior",
+          "Cavalry"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [],
+        "specialRules": [],
+        "wargear": [
+          "Armour",
+          "Hand weapon",
+          "Caragor"
+        ],
+        "options": [
+          {
+            "name": "Crossbow",
+            "points": 2
+          },
+          {
+            "name": "Dual blades",
+            "points": 2
+          },
+          {
+            "name": "Spear and shield",
+            "points": 2
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 1
+          }
+        ],
+        "generatedTribeWarriorVariant": true
+      },
+      {
+        "name": "Orc Caragor Rider (Dark)",
+        "factions": [
+          "Tribes of Udûn"
+        ],
+        "points": 15,
+        "movement": 6,
+        "fight": 3,
+        "shoot": 5,
+        "strength": 3,
+        "defence": 4,
+        "attack": 1,
+        "wounds": 1,
+        "courage": 8,
+        "intelligence": 8,
+        "race": [
+          "Uruk-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Dark Tribe"
+        ],
+        "unitType": [
+          "Warrior",
+          "Cavalry"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [],
+        "specialRules": [],
+        "wargear": [
+          "Armour",
+          "Hand weapon",
+          "Caragor"
+        ],
+        "options": [
+          {
+            "name": "Throwing spears",
+            "points": 2
+          },
+          {
+            "name": "Dual blades",
+            "points": 2
+          },
+          {
+            "name": "Shield",
+            "points": 1
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 1
+          }
+        ],
+        "generatedTribeWarriorVariant": true
+      },
+      {
+        "name": "Orc Warrior (Feral)",
+        "factions": [
+          "Tribes of Udûn"
+        ],
+        "points": 5,
+        "movement": 6,
+        "fight": 3,
+        "shoot": 5,
+        "strength": 3,
+        "defence": 4,
+        "attack": 1,
+        "wounds": 1,
+        "courage": 8,
+        "intelligence": 8,
+        "race": [
+          "Orc"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Feral Tribe"
+        ],
+        "unitType": [
+          "Warrior",
+          "Infantry"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [],
+        "specialRules": [],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Throwing spears",
+            "points": 2
+          },
+          {
+            "name": "Dual blades",
+            "points": 2
+          },
+          {
+            "name": "Shield",
+            "points": 1
+          },
+          {
+            "name": "Spear",
+            "points": 1
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 1
+          }
+        ],
+        "generatedTribeWarriorVariant": true
+      },
+      {
+        "name": "Uruk-hai Warrior (Feral)",
+        "factions": [
+          "Tribes of Udûn"
+        ],
+        "points": 8,
+        "movement": 6,
+        "fight": 4,
+        "shoot": 4,
+        "strength": 4,
+        "defence": 4,
+        "attack": 1,
+        "wounds": 1,
+        "courage": 6,
+        "intelligence": 7,
+        "race": [
+          "Uruk-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Feral Tribe"
+        ],
+        "unitType": [
+          "Warrior",
+          "Infantry"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [],
+        "specialRules": [],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Swap armour for heavy armour",
+            "points": 1,
+            "usesDefinition": "Swap armour for heavy armour"
+          },
+          {
+            "name": "Crossbow",
+            "points": 2
+          },
+          {
+            "name": "Dual blades",
+            "points": 2
+          },
+          {
+            "name": "Spear and shield",
+            "points": 2
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 1
+          }
+        ],
+        "generatedTribeWarriorVariant": true
+      },
+      {
+        "name": "Olog-hai Warrior (Feral)",
+        "factions": [
+          "Tribes of Udûn"
+        ],
+        "points": 45,
+        "movement": 6,
+        "fight": 5,
+        "shoot": 6,
+        "strength": 5,
+        "defence": 5,
+        "attack": 2,
+        "wounds": 2,
+        "courage": 7,
+        "intelligence": 8,
+        "race": [
+          "Olog-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Feral Tribe"
+        ],
+        "unitType": [
+          "Warrior",
+          "Infantry",
+          "Monster"
+        ],
+        "baseSize": [
+          "40mm"
+        ],
+        "heroicActions": [],
+        "specialRules": [
+          "Dominant (2)"
+        ],
+        "wargear": [
+          "Light armour",
+          "Olog gauntlets"
+        ],
+        "options": [
+          {
+            "name": "Exchange light armour with armour",
+            "points": 1,
+            "usesDefinition": "Exchange light armour with armour"
+          },
+          {
+            "name": "Olog-hai mace",
+            "points": 2
+          },
+          {
+            "name": "Pit spear and shield",
+            "points": 2
+          }
+        ],
+        "generatedTribeWarriorVariant": true
+      },
+      {
+        "name": "Uruk-hai Caragor Rider (Feral)",
+        "factions": [
+          "Tribes of Udûn"
+        ],
+        "points": 18,
+        "movement": 6,
+        "fight": 4,
+        "shoot": 4,
+        "strength": 4,
+        "defence": 4,
+        "attack": 1,
+        "wounds": 1,
+        "courage": 6,
+        "intelligence": 7,
+        "race": [
+          "Uruk-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Feral Tribe"
+        ],
+        "unitType": [
+          "Warrior",
+          "Cavalry"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [],
+        "specialRules": [],
+        "wargear": [
+          "Armour",
+          "Hand weapon",
+          "Feral Caragor"
+        ],
+        "options": [
+          {
+            "name": "Crossbow",
+            "points": 2
+          },
+          {
+            "name": "Dual blades",
+            "points": 2
+          },
+          {
+            "name": "Spear and shield",
+            "points": 2
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 1
+          },
+          {
+            "name": "Chained Bolas",
+            "points": 2,
+            "usesDefinition": "Chained Bolas"
+          }
+        ],
+        "generatedTribeWarriorVariant": true
+      },
+      {
+        "name": "Orc Caragor Rider (Feral)",
+        "factions": [
+          "Tribes of Udûn"
+        ],
+        "points": 15,
+        "movement": 6,
+        "fight": 3,
+        "shoot": 5,
+        "strength": 3,
+        "defence": 4,
+        "attack": 1,
+        "wounds": 1,
+        "courage": 8,
+        "intelligence": 8,
+        "race": [
+          "Uruk-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Feral Tribe"
+        ],
+        "unitType": [
+          "Warrior",
+          "Cavalry"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [],
+        "specialRules": [],
+        "wargear": [
+          "Armour",
+          "Hand weapon",
+          "Feral Caragor"
+        ],
+        "options": [
+          {
+            "name": "Throwing spears",
+            "points": 2
+          },
+          {
+            "name": "Dual blades",
+            "points": 2
+          },
+          {
+            "name": "Shield",
+            "points": 1
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 1
+          },
+          {
+            "name": "Chained Bolas",
+            "points": 2,
+            "usesDefinition": "Chained Bolas"
+          }
+        ],
+        "generatedTribeWarriorVariant": true
+      },
+      {
+        "name": "Orc Warrior (Machine)",
+        "factions": [
+          "Tribes of Udûn"
+        ],
+        "points": 5,
+        "movement": 6,
+        "fight": 3,
+        "shoot": 5,
+        "strength": 3,
+        "defence": 4,
+        "attack": 1,
+        "wounds": 1,
+        "courage": 8,
+        "intelligence": 8,
+        "race": [
+          "Orc"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Machine Tribe"
+        ],
+        "unitType": [
+          "Warrior",
+          "Infantry"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [],
+        "specialRules": [],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Throwing spears",
+            "points": 2
+          },
+          {
+            "name": "Dual blades",
+            "points": 2
+          },
+          {
+            "name": "Shield",
+            "points": 1
+          },
+          {
+            "name": "Spear",
+            "points": 1
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 1
+          },
+          {
+            "name": "Machine Hook",
+            "points": 2,
+            "usesDefinition": "Machine Hook"
+          }
+        ],
+        "generatedTribeWarriorVariant": true
+      },
+      {
+        "name": "Uruk-hai Warrior (Machine)",
+        "factions": [
+          "Tribes of Udûn"
+        ],
+        "points": 8,
+        "movement": 6,
+        "fight": 4,
+        "shoot": 4,
+        "strength": 4,
+        "defence": 4,
+        "attack": 1,
+        "wounds": 1,
+        "courage": 6,
+        "intelligence": 7,
+        "race": [
+          "Uruk-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Machine Tribe"
+        ],
+        "unitType": [
+          "Warrior",
+          "Infantry"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [],
+        "specialRules": [],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Swap armour for heavy armour",
+            "points": 1,
+            "usesDefinition": "Swap armour for heavy armour"
+          },
+          {
+            "name": "Crossbow",
+            "points": 2
+          },
+          {
+            "name": "Dual blades",
+            "points": 2
+          },
+          {
+            "name": "Spear and shield",
+            "points": 2
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 1
+          },
+          {
+            "name": "Machine Hook",
+            "points": 2,
+            "usesDefinition": "Machine Hook"
+          }
+        ],
+        "generatedTribeWarriorVariant": true
+      },
+      {
+        "name": "Olog-hai Warrior (Machine)",
+        "factions": [
+          "Tribes of Udûn"
+        ],
+        "points": 45,
+        "movement": 6,
+        "fight": 5,
+        "shoot": 6,
+        "strength": 5,
+        "defence": 5,
+        "attack": 2,
+        "wounds": 2,
+        "courage": 7,
+        "intelligence": 8,
+        "race": [
+          "Olog-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Machine Tribe"
+        ],
+        "unitType": [
+          "Warrior",
+          "Infantry",
+          "Monster"
+        ],
+        "baseSize": [
+          "40mm"
+        ],
+        "heroicActions": [],
+        "specialRules": [
+          "Dominant (2)"
+        ],
+        "wargear": [
+          "Light armour",
+          "Olog gauntlets"
+        ],
+        "options": [
+          {
+            "name": "Exchange light armour with armour",
+            "points": 1,
+            "usesDefinition": "Exchange light armour with armour"
+          },
+          {
+            "name": "Olog-hai mace",
+            "points": 2
+          },
+          {
+            "name": "Pit spear and shield",
+            "points": 2
+          }
+        ],
+        "generatedTribeWarriorVariant": true
+      },
+      {
+        "name": "Uruk-hai Caragor Rider (Machine)",
+        "factions": [
+          "Tribes of Udûn"
+        ],
+        "points": 18,
+        "movement": 6,
+        "fight": 4,
+        "shoot": 4,
+        "strength": 4,
+        "defence": 4,
+        "attack": 1,
+        "wounds": 1,
+        "courage": 6,
+        "intelligence": 7,
+        "race": [
+          "Uruk-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Machine Tribe"
+        ],
+        "unitType": [
+          "Warrior",
+          "Cavalry"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [],
+        "specialRules": [],
+        "wargear": [
+          "Armour",
+          "Hand weapon",
+          "Caragor"
+        ],
+        "options": [
+          {
+            "name": "Crossbow",
+            "points": 2
+          },
+          {
+            "name": "Dual blades",
+            "points": 2
+          },
+          {
+            "name": "Spear and shield",
+            "points": 2
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 1
+          }
+        ],
+        "generatedTribeWarriorVariant": true
+      },
+      {
+        "name": "Orc Caragor Rider (Machine)",
+        "factions": [
+          "Tribes of Udûn"
+        ],
+        "points": 15,
+        "movement": 6,
+        "fight": 3,
+        "shoot": 5,
+        "strength": 3,
+        "defence": 4,
+        "attack": 1,
+        "wounds": 1,
+        "courage": 8,
+        "intelligence": 8,
+        "race": [
+          "Uruk-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Machine Tribe"
+        ],
+        "unitType": [
+          "Warrior",
+          "Cavalry"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [],
+        "specialRules": [],
+        "wargear": [
+          "Armour",
+          "Hand weapon",
+          "Caragor"
+        ],
+        "options": [
+          {
+            "name": "Throwing spears",
+            "points": 2
+          },
+          {
+            "name": "Dual blades",
+            "points": 2
+          },
+          {
+            "name": "Shield",
+            "points": 1
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 1
+          }
+        ],
+        "generatedTribeWarriorVariant": true
+      },
+      {
+        "name": "Orc Warrior (Marauder)",
+        "factions": [
+          "Tribes of Udûn"
+        ],
+        "points": 5,
+        "movement": 6,
+        "fight": 3,
+        "shoot": 5,
+        "strength": 3,
+        "defence": 4,
+        "attack": 1,
+        "wounds": 1,
+        "courage": 8,
+        "intelligence": 8,
+        "race": [
+          "Orc"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Marauder Tribe"
+        ],
+        "unitType": [
+          "Warrior",
+          "Infantry"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [],
+        "specialRules": [
+          "Scavenge"
+        ],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Throwing spears",
+            "points": 2
+          },
+          {
+            "name": "Dual blades",
+            "points": 2
+          },
+          {
+            "name": "Shield",
+            "points": 1
+          },
+          {
+            "name": "Spear",
+            "points": 1
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 1
+          }
+        ],
+        "generatedTribeWarriorVariant": true
+      },
+      {
+        "name": "Uruk-hai Warrior (Marauder)",
+        "factions": [
+          "Tribes of Udûn"
+        ],
+        "points": 8,
+        "movement": 6,
+        "fight": 4,
+        "shoot": 4,
+        "strength": 4,
+        "defence": 4,
+        "attack": 1,
+        "wounds": 1,
+        "courage": 6,
+        "intelligence": 7,
+        "race": [
+          "Uruk-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Marauder Tribe"
+        ],
+        "unitType": [
+          "Warrior",
+          "Infantry"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [],
+        "specialRules": [
+          "Scavenge"
+        ],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Swap armour for heavy armour",
+            "points": 1,
+            "usesDefinition": "Swap armour for heavy armour"
+          },
+          {
+            "name": "Crossbow",
+            "points": 2
+          },
+          {
+            "name": "Dual blades",
+            "points": 2
+          },
+          {
+            "name": "Spear and shield",
+            "points": 2
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 1
+          }
+        ],
+        "generatedTribeWarriorVariant": true
+      },
+      {
+        "name": "Olog-hai Warrior (Marauder)",
+        "factions": [
+          "Tribes of Udûn"
+        ],
+        "points": 45,
+        "movement": 6,
+        "fight": 5,
+        "shoot": 6,
+        "strength": 5,
+        "defence": 5,
+        "attack": 2,
+        "wounds": 2,
+        "courage": 7,
+        "intelligence": 8,
+        "race": [
+          "Olog-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Marauder Tribe"
+        ],
+        "unitType": [
+          "Warrior",
+          "Infantry",
+          "Monster"
+        ],
+        "baseSize": [
+          "40mm"
+        ],
+        "heroicActions": [],
+        "specialRules": [
+          "Dominant (2)",
+          "Scavenge",
+          "Marauder Tribe Olog-hai"
+        ],
+        "wargear": [
+          "Light armour",
+          "Olog gauntlets"
+        ],
+        "options": [
+          {
+            "name": "Exchange light armour with armour",
+            "points": 1,
+            "usesDefinition": "Exchange light armour with armour"
+          },
+          {
+            "name": "Olog-hai mace",
+            "points": 2
+          },
+          {
+            "name": "Pit spear and shield",
+            "points": 2
+          }
+        ],
+        "generatedTribeWarriorVariant": true
+      },
+      {
+        "name": "Uruk-hai Caragor Rider (Marauder)",
+        "factions": [
+          "Tribes of Udûn"
+        ],
+        "points": 18,
+        "movement": 6,
+        "fight": 4,
+        "shoot": 4,
+        "strength": 4,
+        "defence": 4,
+        "attack": 1,
+        "wounds": 1,
+        "courage": 6,
+        "intelligence": 7,
+        "race": [
+          "Uruk-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Marauder Tribe"
+        ],
+        "unitType": [
+          "Warrior",
+          "Cavalry"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [],
+        "specialRules": [],
+        "wargear": [
+          "Armour",
+          "Hand weapon",
+          "Caragor"
+        ],
+        "options": [
+          {
+            "name": "Crossbow",
+            "points": 2
+          },
+          {
+            "name": "Dual blades",
+            "points": 2
+          },
+          {
+            "name": "Spear and shield",
+            "points": 2
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 1
+          }
+        ],
+        "generatedTribeWarriorVariant": true
+      },
+      {
+        "name": "Orc Caragor Rider (Marauder)",
+        "factions": [
+          "Tribes of Udûn"
+        ],
+        "points": 15,
+        "movement": 6,
+        "fight": 3,
+        "shoot": 5,
+        "strength": 3,
+        "defence": 4,
+        "attack": 1,
+        "wounds": 1,
+        "courage": 8,
+        "intelligence": 8,
+        "race": [
+          "Uruk-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Marauder Tribe"
+        ],
+        "unitType": [
+          "Warrior",
+          "Cavalry"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [],
+        "specialRules": [],
+        "wargear": [
+          "Armour",
+          "Hand weapon",
+          "Caragor"
+        ],
+        "options": [
+          {
+            "name": "Throwing spears",
+            "points": 2
+          },
+          {
+            "name": "Dual blades",
+            "points": 2
+          },
+          {
+            "name": "Shield",
+            "points": 1
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 1
+          }
+        ],
+        "generatedTribeWarriorVariant": true
+      },
+      {
+        "name": "Orc Warrior (Mystic)",
+        "factions": [
+          "Tribes of Udûn"
+        ],
+        "points": 5,
+        "movement": 6,
+        "fight": 3,
+        "shoot": 5,
+        "strength": 3,
+        "defence": 4,
+        "attack": 1,
+        "wounds": 1,
+        "courage": 8,
+        "intelligence": 8,
+        "race": [
+          "Orc"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Mystic Tribe"
+        ],
+        "unitType": [
+          "Warrior",
+          "Infantry"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [],
+        "specialRules": [],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Throwing spears",
+            "points": 2
+          },
+          {
+            "name": "Dual blades",
+            "points": 1
+          },
+          {
+            "name": "Shield",
+            "points": 1
+          },
+          {
+            "name": "Spear",
+            "points": 1
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 1
+          }
+        ],
+        "generatedTribeWarriorVariant": true
+      },
+      {
+        "name": "Uruk-hai Warrior (Mystic)",
+        "factions": [
+          "Tribes of Udûn"
+        ],
+        "points": 8,
+        "movement": 6,
+        "fight": 4,
+        "shoot": 4,
+        "strength": 4,
+        "defence": 4,
+        "attack": 1,
+        "wounds": 1,
+        "courage": 6,
+        "intelligence": 7,
+        "race": [
+          "Uruk-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Mystic Tribe"
+        ],
+        "unitType": [
+          "Warrior",
+          "Infantry"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [],
+        "specialRules": [],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Swap armour for heavy armour",
+            "points": 1,
+            "usesDefinition": "Swap armour for heavy armour"
+          },
+          {
+            "name": "Crossbow",
+            "points": 2
+          },
+          {
+            "name": "Dual blades",
+            "points": 1
+          },
+          {
+            "name": "Spear and shield",
+            "points": 2
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 1
+          }
+        ],
+        "generatedTribeWarriorVariant": true
+      },
+      {
+        "name": "Olog-hai Warrior (Mystic)",
+        "factions": [
+          "Tribes of Udûn"
+        ],
+        "points": 45,
+        "movement": 6,
+        "fight": 5,
+        "shoot": 6,
+        "strength": 5,
+        "defence": 5,
+        "attack": 2,
+        "wounds": 2,
+        "courage": 7,
+        "intelligence": 8,
+        "race": [
+          "Olog-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Mystic Tribe"
+        ],
+        "unitType": [
+          "Warrior",
+          "Infantry",
+          "Monster"
+        ],
+        "baseSize": [
+          "40mm"
+        ],
+        "heroicActions": [],
+        "specialRules": [
+          "Dominant (2)",
+          "Resistant to Magic"
+        ],
+        "wargear": [
+          "Light armour",
+          "Olog gauntlets"
+        ],
+        "options": [
+          {
+            "name": "Exchange light armour with armour",
+            "points": 1,
+            "usesDefinition": "Exchange light armour with armour"
+          },
+          {
+            "name": "Olog-hai mace",
+            "points": 2
+          },
+          {
+            "name": "Pit spear and shield",
+            "points": 2
+          }
+        ],
+        "generatedTribeWarriorVariant": true
+      },
+      {
+        "name": "Uruk-hai Caragor Rider (Mystic)",
+        "factions": [
+          "Tribes of Udûn"
+        ],
+        "points": 18,
+        "movement": 6,
+        "fight": 4,
+        "shoot": 4,
+        "strength": 4,
+        "defence": 4,
+        "attack": 1,
+        "wounds": 1,
+        "courage": 6,
+        "intelligence": 7,
+        "race": [
+          "Uruk-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Mystic Tribe"
+        ],
+        "unitType": [
+          "Warrior",
+          "Cavalry"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [],
+        "specialRules": [],
+        "wargear": [
+          "Armour",
+          "Hand weapon",
+          "Caragor"
+        ],
+        "options": [
+          {
+            "name": "Crossbow",
+            "points": 2
+          },
+          {
+            "name": "Dual blades",
+            "points": 2
+          },
+          {
+            "name": "Spear and shield",
+            "points": 2
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 1
+          }
+        ],
+        "generatedTribeWarriorVariant": true
+      },
+      {
+        "name": "Orc Caragor Rider (Mystic)",
+        "factions": [
+          "Tribes of Udûn"
+        ],
+        "points": 15,
+        "movement": 6,
+        "fight": 3,
+        "shoot": 5,
+        "strength": 3,
+        "defence": 4,
+        "attack": 1,
+        "wounds": 1,
+        "courage": 8,
+        "intelligence": 8,
+        "race": [
+          "Uruk-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Mystic Tribe"
+        ],
+        "unitType": [
+          "Warrior",
+          "Cavalry"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [],
+        "specialRules": [],
+        "wargear": [
+          "Armour",
+          "Hand weapon",
+          "Caragor"
+        ],
+        "options": [
+          {
+            "name": "Throwing spears",
+            "points": 2
+          },
+          {
+            "name": "Dual blades",
+            "points": 2
+          },
+          {
+            "name": "Shield",
+            "points": 1
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 1
+          }
+        ],
+        "generatedTribeWarriorVariant": true
+      },
+      {
+        "name": "Orc Warrior (Outlaw)",
+        "factions": [
+          "Tribes of Udûn"
+        ],
+        "points": 5,
+        "movement": 6,
+        "fight": 3,
+        "shoot": 5,
+        "strength": 3,
+        "defence": 4,
+        "attack": 1,
+        "wounds": 1,
+        "courage": 8,
+        "intelligence": 8,
+        "race": [
+          "Orc"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Outlaw Tribe"
+        ],
+        "unitType": [
+          "Warrior",
+          "Infantry"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [],
+        "specialRules": [],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Throwing spears",
+            "points": 2
+          },
+          {
+            "name": "Dual blades",
+            "points": 2
+          },
+          {
+            "name": "Shield",
+            "points": 1
+          },
+          {
+            "name": "Spear",
+            "points": 1
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 1
+          },
+          {
+            "name": "Chained Bolas",
+            "points": 2,
+            "usesDefinition": "Chained Bolas"
+          }
+        ],
+        "generatedTribeWarriorVariant": true
+      },
+      {
+        "name": "Uruk-hai Warrior (Outlaw)",
+        "factions": [
+          "Tribes of Udûn"
+        ],
+        "points": 8,
+        "movement": 6,
+        "fight": 4,
+        "shoot": 4,
+        "strength": 4,
+        "defence": 4,
+        "attack": 1,
+        "wounds": 1,
+        "courage": 6,
+        "intelligence": 7,
+        "race": [
+          "Uruk-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Outlaw Tribe"
+        ],
+        "unitType": [
+          "Warrior",
+          "Infantry"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [],
+        "specialRules": [],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Swap armour for heavy armour",
+            "points": 1,
+            "usesDefinition": "Swap armour for heavy armour"
+          },
+          {
+            "name": "Crossbow",
+            "points": 2
+          },
+          {
+            "name": "Dual blades",
+            "points": 2
+          },
+          {
+            "name": "Spear and shield",
+            "points": 2
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 1
+          },
+          {
+            "name": "Chained Bolas",
+            "points": 2,
+            "usesDefinition": "Chained Bolas"
+          }
+        ],
+        "generatedTribeWarriorVariant": true
+      },
+      {
+        "name": "Olog-hai Warrior (Outlaw)",
+        "factions": [
+          "Tribes of Udûn"
+        ],
+        "points": 45,
+        "movement": 6,
+        "fight": 5,
+        "shoot": 6,
+        "strength": 5,
+        "defence": 5,
+        "attack": 2,
+        "wounds": 2,
+        "courage": 6,
+        "intelligence": 7,
+        "race": [
+          "Olog-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Outlaw Tribe"
+        ],
+        "unitType": [
+          "Warrior",
+          "Infantry",
+          "Monster"
+        ],
+        "baseSize": [
+          "40mm"
+        ],
+        "heroicActions": [],
+        "specialRules": [
+          "Dominant (2)"
+        ],
+        "wargear": [
+          "Light armour",
+          "Olog gauntlets"
+        ],
+        "options": [
+          {
+            "name": "Exchange light armour with armour",
+            "points": 1,
+            "usesDefinition": "Exchange light armour with armour"
+          },
+          {
+            "name": "Olog-hai mace",
+            "points": 2
+          },
+          {
+            "name": "Pit spear and shield",
+            "points": 2
+          }
+        ],
+        "generatedTribeWarriorVariant": true
+      },
+      {
+        "name": "Uruk-hai Caragor Rider (Outlaw)",
+        "factions": [
+          "Tribes of Udûn"
+        ],
+        "points": 18,
+        "movement": 6,
+        "fight": 4,
+        "shoot": 4,
+        "strength": 4,
+        "defence": 4,
+        "attack": 1,
+        "wounds": 1,
+        "courage": 6,
+        "intelligence": 7,
+        "race": [
+          "Uruk-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Outlaw Tribe"
+        ],
+        "unitType": [
+          "Warrior",
+          "Cavalry"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [],
+        "specialRules": [],
+        "wargear": [
+          "Armour",
+          "Hand weapon",
+          "Caragor"
+        ],
+        "options": [
+          {
+            "name": "Crossbow",
+            "points": 2
+          },
+          {
+            "name": "Dual blades",
+            "points": 2
+          },
+          {
+            "name": "Spear and shield",
+            "points": 2
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 1
+          }
+        ],
+        "generatedTribeWarriorVariant": true
+      },
+      {
+        "name": "Orc Caragor Rider (Outlaw)",
+        "factions": [
+          "Tribes of Udûn"
+        ],
+        "points": 15,
+        "movement": 6,
+        "fight": 3,
+        "shoot": 5,
+        "strength": 3,
+        "defence": 4,
+        "attack": 1,
+        "wounds": 1,
+        "courage": 8,
+        "intelligence": 8,
+        "race": [
+          "Uruk-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Outlaw Tribe"
+        ],
+        "unitType": [
+          "Warrior",
+          "Cavalry"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [],
+        "specialRules": [],
+        "wargear": [
+          "Armour",
+          "Hand weapon",
+          "Caragor"
+        ],
+        "options": [
+          {
+            "name": "Throwing spears",
+            "points": 2
+          },
+          {
+            "name": "Dual blades",
+            "points": 2
+          },
+          {
+            "name": "Shield",
+            "points": 1
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 1
+          }
+        ],
+        "generatedTribeWarriorVariant": true
+      },
+      {
+        "name": "Orc Warrior (Slaughter)",
+        "factions": [
+          "Tribes of Udûn"
+        ],
+        "points": 5,
+        "movement": 6,
+        "fight": 3,
+        "shoot": 5,
+        "strength": 3,
+        "defence": 4,
+        "attack": 1,
+        "wounds": 1,
+        "courage": 8,
+        "intelligence": 8,
+        "race": [
+          "Orc"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Slaughter Tribe"
+        ],
+        "unitType": [
+          "Warrior",
+          "Infantry"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [],
+        "specialRules": [],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Throwing spears",
+            "points": 2
+          },
+          {
+            "name": "Dual blades",
+            "points": 2
+          },
+          {
+            "name": "Shield",
+            "points": 1
+          },
+          {
+            "name": "Spear",
+            "points": 1
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 1
+          }
+        ],
+        "generatedTribeWarriorVariant": true
+      },
+      {
+        "name": "Uruk-hai Warrior (Slaughter)",
+        "factions": [
+          "Tribes of Udûn"
+        ],
+        "points": 8,
+        "movement": 6,
+        "fight": 4,
+        "shoot": 4,
+        "strength": 4,
+        "defence": 4,
+        "attack": 1,
+        "wounds": 1,
+        "courage": 6,
+        "intelligence": 7,
+        "race": [
+          "Uruk-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Slaughter Tribe"
+        ],
+        "unitType": [
+          "Warrior",
+          "Infantry"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [],
+        "specialRules": [],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Swap armour for heavy armour",
+            "points": 1,
+            "usesDefinition": "Swap armour for heavy armour"
+          },
+          {
+            "name": "Crossbow",
+            "points": 2
+          },
+          {
+            "name": "Dual blades",
+            "points": 2
+          },
+          {
+            "name": "Spear and shield",
+            "points": 2
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 1
+          },
+          {
+            "name": "Slaughter Cleavers",
+            "points": 2,
+            "usesDefinition": "Slaughter Cleavers"
+          }
+        ],
+        "generatedTribeWarriorVariant": true
+      },
+      {
+        "name": "Olog-hai Warrior (Slaughter)",
+        "factions": [
+          "Tribes of Udûn"
+        ],
+        "points": 45,
+        "movement": 6,
+        "fight": 5,
+        "shoot": 6,
+        "strength": 5,
+        "defence": 5,
+        "attack": 2,
+        "wounds": 2,
+        "courage": 7,
+        "intelligence": 8,
+        "race": [
+          "Olog-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Slaughter Tribe"
+        ],
+        "unitType": [
+          "Warrior",
+          "Infantry",
+          "Monster"
+        ],
+        "baseSize": [
+          "40mm"
+        ],
+        "heroicActions": [],
+        "specialRules": [
+          "Dominant (2)",
+          "Slaughter Tribe Olog-hai"
+        ],
+        "wargear": [
+          "Light armour",
+          "Olog gauntlets"
+        ],
+        "options": [
+          {
+            "name": "Exchange light armour with armour",
+            "points": 1,
+            "usesDefinition": "Exchange light armour with armour"
+          },
+          {
+            "name": "Olog-hai mace",
+            "points": 2
+          },
+          {
+            "name": "Pit spear and shield",
+            "points": 2
+          }
+        ],
+        "generatedTribeWarriorVariant": true
+      },
+      {
+        "name": "Uruk-hai Caragor Rider (Slaughter)",
+        "factions": [
+          "Tribes of Udûn"
+        ],
+        "points": 18,
+        "movement": 6,
+        "fight": 4,
+        "shoot": 4,
+        "strength": 4,
+        "defence": 4,
+        "attack": 1,
+        "wounds": 1,
+        "courage": 6,
+        "intelligence": 7,
+        "race": [
+          "Uruk-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Slaughter Tribe"
+        ],
+        "unitType": [
+          "Warrior",
+          "Cavalry"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [],
+        "specialRules": [],
+        "wargear": [
+          "Armour",
+          "Hand weapon",
+          "Caragor"
+        ],
+        "options": [
+          {
+            "name": "Crossbow",
+            "points": 2
+          },
+          {
+            "name": "Dual blades",
+            "points": 2
+          },
+          {
+            "name": "Spear and shield",
+            "points": 2
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 1
+          }
+        ],
+        "generatedTribeWarriorVariant": true
+      },
+      {
+        "name": "Orc Caragor Rider (Slaughter)",
+        "factions": [
+          "Tribes of Udûn"
+        ],
+        "points": 15,
+        "movement": 6,
+        "fight": 3,
+        "shoot": 5,
+        "strength": 3,
+        "defence": 4,
+        "attack": 1,
+        "wounds": 1,
+        "courage": 8,
+        "intelligence": 8,
+        "race": [
+          "Uruk-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Slaughter Tribe"
+        ],
+        "unitType": [
+          "Warrior",
+          "Cavalry"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [],
+        "specialRules": [],
+        "wargear": [
+          "Armour",
+          "Hand weapon",
+          "Caragor"
+        ],
+        "options": [
+          {
+            "name": "Throwing spears",
+            "points": 2
+          },
+          {
+            "name": "Dual blades",
+            "points": 2
+          },
+          {
+            "name": "Shield",
+            "points": 1
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 1
+          }
+        ],
+        "generatedTribeWarriorVariant": true
+      },
+      {
+        "name": "Orc Warrior (Terror)",
+        "factions": [
+          "Tribes of Udûn"
+        ],
+        "points": 5,
+        "movement": 6,
+        "fight": 3,
+        "shoot": 5,
+        "strength": 3,
+        "defence": 4,
+        "attack": 1,
+        "wounds": 1,
+        "courage": 8,
+        "intelligence": 8,
+        "race": [
+          "Orc"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Terror Tribe"
+        ],
+        "unitType": [
+          "Warrior",
+          "Infantry"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [],
+        "specialRules": [],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Throwing spears",
+            "points": 2
+          },
+          {
+            "name": "Dual blades",
+            "points": 2
+          },
+          {
+            "name": "Shield",
+            "points": 1
+          },
+          {
+            "name": "Spear",
+            "points": 1
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 1
+          },
+          {
+            "name": "Throwing Weapons",
+            "points": 2,
+            "usesDefinition": "Throwing Weapons"
+          }
+        ],
+        "generatedTribeWarriorVariant": true
+      },
+      {
+        "name": "Uruk-hai Warrior (Terror)",
+        "factions": [
+          "Tribes of Udûn"
+        ],
+        "points": 8,
+        "movement": 6,
+        "fight": 4,
+        "shoot": 4,
+        "strength": 4,
+        "defence": 4,
+        "attack": 1,
+        "wounds": 1,
+        "courage": 6,
+        "intelligence": 7,
+        "race": [
+          "Uruk-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Terror Tribe"
+        ],
+        "unitType": [
+          "Warrior",
+          "Infantry"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [],
+        "specialRules": [],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Swap armour for heavy armour",
+            "points": 1,
+            "usesDefinition": "Swap armour for heavy armour"
+          },
+          {
+            "name": "Crossbow",
+            "points": 2
+          },
+          {
+            "name": "Dual blades",
+            "points": 2
+          },
+          {
+            "name": "Spear and shield",
+            "points": 2
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 1
+          },
+          {
+            "name": "Throwing Weapons",
+            "points": 2,
+            "usesDefinition": "Throwing Weapons"
+          }
+        ],
+        "generatedTribeWarriorVariant": true
+      },
+      {
+        "name": "Olog-hai Warrior (Terror)",
+        "factions": [
+          "Tribes of Udûn"
+        ],
+        "points": 45,
+        "movement": 6,
+        "fight": 5,
+        "shoot": 6,
+        "strength": 5,
+        "defence": 5,
+        "attack": 2,
+        "wounds": 2,
+        "courage": 7,
+        "intelligence": 8,
+        "race": [
+          "Olog-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Terror Tribe"
+        ],
+        "unitType": [
+          "Warrior",
+          "Infantry",
+          "Monster"
+        ],
+        "baseSize": [
+          "40mm"
+        ],
+        "heroicActions": [],
+        "specialRules": [
+          "Dominant (2)",
+          "Harbinger of Evil (3\")"
+        ],
+        "wargear": [
+          "Light armour",
+          "Olog gauntlets"
+        ],
+        "options": [
+          {
+            "name": "Exchange light armour with armour",
+            "points": 1,
+            "usesDefinition": "Exchange light armour with armour"
+          },
+          {
+            "name": "Olog-hai mace",
+            "points": 2
+          },
+          {
+            "name": "Pit spear and shield",
+            "points": 2
+          }
+        ],
+        "generatedTribeWarriorVariant": true
+      },
+      {
+        "name": "Uruk-hai Caragor Rider (Terror)",
+        "factions": [
+          "Tribes of Udûn"
+        ],
+        "points": 18,
+        "movement": 6,
+        "fight": 4,
+        "shoot": 4,
+        "strength": 4,
+        "defence": 4,
+        "attack": 1,
+        "wounds": 1,
+        "courage": 6,
+        "intelligence": 7,
+        "race": [
+          "Uruk-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Terror Tribe"
+        ],
+        "unitType": [
+          "Warrior",
+          "Cavalry"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [],
+        "specialRules": [],
+        "wargear": [
+          "Armour",
+          "Hand weapon",
+          "Caragor"
+        ],
+        "options": [
+          {
+            "name": "Crossbow",
+            "points": 2
+          },
+          {
+            "name": "Dual blades",
+            "points": 2
+          },
+          {
+            "name": "Spear and shield",
+            "points": 2
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 1
+          }
+        ],
+        "generatedTribeWarriorVariant": true
+      },
+      {
+        "name": "Orc Caragor Rider (Terror)",
+        "factions": [
+          "Tribes of Udûn"
+        ],
+        "points": 15,
+        "movement": 6,
+        "fight": 3,
+        "shoot": 5,
+        "strength": 3,
+        "defence": 4,
+        "attack": 1,
+        "wounds": 1,
+        "courage": 8,
+        "intelligence": 8,
+        "race": [
+          "Uruk-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Terror Tribe"
+        ],
+        "unitType": [
+          "Warrior",
+          "Cavalry"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [],
+        "specialRules": [],
+        "wargear": [
+          "Armour",
+          "Hand weapon",
+          "Caragor"
+        ],
+        "options": [
+          {
+            "name": "Throwing spears",
+            "points": 2
+          },
+          {
+            "name": "Dual blades",
+            "points": 2
+          },
+          {
+            "name": "Shield",
+            "points": 1
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 1
+          }
+        ],
+        "generatedTribeWarriorVariant": true
+      },
+      {
+        "name": "Orc Warrior (Warmonger)",
+        "factions": [
+          "Tribes of Udûn"
+        ],
+        "points": 5,
+        "movement": 6,
+        "fight": 3,
+        "shoot": 5,
+        "strength": 3,
+        "defence": 4,
+        "attack": 1,
+        "wounds": 1,
+        "courage": 8,
+        "intelligence": 8,
+        "race": [
+          "Orc"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Warmonger Tribe"
+        ],
+        "unitType": [
+          "Warrior",
+          "Infantry"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [],
+        "specialRules": [],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Throwing spears",
+            "points": 2
+          },
+          {
+            "name": "Dual blades",
+            "points": 2
+          },
+          {
+            "name": "Shield",
+            "points": 1
+          },
+          {
+            "name": "Spear",
+            "points": 1
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 1
+          },
+          {
+            "name": "War Drum",
+            "points": 30,
+            "usesDefinition": "War Drum"
+          }
+        ],
+        "generatedTribeWarriorVariant": true
+      },
+      {
+        "name": "Uruk-hai Warrior (Warmonger)",
+        "factions": [
+          "Tribes of Udûn"
+        ],
+        "points": 8,
+        "movement": 6,
+        "fight": 4,
+        "shoot": 4,
+        "strength": 4,
+        "defence": 4,
+        "attack": 1,
+        "wounds": 1,
+        "courage": 6,
+        "intelligence": 7,
+        "race": [
+          "Uruk-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Warmonger Tribe"
+        ],
+        "unitType": [
+          "Warrior",
+          "Infantry"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [],
+        "specialRules": [],
+        "wargear": [
+          "Armour",
+          "Hand weapon"
+        ],
+        "options": [
+          {
+            "name": "Swap armour for heavy armour",
+            "points": 1,
+            "usesDefinition": "Swap armour for heavy armour"
+          },
+          {
+            "name": "Crossbow",
+            "points": 2
+          },
+          {
+            "name": "Dual blades",
+            "points": 2
+          },
+          {
+            "name": "Spear and shield",
+            "points": 2
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 1
+          },
+          {
+            "name": "War Drum",
+            "points": 30,
+            "usesDefinition": "War Drum"
+          }
+        ],
+        "generatedTribeWarriorVariant": true
+      },
+      {
+        "name": "Olog-hai Warrior (Warmonger)",
+        "factions": [
+          "Tribes of Udûn"
+        ],
+        "points": 45,
+        "movement": 6,
+        "fight": 5,
+        "shoot": 6,
+        "strength": 5,
+        "defence": 5,
+        "attack": 2,
+        "wounds": 2,
+        "courage": 7,
+        "intelligence": 8,
+        "race": [
+          "Olog-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Warmonger Tribe"
+        ],
+        "unitType": [
+          "Warrior",
+          "Infantry",
+          "Monster"
+        ],
+        "baseSize": [
+          "40mm"
+        ],
+        "heroicActions": [],
+        "specialRules": [
+          "Dominant (2)",
+          "Warmonger Tribe Olog-hai"
+        ],
+        "wargear": [
+          "Light armour",
+          "Olog gauntlets"
+        ],
+        "options": [
+          {
+            "name": "Exchange light armour with armour",
+            "points": 1,
+            "usesDefinition": "Exchange light armour with armour"
+          },
+          {
+            "name": "Olog-hai mace",
+            "points": 2
+          },
+          {
+            "name": "Pit spear and shield",
+            "points": 2
+          }
+        ],
+        "generatedTribeWarriorVariant": true
+      },
+      {
+        "name": "Uruk-hai Caragor Rider (Warmonger)",
+        "factions": [
+          "Tribes of Udûn"
+        ],
+        "points": 18,
+        "movement": 6,
+        "fight": 4,
+        "shoot": 4,
+        "strength": 4,
+        "defence": 4,
+        "attack": 1,
+        "wounds": 1,
+        "courage": 6,
+        "intelligence": 7,
+        "race": [
+          "Uruk-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Warmonger Tribe"
+        ],
+        "unitType": [
+          "Warrior",
+          "Cavalry"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [],
+        "specialRules": [],
+        "wargear": [
+          "Armour",
+          "Hand weapon",
+          "Caragor"
+        ],
+        "options": [
+          {
+            "name": "Crossbow",
+            "points": 2
+          },
+          {
+            "name": "Dual blades",
+            "points": 2
+          },
+          {
+            "name": "Spear and shield",
+            "points": 2
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 1
+          }
+        ],
+        "generatedTribeWarriorVariant": true
+      },
+      {
+        "name": "Orc Caragor Rider (Warmonger)",
+        "factions": [
+          "Tribes of Udûn"
+        ],
+        "points": 15,
+        "movement": 6,
+        "fight": 3,
+        "shoot": 5,
+        "strength": 3,
+        "defence": 4,
+        "attack": 1,
+        "wounds": 1,
+        "courage": 8,
+        "intelligence": 8,
+        "race": [
+          "Uruk-hai"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Warmonger Tribe"
+        ],
+        "unitType": [
+          "Warrior",
+          "Cavalry"
+        ],
+        "baseSize": [
+          "25mm"
+        ],
+        "heroicActions": [],
+        "specialRules": [],
+        "wargear": [
+          "Armour",
+          "Hand weapon",
+          "Caragor"
+        ],
+        "options": [
+          {
+            "name": "Throwing spears",
+            "points": 2
+          },
+          {
+            "name": "Dual blades",
+            "points": 2
+          },
+          {
+            "name": "Shield",
+            "points": 1
+          },
+          {
+            "name": "Two-handed weapon",
+            "points": 1
+          }
+        ],
+        "generatedTribeWarriorVariant": true
+      },
+      {
+        "name": "Caragor (Feral)",
+        "factions": [
+          "Tribes of Udûn"
+        ],
+        "points": 10,
+        "movement": 10,
+        "fight": 3,
+        "shoot": 6,
+        "strength": 5,
+        "defence": 4,
+        "attack": 1,
+        "wounds": 1,
+        "courage": 8,
+        "intelligence": 7,
+        "race": [
+          "Caragor"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Feral Tribe"
+        ],
+        "unitType": [
+          "Warrior",
+          "Infantry",
+          "Beast"
+        ],
+        "baseSize": [
+          "40mm"
+        ],
+        "heroicActions": [],
+        "specialRules": [
+          "Mountain Dweller",
+          "Monsterbane",
+          "Unruly Strength"
+        ],
+        "wargear": [
+          "Teeth and Claws (hand weapons)"
+        ],
+        "options": [],
+        "generatedTribeWarriorVariant": true
+      },
+      {
+        "name": "Graug (Feral)",
+        "factions": [
+          "Tribes of Udûn"
+        ],
+        "points": 125,
+        "movement": 6,
+        "fight": 6,
+        "shoot": 4,
+        "strength": 7,
+        "defence": 6,
+        "attack": 3,
+        "wounds": 4,
+        "courage": 6,
+        "intelligence": 6,
+        "race": [
+          "Graug"
+        ],
+        "faction": [
+          "Mordor",
+          "Udûn",
+          "Feral Tribe"
+        ],
+        "unitType": [
+          "Warrior",
+          "Infantry",
+          "Monster"
+        ],
+        "baseSize": [
+          "80mm"
+        ],
+        "heroicActions": [],
+        "specialRules": [
+          "Cave Dweller",
+          "Dominant (4)",
+          "Fearless",
+          "Large Target",
+          "Monstrous Charge",
+          "Terror",
+          "Immovable Object",
+          "Relentless Advance"
+        ],
+        "wargear": [
+          "Massive Claws (hand weapons)"
+        ],
+        "options": [
+          {
+            "name": "Fire Graug",
+            "points": 50,
+            "chooseOneKey": "graugType"
+          },
+          {
+            "name": "Wretched Graug",
+            "points": 50,
+            "chooseOneKey": "graugType"
+          },
+          {
+            "name": "Frost Graug",
+            "points": 50,
+            "chooseOneKey": "graugType"
+          }
+        ],
+        "generatedTribeWarriorVariant": true
+      }
+    ],
+    "siegeEquipment": [
+      {
+        "name": "Siege Ladder",
+        "points": 5,
+        "siegeEquipment": true,
+        "unlimited": true,
+        "siegeRole": 1,
+        "specialRules": [
+          "Siege Ladder"
+        ]
+      },
+      {
+        "name": "Battering Ram",
+        "points": 15,
+        "siegeEquipment": true,
+        "unlimited": true,
+        "siegeRole": 1,
+        "specialRules": [
+          "Battering Ram"
+        ]
+      },
+      {
+        "name": "Siege Tower",
+        "points": 40,
+        "siegeEquipment": true,
+        "unlimited": true,
+        "siegeRole": 1,
+        "specialRules": [
+          "Siege Tower"
+        ]
+      },
+      {
+        "name": "Barricade",
+        "points": 5,
+        "siegeEquipment": true,
+        "unlimited": true,
+        "siegeRole": 2,
+        "specialRules": [
+          "Barricade"
+        ]
+      },
+      {
+        "name": "Spiked Barricade",
+        "points": 10,
+        "siegeEquipment": true,
+        "unlimited": true,
+        "siegeRole": 2,
+        "specialRules": [
+          "Spiked Barricade"
+        ]
+      },
+      {
+        "name": "Rallying Point",
+        "points": 25,
+        "siegeEquipment": true,
+        "unlimited": true,
+        "siegeRole": 2,
+        "specialRules": [
+          "Rallying Point"
+        ]
+      },
+      {
+        "name": "Rocks",
+        "points": 5,
+        "siegeEquipment": true,
+        "unlimited": true,
+        "siegeRole": 2,
+        "specialRules": [
+          "Rocks"
+        ]
+      },
+      {
+        "name": "Boiling Oil",
+        "points": 25,
+        "siegeEquipment": true,
+        "unlimited": true,
+        "siegeRole": 2,
+        "specialRules": [
+          "Boiling Oil"
+        ]
+      }
+    ],
+    "gear": [
+      {
+        "name": "Whip",
+        "type": "throwingWeapon",
+        "definition": "A whip counts as a throwing weapon with a Strength of l and a range of 2\". It can also be used as a hand weapon in a Combat."
+      },
+      {
+        "name": "Pike",
+        "definition": "Pikes function in much the same way as spears, and allow models to Support in exactly the same way as those armed with a spear.\n                Additionally, a model armed with a pike can Support another friendly model armed with a pike that is Supporting a friendly model Engaged in Combat - essentially giving two Supports to the same model.\n                A pike requires two hands to use, and so a model armed with a pike will suffer a -1 penalty to their Duel Rolls if they are armed with a shield or a Missile Weapon.\n                As models armed with pikes can effectively Support at three models deep (one Engaged in Combat and two Supporting), it can be very easy to cause your own models to be Trapped, as only one model may Back Away not two. This is the risk of Supporting in such depth.\n                Additionally, if a Cavalry model Charges a model armed with a pike, then the model with a pike will gain a bonus of +l To Wound when making Strikes against the Mount in the ensuing Combat."
+      },
+      {
+        "name": "The One Ring",
+        "tag": "Active",
+        "definition": "A model who carries the One Ring is referred to as the Ringbearer.\nWEARING THE RING\nA Ringbearer can put on the One Ring at any point during their Activation. As soon as they do they benefit from the Invisible special rule (see page 127). A Ringbearer who is unable to Activate (such as if they are Engaged in Combat) cannot put on the Ring.\nIf a model puts on the Ring whilst they are mounted, then their Mount will immediately bolt and flee the battlefield (the Mount is therefore removed), and the model must immediately take a Thrown Rider Test.\nSAURON'S WILL\nIf a Ringbearer begins its Activation wearing the One Ring, then their controlling player must test to see if the model can overcome the call of the Ring. To do this, the Ringbearer's controlling player rolls a D6 before doing anything else for the Ringbearer during their Activation. A Hero may use Might to improve this roll. On a 3+, the Ringbearer is able to keep control and may Activate as normal. However, on a 1-2 the opposing player may Move the Ringbearer during their Activation, and may even make them Charge – in this case, the model passes all Courage Tests for the Terror special rule. The opposing player cannot make the Ringbearer remove the Ring when they Move them.\nThe opposing player cannot make the Ringbearer pick up or put down items, perform anything that may bring the Ringbearer to harm (such as Jumping off a cliff or making a Leap Test), or make them leave the board in Scenarios that allow it.\nIt's important to note that even when an opposing player gets to Move the Ringbearer in this manner, they are still part of their controlling player's Army, and all other actions such as Shooting, fighting in Combat, or anything else the Ringbearer can do remains under the control of their controlling player.\nREMOVING THE RING\nSuch is the hold of the Ring, that any model who is wearing it and wants to remove it must take a Courage Test. This can be done at any point in the model's Activation, though after making the roll for Sauron's Will (if applicable). If the model fails this Courage Test then they cannot take the Ring off this turn and must wait until the following turn to try again.\nMY PRECIOUS!\nDuring a Matched Play game, if the Ringbearer is the only model left on their side and is Invisible (i.e., they are wearing the Ring), then they succumb to the call of the Ring and are removed as a casualty. If the opposing side's objective is to kill the Ringbearer, then this is still achieved if the Ringbearer is removed in this manner.\nThere may be the odd occasions in Matched Play games where there is more than one model on the battlefield who can carry the One Ring. As the One Ring is unique, there is a hierarchy as to who carries the One Ring in the case of multiple Ringbearers. The model closest to the top of the hierarchy table below will get to use the Ring – the other will not be a Ringbearer at all for that battle.\n1 The Dark Lord Sauron\n2 Isildur\n3 Bilbo Baggins or Bilbo Baggins, Master Burglar\n4 Frodo Baggins\n5 Bilbo Baggins, Ageing Hobbit\n6 Gollum\nIn the rare situation where both players have a Ringbearer, and both are at the same highest point on the hierarchy table, then both may carry the One Ring – though one of them is clearly a fake, and only the winner can claim that theirs was the real One Ring"
+      },
+      {
+        "name": "Horse",
+        "type": "mount",
+        "race": [
+          "Horse"
+        ],
+        "unitType": [
+          "Mount"
+        ],
+        "baseSize": [
+          "40mm"
+        ],
+        "movement": 10,
+        "fight": 2,
+        "shoot": 6,
+        "strength": 3,
+        "defence": 4,
+        "attack": 0,
+        "wounds": 1,
+        "courage": 7,
+        "intelligence": 7
+      },
+      {
+        "name": "Armoured horse",
+        "type": "mount",
+        "race": [
+          "Horse"
+        ],
+        "unitType": [
+          "Mount"
+        ],
+        "baseSize": [
+          "40mm"
+        ],
+        "movement": 10,
+        "fight": 2,
+        "shoot": 6,
+        "strength": 3,
+        "defence": 5,
+        "attack": 0,
+        "wounds": 1,
+        "courage": 7,
+        "intelligence": 7
+      },
+      {
+        "name": "Warg",
+        "type": "mount",
+        "movement": 10,
+        "fight": 3,
+        "shoot": 6,
+        "strength": 4,
+        "defence": 4,
+        "attack": 1,
+        "wounds": 1,
+        "courage": 8,
+        "intelligence": 8,
+        "race": [
+          "Warg"
+        ],
+        "unitType": [
+          "Mount"
+        ],
+        "baseSize": [
+          "40mm"
+        ]
+      },
+      {
+        "name": "Pony",
+        "type": "mount",
+        "movement": 8,
+        "fight": 1,
+        "shoot": 6,
+        "strength": 3,
+        "defence": 3,
+        "attack": 0,
+        "wounds": 1,
+        "courage": 8,
+        "intelligence": 7,
+        "race": [
+          "Horse"
+        ],
+        "unitType": [
+          "Mount"
+        ],
+        "baseSize": [
+          "40mm"
+        ],
+        "specialRules": [
+          "Timid"
+        ]
+      },
+      {
+        "name": "Armour",
+        "type": "armour",
+        "modifiesStats": [
+          {
+            "stat": "defence",
+            "modifier": 1
+          }
+        ]
+      },
+      {
+        "name": "Heavy Armour",
+        "type": "armour",
+        "modifiesStats": [
+          {
+            "stat": "defence",
+            "modifier": 2
+          }
+        ]
+      },
+      {
+        "name": "Light Armour",
+        "definition": "A model wearing Light Armour will add 1 to their Defence characteristic against Shooting Attacks. If a model is wearing light armour then the Defence improvement will not have been added onto their profile."
+      },
+      {
+        "name": "Shield",
+        "type": "shield",
+        "modifiesStats": [
+          {
+            "stat": "defence",
+            "modifier": 1,
+            "cancelledBy": {
+              "type": "bow",
+              "uncancelledByKeyword": "Expert Rider"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Bow",
+        "type": "bow",
+        "definition": "24\" Range, 2 Strength"
+      },
+      {
+        "name": "Elf Bow",
+        "type": "bow",
+        "definition": "24\" Range, 3 Strength"
+      },
+      {
+        "name": "Longbow",
+        "type": "bow",
+        "definition": "24\" Range, 3 Strength"
+      },
+      {
+        "name": "Great Bow",
+        "type": "bow",
+        "definition": "24\" Range, 4 Strength"
+      },
+      {
+        "name": "Short Bow",
+        "type": "bow",
+        "definition": "18\" Range, 2 Strength"
+      },
+      {
+        "name": "Orc Bow",
+        "type": "bow",
+        "definition": "18\" Range, 2 Strength"
+      },
+      {
+        "name": "Dwarf Bow",
+        "type": "bow",
+        "definition": "18\" Range, 3 Strength"
+      },
+      {
+        "name": "Dwarf Longbow",
+        "type": "bow",
+        "definition": "24\" Range, 3 Strength"
+      },
+      {
+        "name": "Crossbow",
+        "type": "bow",
+        "definition": "24\" Range, Strength 4. A model with a crossbow may not fire in the same turn that it has Moved."
+      },
+      {
+        "name": "Uruk-Hai Bow",
+        "type": "bow",
+        "definition": "18\" Range, 3 Strength"
+      },
+      {
+        "name": "Blowpipe",
+        "type": "blowpipe",
+        "definition": "12\" Range, 2 Strength. Benefits from the Poisoned Weapons special rule (re-roll 1s to wound). "
+      },
+      {
+        "name": "War Horn",
+        "type": "horn",
+        "definition": "Models within 24\" of a friendly model with a war horn gain a bonus of +1 to any Courage Tests they take. Additionally, a model with a war horn gains the Dominant (2) special rule and can use it once per game to increase the range of a friendly Hero model's Stand Fast by 3\", so long as the model with the war horn is in range of the Hero model's Stand Fast before this increase. If a Hero model has a war horn themselves, they may use it to increase the range of their own Stand Fast by 3\" instead. A war horn is treated as an Active ability."
+      },
+      {
+        "name": "Banner",
+        "type": "banner",
+        "definition": "A banner provides a single re-roll to friendly models who are involved in a Fight within 3\". Any model carrying a banner is encumbered by its weight, and suffers a -1 penalty to their Duel rolls."
+      },
+      {
+        "name": "Throwing Spears",
+        "type": "throwingWeapon",
+        "definition": "8\" Range, 3 Strength"
+      },
+      {
+        "name": "Throwing weapon",
+        "type": "throwingWeapon",
+        "definition": "6\" Range, 3 Strength"
+      },
+      {
+        "name": "Throwing weapons",
+        "type": "throwingWeapon",
+        "definition": "6\" Range, 3 Strength"
+      },
+      {
+        "name": "Throwing Axes",
+        "type": "throwingWeapon",
+        "definition": "6\" Range, 3 Strength"
+      },
+      {
+        "name": "Light Shield",
+        "definition": "A model with a light shield does not gain a bonus to its Defence. However, it may use the Shielding special rule."
+      },
+      {
+        "name": "Troll Spear",
+        "type": "spear",
+        "definition": "This is a spear. Additionally, if this model is not Supporting, any To Wound Rolls of a natural 6 it makes when making Strikes that are not prevented will deal 2 Wounds rather than 1."
+      },
+      {
+        "name": "War spear",
+        "type": "Spear",
+        "definition": "Counts as a lance while mounted, and a spear while dismounted"
+      },
+      {
+        "name": "Lance",
+        "definition": "A Cavalry model using a lance receives a bonus when making Strikes in a turn that they have Charged; add 1 to their roll To Wound - thus, a score of 2 becomes 3, 4 becomes 5 and so on. Note, in cases where two rolls are required (e.g., 6/4+), this will affect both rolls. A Cavalry model using a lance even gets this bonus against other Cavalry models, as long as it has Charged, although not if it is within difficult terrain.\n                If a Cavalry model with a lance dismounts, or their steed is slain, they will ordinarily abandon their lance, resorting to using another hand weapon."
+      },
+      {
+        "name": "Staff of Power",
+        "definition": "A Staff of Power is a hand-and-a-half weapon. Additionally, the wielder of a Staff of Power gains a free Will Point at the start of each turn. If this free Will Point is not spent by the end of the turn, it is lost."
+      },
+      {
+        "name": "Flail",
+        "tag": "Active",
+        "definition": "This is a hand-and-a-half weapon. Additionally, if the bearer wins a Duel Roll, then they can either make Strikes as normal or make a single Strike against each enemy model that was involved in the Combat."
+      },
+      {
+        "name": "Elven Cloak",
+        "tag": "Passive",
+        "definition": "A model wearing an Elven cloak has the Stalk Unseen special rule. Additionally, models targeting an Infantry model wearing an Elven cloak with a Shooting Attack suffer a -1 penalty when rolling To Hit."
+      },
+      {
+        "name": "Archan",
+        "type": "meleeWeapon",
+        "definition": "This is a Unique hand-and-a-half weapon. On a turn that a model with this weapon has made a successful Charge, increase their Strength by +1 until the end of the turn."
+      },
+      {
+        "name": "Banner of Faces",
+        "type": "banner",
+        "tag": "Active",
+        "definition": "Enemy models within 3\" of The Tower of Sauron cannot benefit from a friendly Hero model's Stand Fast and cannot use the Shieldwall special rule."
+      },
+      {
+        "name": "Caragor",
+        "type": "mount",
+        "movement": 10,
+        "fight": 3,
+        "shoot": 6,
+        "strength": 5,
+        "defence": 4,
+        "attack": 1,
+        "wounds": 1,
+        "courage": 8,
+        "intelligence": 7,
+        "race": [
+          "Caragor"
+        ],
+        "faction": [
+          "Mordor"
+        ],
+        "unitType": [
+          "Mount"
+        ],
+        "baseSize": [
+          "40mm"
+        ],
+        "specialRules": [
+          "Mountain Dweller",
+          "Monsterbane",
+          "Unruly Strength"
+        ],
+        "wargear": [
+          "Teeth and Claws (hand weapons)"
+        ]
+      },
+      {
+        "name": "Dagger",
+        "definition": "A hand weapon."
+      },
+      {
+        "name": "Exchange Armour for Heavy Armour",
+        "definition": "Exchange Armour for Heavy Armour."
+      },
+      {
+        "name": "Hand weapon",
+        "definition": "A standard hand weapon."
+      },
+      {
+        "name": "Hand-and-a-half Sword",
+        "definition": "A hand-and-a-half weapon."
+      },
+      {
+        "name": "Ithil-stone",
+        "definition": "After rolling for Priority, Castamir may take an Intelligence Test. If passed, his controlling player may modify the Priority roll by +1 or -1. If any dice rolled for the test is a natural 1, Castamir suffers one Wound.",
+        "tag": "Active"
+      },
+      {
+        "name": "Mace of Sauron",
+        "type": "weapon",
+        "tag": "Active",
+        "definition": "This is a Unique two-handed weapon. Instead of making Strikes as normal, The Hammer of Sauron may instead make a single Strength 6 hit on every model involved in the Combat."
+      },
+      {
+        "name": "Morgai Flies",
+        "definition": "This is a Unique throwing weapon. Any model hit but not slain must take an Intelligence Test or suffer -1 to its Duel Roll until the end of the turn.",
+        "tag": "Active"
+      },
+      {
+        "name": "Olog Gauntlets",
+        "definition": "Models armed with this weapon increase their Attacks to 4.",
+        "tag": "Active"
+      },
+      {
+        "name": "Sword",
+        "definition": "A hand weapon."
+      },
+      {
+        "name": "Teeth and Claws (hand weapons)",
+        "type": "weapon",
+        "definition": "Teeth and claws; hand weapons."
+      },
+      {
+        "name": "The New Ring",
+        "definition": "Talion's Wraith Resurrection roll is improved to 2+.",
+        "tag": "Passive"
+      },
+      {
+        "name": "Twin Blades",
+        "definition": "These are two Elven-made hand weapons. When making Strikes with them, failed To Wound Rolls must be re-rolled.",
+        "tag": "Active"
+      },
+      {
+        "name": "Two Hand Weapons",
+        "definition": "Two hand weapons."
+      },
+      {
+        "name": "Two-handed Weapon",
+        "definition": "A two-handed weapon."
+      },
+      {
+        "name": "Urfael",
+        "type": "meleeWeapon",
+        "definition": "This is a Unique hand-and-a-half sword. Additionally, a model wielding Urfael may re-roll To Wound Rolls of a natural 1 when making Strikes against Orc and Uruk-hai models."
+      },
+      {
+        "name": "Urfael and Acharn",
+        "type": "meleeWeapon",
+        "definition": "This is a Unique hand-and-a-half sword and dagger (hand weapon). While Talion has the Infantry keyword, at the beginning of a Combat he may choose to gain +1 Attack or add +1 to To Wound Rolls."
+      },
+      {
+        "name": "Vials of Flies",
+        "type": "meleeWeapon",
+        "definition": "This is a Unique throwing weapon. Any model hit but not killed by this weapon must take an Intelligence Test or suffer -1 from their Duel Roll until the end of the turn."
+      },
+      {
+        "name": "Gollum's fingers / The One Ring",
+        "type": "meleeWeapon",
+        "definition": "Gollum has strong, strangling fingers and is never considered Unarmed. If your opponent does not have a Ringbearer in their Army, then Gollum carries the One Ring."
+      },
+      {
+        "name": "Olog gauntlets",
+        "type": "weapon",
+        "definition": "Olog gauntlets are a hand weapon. A model with this weapon never counts as Unarmed. Additionally, a model with this weapon can still Move its full Move Value whilst carrying a Heavy Object."
+      },
+      {
+        "name": "Olog-hai mace",
+        "type": "weapon",
+        "definition": "An Olog-hai mace is a hand-and-a-half weapon. When a model with this weapon uses the Barge Brutal Power Attack, it may still inflict one Strike on an enemy it was previously Engaged with."
+      },
+      {
+        "name": "Pit spear",
+        "type": "spear",
+        "definition": "This is a war spear. Additionally, when used with a shield, the bearer may still make one Strike when Shielding."
+      },
+      {
+        "name": "Pit spear and shield",
+        "includes": [
+          {
+            "name": "Pit spear",
+            "dataSource": "gear"
+          },
+          {
+            "name": "Shield",
+            "dataSource": "gear"
+          }
+        ]
+      },
+      {
+        "name": "Dual blades",
+        "type": "weapon",
+        "definition": "Dual blades are a pair of two hand weapons. A model with this weapon may re-roll a single roll of a 1 in the Duel Roll. Additionally, should this weapon be destroyed by any means, the bearer will instead count as having a single hand weapon and will lose the re-roll gained by this weapon."
+      },
+      {
+        "name": "Chained bolas",
+        "type": "throwingWeapon",
+        "definition": "Range 6\", Strength 2. This is a throwing weapon. An Infantry model on a 25mm base that suffers a Wound from this weapon but is not slain is Knocked Prone."
+      },
+      {
+        "name": "Light shield",
+        "type": "wargear",
+        "definition": "A light shield as listed in the supplied Nûrn profiles."
+      },
+      {
+        "name": "Sling",
+        "type": "bow",
+        "definition": "A sling as listed in the supplied Nûrn profile."
+      },
+      {
+        "name": "War horn and spear",
+        "type": "wargear",
+        "definition": "A war horn and spear."
+      },
+      {
+        "name": "Spear and bow",
+        "type": "bow",
+        "definition": "24\" Range, Strength 2.",
+        "includes": [
+          {
+            "name": "Spear",
+            "dataSource": "gear"
+          },
+          {
+            "name": "Bow",
+            "dataSource": "gear"
+          }
+        ]
+      },
+      {
+        "name": "Throwing spear and light shield",
+        "type": "throwingWeapon",
+        "definition": "A throwing spear and light shield.",
+        "includes": [
+          {
+            "name": "Throwing Spears",
+            "dataSource": "gear"
+          },
+          {
+            "name": "Light Shield",
+            "dataSource": "gear"
+          }
+        ]
+      },
+      {
+        "name": "Sling and light shield",
+        "type": "bow",
+        "definition": "A sling and light shield.",
+        "includes": [
+          {
+            "name": "Sling",
+            "dataSource": "gear"
+          },
+          {
+            "name": "Light Shield",
+            "dataSource": "gear"
+          }
+        ]
+      },
+      {
+        "name": "Ithil Stone",
+        "type": "wargear",
+        "tag": "Active",
+        "definition": "This is a Unique Light Object. After the Priority Roll, the bearer of this Object may take an Intelligence Test. If the test is passed, the controlling player may modify the Priority Roll by +1 or -1. If either die rolled for this test is a natural 1, the bearer takes one Wound."
+      },
+      {
+        "name": "Spear",
+        "type": "spear",
+        "definition": "A spear."
+      },
+      {
+        "name": "Bow with Flaming Arrows",
+        "type": "bow",
+        "definition": "24\" Range, Strength 2. This is a bow. A model with this weapon that did not Move in the Move Phase may re-roll failed To Wound Rolls against a Siege Target or a model with the Monster keyword."
+      },
+      {
+        "name": "Replace shield with Banner",
+        "type": "banner",
+        "definition": "Replaces the model's shield with a banner.",
+        "replaceProperties": [
+          [
+            {
+              "property": "wargear",
+              "value": [
+                "Armour",
+                "Hand weapon",
+                "Spear",
+                "Banner"
+              ]
+            }
+          ]
+        ]
+      },
+      {
+        "name": "Flaming Ammunition",
+        "type": "wargear",
+        "definition": "Flaming Ammunition as listed for the Gondor Battlecry Trebuchet."
+      },
+      {
+        "name": "Heavy armour",
+        "type": "armour",
+        "modifiesStats": [
+          {
+            "stat": "defence",
+            "modifier": 2
+          }
+        ]
+      },
+      {
+        "name": "Light armour",
+        "definition": "A model wearing Light Armour will add 1 to their Defence characteristic against Shooting Attacks. If a model is wearing light armour then the Defence improvement will not have been added onto their profile."
+      },
+      {
+        "name": "Throwing spears",
+        "type": "throwingWeapon",
+        "definition": "8\" Range, Strength 3."
+      },
+      {
+        "name": "War horn",
+        "type": "horn",
+        "definition": "Models within 24\" of a friendly model with a war horn gain a bonus of +1 to any Courage Tests they take."
+      },
+      {
+        "name": "Unarmed",
+        "type": "weapon",
+        "definition": "This model is Unarmed."
+      },
+      {
+        "name": "Two-handed weapon",
+        "type": "weapon",
+        "definition": "A two-handed weapon."
+      },
+      {
+        "name": "Spear and shield",
+        "includes": [
+          {
+            "name": "Spear",
+            "dataSource": "gear"
+          },
+          {
+            "name": "Shield",
+            "dataSource": "gear"
+          }
+        ]
+      },
+      {
+        "name": "Exchange armour for heavy armour",
+        "type": "armour",
+        "modifiesStats": [
+          {
+            "stat": "defence",
+            "modifier": 1
+          }
+        ]
+      },
+      {
+        "name": "Swap armour for heavy armour",
+        "type": "armour",
+        "modifiesStats": [
+          {
+            "stat": "defence",
+            "modifier": 1
+          }
+        ]
+      },
+      {
+        "name": "Exchange light armour for armour",
+        "type": "armour",
+        "modifiesStats": [
+          {
+            "stat": "defence",
+            "modifier": 1
+          }
+        ]
+      },
+      {
+        "name": "Exchange light armour with armour",
+        "type": "armour",
+        "modifiesStats": [
+          {
+            "stat": "defence",
+            "modifier": 1
+          }
+        ]
+      },
+      {
+        "name": "Hand-and-a-half weapon",
+        "type": "weapon",
+        "definition": "A hand-and-a-half weapon."
+      },
+      {
+        "name": "Two hand weapons",
+        "type": "weapon",
+        "definition": "Two hand weapons."
+      },
+      {
+        "name": "Fire Graug",
+        "type": "upgrade",
+        "specialRules": [
+          "Ashen Body",
+          "Flame Breath"
+        ],
+        "definition": "This Graug gains the Ashen Body and Flame Breath special rules."
+      },
+      {
+        "name": "Wretched Graug",
+        "type": "upgrade",
+        "specialRules": [
+          "Festering Bulk",
+          "Toxic spit"
+        ],
+        "definition": "This Graug gains the Festering Bulk and Toxic spit special rules."
+      },
+      {
+        "name": "Frost Graug",
+        "type": "upgrade",
+        "modifiesStats": [
+          {
+            "stat": "defence",
+            "modifier": 1
+          },
+          {
+            "stat": "wounds",
+            "modifier": 1
+          }
+        ],
+        "specialRules": [
+          "Frozen Juggernaut",
+          "Icy Torrent",
+          "Resistant to Magic"
+        ],
+        "definition": "This Graug gains +1 Defence, +1 Wound, Resistant to Magic, Frozen Juggernaut and Icy Torrent."
+      },
+      {
+        "name": "Massive Claws (hand weapons)",
+        "type": "weapon",
+        "definition": "Massive claws; hand weapons."
+      },
+      {
+        "name": "Razor-sharp teeth and talons (hand weapons)",
+        "type": "weapon",
+        "definition": "Razor-sharp teeth and talons; hand weapons."
+      },
+      {
+        "name": "Stinging bite (hand weapon)",
+        "type": "weapon",
+        "definition": "A stinging bite; hand weapon."
+      },
+      {
+        "name": "Chained Bolas",
+        "type": "throwingWeapon",
+        "definition": "Range 6\", Strength 2. This is a throwing weapon. An Infantry model on a 25mm base that suffers a Wound from this weapon but is not slain is Knocked Prone."
+      },
+      {
+        "name": "Machine Hook",
+        "type": "throwingWeapon",
+        "definition": "Range 6\", Strength 3. This follows all the normal rules for a throwing weapon and has the Grappling Shot special rule.",
+        "specialRules": [
+          "Grappling Shot"
+        ]
+      },
+      {
+        "name": "Twin Hand-crossbows",
+        "type": "bow",
+        "definition": "Range 8\", Strength 3. A model may make a Shooting Attack with twin hand-crossbows during the Shoot Phase provided it has not Moved over half its Move Value during the preceding Move Phase. A model with this weapon may make two Shooting Attacks in the Shoot Phase rather than one. These Shooting Attacks must target the same enemy model."
+      },
+      {
+        "name": "Olog-hai Flamethrower",
+        "type": "bow",
+        "definition": "Range 8\", Strength 4. This is a crossbow. If the To Hit roll is a natural 6, the target model and all models in base contact are Set Ablaze."
+      },
+      {
+        "name": "Morgul Blade",
+        "type": "weapon",
+        "definition": "Rules for this wargear are not defined in the supplied Tribes of the Orcs extract."
+      },
+      {
+        "name": "Slaughter Cleavers",
+        "type": "throwingWeapon",
+        "definition": "Range 12\", Strength 4. This follows all the normal rules for a throwing weapon."
+      },
+      {
+        "name": "War Drum",
+        "type": "wargear",
+        "definition": "Rules for this wargear are not defined in the supplied Tribes of the Orcs extract."
+      },
+      {
+        "name": "Throwing Weapons",
+        "type": "throwingWeapon",
+        "definition": "Rules for this wargear are not defined in the supplied Tribes of the Orcs extract."
+      },
+      {
+        "name": "Feral claws",
+        "type": "weapon",
+        "definition": "Feral claws are a hand weapon. A model with this weapon never counts as Unarmed. An Infantry model with this weapon gains +1 Strength when making Strikes."
+      },
+      {
+        "name": "Olog Flamethrower",
+        "type": "bow",
+        "definition": "Range 8\", Strength 4. This is a crossbow. If the To Hit roll is a natural 6, the target model and all models in base contact are Set Ablaze."
+      },
+      {
+        "name": "Feral Caragor",
+        "type": "mount",
+        "movement": 12,
+        "fight": 3,
+        "shoot": 6,
+        "strength": 5,
+        "defence": 4,
+        "attack": 1,
+        "wounds": 1,
+        "courage": 8,
+        "intelligence": 7,
+        "race": [
+          "Caragor"
+        ],
+        "faction": [
+          "Mordor"
+        ],
+        "unitType": [
+          "Mount"
+        ],
+        "baseSize": [
+          "40mm"
+        ],
+        "specialRules": [
+          "Mountain Dweller",
+          "Monsterbane",
+          "Unruly Strength"
+        ],
+        "wargear": [
+          "Teeth and Claws (hand weapons)"
+        ]
+      }
+    ],
+    "magicalPowers": [
+      {
+        "name": "Aura of Command",
+        "duration": "Exhaustion",
+        "definition": "This Magical Power targets the caster. Whilst this power is in effect, the caster and all friendly models within 6\" automatically pass all Courage tests they are required to make."
+      },
+      {
+        "name": "Aura of Dismay",
+        "duration": "Exhaustion",
+        "definition": "This Magical Power targets the caster. Enemy models within 6\" of the caster suffer a -1 penalty to any Courage Tests they are required to take."
+      },
+      {
+        "name": "Banishment",
+        "duration": "Instant",
+        "definition": "This Magical Power targets one enemy Spirit model within range. The target immediately suffers 1 Wound. If this Magical Power targets a Cavalry model, the caster must choose whether the rider or the mount is the target."
+      },
+      {
+        "name": "Black Dart",
+        "duration": "Instant",
+        "definition": "This power targets one enemy model within range. The target immediately suffers one Strength 6 hit. If this Magical Power targets a Cavalry model, the caster must choose whether the rider or the mount is the target."
+      },
+      {
+        "name": "Bladewrath",
+        "duration": "Temporary",
+        "definition": "This Magical Power targets one friendly model within range. In the ensuing Fight phase, all Strikes made by the target model are resolved at Strength 6, regardless of any other modifiers."
+      },
+      {
+        "name": "Blessing of the Valar",
+        "duration": "Instant",
+        "definition": "This Magical Power targets one friendly model within range. The target immediately regains 1 Fate point spent earlier in the battle."
+      },
+      {
+        "name": "Blinding Light",
+        "duration": "Temporary",
+        "definition": "This Magical Power targets the caster. Whilst the power is in effect, the area within 6\" of the caster is always considered to be daylight (perfect if you are playing a battle at night). Additionally, whilst this power is in effect, enemy models that make a Shooting Attack that targets a model within 6\" of the caster will only hit on a To Hit Roll of a 6. Models cannot benefit from this Magical Power if there is a piece of impassable terrain, such as a wall or building, directly between all parts of the model and the source of the light."
+      },
+      {
+        "name": "Call Winds",
+        "duration": "Instant",
+        "definition": "This Magical Power targets one enemy model within range. The target is immediately blown D3 + 3\" directly away from the caster in a straight line. If the model comes into contact with another model or piece of terrain, then it immediately stop. After it has been blown back, the target is knocked Prone. If the target was Engaged in Combat, the effect is the same and they can be blown out of Combat."
+      },
+      {
+        "name": "Chill Soul",
+        "duration": "Instant",
+        "definition": "This Magical Power targets one enemy model in range. The target model immediately suffers 1 Wound. If this Magical Power targets a Cavalry model, the caster must choose whether the rider or the mount is the target."
+      },
+      {
+        "name": "Collapse Rocks",
+        "duration": "Instant",
+        "definition": "This Magical Power targets one enemy model in range that is within a ruin, stone or brick building, cave, rock pile or some other piece of terrain where the caster could crack rocks either underfoot or overhead. The target suffers one Strength 7 hit and is knocked Prone. If the target was a Cavalry model, they will automatically count as suffering the Knocked Flying result on the Thrown Rider Chart."
+      },
+      {
+        "name": "Compel",
+        "duration": "Instant",
+        "definition": "This Magical Power targets one enemy model in range. The caster may Move the target up to half its maximum Move Value, even if the target has already Moved this turn. They cannot Move the target out of Combat, make them take a Jump, Climb, Leap or Swim Test, lie them down or make them dismount. They can, however, make them Move into Difficult Terrain or Charge an enemy model (if able), in which case no Courage Test would be required to Charge an enemy with the Terror special rule. They can make the target drop an Object they are carrying as part of a Scenario (but not Wargear) or put on the One Ring if they carry it. Once the target has been Moved, it cannot Move any further that turn for any reason but may otherwise act normally. If the model affected by this Magical Power would normally have to Charge as part of their Move, they are not forced to when under the influence of this Magical Power."
+      },
+      {
+        "name": "Curse",
+        "duration": "Instant",
+        "definition": "This Magical Power targets one enemy model in range. The target immediately loses 1 Fate point. If this Magical Power targets a Cavalry model, the caster must choose whether the rider or the mount is the target."
+      },
+      {
+        "name": "Drain Courage",
+        "duration": "Instant",
+        "definition": "This Magical Power targets one enemy model in range. The target immediately worsens their Courage value by 1 for the remainder of the game, so a model with a Courage of 5+ that is affected by this Magical Power would then have a Courage of 6+. A model can be affected by this Magical Power multiple times over the course of the battle, worsening its Courage value each time. If this Magical Power targets a Cavalry model, the caster must choose whether the rider or the Mount is the target."
+      },
+      {
+        "name": "Enchant Blades",
+        "duration": "Temporary",
+        "definition": "This Magical Power targets one friendly model within range. In the ensuing Fight Phase, the target may re-roll all failed To Wound rolls when making Strikes."
+      },
+      {
+        "name": "Enrage Beast",
+        "duration": "Temporary",
+        "definition": "This Magical Power targets one friendly Beast model within range. The target increases its Fight Value, Strength, and Attacks by 2, and gains the Fearless special rule, until the End Phase of the turn, at which point the target will immediately suffer 1 Wound."
+      },
+      {
+        "name": "Flameburst",
+        "duration": "Instant",
+        "definition": "This Magical Power targets one enemy model in range. The target immediately suffers one Strength 6 hit. This is a fire-based attack, so if a model is immune to fire-based attacks, they are immmune to this Magical Power."
+      },
+      {
+        "name": "Fog of Disarray",
+        "duration": "Exhaustion",
+        "definition": "This Magical Power targets the caster. Enemy models within 6\" of the caster suffer a -1 penalty to any Intelligence Tests they are required to take."
+      },
+      {
+        "name": "Foil Magic",
+        "duration": "Instant",
+        "definition": "This Magical Power targets one enemy model within range. The caster may choose one Magical Power Cast by the target with the Exhaustion duration that is currently in play. That Magical Power immediately ends."
+      },
+      {
+        "name": "Fortify Spirit",
+        "duration": "Exhaustion",
+        "definition": "This Magical Power may target one friendly model within range. Each time the target becomes the target of a Magical Power Cast by an enemy model, they gain an additional free dice to any Resist Test they would take. The free dice can still be rolled even if the target has no Will Points or chooses not to use any from their store."
+      },
+      {
+        "name": "Fury",
+        "duration": "Exhaustion",
+        "definition": "This Magical Power targets the caster. Friendly models within 6\" of the caster who have the same keywords as those shown in brackets will automatically pass any Courage Tests they are required to take."
+      },
+      {
+        "name": "Immobilise",
+        "duration": "Temporary",
+        "definition": "(This is the definition for Transfix. Technically this spell does not exist.) This Magical Power targets one enemy model in range. Until the End Phase of the turn, the target cannot Activate, declare Heroic Actions, use Active Abilities, or make Shooting Attacks. If the target wins a Duel Roll, they may not make Strikes. if the target has a piece of wargear that has an Active ability, they still have that piece of wargear but cannot use the ability tied to it."
+      },
+      {
+        "name": "Instil Fear",
+        "duration": "Temporary",
+        "definition": "This Magical Power targets the caster. Enemy models within 6\" of the caster are considered to have the Fearful special rule."
+      },
+      {
+        "name": "Nature's Wrath",
+        "duration": "Instant",
+        "definition": "This Magical Power targets all enemy models within range, even if they are not in Line of Sight of the caster. All target models are immediately knocked Prone. Cavalry models are automatically treated as suffering a Knocked Flying result on the Thrown Rider Chart."
+      },
+      {
+        "name": "Panic Steed",
+        "duration": "Instant",
+        "definition": "This Magical Power targets one enemy Cavalry model within range. The rider is immediately thrown and the Mount immediately flees and is removed as a casualty. The rider is automatically treated as suffering a Knocked Flying result on the Thrown Rider Chart."
+      },
+      {
+        "name": "Paralyse",
+        "duration": "Exhaustion",
+        "definition": "This Magical Power targets one enemy model in range. The target immediately becomes paralysed. A Paralysed model immediately becomes Prone and may do nothing until it recovers. This includes Activating, making Shooting Attacks, declaring Heroic Actions or using Active abilities. If a Paralysed model is Engaged in Combat, it may contribute no dice to the Duel Roll, and does not provide its Fight Value - it may also not make Strikes or stand up if its side wins. If a Paralysed model is the only model from its side involved in a Combat, then it automatically loses the Duel Roll - no dice are rolled.\n                \n                At the end of the End Phase of each turn, a Paralysed model may roll a D6. On a 6, the model immediately recovers (they may use Might to improve this roll). Additionally, after making this roll, any friendly model in base contact with a Paralysed model may roll a D6 one at a time. If any model rolls a 6, the Paralysed model immediately recovers (a Hero model may use their own Might to improve this roll.)\n                \n                If a Paralysed model is in a water feature at the end of the Move Phase, then it must take a Swim Test to see if it sinks."
+      },
+      {
+        "name": "Protection of the Valar",
+        "duration": "Temporary",
+        "definition": "This Magical Power targets one friendly model within range. The target cannot be chosen as the target of an enemy Magical Power or enemy special rule that specifically targets a model. Additionally, enemy models that target the protected model with a Shooting attack will suffer a -1 penalty to the to hit Roll."
+      },
+      {
+        "name": "Renew",
+        "duration": "Instant",
+        "definition": "This Magical Power targets one friendly model in range. The target immediately regains 1 Wound lost earlier in the battle.If this Magical Power targets a Cavalry model, the caster must choose whether the rider or the mount is the target."
+      },
+      {
+        "name": "Sorcerous Blast",
+        "duration": "Instant",
+        "definition": "This Magical Power targets one enemy model within range. The target immediately suffers one Strength 5 hit. If they survive, the target is immediately knocked Prone. If the target was a Cavalry model, they will automatically count as suffering the Knocked Flying result on the Thrown Rider Chart.\n                \n                If the target was Engaged in Combat, then any other model that is also engaged in the same Combat will also be knocked prone if it has a Strength of 5 or lower - make sure to Pair Off Combats before working out which models are knocked prone in this manner."
+      },
+      {
+        "name": "Strengthen Will",
+        "duration": "Instant",
+        "definition": "This Magical Power targets one friendly model within range.The target immediately regains a single Will Point spent earlier in the battle. If this Magical Power targets a Cavalry model, the caster must choose whether the rider or the mount is the target."
+      },
+      {
+        "name": "Terrifying Aura",
+        "duration": "Exhaustion",
+        "definition": "This Magical Power targets the caster themselves. Whilst this Magical Power is in effect, the caster has the Terror special rule."
+      },
+      {
+        "name": "Transfix",
+        "duration": "Temporary",
+        "definition": "This Magical Power targets one enemy model in range. Until the End Phase of the turn, the target cannot Activate, declare Heroic Actions, use Active Abilities, or make Shooting Attacks. If the target wins a Duel Roll, they may not make Strikes. if the target has a piece of wargear that has an Active ability, they still have that piece of wargear but cannot use the ability tied to it."
+      },
+      {
+        "name": "Tremor",
+        "duration": "Instant",
+        "definition": "Draw an imaginary 1mm line that extends D3+3\" directly away from the caster in a direction chosen by the caster. This Magical Power targets every model (friend of foe) that lies under the line. Each target immediately suffers one Strength 4 hit and is knocked Prone; if the target was a Cavalry model, they will automatically count as suffering the Knocked Flying result on the Thrown Rider Chart. If a target is Engaged in Combat, then all other models in the same Combat are also considered to be a target - make sure to Pair Off Combats before working out which models are a target.\n                \n                Models with the Fly special rule can never be a target of this Magical Power under any circumstances."
+      },
+      {
+        "name": "Wither",
+        "duration": "Instant",
+        "definition": "This Magical Power targets one enemy model in range. The target immediately reduces their Strength value by 1 for the remainder of the game. A model can be affected by this Magical Power multiple times over the course of the battle, reducing its Strength value each time. Should a model ever have its Strength reduced to 0, they are immediately slain and removed as a casualty. If this Magical Power targets a Cavalry model, the caster must choose whether the rider or the Mount is the target."
+      },
+      {
+        "name": "Wrath of Bruinen",
+        "duration": "Instant",
+        "definition": "This Magical Power targets all enemy models within range, even if they are not in Line of Sight of the caster. All target models immediately suffer one Strength 2 hit and are knocked Prone. Cavalry models are automatically treated as suffering a Knocked Flying result on the Thrown Rider Chart. If a target is within a water feature, they will suffer one Strength 8 hit instead of one Strength 2 hit."
+      },
+      {
+        "name": "Writhing Vines",
+        "duration": "Temporary",
+        "definition": "This Magical Power targets the caster. Place a 25mm Vine Marker wholly within 3\" of the caster. Enemy models treat the area within 3\" of the Vine Marker as Difficult Terrain. Remove the Vine Marker during the End Phase."
+      },
+      {
+        "name": "Your Staff is Broken",
+        "duration": "Instant",
+        "definition": "This Magical Power targets one enemy model that has a Staff of Power within range. The target's Staff of Power is immediately destroyed - remove it from their wargear."
+      },
+      {
+        "name": "Fury (X)",
+        "duration": "Exhaustion",
+        "definition": "This Magical Power targets the caster. Friendly models within 6\" of the caster who have the same keywords as those shown in brackets will automatically pass any Courage Tests they are required to take."
+      },
+      {
+        "name": "Undying Loyalty",
+        "definition": "This Magical Power targets the caster. Roll a D6. On a 1-4, immediately place a single Orc Warrior anywhere within 3\" of the caster. On a 5+, place an Uruk-hai Warrior instead. Models placed in this manner may never be placed in base contact with enemy models, but may be placed within enemy Control Zones. A summoned model may Activate on the turn it was summoned, though may not Activate as part of a Heroic Move or Heroic March declared by a friendly model that turn. Models summoned in this way are never taken into account when determining whether an Army is Broken or reduced to 25%. Duration: Instant."
+      }
+    ],
+    "keywords": [
+      {
+        "name": "Ancient Enemies (X)",
+        "tag": "Active",
+        "definition": "A model with this special rule must re-roll To Wound Rolls of a natural 1 when making Strikes against a model with the keywords listed in brackets in that model's profile. So, a model with the Ancient Enemies (Elf) special rule would re-roll To Wound Rolls of a natural 1 against Elf models."
+      },
+      {
+        "name": "Backstabbers",
+        "tag": "Active",
+        "definition": "This model receives bonus of +1 To Wound  when making Strikes against a Trapped model."
+      },
+      {
+        "name": "Bane of Kings",
+        "tag": "Active",
+        "definition": "This model must re-roll all failed To Wound rolls when making Shooting Attacks or when making Strikes."
+      },
+      {
+        "name": "Bane Weapons (Xbane)",
+        "definition": "A Bane Weapon is presented as Xbane, where X is a Race keyword. Each successful Strike caused by that weapon inflicts D3 Wounds rather than 1 if the target has the matching Race keyword.",
+        "tag": "Active"
+      },
+      {
+        "name": "Blades of the Dead",
+        "tag": "Active",
+        "definition": "Models with this special rule don't roll To Wound when making Strikes in the same way. Instead, when a model with this special rule makes a Strike, the target counts their Defence value as 10 minus the numerical value of their Courage. So, a model with a Courage of 8+ would treat their Defence as 2 (10-8) when a model with Blades of the Dead makes a Strike against them."
+      },
+      {
+        "name": "Bodyguard",
+        "tag": "Active",
+        "definition": "All models with this special rule in an Army must select a Hero to bodyguard; this will automatically be the General if they have the same Faction keyword as this model. If the General does not have the same Faction keyword as this model, then they will bodyguard the Hero with the highest Heroic Tier amongst those who have the same Faction keyword (if there are multiple of the same Heroic Tier, you may choose which will be bodyguarded). All models of this type must choose the same Hero to bodyguard.\n                So long as the bodyguarded Hero is alive and on the battlefield, all models who are bodygaurding that Hero will automatically pass all Courage Tests they are required to take."
+      },
+      {
+        "name": "Burly",
+        "tag": "Passive",
+        "definition": "A model with this special rule does not suffer the -1 penalty to the Duel Roll for using a two-handed weapon. Additionally, a model with this special rule can still Move its full Move Value whilst carrying a Heavy Object."
+      },
+      {
+        "name": "Cave Dweller",
+        "tag": "Active",
+        "definition": "A model with this special rule applies a +1 modifier to any Jump, Leap and Climb tests they take. Additionally, a model with this special rule suffers no penalties to how far they can see when fighting in the dark. This special rule may be used by models that are not yet on the battlefield."
+      },
+      {
+        "name": "Dominant (X)",
+        "tag": "Passive",
+        "definition": "This model counts as the number of models as shown in brackets when working out how many models are in range of an objective, in a specific are of the board, or when working out how many models have escaped the battlefield. So, a model with Dominant (3) would count as three models in range of an objective, or in a specific are of the board, or three models when working out how many models have excaped the battlefield. If a model would gain this special rule whilst in range of another model or specific area of the board, and then moves off the board, they will not gain the benefit of this special rule once off the board.\n                If a model has two sources of the Dominant (X) special rule, then they use the highest value."
+      },
+      {
+        "name": "Expert Rider",
+        "tag": "Active",
+        "definition": "A Cavalry model with this special rule may re-roll the dice on any Jump, Swim, or Thrown Rider Tests, and can pick up Light Objects without having to dismount.\n                Additionally, a model with this special rule that is carrying both a bow and a shield will still get the +1 bonus to their Defence for having a shield whilst they remain mounted."
+      },
+      {
+        "name": "Expert Shot",
+        "tag": "Active",
+        "definition": "A model with this special rule can make two Shooting Attacks in the Shoot Phase rather than one. These Shooting Attacks are made one at a time and do not have to target the same enemy model, though both must be made with the same Missile Weapon."
+      },
+      {
+        "name": "Fearful",
+        "tag": "Passive",
+        "definition": "If a model with this special rule wishes to Charge, then it must take a Courage Test at the start of its Move. If the test is failed, the model may not Move that turn but may otherwise act normally."
+      },
+      {
+        "name": "Fearless",
+        "tag": "Passive",
+        "definition": "A model with this special rule automatically passes any Courage Test it is required to make."
+      },
+      {
+        "name": "Fell Sight",
+        "tag": "Passive",
+        "definition": "A model with this special rule does not need to have Line of Sight to be able to Charge an enemy model. Additionally, a model with this special rule can Charge or target an enemy model with the Stalk Unseen special rule with no penalty. If a Mount has this special rule, the rider may benefit from it whilst they remain mounted."
+      },
+      {
+        "name": "Fly",
+        "tag": "Active",
+        "definition": "A model with this special rule ignores intervening models and terrain when it Moves - flying over buildings, woods and so on, and ignoring the vertical distance as they Move. A model that Moves in this way cannot end its Move overlapping another model, within a piece of woodland terrain, or upon any surface in which it cannot balance safely (flat rock and hills are fine, but don't try perching a model upon a sloped roof for example). Additionally, a model that Moves in this way cannot finish its Move atop a piece of terrain which it is impossible for the enemy to reach, such as at the top of a sheer rock face with no way up, or straddling one or more pieces of terrain that would allow other models to Move underneath.\n                If a model wishes to do something part way through its Move whilst it is Flying (such as Cast a Magical Power), then it must land in order to do so. When a model lands, there cannot be any models underneath it, and if it lands in an enemy model's Control Zone then it must Charge that enemy model.\n                A model with this special rule can choose not to Fly, and in which case will treat its Move Value as 4\" rather than that listed in its profile (usually 12\"). lf it does, then it gains none of the benefits of the Fly special rule, though it may enter a piece of woodland terrain; however, if it enters a piece of woodland terrain, it cannot elect to Fly again until it has completely left the woods.\n                A model that chooses to Fly will ignore enemy Control Zones as it Moves. A model that wishes to Charge when it is flying can Charge any model whose Control Zone it finishes its Move in. If a Flying model wishes to Charge a model that is already Engaged in Combat (or has otherwise lost their Control Zone) then it can only do so if it can land in a position where is is not within the Control Zones of other enemy models.\n                This special rule may be used by models that are not yet on the battlefield."
+      },
+      {
+        "name": "General Hunter",
+        "tag": "Active",
+        "definition": "If this model slays the enemy General in a Combat, they immediately regain a single point of Might spent earlier in the battle."
+      },
+      {
+        "name": "Harbinger of Evil (X)",
+        "tag": "Passive",
+        "definition": "An enemy model within the range shown in brackets in this model's profile suffers a -1 penalty to any Courage Tests it is required to make. This is not cumulative with other special rules that also provide a similar effect. A model with this special rule is unaffected by the Harbinger of Evil special rule of enemy models."
+      },
+      {
+        "name": "Hatred (X)",
+        "tag": "Active",
+        "definition": "A model with this special rule gains a bonus of +1 To Wound when making Strikes against a model with the same keyword as the one shown in brackets. So, a model with the Hatred (Man) special rule would gain a bonus of +1 To Wound when making Strikes against Man models."
+      },
+      {
+        "name": "Horse Lord",
+        "tag": "Passive",
+        "definition": "Whenever the Mount of a model with this special rule suffers a Wound, roll a D6 - on a natural 6, the Wound is ignored. Additionally, a model with this special rule can use their own Fate Points to prevent Wounds inflicted upon their Mount."
+      },
+      {
+        "name": "Invisible",
+        "tag": "Passive",
+        "definition": "A model that is Invisible cannot be targeted by Magical Powers, Shooting Attacks or special rules and other models cannot draw Line of Sight to it.\nAn Invisible model has no Control Zone, and models (from either side) may Move through them as if they were not there, though they cannot finish their Move overlapping the Invisible model. An Invisible model may Move through other models (from either side) and may ignore enemy Control Zones; however, it may not end its Move overlapping another model.\nIf a model wishes to Charge an Invisible model, they must take an Intelligence Test, suffering a -1 penalty to the test for every full 1\" that the Invisible model is away from them. If this Intelligence Test is failed, the model may not Charge the Invisible model at all that turn, but may Charge a different target if they wish.\nAn Invisible model may declare Heroic Actions, but friendly models may never benefit from their Heroic Actions. So, an Invisible model cannot shout With Me, At the Double, Loose or Take Aim, and if they declare a Heroic Combat, other friendly models cannot Move as part of it. An Invisible model also cannot provide a Stand Fast.\nDuring the Fight Phase, if an Invisible model is Engaged in Combat and has no other friendly models as part of the Combat, they will halve the Fight Value of all enemy models they are Engaged in Combat with. A friendly model cannot Support an Invisible model, and models cannot Support a model that is only fighting an Invisible model.\nNone of the above applies to Sauron or Ringwraith models –see the Will of Evil special rule for further details."
+      },
+      {
+        "name": "Large Target",
+        "tag": "Passive",
+        "definition": "When a model makes a Shooting Attack that targets a model with this special rule, when they are determining models that are In The Way, they Ignore models (both friendly and enemy) that do not have any of the following keywords: Monster, Siege Engine, War Beast. If the target model is Engaged In Combat, then the In The Way Test for Shooting Into Combat Is still applied regardless of the model the target model is Engaged In Combat with."
+      },
+      {
+        "name": "Leader (X)",
+        "tag": "Passive",
+        "definition": "A model with this special rule can include Warrior models of the type listed in brackets in their Warband."
+      },
+      {
+        "name": "Master of Battle (X+)",
+        "tag": "Active",
+        "definition": "Whenever an enemy Hero declares a Heroic Action within 6\" of this model, this model may roll a D6. If the result on the dice equals or beats the number shown in brackets, then this model may Immediately declare a Heroic Action of the same type without spending a Might Point. This may still be done if this model has no Might Points remaining or would not normally be able to declare that Heroic Action. If the roll is failed, this model may still declare a Heroic Action if they wish (though not one they cannot usually declare) for the usual cost of a Might Point."
+      },
+      {
+        "name": "Mighty Blow",
+        "tag": "Active",
+        "definition": "For each successful Strike caused by this model (i.e. one that causes a Wound that is not prevented), the target will suffer 2 Wounds rather than 1."
+      },
+      {
+        "name": "Mighty Hero",
+        "tag": "Passive",
+        "definition": "A model with this special gains a free Might Point at the start of each turn (even if their store of Might is full). If this free Might Point has not been spent by the end of the turn, it is lost."
+      },
+      {
+        "name": "Monstrous Charge",
+        "tag": "Active",
+        "definition": "If a model with this special rule Charges into Combat, then it will increase its Attacks characteristic by 1 during the ensuing Fight Phase. Additionally, if this model Charges and subsequently wins the Duel Roll, then all enemy models involved in the Combat with a Strength characteristic lower than this model, will be immediately knocked Prone before this model makes Strikes. Cavalry models will automatically count as suffering the Knocked Flying result on the Thrown Rider Chart."
+      },
+      {
+        "name": "Mountain Dweller",
+        "tag": "Active",
+        "definition": "A model with this special rule may Move through areas of rocky terrain that are classed as Difficult Terrain as if they are Open Ground. If a Cavalry model has this special rule, but their Mount does not, then this rule does not apply to the Mount. If a Mount has this special rule, then they will still gain their Cavalry Charge bonuses when they Charge, even If the rider does not have this special rule. Additionally, a model with this special rule may re-roll any Jump, Leap or Climb Tests. This special rule may be used by models that are not yet on the battlefield."
+      },
+      {
+        "name": "Resistant to Magic",
+        "tag": "Passive",
+        "definition": "Every time this model is targeted by a Magical Power, they gain an additional free dice when making a Resist Test, even if they have no Will Points remaining or decide not to use any Will Points. This is cumulative with other rules that confer a similar effect."
+      },
+      {
+        "name": "Sharpshooter",
+        "tag": "Active",
+        "definition": "When a model with this special rule makes a Shooting Attack that targets a Cavalry model, it may choose either the rider or the Mount as its target. Additionally, if a model with this special rule hits a Cavalry model that it targeted with a Shooting Attack, it does not need to make the In The Way Test to see which part of the model it hits - it will automatically hit the part of the model it targeted, either rider or Mount."
+      },
+      {
+        "name": "Shieldwall",
+        "tag": "Active",
+        "definition": "If this model is carrying a shield, then whilst it is in base contact with two or more other friendly models who also have this special rule and are carrying a shield, then this model receives an additional +1 bonus to its Defence. In Combat, this bonus is calculated before the model Backs Away.\n                Models that are Prone or have the Cavalry keyword cannot benefit from, or provide an ally with the benefit from, this special rule."
+      },
+      {
+        "name": "Spectral Walk",
+        "tag": "Passive",
+        "definition": "A model with this special rule is never slowed by Difficult Terrain. Additionally, a model with this special rule always counts as rolling a 6 for any Climb, Jump, Leap or Swim Tests. This special rule may be used by models that are not yet on the battlefield."
+      },
+      {
+        "name": "Stalk Unseen",
+        "tag": "Passive",
+        "definition": "An Infantry model with this special rule that is partially concealed from view by a piece of terrain cannot be seen at distances of more than 6\". This means that enemy models cannot target this model with Shooting Attacks, Magical Powers, special rules, or anything else that requires Line of Sight unless they have a completely clear view of this model."
+      },
+      {
+        "name": "Survival Instinct",
+        "tag": "Active",
+        "definition": "Every time a model with this special rule suffers a Wound that is not prevented, it must take a Courage Test. If the Courage Test is failed, the model flees and is removed from the board as a casualty. This is an exception to taking multiple Courage Tests of the same type in the same turn."
+      },
+      {
+        "name": "Swift Movement",
+        "tag": "Active",
+        "definition": "A model with this special rule is never slowed by Difficult Terrain, with the exception of water features. It can also ignore Obstacles as it Moves, allowing it to Move at any angle without having to make a Climb or Jump Test, though it will still count any vertical distance it has Moved towards its Move Value.\n                A model with this special rule must finish its Move as flat to the playing surface as possible - no models finishing upside down, halfway up a wall, or at an angle, for example! This special rule may be used by models that are not yet on the battlefield."
+      },
+      {
+        "name": "Sworn Protector (X)",
+        "tag": "Active",
+        "definition": "Whilst Durin is alive and on the battlefield, this model passes all Courage tests."
+      },
+      {
+        "name": "Terror",
+        "tag": "Passive",
+        "definition": "If a model wishes to Charge a model with this special rule, then it must take a Courage Test at the start of its Move. If the test is passed, the model may Charge as normal. If the test is failed, the model cannot Move that turn, but may otherwise act normally.\n                Sometimes a situation may open up the chance for a model to Charge a model with Terror part way through their Move, such as moving a different model with magic or killing something in the way with a throwing weapon. In such instances, the model only needs to take the Courage Test at the point in which the Terror causing model becomes possible to Charge. If a model making a Jump, Climb or Leap Test finishes within the Control Zone of an enemy with Terror and would normally be able to Charge, they will take their Courage Test after they have made their Jump, Climb or Leap Test.\n                Sometimes, a model may only cause Terror In certain enemies. In these Instances, a keyword will follow Terror in brackets, and only models with that keyword will need to take a Courage Test to Charge the model. So, a model with Terror (Orc) will only cause Terror In Orc models,"
+      },
+      {
+        "name": "Throw Stones (range X\", Strength X)",
+        "tag": "Active",
+        "definition": "If this model does not Move during the Move Phase, it may make a Shooting Attack during the following Shoot Phase. The Strength and range of this Shooting Attack will be shown in the model's profile."
+      },
+      {
+        "name": "Timid",
+        "tag": "Passive",
+        "definition": "If a Mount has this special rule, then every time it wishes to Charge an enemy model it must take a Courage Test. It may use its rider's Courage Value, but may never benefit from special rules or Magical Powers that would allow it to automatically pass a Courage Test. If the test is failed. the model cannot Move that turn but may otherwise act normally. A model with this special rule gains no Cavalry Charge bonuses."
+      },
+      {
+        "name": "Venom",
+        "tag": "Active",
+        "definition": "This model must re-roll all failed To Wound Rolls when making Strikes. Additionally, at the end of a Combat involving this model, choose one enemy model that was wounded by this model but not slain and roll a D6. On a natural 6, the model suffers an additional Wound."
+      },
+      {
+        "name": "Will of Evil",
+        "tag": "Passive",
+        "definition": "This model must give up 1 Will Point during the End Phase if it has been involved in one or more Combats that turn; if it is in base contact with an enemy model, it is involved in that Combat - it cannot choose not to fight! Should this model be reduced to O Will Points, it is immediately banished and removed as a casualty. A model with this special rule cannot use their last Will Point to Cast a Magical Power or use a special rule if by doing so they would be reduced to O Will Points. Additionally, this model ignores the Invisible special rule and, if it was involved in a Combat with an Invisible model that turn, does not give up a Will Point during the End Phase."
+      },
+      {
+        "name": "Woodland Creature",
+        "tag": "Active",
+        "definition": "A model with this special rule may Move through woods and forests that are classed as Difficult Terrain as if they are Open Ground. If a Cavalry model has this special rule, but their Mount does not, then this rule does not apply to the Mount. If a Mount has this special rule, then they will still gain their Cavalry Charge bonuses when they Charge, even if the rider does not have this special rule. This special rule may be used by models that are not yet on the battlefield."
+      },
+      {
+        "name": "Bodyguard (Ioreth)",
+        "tag": "Passive",
+        "definition": "As Bodyguard, with Ioreth as the named model."
+      },
+      {
+        "name": "Dominant (2)",
+        "tag": "Passive",
+        "definition": "As Dominant (X), with a value of 2."
+      },
+      {
+        "name": "Dominant (4)",
+        "tag": "Passive",
+        "definition": "As Dominant (X), with a value of 4."
+      },
+      {
+        "name": "Hatred (Man)",
+        "tag": "Passive",
+        "definition": "As Hatred (X), with Man as the listed keyword."
+      },
+      {
+        "name": "Hatred (Mordor)",
+        "tag": "Passive",
+        "definition": "As Hatred (X), with Mordor as the listed keyword."
+      },
+      {
+        "name": "Sworn Protector (Dirhael)",
+        "tag": "Passive",
+        "definition": "As Sworn Protector (X), with Dirhael as the named model."
+      },
+      {
+        "name": "Sworn Protector (Ioreth)",
+        "tag": "Passive",
+        "definition": "As Sworn Protector (X), with Ioreth as the named model."
+      },
+      {
+        "name": "Sworn Protector (Marwen)",
+        "tag": "Passive",
+        "definition": "As Sworn Protector (X), with Marwen as the named model."
+      },
+      {
+        "name": "Sworn Protector (Ratbag)",
+        "tag": "Active",
+        "definition": "Whilst Durin is alive and on the battlefield, this model passes all Courage tests."
+      },
+      {
+        "name": "Lunge Deep, Cut Deeper",
+        "tag": "Active",
+        "definition": "If Talion is within 6\" of the enemy General at the start of the Fight Phase, he may call a Heroic Combat for free. If he is in base contact with the enemy General at the start of the Fight Phase, his Strikes Wound on a 4+ regardless of any other modifiers."
+      },
+      {
+        "name": "\"Remember your training!\"",
+        "tag": "Active",
+        "definition": "At the beginning of the Fight Phase, if Talion is Engaged in a Fight, friendly Gondor models within 3\" treat Talion as a banner."
+      },
+      {
+        "name": "Healer's Touch",
+        "tag": "Active",
+        "definition": "At any point during her Activation in the Move Phase, Ioreth can choose a friendly Gondor Hero in base contact and roll a D6. On a 4+, the chosen model immediately regains a Wound lost earlier in the battle. Ioreth can only use this special rule once per turn."
+      },
+      {
+        "name": "Innocent Courage",
+        "tag": "Active",
+        "definition": "Dirhael gains +1 Attack if he is within 6\" of Talion."
+      },
+      {
+        "name": "Martial Discipline",
+        "tag": "Active",
+        "definition": "If Hallas is involved in a drawn Combat in which there is at least one enemy model with the Mordor keyword, he will only lose the Combat on a roll of a 1."
+      },
+      {
+        "name": "Leader of the Watch",
+        "tag": "Active",
+        "definition": "Gondor Hero models may also benefit from Hallas' Stand Fast."
+      },
+      {
+        "name": "Reconnaissance Expert",
+        "tag": "Active",
+        "definition": "After rolling for Priority on the first turn, Hirgon and his warband may move up to 6\", exactly as if he had called a With Me. This cannot be used to enter enemy Control Zones. Additionally, in Scenarios where you roll for warbands to arrive, you may modify the roll for Hirgon's Warband by +1 or -1, even if he is not on the battlefield."
+      },
+      {
+        "name": "Bound by Saruman",
+        "tag": "Passive",
+        "definition": "Whilst Saruman is within 6\" of Marwen, Marwen reduces her Fight Value to 3, cannot declare Heroic Actions, and cannot spend Will Points."
+      },
+      {
+        "name": "Leader of the Tribe",
+        "tag": "Passive",
+        "definition": "Friendly Nûrn models within 6\" of Lithariel gain +1 to Courage Tests they are required to take and treat her as a Banner."
+      },
+      {
+        "name": "Defend the stone, at all costs",
+        "tag": "Passive",
+        "definition": "If Castamir is carrying the Ithil Stone he may re-roll his Intelligence Test when modifying the Priority Roll. Additionally, while he is carrying the Ithil Stone he gains a free Might Point per turn. If this free Might Point has not been spent by the end of the turn, it is lost."
+      },
+      {
+        "name": "Bound by blood",
+        "tag": "Passive",
+        "definition": "Whilst within 6\" of Castamir, if Castamir calls a Heroic Move, Heroic Shoot or Heroic Combat, then Idril may also use the same Heroic Action for free."
+      },
+      {
+        "name": "Fight another Day",
+        "definition": "At the beginning of a Combat he is involved in, that includes one or more other friendly models, this model must take a courage test. If the test is passed he may immediately back away 1\". If he is unable to do so he gains +1 to wound and the Survival Instinct Special Rule until the end of the turn."
+      },
+      {
+        "name": "Dishonourable Saviour",
+        "definition": "If Ratbag is included in your army, Ranger must be deployed in Ratbag's Warband. Ranger counts Ratbag as a banner with a range of 6\". However, Ranger can never be part of a heroic actions called by Ratbag and Ratbag can never be part of a heroic actions called by Ranger."
+      },
+      {
+        "name": "“Snaga-Uruk”",
+        "definition": "At the beginning of a Combat that both Ranger and Ratbag are involved in, if Ratbag backs away due to his Fight Another Day Special Rule then Ranger gains Mighty Blow until the end of that combat."
+      },
+      {
+        "name": "Galadriel's Assassin",
+        "definition": ""
+      },
+      {
+        "name": "Celebrimbor's Intervention",
+        "tag": "Active",
+        "definition": "Once per turn, Talion may declare either a Heroic Move, Heroic Shoot or Heroic Combat for free. No other models are affected by Heroic Actions called in this way. If he calls a Heroic Move while he has the Infantry keyword, his Move Value is increased to 8\" and he gains Spectral Walk until the end of the turn. If he calls a Heroic Shoot, for the duration of the next Shoot Phase he gains Expert Shot and his bow is replaced with Azkar, a Unique Elf bow with Blades of the Dead. If he calls a Heroic Combat, for the duration of the next Fight Phase Urfael and Acharn are replaced with the Forge Hammer, a Unique Elven hand weapon with Blades of the Dead, and Talion may re-roll failed To Wound rolls."
+      },
+      {
+        "name": "Wraith Resurrection",
+        "tag": "Active",
+        "definition": "Each time Talion would lose his last Wound and before being removed as a casualty, roll a D6. On a 4+, he remains on the board with 1 Wound remaining. If he suffers multiple Wounds in a Combat that would remove him as a casualty, make this roll for each of them. Talion may use Might to improve this roll."
+      },
+      {
+        "name": "Master of Illusions",
+        "tag": "Active",
+        "definition": "Whenever The Tower of Sauron suffers a Wound, roll a D6. On a 5+, the Wound is ignored exactly as if a Fate Point had been spent. Whenever a Wound is ignored in this way, The Tower may immediately Move up to 3\". This additional Move cannot be used to Charge. It ignores Control Zones but cannot finish on Impassable Terrain. Any remaining Wounds caused during this Phase upon The Tower of Sauron are ignored."
+      },
+      {
+        "name": "Swarm Leader",
+        "tag": "Active",
+        "definition": "If the Ghûl Matron is involved in a Fight that includes at least two other friendly Ghûl models, she may call a Heroic Combat without spending Might."
+      },
+      {
+        "name": "Pack Hunter",
+        "tag": "Passive",
+        "definition": "At the start of the Move Phase, if a Ghûl model is in base contact with two or more friendly Ghûl models, its Move Value increases to 8\" until the end of that Phase."
+      },
+      {
+        "name": "Pack Instinct",
+        "tag": "Active",
+        "definition": "In a Fight where a Ghûl has at least one other friendly Ghûl model in the Fight against the same model, it gains +1 Fight Value for the duration of the Combat."
+      },
+      {
+        "name": "Tribes of the Orcs",
+        "tag": "Passive",
+        "definition": "Each Hero and Warrior profile in this Army shows its Tribe in its profile name. All Warrior models included as Followers in a Hero's Warband must belong to the same Tribe as that Hero; the army builder restricts the Warrior list accordingly. Tribe-specific Warrior benefits, altered points costs and wargear options are built directly into those Warrior profiles. Hero bonuses are cumulative by tier: a Warchief also gains its Tribe's Captain rule, and an Overlord gains its Tribe's Captain, Warchief and Overlord rules."
+      },
+      {
+        "name": "Unruly Strength",
+        "tag": "Active",
+        "definition": "At the beginning of its Activation in the Move Phase, a Caragor model must take an Intelligence Test. If the test is failed, the model gains Fearless until the end of the Move Phase and must then Move towards and, if possible, Charge the closest enemy model. Additionally, in any turn in which a Caragor Charges it gains +1 Fight."
+      },
+      {
+        "name": "Talion's Family",
+        "tag": "Active",
+        "definition": "Talion's Family is made up of Ioreth and Dirhael and counts as two models. It may only be included if the Army also includes Talion, Captain of the Watch. If a member of Talion's Family is slain, note the model that killed them. For the remainder of the game, whenever Talion Activates, if he can Charge an enemy model then he must do so; if he can Charge a model that killed a member of his family, he must prioritise that model."
+      },
+      {
+        "name": "Rally the people",
+        "tag": "Active",
+        "definition": "At the beginning of Eryn's Activation in the Move Phase, she may expend a Will Point. Choose one friendly Gondor Hero within 3\"; they immediately regain one Might Point spent earlier in the battle."
+      },
+      {
+        "name": "Against our enemies",
+        "tag": "Active",
+        "definition": "While Hirgon is alive and on the battlefield, Eryn gains the Fearless special rule."
+      },
+      {
+        "name": "Fight Another Day",
+        "tag": "Active",
+        "definition": "At the beginning of a Combat Ratbag is involved in that includes one or more other friendly models, Ratbag must take a Courage Test. If passed, he may immediately Back Away 1\". If he chooses not to, or is unable to do so, he gains +1 To Wound and the Survival Instinct special rule until the end of the turn."
+      },
+      {
+        "name": "The Precious",
+        "tag": "Active",
+        "definition": "If your opponent's Army contains a Ringbearer, then when Gollum Moves he must always Charge the enemy Ringbearer if possible. Additionally, if Gollum kills the enemy Ringbearer in Combat, he automatically regains the One Ring and counts as having it as part of his Wargear from that point onwards."
+      },
+      {
+        "name": "Ancient Enemies (Mordor)",
+        "tag": "Passive",
+        "definition": "As Ancient Enemies (X), with Mordor as the listed keyword."
+      },
+      {
+        "name": "Venom (Orc, Uruk-hai)",
+        "tag": "Passive",
+        "definition": "Venom applies against Orc and Uruk-hai models."
+      },
+      {
+        "name": "Dominant (3)",
+        "tag": "Passive",
+        "definition": "As Dominant (X), with a value of 3."
+      },
+      {
+        "name": "Dominant (5)",
+        "tag": "Passive",
+        "definition": "As Dominant (X), with a value of 5."
+      },
+      {
+        "name": "Siege Ladder",
+        "definition": "A Siege Ladder is a Heavy Object, however, it is not mounted on a 25mm base and will simply use the template of the model when carried. If it is not being carried, a Siege Ladder can be shot at and attacked as normal; it counts as having a Defence of 8 and 2 Wounds. If any model that is carrying a Siege Ladder Moves into base contact with the walls of the fortress, the Siege Ladder is immediately raised; place it in position against the wall. Models may Move up a Siege Ladder in the same way as a normal ladder."
+      },
+      {
+        "name": "Rocks",
+        "definition": "A pile of Rocks is represented by a 25mm base and is a Light Object. A defending model in base contact with the Rocks and in base contact with the battlements can make a Shooting Attack with them during the Shoot Phase. This Shooting Attack can only target enemy models within 1\" of the walls, or climbing a Siege Ladder, and has a range of 8\". A model making a Shooting Attack with a rock treats their Shoot Value as 4+ regardless of its actual value. Any model hit by a rock suffers one Strength 6 hit. A model climbing a Siege Ladder that is hit must roll a D6, and on a 1-3 they will fall off and suffer Falling Damage."
+      },
+      {
+        "name": "Boiling Oil",
+        "definition": "A vat of Boiling Oil is a Heavy Object and is represented by a 40mm base. If two defending models are in base contact with the Boiling Oil, and are not Engaged in Combat, they can pour it on an attacker as a Shooting Attack. This Shooting Attack can only target enemy models within 1\" of the walls, or climbing a Siege Ladder, and has a range of 8\". Models making a Shooting Attack with Boiling Oil treat their Shoot Value as 4+ regardless of its actual value. Any model hit by Boiling Oil suffers one Strength 8 hit, and any model (friend or foe) within 2\" of the target suffers one Strength 4 hit. A model climbing a Siege Ladder that is hit must roll a D6, and on a 1-4 they will fall off and suffer Falling Damage. After making a Shooting Attack with Boiling Oil, the defender rolls a D6. On a 1, the supply of oil has run dry and that vat of Boiling Oil cannot be used for the remainder of the game."
+      },
+      {
+        "name": "Barricade",
+        "definition": "A Barricade should be no more than 3\" in length, 1\" in width and 1\" in height. A Barricade can be defended in the same way as a Barrier (see page 54), and can be Jumped over in the same way as an Obstacle. A Barricade has a Defence of 7 and 2 Wounds."
+      },
+      {
+        "name": "Spiked Barricade",
+        "definition": "A Spiked Barricade follows all the rules for a regular Barricade, with the following additions: Any model that attempts to Jump over a Spiked Barricade will suffer one Strength 3 hit after resolving their Jump Test, unless they rolled a 6. Any model that is fighting across a Spiked Barricade and accidentally Strikes it instead of their opponent immediately suffers one Strength 3 hit."
+      },
+      {
+        "name": "Rallying Point",
+        "definition": "A Rallying Point is represented by a 25mm base. Models may Move over a Rallying Point but cannot finish their Move overlapping it. Defending models treat a Rallying Point as a banner. Additionally, defending models within 6\" of a Rallying Point apply a +1 modifier to any Courage Tests they are required to take. If, during the End Phase of a turn, an enemy model is in base contact with a Rallying Point, that model hasn't done anything during that turn except Move (i.e., has not made a Shooting Attack, Cast a Magical Power, been Engaged in Combat), and that model was not affected by a Magical Power that turn, then it can destroy the Rallying Point – remove it from play."
+      },
+      {
+        "name": "Siege Tower",
+        "definition": "A Siege Tower should be tall enough for the ramp to reach the battlements of the fortress when lowered and should be no more than 4\" wide across the ramp. Infantry models may be deployed within or on top of a Siege Tower, with the exception of Monster models. A Siege Tower can be pushed by friendly models, and will Move 6\" when they do so. It requires six Infantry models to push a Siege Tower, with an additional Infantry model required for each model in or on the Siege Tower. Monster models count as six models for the purpose of pushing a Siege Tower. To count as pushing a Siege Tower, a model must be in base contact with either the rear or side of the Siege Tower, or in base contact with another model that is pushing from the rear. If a Siege Tower moves into base contact with the fortress in the Move Phase, then the ramp is immediately lowered. Models in the Siege Tower do not count as Moving whilst the Siege Tower is being pushed, unless they specifically Move within it. A Siege Tower can be shot at or attacked normally, has a Defence of 10 and 4 Wounds, and is a Battlefield Target. If a siege tower would be destroyed, all models in or on it will suffer Falling Damage."
+      },
+      {
+        "name": "Battering Ram",
+        "definition": "A Battering Ram is a Heavy Object, however, it is not mounted on a 25mm base and will simply use the template of the model when carried. If it is not being carried, a Battering Ram can be shot and attacked as normal; it counts as having a Defence of 8 and 3 Wounds. A Battering Ram must always have a minimum of two models carrying it, otherwise it cannot be carried. To use a Battering Ram, it must be in base contact with a door or gate at the start of the Fight Phase. After any Heroic Combats have been resolved, but before any other Combats are resolved, a Battering Ram can be used against the doors or gates. It will automatically hit its target, and will make a single Strike against it. Note that as a door or gate is always considered Trapped, the Battering Ram will make two rolls To Wound as a result. The Strength of the Battering Ram is equal to the Strength of the strongest model helping to carry it, +1 for each additional model carrying it, to a maximum of 10. If a Battering Ram would have a Strength of higher than 10, then it may re-roll any failed To Wound Rolls."
+      },
+      {
+        "name": "Queen of Nûrn",
+        "tag": "Active",
+        "definition": "At the start of the Fight Phase, Marwen may spend a point of Will. If she does, friendly Nûrn models within 12\" gain +1 Fight and may re-roll failed To Wound Rolls of a natural 1 until the end of that Fight Phase."
+      },
+      {
+        "name": "Expert Hunter",
+        "tag": "Passive",
+        "definition": "If this model has not moved in the Move Phase, it may re-roll failed To Hit Rolls of a natural 1 when making a Shooting Attack."
+      },
+      {
+        "name": "Master Hunter",
+        "tag": "Passive",
+        "definition": "If this model has not moved in the Move Phase, this model may call a Heroic Shoot without expending a Might Point."
+      },
+      {
+        "name": "Entangling Throw",
+        "tag": "Active",
+        "definition": "If this model is Charged by a Cavalry model whose Mount is Strength 5 or lower, roll a D6. On a 4+, that model is Knocked Prone."
+      },
+      {
+        "name": "Scavenge",
+        "tag": "Active",
+        "definition": "Whenever this model slays an enemy model in Combat, with the exception of Monster models, it may choose to scavenge a single piece of wargear carried by that model, with the exception of a Mount, living creatures, the One Ring, items of wargear integral to the model such as claws and teeth, and Unique items. This happens before any effects that allow the slain model to pass on that piece of wargear. Add the scavenged item to this model's wargear; this model then benefits from it as if it were the original model. This model may discard any piece of scavenged wargear at any time. If it does so, it cannot reclaim it."
+      },
+      {
+        "name": "Salt in the Blood",
+        "tag": "Active",
+        "definition": "At the start of the Move Phase, nominate one friendly Nûrn Hero model. Until the end of the turn, that model and all friendly Nûrn Warrior models within 3\" gain the current-turn effect: Turn 1 — Approaching Tide: +3\" Move during the Move Phase; this cannot be increased by Heroic March. Turn 2 — Cast the Nets: models with Entangling Throw may also affect Infantry models with Strength 5 or less. Turn 3 — Pull Together: models may use throwing spears as a normal spear during the Fight Phase if they have not made a Shooting Attack with it in the preceding Move or Shoot Phase. Turn 4 — Close the Traps: +1 to Duel Rolls when fighting an enemy that is Trapped. Turn 5 onwards — Break the Tide: models gain Dominant (2)."
+      },
+      {
+        "name": "Break the Chains",
+        "tag": "Active",
+        "definition": "At the start of the game, after both sides have deployed, place 3 Captive Markers on the battlefield. In Scenarios using standard deployment zones, each must be wholly within 12\" of the enemy board edge and more than 6\" from any board-edge corner. In Maelstrom of Battle deployment, they must instead be wholly within 12\" of the centre. Each Captive Marker must be more than 6\" from any other Captive Marker. If a friendly Nûrn Infantry model is in base contact with a Captive Marker at the end of the turn, roll a D6; on a 4+, immediately place D3 Liberated Captive models within 3\" of the marker and not within 1\" of enemy models, then remove the Marker. These models do not count towards the Army's Break Point."
+      },
+      {
+        "name": "Hatred (Uruk-hai)",
+        "tag": "Passive",
+        "definition": "As Hatred (X), with Uruk-hai as the listed keyword."
+      },
+      {
+        "name": "Arcing Shot",
+        "definition": "A Siege Engine that Shoots by Arcing Shot does not need Line of Sight to its target, or to a model its shot would scatter on to, so long as another friendly model has Line of Sight to the initial target. After determining the actual target, a Siege Engine with Arcing Shot does not make In The Way Tests for intervening models and terrain (the shot goes over them). However, anything that is clearly taller than the actual target and would be above the actual target when the shot comes down will incur an In The Way Test. This could include the likes of trees, ledges, or rocks that jut out from cliff faces; a degree of common sense will be needed here - a whole tree would provide this In The Way, but a single branch would not!\n                This is also the case for when a Siege Engine with Arcing Shot hits a War Beast with a Howdah, as the Howdah is above the War Beast and so will provide an In The Way Test"
+      },
+      {
+        "name": "Static",
+        "definition": "If a Siege Engine has the Static special rule, then it cannot be Moved or rotated."
+      },
+      {
+        "name": "Area Effect",
+        "tag": "Active",
+        "definition": "After rolling To Hit against hte actual target, if the actual target was a Battlefield Target then all other models within 2\" of the actual target suffer a Strength 5 hit and, if they survive, will be knocked Prone."
+      },
+      {
+        "name": "Wall-breaker",
+        "tag": "Active",
+        "definition": "When rolling To Wound against a Siege Target, this model makes 2 To-Wound Rolls and picks the highest. Additionally, a successful To Wound Roll against a Siege Target will do D3 Wounds rather than 1."
+      },
+      {
+        "name": "Haradrim Training",
+        "tag": "Passive",
+        "definition": "This model gains +2 to its Courage Test when attempting to Charge a model with the Terror special rule."
+      },
+      {
+        "name": "Guardians of the Ithil Stone",
+        "tag": "Active",
+        "definition": "This model gains the Bodyguard special rule for any friendly Gondor Hero that is in possession of the Ithil Stone. Additionally, while this model is within 3\" of the Ithil Stone, it increases its Attacks to 2."
+      },
+      {
+        "name": "The Ithil Stone",
+        "tag": "Active",
+        "definition": "The Ithil Stone begins carried by the Army's General. If the model carrying the Ithil Stone is a friendly Gondor, non-Spirit Hero model it may use the Ithil Stone while carrying the object. At the end of the game, if a friendly model is carrying this object then this side gains an additional 2 Victory Points; if an enemy model is carrying this object then your opponent gains 1 Victory Point. In either instance this can never take an Army's total above 20."
+      },
+      {
+        "name": "Weather the siege",
+        "tag": "Passive",
+        "definition": "Friendly Warrior models in this Army treat Unique Gondor Hero models as banners with a range of 3\". If this Army is Broken, this range is increased to 6\" and friendly Gondor Warrior models also gain +1 Fight."
+      },
+      {
+        "name": "Hatred (Orc, Uruk-hai)",
+        "tag": "Passive",
+        "definition": "As Hatred (X), with Orc and Uruk-hai as the listed keywords."
+      },
+      {
+        "name": "Leader (Ithil Stone Guard)",
+        "tag": "Passive",
+        "definition": "As Leader (X), with Ithil Stone Guard as the listed model."
+      },
+      {
+        "name": "Bodyguard (Castamir)",
+        "tag": "Passive",
+        "definition": "As Bodyguard, with Castamir as the named model."
+      },
+      {
+        "name": "Poisoned Attacks (throwing weapon)",
+        "tag": "Passive",
+        "definition": "Poisoned Attacks applies to this model's throwing weapon."
+      },
+      {
+        "name": "\"I am one, but we are many\"",
+        "tag": "Active",
+        "definition": "Before deployment, you may nominate a single Orc, Uruk-hai or Olog-hai Infantry Hero model in Talion's Army to be kept in reserve instead of deploying normally. If the chosen Hero is a Leader for a Warband, choose one other model in that Warband to act as its Leader. At the start of Talion's Activation during the Move Phase, Talion may summon the reserved Hero. Place that Hero wholly within 3\" of Talion and within the Control Zone of an enemy model. The summoned Hero must Activate next."
+      },
+      {
+        "name": "Shattered Dominance",
+        "tag": "Passive",
+        "definition": "If Talion is required to make a Wraith Resurrection roll, then during the following turn, at the start of each other friendly Hero model's Activation in the Move Phase, that Hero must take a Courage Test as though the force were Broken. If there are no other friendly Hero models remaining on the battlefield, then all remaining friendly Warrior models must instead take Courage Tests as though the force were Broken. This special rule does not affect Ratbag."
+      },
+      {
+        "name": "Aura of Dread",
+        "tag": "Passive",
+        "definition": "Enemy models that are part of a Fight involving The Black Hand of Sauron can only re-roll a die in the Duel Roll if the initial die rolled is a natural 1."
+      },
+      {
+        "name": "A Sacrifice of Blood",
+        "tag": "Active",
+        "definition": "Keep track of how many Wounds The Black Hand causes in Combat. Once he has caused two or more Wounds, he may spend Will Points as if they were Fate Points. Once he has caused five or more Wounds, he gains Mighty Blow. Once he has caused eight or more Wounds, he gains Fearless and his Stand Fast is increased to 12\"."
+      },
+      {
+        "name": "Dark Ritual",
+        "tag": "Active",
+        "definition": "At the start of the Fight Phase, The Black Hand may choose to take a Wound, which he may try to save if possible. If he does, he gains +1 Fight Value, Strength and Attacks until the end of the turn. At the end of the Fight Phase, if he killed at least one enemy model in that Phase, he restores a single Will Point lost earlier in the battle. If the Wound caused by this rule would remove his last Wound, he may instead call a free Heroic Combat and gains +2 Fight Value, Strength and Attacks; he is then removed as a casualty at the end of the turn."
+      },
+      {
+        "name": "Relentless Charge",
+        "tag": "Active",
+        "definition": "In a turn in which The Hammer of Sauron has Charged, he increases his Attacks to 3 until the end of the turn."
+      },
+      {
+        "name": "\"Bring me that head!\"",
+        "tag": "Active",
+        "definition": "At the beginning of The Hammer of Sauron's Activation in the Move Phase, choose one enemy Hero within 6\". If that model is removed as a casualty in the Fight Phase, all friendly models that were in that Fight will Move exactly as if they had won a Heroic Combat."
+      },
+      {
+        "name": "\"The Warchiefs did NOTHING to prevent this sacrilege?!\"",
+        "tag": "Active",
+        "definition": "At the start of his Activation, The Hammer of Sauron may kill a friendly Orc Infantry model within 2\"; remove that model as a casualty. All friendly models within 6\" of The Hammer gain Fearless until the end of the turn. If the model killed is a Hero, all friendly models also gain +1 To Wound when making Strikes until the end of the turn."
+      },
+      {
+        "name": "\"I can see through your tricks\"",
+        "tag": "Passive",
+        "definition": "If an enemy model with the Stalk Unseen or Invisible special rule is within 12\" of The Tower of Sauron, all friendly models within 6\" of The Tower gain Fell Sight."
+      },
+      {
+        "name": "Illusion of strength",
+        "tag": "Active",
+        "definition": "At the start of any Fight Phase, The Tower of Sauron may take an Intelligence Test. If passed, choose one friendly model within 6\". That model may choose to increase its Fight Value, Strength or Attacks to the same as The Tower of Sauron's until the end of the turn."
+      },
+      {
+        "name": "Marked by The Hand",
+        "tag": "Passive",
+        "definition": "While The Black Hand of Sauron is alive and on the battlefield, Uruk-hai Warchief models in this Army gain Fearless."
+      },
+      {
+        "name": "The Talons of the Hand",
+        "tag": "Active",
+        "definition": "Up to five Uruk-hai Warchief models, chosen before deployment, gain the following: while this model is alive and on the battlefield, your opponent cannot score any Victory Points for Wounding or slaying your General."
+      },
+      {
+        "name": "Harbinger of Evil (6\")",
+        "tag": "Passive",
+        "definition": "As Harbinger of Evil (X), with a range of 6\"."
+      },
+      {
+        "name": "Immovable Object",
+        "tag": "Passive",
+        "definition": "Graug models can never be Knocked Prone for any reason, cannot be Hurled or Barged. Additionally, a Graug will never Back Away if it loses a Combat; its opponents must Back Away instead. The only exception is if a Graug is fighting a model with a similar special rule that has a higher Strength, in which case the Graug Backs Away as normal. A Graug only counts as Trapped if the combined Strength of all enemy models in base contact is greater than the Graug's Strength."
+      },
+      {
+        "name": "Relentless Advance",
+        "tag": "Active",
+        "definition": "This model may Move through friendly non-Monster models when it Charges an enemy model, though not when forced to Move by an enemy Magical Power. Each friendly model Moved through suffers a Strength 5 hit. This model may finish its Move overlapping friendly non-Monster models; any friendly models it finishes overlapping are automatically slain."
+      },
+      {
+        "name": "Sovereign Predator",
+        "tag": "Active",
+        "definition": "The White Graug may allocate any number of its Strikes towards friendly Ghûl models in base contact with itself or in the same Fight. If the White Graug kills a model in this way, it regains one Wound lost earlier in the battle."
+      },
+      {
+        "name": "Ashen Body",
+        "tag": "Passive",
+        "definition": "This model's Attacks are fire-based. Additionally, this model is immune to fire-based attacks."
+      },
+      {
+        "name": "Flame Breath",
+        "tag": "Active",
+        "definition": "This is a fire-based Shooting Attack treated as a bow with a range of 6\". The target suffers a Strength 6 hit; then roll a D6 for the target and each model in base contact with it. On a natural 6, that model is Set Ablaze."
+      },
+      {
+        "name": "Festering Bulk",
+        "tag": "Passive",
+        "definition": "This model gains Poisoned Attacks. Additionally, this model is immune to the effects of Poisoned Attacks and Venom."
+      },
+      {
+        "name": "Toxic spit",
+        "tag": "Active",
+        "definition": "This is a Shooting Attack treated as a bow with a range of 6\". If it hits the target, all models in base contact with the target are also hit. Each model hit suffers a Strength 3 hit. This Shooting Attack has the Venom special rule."
+      },
+      {
+        "name": "Frozen Juggernaut",
+        "tag": "Passive",
+        "definition": "This model gains +1 Defence and +1 Wound. Additionally, this model gains Resistant to Magic."
+      },
+      {
+        "name": "Icy Torrent",
+        "tag": "Active",
+        "definition": "This is a Shooting Attack treated as a bow with a range of 6\". If it hits the target, all models in base contact with the target are also hit. Each model hit suffers a Strength 4 hit. Any model hit reduces its Attacks to 1 until the end of the turn."
+      },
+      {
+        "name": "Many bodies",
+        "tag": "Passive",
+        "definition": "This model may only be Wounded by Shooting Attacks on a natural 6."
+      },
+      {
+        "name": "Aerial hunter",
+        "tag": "Passive",
+        "definition": "This model gains +1 To Wound when making Strikes against models with the Fly special rule."
+      },
+      {
+        "name": "Venomous bite",
+        "tag": "Active",
+        "definition": "If this model rolls a natural 6 To Wound and the target model survives, the target model reduces its Strength by 1."
+      },
+      {
+        "name": "Monsterbane",
+        "tag": "Passive",
+        "definition": "Monsterbane as used by the supplied Caragor profiles."
+      },
+      {
+        "name": "The Most Dominant Species",
+        "tag": "Passive",
+        "definition": "If The White Graug is your General, it gains Harbinger of Evil (12\"). Additionally, it counts as a banner with a range of 6\" and counts as a banner for the purposes of Victory Points."
+      },
+      {
+        "name": "Call of the Hive",
+        "tag": "Passive",
+        "definition": "If this Army does not contain The White Graug, choose one Ghûl Matron to be the Army General. It gains Harbinger of Evil (6\") and General Hunter. Additionally, all Ghûl models within 6\" gain Fearless."
+      },
+      {
+        "name": "Beasts of the Lairs",
+        "tag": "Passive",
+        "definition": "A Warband in this Army that contains at least one Dire Caragor and at least four additional Caragor models does not need a Hero to be its Leader. Instead, choose one Dire Caragor to be the Warband Leader for deployment. Additionally, Caragor models in this Army within 3\" of a Dire Caragor that has passed its Intelligence Test for Unruly Strength may choose whether or not to pass their Intelligence Test."
+      },
+      {
+        "name": "Dominant (6)",
+        "tag": "Passive",
+        "definition": "As Dominant (X), with a value of 6."
+      },
+      {
+        "name": "Tribe Fortress",
+        "tag": "Passive",
+        "definition": "After both sides deploy, place three 25mm Influence Markers. They cannot be placed within an enemy deployment zone, within 6\" of an Objective Marker, within 18\" of another Influence Marker, within 8\" of the centre, within Impassable Terrain, or within an enemy Control Zone. Each marker has Defence 8 and 2 Wounds and may be attacked as a Siege Engine. A marker is Active while a friendly Warchief with the same Tribe keyword as the Dominant Tribe is within 3\". Before Priority, if the Dominant Tribe's Overlord is within 3\" of an Active marker, it may invoke that Tribe's Fortress Ability."
+      },
+      {
+        "name": "Dark Tribe Warrior Training",
+        "tag": "Passive",
+        "definition": "Dark Tribe Orc Warrior and Dark Tribe Uruk-hai Warrior models reduce the cost of their Dual Blades option to 1 point. Dark Tribe Olog-hai models gain Resistant to Poison."
+      },
+      {
+        "name": "Dark Tribe Captain",
+        "tag": "Passive",
+        "definition": "Dark Tribe Hero models of this Heroic Tier and above gain Poisoned Attacks and Resistant to Poison."
+      },
+      {
+        "name": "Dark Tribe Warchief",
+        "tag": "Passive",
+        "definition": "Dark Tribe Hero models of this Heroic Tier or above gain Venom."
+      },
+      {
+        "name": "Dark Tribe Overlord",
+        "tag": "Passive",
+        "definition": "Friendly Dark Tribe Warrior models within 3\" of the Dark Tribe Overlord count as having Poisoned Attacks."
+      },
+      {
+        "name": "Dark Tribe Influence",
+        "tag": "Passive",
+        "definition": "Whilst at least one Influence Marker is Active, friendly Dark Tribe models count as having Stalk Unseen."
+      },
+      {
+        "name": "Shadow Network",
+        "tag": "Passive",
+        "definition": "Until the end of the turn, whenever an enemy model Charges a friendly Dark Tribe model within 6\" of an Active Influence Marker, the charging model immediately suffers one Strength 2 hit with Poisoned Attacks."
+      },
+      {
+        "name": "Feral Tribe Training",
+        "tag": "Passive",
+        "definition": "Feral Tribe Uruk-hai Caragor Riders and Feral Tribe Orc Caragor Riders add Chained Bolas to their options for 2 points. Feral Tribe Orc Hero and Uruk-hai Hero models add Chained Bolas for 5 points."
+      },
+      {
+        "name": "Feral Tribe Captain",
+        "tag": "Passive",
+        "definition": "Feral Tribe Hero models of this Heroic Tier and above may include Caragor models as Followers in their Warband, even if those models are not listed in the same Army List."
+      },
+      {
+        "name": "Feral Tribe Warchief",
+        "tag": "Passive",
+        "definition": "Friendly Caragor models within 6\" of a Feral Tribe Hero model of this Heroic Tier or above may re-roll failed Intelligence Tests."
+      },
+      {
+        "name": "Feral Tribe Overlord",
+        "tag": "Passive",
+        "definition": "The Feral Tribe Overlord may include a single Graug model as a Follower in its Warband, even if that model is not listed in the same Army List."
+      },
+      {
+        "name": "Feral Tribe Influence",
+        "tag": "Passive",
+        "definition": "Whilst at least one Influence Marker is Active, friendly Feral Tribe Mount and Beast models increase their Move Value by 2\"."
+      },
+      {
+        "name": "Beast Cages",
+        "tag": "Passive",
+        "definition": "Immediately place a Caragor beside each Active Influence Marker. These Caragors are Reinforcements, may not Charge that turn, and do not count towards the Army's Break Point."
+      },
+      {
+        "name": "Machine Tribe Training",
+        "tag": "Passive",
+        "definition": "Machine Tribe Orc Warrior and Machine Tribe Uruk-hai Warrior models add Machine Hook to their options for 2 points. Machine Tribe Orc Hero and Uruk-hai Hero models add Twin Hand-crossbows to their options for 5 points."
+      },
+      {
+        "name": "Machine Tribe Captain",
+        "tag": "Passive",
+        "definition": "Shooting Attacks made by Machine Tribe Orc and Uruk-hai Hero models of this Heroic Tier and above gain Grappling Shot."
+      },
+      {
+        "name": "Machine Tribe Warchief",
+        "tag": "Passive",
+        "definition": "Machine Tribe Olog-hai Hero models of this Heroic Tier or above add Olog-hai Flamethrower to their options for 40 points."
+      },
+      {
+        "name": "Machine Tribe Overlord",
+        "tag": "Passive",
+        "definition": "Friendly Machine Tribe models within 6\" of the Machine Tribe Overlord may re-roll a single failed To Wound Roll when making a Shooting Attack with a Throwing Weapon."
+      },
+      {
+        "name": "Machine Tribe Influence",
+        "tag": "Passive",
+        "definition": "Friendly Machine Tribe models within 3\" of an Active Influence Marker add 2\" to the Range of their Shooting Attacks."
+      },
+      {
+        "name": "Ammunition Stores",
+        "tag": "Passive",
+        "definition": "Until the end of the turn, increase the Strength characteristic of all Shooting Attacks made by friendly Machine Tribe models by 1."
+      },
+      {
+        "name": "Marauder Tribe Training",
+        "tag": "Passive",
+        "definition": "Marauder Tribe Infantry models gain Scavenge. Marauder Tribe Olog-hai models gain Burly while in a Fight that includes two or more enemy models."
+      },
+      {
+        "name": "Marauder Tribe Captain",
+        "tag": "Passive",
+        "definition": "Marauder Tribe Hero models of this Heroic Tier or above gain +1 Fight Value if equipped with a piece of Scavenged Wargear."
+      },
+      {
+        "name": "Marauder Tribe Warchief",
+        "tag": "Passive",
+        "definition": "Marauder Tribe Hero models of this Heroic Tier or above gain Burly."
+      },
+      {
+        "name": "Marauder Tribe Overlord",
+        "tag": "Passive",
+        "definition": "The Marauder Tribe Overlord gains +1 Fight Value and +1 Strength when fighting a model with a higher Fight Value or Strength than its own."
+      },
+      {
+        "name": "Marauder Tribe Influence",
+        "tag": "Passive",
+        "definition": "Whilst at least one Influence Marker is Active, friendly Marauder Tribe models gain Dominant (2) if equipped with a piece of Scavenged Wargear."
+      },
+      {
+        "name": "Spoils of War",
+        "tag": "Passive",
+        "definition": "Until the end of the turn, friendly Marauder Tribe models with one or more pieces of Scavenged Wargear gain +1 Attack."
+      },
+      {
+        "name": "Mystic Tribe Training",
+        "tag": "Passive",
+        "definition": "Mystic Tribe Orc Warrior and Mystic Tribe Uruk-hai Warrior models reduce the cost of their Dual Blades option to 1 point. Mystic Tribe Olog-hai models gain Resistant to Magic."
+      },
+      {
+        "name": "Mystic Tribe Captain",
+        "tag": "Passive",
+        "definition": "Mystic Tribe Hero models of this Heroic Tier and above gain Fury (X), where X is the Race of the caster. It targets the caster and is cast on a 5+."
+      },
+      {
+        "name": "Mystic Tribe Warchief",
+        "tag": "Passive",
+        "definition": "Mystic Tribe Hero models of this Heroic Tier or above add Morgul Blade to their options for 5 points and gain Instil Fear, targeting the caster and cast on a 5+."
+      },
+      {
+        "name": "Mystic Tribe Overlord",
+        "tag": "Passive",
+        "definition": "Friendly Mystic Tribe Warrior models within 3\" of the Mystic Tribe Overlord count as having Blades of the Dead."
+      },
+      {
+        "name": "Mystic Tribe Influence",
+        "tag": "Passive",
+        "definition": "Whilst at least one Influence Marker is Active, friendly Mystic Tribe models count as having Resistant to Magic."
+      },
+      {
+        "name": "Mystic Ritual",
+        "tag": "Passive",
+        "definition": "Until the end of the turn, each time a friendly Mystic Tribe model makes a Casting Roll or Resist Test, it may change the result of one die to a 5."
+      },
+      {
+        "name": "Outlaw Tribe Training",
+        "tag": "Passive",
+        "definition": "Outlaw Tribe Orc Warrior and Outlaw Tribe Uruk-hai Warrior models add Chained Bolas to their options for 2 points. Outlaw Tribe Olog-hai models increase their Courage and Intelligence by 1."
+      },
+      {
+        "name": "Outlaw Tribe Captain",
+        "tag": "Passive",
+        "definition": "Outlaw Tribe Hero models of this Heroic Tier and above always win a Drawn Combat if the enemy model is Prone."
+      },
+      {
+        "name": "Outlaw Tribe Warchief",
+        "tag": "Passive",
+        "definition": "Outlaw Tribe Hero models of this Heroic Tier or above never worsen their Shoot Value when Moving and Shooting with a Throwing Weapon."
+      },
+      {
+        "name": "Outlaw Tribe Overlord",
+        "tag": "Passive",
+        "definition": "The Stand Fast of the Outlaw Tribe Overlord affects all friendly Outlaw Tribe models within range."
+      },
+      {
+        "name": "Outlaw Tribe Influence",
+        "tag": "Passive",
+        "definition": "Whilst at least one Influence Marker is Active, friendly Outlaw Tribe models may re-roll a single die in the Duel Roll when in a Fight with a Prone model."
+      },
+      {
+        "name": "Hidden Snares",
+        "tag": "Passive",
+        "definition": "At the end of the Move Phase, roll a D6 for any enemy model on a 25mm base that is Engaged in Combat with a friendly Outlaw Tribe model. On a 4+, that model is Knocked Prone."
+      },
+      {
+        "name": "Slaughter Tribe Training",
+        "tag": "Passive",
+        "definition": "Slaughter Tribe Uruk-hai Warrior models add Slaughter Cleavers to their options for 2 points. The source also states: 'Outlaw Tribe Olog-hai models may re-roll a single failed To Wound Roll when using the Rend Brutal Power Attack.'"
+      },
+      {
+        "name": "Slaughter Tribe Captain",
+        "tag": "Passive",
+        "definition": "Slaughter Tribe Hero models of this Heroic Tier and above increase their Attacks by 1 when Engaged in Combat with two or more enemy models."
+      },
+      {
+        "name": "Slaughter Tribe Warchief",
+        "tag": "Passive",
+        "definition": "Slaughter Tribe Hero models of this Heroic Tier gain General Hunter."
+      },
+      {
+        "name": "Slaughter Tribe Overlord",
+        "tag": "Passive",
+        "definition": "All friendly Slaughter Tribe models within 3\" of the Slaughter Tribe Overlord count their Fight Value 1 higher when Engaged in Combat against an enemy model that has lost one or more Wounds."
+      },
+      {
+        "name": "Slaughter Tribe Influence",
+        "tag": "Passive",
+        "definition": "Whilst at least one Influence Marker is Active, friendly Slaughter Tribe models may re-roll a single failed To Wound Roll when in a Fight with a model that has lost one or more Wounds."
+      },
+      {
+        "name": "Feast on Carnage",
+        "tag": "Passive",
+        "definition": "Until the end of the turn, if a friendly Slaughter Tribe model slays an enemy model in Combat, it may immediately make one additional Strike against another enemy model involved in the same Combat."
+      },
+      {
+        "name": "Terror Tribe Training",
+        "tag": "Passive",
+        "definition": "Terror Tribe Orc Warrior and Terror Tribe Uruk-hai Warrior models add Throwing Weapons to their options for 2 points. Terror Tribe Olog-hai models gain Harbinger of Evil (3\")."
+      },
+      {
+        "name": "Terror Tribe Captain",
+        "tag": "Passive",
+        "definition": "Terror Tribe Hero models of this Heroic Tier and above that declare a Charge against an enemy model with Terror may re-roll a failed Courage Test to see whether they can Charge."
+      },
+      {
+        "name": "Terror Tribe Warchief",
+        "tag": "Passive",
+        "definition": "Terror Tribe Hero models of this Heroic Tier and above gain Harbinger of Evil (3\"). Terror Tribe Olog-hai Heroes of this Heroic Tier and above increase this to 6\"."
+      },
+      {
+        "name": "Terror Tribe Overlord",
+        "tag": "Passive",
+        "definition": "The source states: 'Enemy Warrior models within 6\" of the Slaughter Tribe Overlord cannot benefit from a friendly Hero model's Stand Fast.' This rule appears under the Terror Tribe Overlord heading."
+      },
+      {
+        "name": "Terror Tribe Influence",
+        "tag": "Passive",
+        "definition": "Whilst at least one Influence Marker is Active, friendly Terror Tribe Hero models and friendly Terror Tribe Warrior models within 3\" of a Terror Tribe Hero gain Terror."
+      },
+      {
+        "name": "Fearsome Visage",
+        "tag": "Passive",
+        "definition": "At the beginning of the Move Phase, all enemy Hero models must pass a Courage Test. If failed, that model cannot Move that turn, but may otherwise act normally."
+      },
+      {
+        "name": "Warmonger Tribe Training",
+        "tag": "Passive",
+        "definition": "Warmonger Tribe Orc Warrior and Warmonger Tribe Uruk-hai Warrior models add War Drum to their options for 30 points. Warmonger Tribe Olog-hai models with an Olog-hai mace may use Shielding."
+      },
+      {
+        "name": "Warmonger Tribe Captain",
+        "tag": "Passive",
+        "definition": "Warmonger Tribe Hero models of this Heroic Tier and above may exchange their armour for heavy armour for free."
+      },
+      {
+        "name": "Warmonger Tribe Warchief",
+        "tag": "Passive",
+        "definition": "Warmonger Tribe Hero models of this Heroic Tier and above, and any Followers in their Warband, gain Shieldwall."
+      },
+      {
+        "name": "Warmonger Tribe Overlord",
+        "tag": "Passive",
+        "definition": "Warmonger Tribe models count the Warmonger Tribe Overlord as a Banner with a range of 6\"."
+      },
+      {
+        "name": "Warmonger Tribe Influence",
+        "tag": "Passive",
+        "definition": "Whilst at least one Influence Marker is Active, friendly Warmonger Tribe models that elect to Shield may still be Supported."
+      },
+      {
+        "name": "Martialed Advance",
+        "tag": "Passive",
+        "definition": "Until the end of the turn, friendly Warmonger Tribe models may Charge even if they are within range of a friendly War Drum. Additionally, friendly War Drums carried by Warmonger Tribe models count as banners with a range of 6\"."
+      },
+      {
+        "name": "Resistant to Poison",
+        "tag": "Active",
+        "definition": "If this model would suffer a Wound from a Strike with the Poisoned Attacks or Venom special rules, roll a D6. On a 6, the Wound is ignored."
+      },
+      {
+        "name": "Poisoned Attacks",
+        "tag": "Passive",
+        "definition": "This model has Poisoned Attacks."
+      },
+      {
+        "name": "Grappling Shot",
+        "tag": "Active",
+        "definition": "An Infantry model on a 25mm base that is hit by a Shooting Attack from a weapon with this special rule, and is not removed as a casualty, is pulled in a straight line 3\" towards this model. It stops if it comes into base contact with any other model or obstacle."
+      },
+      {
+        "name": "Fury (X)",
+        "tag": "Passive",
+        "definition": "Fury (X), where X is the Race of the caster."
+      },
+      {
+        "name": "Harbinger of Evil (3\")",
+        "tag": "Passive",
+        "definition": "As Harbinger of Evil (X), with a range of 3\"."
+      },
+      {
+        "name": "Dark Tribe Training",
+        "tag": "Passive",
+        "definition": "Dark Tribe Orc Warrior and Dark Tribe Uruk-hai Warrior models reduce the cost of their Dual Blades option to 1 point. Dark Tribe Olog-hai models gain Resistant to Poison."
+      },
+      {
+        "name": "Dominant Tribe",
+        "tag": "Passive",
+        "definition": "When building the Army, choose one Tribe as the Dominant Tribe. The first non-Unique Hero selected must belong to that Tribe. Any Followers in the Warband of a Unique Hero must also belong to the Dominant Tribe. The Dominant Tribe must contain more models than all other Tribes in the Army combined."
+      },
+      {
+        "name": "Marauder Tribe Olog-hai",
+        "tag": "Passive",
+        "definition": "This model gains the Burly special rule while it is involved in a Fight that includes two or more enemy models."
+      },
+      {
+        "name": "Warmonger Tribe Olog-hai",
+        "tag": "Passive",
+        "definition": "If this model is equipped with an Olog-hai mace, it may use the Shielding special rule."
+      },
+      {
+        "name": "Slaughter Tribe Olog-hai",
+        "tag": "Passive",
+        "definition": "This model may re-roll a single failed To Wound Roll when using the Rend Brutal Power Attack. The supplied Slaughter Tribe page labels this as applying to an 'Outlaw Tribe Olog-hai'; this entry applies the rule to the Slaughter Tribe Olog-hai as the contextual reading of that section."
+      }
+    ],
+    "armyBonuses": [
+      {
+        "name": "Call of the Hive",
+        "definition": "If this Army does not contain The White Graug, choose one Ghûl Matron to be the Army General. It gains Harbinger of Evil (6\") and General Hunter. Additionally, all Ghûl models within 6\" gain Fearless."
+      },
+      {
+        "name": "For Hope of Family",
+        "definition": "Talion's Family may either start the game deployed as a single warband or as Followers in another friendly Hero model's warband, other than Talion's. If chosen as their own warband then up to six models from Talion's warband may instead deploy with Talion's Family, in which case Ioreth will count as the Warband Leader. Talion's Family must be deployed at least 18\" away from Talion. Ioreth automatically counts as rolling a 4+ for her Healer's Touch special rule when targeting Talion. While within 3\" of Dirhael, Talion gains the Mighty Hero special rule. At the End of the Game, score an additional Victory Point for each of Ioreth and Dirhael that is still alive, or has escaped the battlefield in Scenarios where this applies. This can never take the Army above 20 Victory Points."
+      },
+      {
+        "name": "Stalwart Defenders",
+        "definition": "Shooting Attacks that require an In The Way test for targeting friendly Gondor models in base contact with an Obstacle will only hit on a 5+."
+      },
+      {
+        "name": "An Army of Rangers",
+        "definition": "A Black Gate Garrison Army ignores the normal restrictions for Bow Limit."
+      },
+      {
+        "name": "Free the Prisoners",
+        "definition": "At the start of the game, before either side deploys, your opponent places three 25mm Prisoner Markers on the battlefield. Each Marker must be placed within 8\" of the centre of the board and not within 6\" of another Prisoner Marker. At the end of any turn, if a friendly Man model is in base contact with a Prisoner Marker, remove that Marker from play. Once one Marker has been removed, friendly Man models gain +1 Courage. Once a second Marker has been removed, friendly Man Hero models count as banners with a range of 3\". Once all Markers are removed, your Army's General model's Stand Fast affects friendly Hero models."
+      },
+      {
+        "name": "Convient Alliance",
+        "definition": "Only friendly Orc and Uruk-hai models can benefit from Heroic Actions and Stand Fast of friendly Uruk-hai Hero models. Additionally, Ratbag may only be included in your Army if Talion is also part of the Army. In a fight that contains at least one friendly Orc or Uruk-hai model and at least one friendly Man model, if that Combat is lost, then immediately, before all other Strikes, the Man model suffers a single Strength 3 hit."
+      },
+      {
+        "name": "Salt in the Blood",
+        "definition": "At the start of the Move Phase, nominate one friendly Nûrn Hero model. Until the end of the turn, that model and all friendly Nûrn Warrior models within 3\" gain the current-turn effect: Turn 1 — Approaching Tide: +3\" Move during the Move Phase; this cannot be increased by Heroic March. Turn 2 — Cast the Nets: models with Entangling Throw may also affect Infantry models with Strength 5 or less. Turn 3 — Pull Together: models may use throwing spears as a normal spear during the Fight Phase if they have not made a Shooting Attack with it in the preceding Move or Shoot Phase. Turn 4 — Close the Traps: +1 to Duel Rolls when fighting an enemy that is Trapped. Turn 5 onwards — Break the Tide: models gain Dominant (2)."
+      },
+      {
+        "name": "Break the Chains",
+        "definition": "At the start of the game, after both sides have deployed, place 3 Captive Markers on the battlefield. In Scenarios using standard deployment zones, each must be wholly within 12\" of the enemy board edge and more than 6\" from any board-edge corner. In Maelstrom of Battle deployment, they must instead be wholly within 12\" of the centre. Each Captive Marker must be more than 6\" from any other Captive Marker. If a friendly Nûrn Infantry model is in base contact with a Captive Marker at the end of the turn, roll a D6; on a 4+, immediately place D3 Liberated Captive models within 3\" of the marker and not within 1\" of enemy models, then remove the Marker. These models do not count towards the Army's Break Point."
+      },
+      {
+        "name": "The Ithil Stone",
+        "definition": "The Ithil Stone begins carried by the Army's General. If the model carrying the Ithil Stone is a friendly Gondor, non-Spirit Hero model it may use the Ithil Stone while carrying the object. At the end of the game, if a friendly model is carrying this object then this side gains an additional 2 Victory Points; if an enemy model is carrying this object then your opponent gains 1 Victory Point. In either instance this can never take an Army's total above 20."
+      },
+      {
+        "name": "Weather the siege",
+        "definition": "Friendly Warrior models in this Army treat Unique Gondor Hero models as banners with a range of 3\". If this Army is Broken, this range is increased to 6\" and friendly Gondor Warrior models also gain +1 Fight."
+      },
+      {
+        "name": "\"I am one, but we are many\"",
+        "definition": "Before deployment, you may nominate a single Orc, Uruk-hai or Olog-hai Infantry Hero model in Talion's Army to be kept in reserve instead of deploying normally. If the chosen Hero is a Leader for a Warband, choose one other model in that Warband to act as its Leader. At the start of Talion's Activation during the Move Phase, Talion may summon the reserved Hero. Place that Hero wholly within 3\" of Talion and within the Control Zone of an enemy model. The summoned Hero must Activate next."
+      },
+      {
+        "name": "Shattered Dominance",
+        "definition": "If Talion is required to make a Wraith Resurrection roll, then during the following turn, at the start of each other friendly Hero model's Activation in the Move Phase, that Hero must take a Courage Test as though the force were Broken. If there are no other friendly Hero models remaining on the battlefield, then all remaining friendly Warrior models must instead take Courage Tests as though the force were Broken. This special rule does not affect Ratbag."
+      },
+      {
+        "name": "\"Bring me that head!\"",
+        "definition": "At the beginning of The Hammer of Sauron's Activation in the Move Phase, choose one enemy Hero within 6\". If that model is removed as a casualty in the Fight Phase, all friendly models that were in that Fight will Move exactly as if they had won a Heroic Combat."
+      },
+      {
+        "name": "\"The Warchiefs did NOTHING to prevent this sacrilege?!\"",
+        "definition": "At the start of his Activation, The Hammer of Sauron may kill a friendly Orc Infantry model within 2\"; remove that model as a casualty. All friendly models within 6\" of The Hammer gain Fearless until the end of the turn. If the model killed is a Hero, all friendly models also gain +1 To Wound when making Strikes until the end of the turn."
+      },
+      {
+        "name": "\"I can see through your tricks\"",
+        "definition": "If an enemy model with the Stalk Unseen or Invisible special rule is within 12\" of The Tower of Sauron, all friendly models within 6\" of The Tower gain Fell Sight."
+      },
+      {
+        "name": "Illusion of strength",
+        "definition": "At the start of any Fight Phase, The Tower of Sauron may take an Intelligence Test. If passed, choose one friendly model within 6\". That model may choose to increase its Fight Value, Strength or Attacks to the same as The Tower of Sauron's until the end of the turn."
+      },
+      {
+        "name": "Marked by The Hand",
+        "definition": "While The Black Hand of Sauron is alive and on the battlefield, Uruk-hai Warchief models in this Army gain Fearless."
+      },
+      {
+        "name": "The Talons of the Hand",
+        "definition": "Up to five Uruk-hai Warchief models, chosen before deployment, gain the following: while this model is alive and on the battlefield, your opponent cannot score any Victory Points for Wounding or slaying your General."
+      },
+      {
+        "name": "The Most Dominant Species",
+        "definition": "If The White Graug is your General, it gains Harbinger of Evil (12\"). Additionally, it counts as a banner with a range of 6\" and counts as a banner for the purposes of Victory Points."
+      },
+      {
+        "name": "Beasts of the Lairs",
+        "definition": "A Warband in this Army that contains at least one Dire Caragor and at least four additional Caragor models does not need a Hero to be its Leader. Instead, choose one Dire Caragor to be the Warband Leader for deployment. Additionally, Caragor models in this Army within 3\" of a Dire Caragor that has passed its Intelligence Test for Unruly Strength may choose whether or not to pass their Intelligence Test."
+      },
+      {
+        "name": "Tribes of the Orcs",
+        "definition": "When choosing a Hero model's Tribe, add the chosen Tribe to that model's Faction keyword. All Warrior models in that Hero's Warband gain the same Tribe keyword and benefit from that Tribe's bonuses. Hero bonuses are cumulative by tier: a Warchief also gains its Tribe's Captain rule, and an Overlord gains the Captain, Warchief and Overlord rules."
+      },
+      {
+        "name": "Tribe Fortress",
+        "definition": "After both sides deploy, place three 25mm Influence Markers. They cannot be placed within an enemy deployment zone, within 6\" of an Objective Marker, within 18\" of another Influence Marker, within 8\" of the centre, within Impassable Terrain, or within an enemy Control Zone. Each marker has Defence 8 and 2 Wounds and may be attacked as a Siege Engine. A marker is Active while a friendly Warchief with the same Tribe keyword as the Dominant Tribe is within 3\". Before Priority, if the Dominant Tribe's Overlord is within 3\" of an Active marker, it may invoke that Tribe's Fortress Ability."
+      },
+      {
+        "name": "Shadow Network",
+        "definition": "Until the end of the turn, whenever an enemy model Charges a friendly Dark Tribe model within 6\" of an Active Influence Marker, the charging model immediately suffers one Strength 2 hit with Poisoned Attacks."
+      },
+      {
+        "name": "Beast Cages",
+        "definition": "Immediately place a Caragor beside each Active Influence Marker. These Caragors are Reinforcements, may not Charge that turn, and do not count towards the Army's Break Point."
+      },
+      {
+        "name": "Ammunition Stores",
+        "definition": "Until the end of the turn, increase the Strength characteristic of all Shooting Attacks made by friendly Machine Tribe models by 1."
+      },
+      {
+        "name": "Spoils of War",
+        "definition": "Until the end of the turn, friendly Marauder Tribe models with one or more pieces of Scavenged Wargear gain +1 Attack."
+      },
+      {
+        "name": "Mystic Ritual",
+        "definition": "Until the end of the turn, each time a friendly Mystic Tribe model makes a Casting Roll or Resist Test, it may change the result of one die to a 5."
+      },
+      {
+        "name": "Hidden Snares",
+        "definition": "At the end of the Move Phase, roll a D6 for any enemy model on a 25mm base that is Engaged in Combat with a friendly Outlaw Tribe model. On a 4+, that model is Knocked Prone."
+      },
+      {
+        "name": "Feast on Carnage",
+        "definition": "Until the end of the turn, if a friendly Slaughter Tribe model slays an enemy model in Combat, it may immediately make one additional Strike against another enemy model involved in the same Combat."
+      },
+      {
+        "name": "Fearsome Visage",
+        "definition": "At the beginning of the Move Phase, all enemy Hero models must pass a Courage Test. If failed, that model cannot Move that turn, but may otherwise act normally."
+      },
+      {
+        "name": "Martialed Advance",
+        "definition": "Until the end of the turn, friendly Warmonger Tribe models may Charge even if they are within range of a friendly War Drum. Additionally, friendly War Drums carried by Warmonger Tribe models count as banners with a range of 6\"."
+      }
+    ],
+    "tribes": [
+      {
+        "name": "Dark Tribe",
+        "definition": "Select Dark Tribe as the Dominant Tribe."
+      },
+      {
+        "name": "Feral Tribe",
+        "definition": "Select Feral Tribe as the Dominant Tribe."
+      },
+      {
+        "name": "Machine Tribe",
+        "definition": "Select Machine Tribe as the Dominant Tribe."
+      },
+      {
+        "name": "Marauder Tribe",
+        "definition": "Select Marauder Tribe as the Dominant Tribe."
+      },
+      {
+        "name": "Mystic Tribe",
+        "definition": "Select Mystic Tribe as the Dominant Tribe."
+      },
+      {
+        "name": "Outlaw Tribe",
+        "definition": "Select Outlaw Tribe as the Dominant Tribe."
+      },
+      {
+        "name": "Slaughter Tribe",
+        "definition": "Select Slaughter Tribe as the Dominant Tribe."
+      },
+      {
+        "name": "Terror Tribe",
+        "definition": "Select Terror Tribe as the Dominant Tribe."
+      },
+      {
+        "name": "Warmonger Tribe",
+        "definition": "Select Warmonger Tribe as the Dominant Tribe."
+      }
+    ]
+  },
+  "campaigns": {},
+  "campaignPacks": {},
+  "customSource": {
+    "name": "Shadow of Mordor / Shadow of War custom supplement",
+    "sourceFile": "Updated from supplied army/profile PDFs",
+    "note": "Tribe filtering test using unlockedByGlobal on generated Tribe Hero profiles. Selecting an army-level Tribe should make only Hero variants with the matching unlockedByGlobal value available in the Hero picker.",
+    "counts": {
+      "factions": 10,
+      "heroes": 126,
+      "warriors": 65,
+      "keywords": 205,
+      "armyBonuses": 31
+    },
+    "audit": {
+      "missingFactionReferences": [],
+      "missingSpecialRuleReferences": [],
+      "rangerCaptainPointsResolution": "65 points used because both supplied Army Composition pages list 65, despite the standalone profile page listing 60.",
+      "missingGearReferences": [],
+      "missingMagicalPowerReferences": [],
+      "tribeWarriorFactionMismatches": [],
+      "tribeHeroMatchingErrors": [],
+      "duplicateHeroNames": [],
+      "duplicateWarriorNames": []
+    }
+  }
+}
